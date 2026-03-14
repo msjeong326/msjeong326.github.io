@@ -268,6 +268,19 @@
     .pub-item:last-child { border-bottom:none; }
     .pub-item:hover { border-left-color:var(--accent); }
     .pub-item.first-author { border-left-color:var(--accent); background:var(--accent-light); }
+    .pub-list-items .pub-item:nth-child(n+6) { display:none; }
+    .pub-list-items.expanded .pub-item:nth-child(n+6) { display:block; }
+    .pub-show-more {
+        display:flex; align-items:center; justify-content:center; gap:0.5rem;
+        margin-top:1.25rem; padding:0.75rem 2rem;
+        background:var(--bg-secondary); border:1px solid var(--border-color);
+        border-radius:var(--radius); color:var(--text-secondary);
+        font-size:0.88rem; font-weight:600; cursor:pointer;
+        font-family:var(--font-sans); transition:all var(--transition); width:100%;
+    }
+    .pub-show-more:hover { border-color:var(--accent); color:var(--accent); }
+    .pub-show-more .arrow { transition:transform 0.3s; }
+    .pub-show-more.expanded .arrow { transform:rotate(180deg); }
     .pub-title { font-size:0.95rem; font-weight:600; margin-bottom:0.2rem; line-height:1.4; }
     .pub-authors { font-size:0.82rem; color:var(--text-secondary); margin-bottom:0.2rem; }
     .pub-authors strong { color:var(--accent); font-weight:700; }
@@ -440,11 +453,11 @@
         <a href="#" class="gnb-logo">정민수 박사</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">소개</a></li>
-            <li><a href="#research">연구</a></li>
-            <li><a href="#publications">논문</a></li>
+            <li><a href="#research">연구분야</a></li>
             <li><a href="#education">학력</a></li>
             <li><a href="#awards">수상</a></li>
-            <li><a href="#skills">기술</a></li>
+            <li><a href="#skills">역량</a></li>
+            <li><a href="#publications">논문</a></li>
             <li><a href="#contact">연락처</a></li>
         </ul>
         <div class="gnb-right">
@@ -584,181 +597,8 @@
     </div>
 </section>
 
-<!-- Publications -->
-<section class="section" id="publications">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">논문 목록</div>
-            <h2 class="section-title">논문 실적</h2>
-            <p class="section-subtitle">SCI(E) 논문 18편 (제1저자 4편), 심사 중 2편, 진행 중 2편. <strong>Jeong, M.</strong> 표기.</p>
-        </div>
-        <div class="reveal">
-            <div class="pub-tabs" id="pubTabs">
-                <button class="pub-tab active" data-tab="all">전체 <span class="count">22</span></button>
-                <button class="pub-tab" data-tab="first">제1저자 <span class="count">4+4</span></button>
-                <button class="pub-tab" data-tab="coauthor">공저자 <span class="count">14</span></button>
-                <button class="pub-tab" data-tab="review">심사 중 <span class="count">4</span></button>
-            </div>
-
-            <div class="pub-panel active" id="panel-all">
-                <div class="pub-list-items">
-                    <div class="pub-item first-author" data-type="first review">
-                        <div class="pub-title">Plastic film mulching with green manure reshapes depth-specific soil carbon pools and saturation dynamics in temperate maize fields</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong> &amp; Lee, J.G. (2025)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Soil Biology and Biochemistry</span>
-                            <span class="pub-badge pub-badge--status">심사 중</span>
-                            <span class="pub-badge pub-badge--first">제1저자</span>
-                        </div>
-                    </div>
-                    <div class="pub-item first-author" data-type="first review">
-                        <div class="pub-title">Multi-omics insights into plant&ndash;microbe dysbiosis caused by cyanobacterial bloom-affected water</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Jeong, S., Park, S., Yeo, S., Ryu, B., Shin, J.H. &amp; Lee, S. (2025)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Science of the Total Environment</span>
-                            <span class="pub-badge pub-badge--status">심사 중</span>
-                            <span class="pub-badge pub-badge--first">제1저자</span>
-                        </div>
-                    </div>
-                    <div class="pub-item first-author" data-type="first review">
-                        <div class="pub-title">Seasonal community turnover, not direct environmental selection, shapes antimicrobial resistance gene dynamics in a weir-regulated river</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Targeting Water Research</span>
-                            <span class="pub-badge pub-badge--if">IF 13.0</span>
-                            <span class="pub-badge pub-badge--status">진행 중</span>
-                            <span class="pub-badge pub-badge--first">제1저자</span>
-                        </div>
-                    </div>
-                    <div class="pub-item first-author" data-type="first review">
-                        <div class="pub-title">Cucumber gnotobiotic multi-omics: host genotype effects on microbiome assembly and biosynthetic potential</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Targeting ISME Journal</span>
-                            <span class="pub-badge pub-badge--if">IF 11.0</span>
-                            <span class="pub-badge pub-badge--status">진행 중</span>
-                            <span class="pub-badge pub-badge--first">제1저자</span>
-                        </div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Unstructured kinetic modeling of mixed-culture honey-wine fermentation systems involving dual substrate and product dynamics</div>
-                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D. &amp; Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Journal of Food Engineering, 404, 112764</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Enhancing cucumber growth and disease resistance against <i>Sclerotinia sclerotiorum</i> by exogenous co-inoculation</div>
-                        <div class="pub-authors">Hathurusinghe, S.H.K., Bashizi, T.F., <strong>Jeong, M.</strong>, Kim, M.J., Pande, A. &amp; Shin, J.H. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Plant Growth Regulation, 1&ndash;16</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18</div>
-                        <div class="pub-authors">Jung, D.R., Choi, Y., <strong>Jeong, M.</strong>, Singh, V., Jeon, S.Y., Seo, I., ... &amp; Chong, G.O. (2025)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">npj Biofilms and Microbiomes, 11(1), 105</span>
-                            <span class="pub-badge pub-badge--if">IF 9.2</span>
-                        </div>
-                    </div>
-                    <div class="pub-item first-author" data-type="first">
-                        <div class="pub-title">Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Kwon, S.-M. et al. (2025)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Scientific Reports, 15(1), 13810</span>
-                            <span class="pub-badge pub-badge--if">IF 4.6</span>
-                            <span class="pub-badge pub-badge--first">제1저자</span>
-                        </div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells</div>
-                        <div class="pub-authors">Myeong, J., Lee, M., ..., <strong>Jeong, M.</strong>, ..., &amp; Jeong, Y. (2025)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Nature Communications, 16(1), 2327</span>
-                            <span class="pub-badge pub-badge--if">IF 16.6</span>
-                        </div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Biofumigation-derived soil microbiome modification</div>
-                        <div class="pub-authors">Lee, D., Park, T.-H., Lim, K., <strong>Jeong, M.</strong>, Nam, G., Kim, W.-C. &amp; Shin, J.H. (2024)</div>
-                        <div class="pub-meta"><span class="pub-journal">Agronomy, 14(10), 2225</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">A comprehensive review of probiotics</div>
-                        <div class="pub-authors">Fentie, E.G., Lim, K., <strong>Jeong, M.</strong> &amp; Shin, J.H. (2024)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Comprehensive Reviews in Food Science and Food Safety, 23(5), e13424</span>
-                            <span class="pub-badge pub-badge--if">IF 12.0</span>
-                        </div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Impact of propiconazole fungicide on soil microbiome</div>
-                        <div class="pub-authors">Sliti, A., Singh, V., Ibal, J.C., <strong>Jeong, M.</strong> &amp; Shin, J.H. (2024)</div>
-                        <div class="pub-meta"><span class="pub-journal">Environmental Science and Pollution Research, 31(7), 8240&ndash;8253</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Deciphering key factors in pathogen-suppressive microbiome assembly</div>
-                        <div class="pub-authors">Andargiea, Y.E., Lee, G., <strong>Jeong, M.</strong>, Tagele, S.B. &amp; Shin, J.H. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14(1), 1301698</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Spinach as green manure modifies soil nutrients and microbiota</div>
-                        <div class="pub-authors">Kim, R.-H., Tagele, S.B., <strong>Jeong, M.</strong> et al. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 13(1), 4140</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Soil amendment with cow dung reduces ginseng replanting problem</div>
-                        <div class="pub-authors">Tagele, S.B., Kim, R.-H., <strong>Jeong, M.</strong> et al. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14(1), 1072216</span></div>
-                    </div>
-                    <div class="pub-item first-author" data-type="first">
-                        <div class="pub-title">The death of Korean fir affects soil symbiotic fungal microbiome</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong>, Tagele, S.B., Kim, M.-J. et al. (2023)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Frontiers in Forests and Global Change, 5(1), 1114390</span>
-                            <span class="pub-badge pub-badge--if">IF 3.0</span>
-                            <span class="pub-badge pub-badge--first">제1저자</span>
-                        </div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Scalp and gut microbiome in androgenetic alopecia</div>
-                        <div class="pub-authors">Jung, D.-R., Yoo, H.-Y., ..., <strong>Jeong, M.</strong> et al. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Microbiology, 13(1), 1076242</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Mixed starter culture for Ethiopian honey wine</div>
-                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 12(1), 13431</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Fermentation dynamics of Ethiopian honey wine</div>
-                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">LWT, 155(1), 112927</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Physicochemical properties of Ethiopian honey wine</div>
-                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Food Research International, 152(1), 110765</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Gut microbiota after FMT for <i>C. difficile</i> with IBD</div>
-                        <div class="pub-authors">Azimirad, M., Jo, Y., Kim, M.-S., <strong>Jeong, M.</strong> et al. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Journal of Inflammation Research, 15(1), 105&ndash;116</span></div>
-                    </div>
-                    <div class="pub-item" data-type="coauthor">
-                        <div class="pub-title">Fermented coffee grounds diminish livestock odors</div>
-                        <div class="pub-authors">Kim, M.-S., Kim, S.-H., <strong>Jeong, M.</strong> et al. (2021)</div>
-                        <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pub-panel" id="panel-first"></div>
-            <div class="pub-panel" id="panel-coauthor"></div>
-            <div class="pub-panel" id="panel-review"></div>
-        </div>
-    </div>
-</section>
-
 <!-- Education -->
-<section class="section section--alt" id="education">
+<section class="section" id="education">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">학력 및 경력</div>
@@ -798,7 +638,7 @@
 </section>
 
 <!-- Awards & Conferences -->
-<section class="section" id="awards">
+<section class="section section--alt" id="awards">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">수상 및 학회 발표</div>
@@ -894,7 +734,7 @@
 </section>
 
 <!-- Skills -->
-<section class="section section--alt" id="skills">
+<section class="section" id="skills">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">기술 역량</div>
@@ -967,6 +807,197 @@
                     <span class="skill-tag">Docker</span>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications -->
+<section class="section section--alt" id="publications">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">논문 목록</div>
+            <h2 class="section-title">논문 실적</h2>
+            <p class="section-subtitle">SCI(E) 논문 20편 이상 (제1저자 4편), 심사 중 2편, In Press 4편. <strong>Jeong, M.</strong> 표기.</p>
+        </div>
+        <div class="reveal">
+            <div class="pub-tabs" id="pubTabs">
+                <button class="pub-tab active" data-tab="all">전체 <span class="count">24</span></button>
+                <button class="pub-tab" data-tab="first">제1저자 <span class="count">4+4</span></button>
+                <button class="pub-tab" data-tab="coauthor">공저자 <span class="count">16</span></button>
+                <button class="pub-tab" data-tab="review">심사 중 <span class="count">4</span></button>
+            </div>
+
+            <div class="pub-panel active" id="panel-all">
+                <div class="pub-list-items">
+                    <div class="pub-item first-author" data-type="first review">
+                        <div class="pub-title">Plastic film mulching with green manure reshapes depth-specific soil carbon pools and saturation dynamics in temperate maize fields</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong> &amp; Lee, J.G. (2025)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Soil Biology and Biochemistry</span>
+                            <span class="pub-badge pub-badge--status">심사 중</span>
+                            <span class="pub-badge pub-badge--first">제1저자</span>
+                        </div>
+                    </div>
+                    <div class="pub-item first-author" data-type="first review">
+                        <div class="pub-title">Multi-omics insights into plant&ndash;microbe dysbiosis caused by cyanobacterial bloom-affected water</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Jeong, S., Park, S., Yeo, S., Ryu, B., Shin, J.H. &amp; Lee, S. (2025)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Science of the Total Environment</span>
+                            <span class="pub-badge pub-badge--status">심사 중</span>
+                            <span class="pub-badge pub-badge--first">제1저자</span>
+                        </div>
+                    </div>
+                    <div class="pub-item first-author" data-type="first review">
+                        <div class="pub-title">Seasonal community turnover, not direct environmental selection, shapes antimicrobial resistance gene dynamics in a weir-regulated river</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Water Research</span>
+                            <span class="pub-badge pub-badge--if">IF 13.0</span>
+                            <span class="pub-badge pub-badge--status">In Press</span>
+                            <span class="pub-badge pub-badge--first">제1저자</span>
+                        </div>
+                    </div>
+                    <div class="pub-item first-author" data-type="first review">
+                        <div class="pub-title">Cucumber gnotobiotic multi-omics: host genotype effects on microbiome assembly and biosynthetic potential</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">ISME Journal</span>
+                            <span class="pub-badge pub-badge--if">IF 11.0</span>
+                            <span class="pub-badge pub-badge--status">In Press</span>
+                            <span class="pub-badge pub-badge--first">제1저자</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Unstructured kinetic modeling of mixed-culture honey-wine fermentation systems involving dual substrate and product dynamics</div>
+                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D. &amp; Shin, J.H. (2026)</div>
+                        <div class="pub-meta"><span class="pub-journal">Journal of Food Engineering, 404, 112764</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Enhancing cucumber growth and disease resistance against <i>Sclerotinia sclerotiorum</i> by exogenous co-inoculation</div>
+                        <div class="pub-authors">Hathurusinghe, S.H.K., Bashizi, T.F., <strong>Jeong, M.</strong>, Kim, M.J., Pande, A. &amp; Shin, J.H. (2025)</div>
+                        <div class="pub-meta"><span class="pub-journal">Plant Growth Regulation, 1&ndash;16</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18</div>
+                        <div class="pub-authors">Jung, D.R., Choi, Y., <strong>Jeong, M.</strong>, Singh, V., Jeon, S.Y., Seo, I., ... &amp; Chong, G.O. (2025)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">npj Biofilms and Microbiomes, 11(1), 105</span>
+                            <span class="pub-badge pub-badge--if">IF 9.2</span>
+                        </div>
+                    </div>
+                    <div class="pub-item first-author" data-type="first">
+                        <div class="pub-title">Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Kwon, S.-M. et al. (2025)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Scientific Reports, 15(1), 13810</span>
+                            <span class="pub-badge pub-badge--if">IF 4.6</span>
+                            <span class="pub-badge pub-badge--first">제1저자</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells</div>
+                        <div class="pub-authors">Myeong, J., Lee, M., ..., <strong>Jeong, M.</strong>, ..., &amp; Jeong, Y. (2025)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Nature Communications, 16(1), 2327</span>
+                            <span class="pub-badge pub-badge--if">IF 16.6</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">토양 마이크로바이옴 기반 기계학습을 이용한 인삼 연작장해 분류</div>
+                        <div class="pub-authors">Kwon, S.-M., <strong>Jeong, M.</strong>, Kim, R.-H. &amp; Shin, J.H. (2026)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Environmental Microbiome</span>
+                            <span class="pub-badge pub-badge--status">In Press</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">낙동강 남조류 세포수와 마이크로시스틴 농도 간의 공간적 이질성</div>
+                        <div class="pub-authors">Yeo, S., <strong>Jeong, M.</strong>, Ryu, B. &amp; Lee, S. (2026)</div>
+                        <div class="pub-meta">
+                            <span class="pub-badge pub-badge--status">In Press</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Biofumigation-derived soil microbiome modification</div>
+                        <div class="pub-authors">Lee, D., Park, T.-H., Lim, K., <strong>Jeong, M.</strong>, Nam, G., Kim, W.-C. &amp; Shin, J.H. (2024)</div>
+                        <div class="pub-meta"><span class="pub-journal">Agronomy, 14(10), 2225</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">A comprehensive review of probiotics</div>
+                        <div class="pub-authors">Fentie, E.G., Lim, K., <strong>Jeong, M.</strong> &amp; Shin, J.H. (2024)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Comprehensive Reviews in Food Science and Food Safety, 23(5), e13424</span>
+                            <span class="pub-badge pub-badge--if">IF 12.0</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Impact of propiconazole fungicide on soil microbiome</div>
+                        <div class="pub-authors">Sliti, A., Singh, V., Ibal, J.C., <strong>Jeong, M.</strong> &amp; Shin, J.H. (2024)</div>
+                        <div class="pub-meta"><span class="pub-journal">Environmental Science and Pollution Research, 31(7), 8240&ndash;8253</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Deciphering key factors in pathogen-suppressive microbiome assembly</div>
+                        <div class="pub-authors">Andargiea, Y.E., Lee, G., <strong>Jeong, M.</strong>, Tagele, S.B. &amp; Shin, J.H. (2023)</div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14(1), 1301698</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Spinach as green manure modifies soil nutrients and microbiota</div>
+                        <div class="pub-authors">Kim, R.-H., Tagele, S.B., <strong>Jeong, M.</strong> et al. (2023)</div>
+                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 13(1), 4140</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Soil amendment with cow dung reduces ginseng replanting problem</div>
+                        <div class="pub-authors">Tagele, S.B., Kim, R.-H., <strong>Jeong, M.</strong> et al. (2023)</div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14(1), 1072216</span></div>
+                    </div>
+                    <div class="pub-item first-author" data-type="first">
+                        <div class="pub-title">The death of Korean fir affects soil symbiotic fungal microbiome</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong>, Tagele, S.B., Kim, M.-J. et al. (2023)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Frontiers in Forests and Global Change, 5(1), 1114390</span>
+                            <span class="pub-badge pub-badge--if">IF 3.0</span>
+                            <span class="pub-badge pub-badge--first">제1저자</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Scalp and gut microbiome in androgenetic alopecia</div>
+                        <div class="pub-authors">Jung, D.-R., Yoo, H.-Y., ..., <strong>Jeong, M.</strong> et al. (2022)</div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Microbiology, 13(1), 1076242</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Mixed starter culture for Ethiopian honey wine</div>
+                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
+                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 12(1), 13431</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Fermentation dynamics of Ethiopian honey wine</div>
+                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
+                        <div class="pub-meta"><span class="pub-journal">LWT, 155(1), 112927</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Physicochemical properties of Ethiopian honey wine</div>
+                        <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
+                        <div class="pub-meta"><span class="pub-journal">Food Research International, 152(1), 110765</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Gut microbiota after FMT for <i>C. difficile</i> with IBD</div>
+                        <div class="pub-authors">Azimirad, M., Jo, Y., Kim, M.-S., <strong>Jeong, M.</strong> et al. (2022)</div>
+                        <div class="pub-meta"><span class="pub-journal">Journal of Inflammation Research, 15(1), 105&ndash;116</span></div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Fermented coffee grounds diminish livestock odors</div>
+                        <div class="pub-authors">Kim, M.-S., Kim, S.-H., <strong>Jeong, M.</strong> et al. (2021)</div>
+                        <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span></div>
+                    </div>
+                </div>
+                <button class="pub-show-more" id="pubShowMore">
+                    전체 논문 보기 <span class="arrow">&#9660;</span>
+                </button>
+            </div>
+
+            <div class="pub-panel" id="panel-first"></div>
+            <div class="pub-panel" id="panel-coauthor"></div>
+            <div class="pub-panel" id="panel-review"></div>
         </div>
     </div>
 </section>
@@ -1195,6 +1226,21 @@
             document.getElementById('panel-' + tab.getAttribute('data-tab')).classList.add('active');
         });
     });
+
+    // Show More publications toggle
+    var showMoreBtn = document.getElementById('pubShowMore');
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', function() {
+            var list = document.querySelector('#panel-all .pub-list-items');
+            list.classList.toggle('expanded');
+            this.classList.toggle('expanded');
+            if (list.classList.contains('expanded')) {
+                this.innerHTML = '접기 <span class="arrow">&#9650;</span>';
+            } else {
+                this.innerHTML = '전체 논문 보기 <span class="arrow">&#9660;</span>';
+            }
+        });
+    }
 
     // Counter Animation
     document.querySelectorAll('.stat-number').forEach(function(stat) {

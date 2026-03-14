@@ -272,6 +272,19 @@
     .pub-item:last-child { border-bottom:none; }
     .pub-item:hover { border-left-color:var(--accent); }
     .pub-item.first-author { border-left-color:var(--accent); background:var(--accent-light); }
+    .pub-list-items .pub-item:nth-child(n+6) { display:none; }
+    .pub-list-items.expanded .pub-item:nth-child(n+6) { display:block; }
+    .pub-show-more {
+        display:flex; align-items:center; justify-content:center; gap:0.5rem;
+        margin-top:1.25rem; padding:0.75rem 2rem;
+        background:var(--bg-secondary); border:1px solid var(--border-color);
+        border-radius:var(--radius); color:var(--text-secondary);
+        font-size:0.88rem; font-weight:600; cursor:pointer;
+        font-family:var(--font-sans); transition:all var(--transition); width:100%;
+    }
+    .pub-show-more:hover { border-color:var(--accent); color:var(--accent); }
+    .pub-show-more .arrow { transition:transform 0.3s; }
+    .pub-show-more.expanded .arrow { transform:rotate(180deg); }
     .pub-title { font-size:0.95rem; font-weight:600; margin-bottom:0.2rem; line-height:1.4; }
     .pub-authors { font-size:0.82rem; color:var(--text-secondary); margin-bottom:0.2rem; }
     .pub-authors strong { color:var(--accent); font-weight:700; }
@@ -457,10 +470,10 @@
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">About</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#publications">Publications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="gnb-right">
@@ -600,19 +613,233 @@
     </div>
 </section>
 
+<!-- Education -->
+<section class="section" id="education">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Education &amp; Experience</div>
+            <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-date">May 2026 &ndash; Present</div>
+                <h3 class="timeline-title">Research Professor</h3>
+                <div class="timeline-inst">Kyungpook National University</div>
+                <div class="timeline-desc">NGS Core Research Support Center. Sejong Science Fellowship (NRF).</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Sep 2025 &ndash; Apr 2026</div>
+                <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                <div class="timeline-inst">Kyungpook National University</div>
+                <div class="timeline-desc">NGS Core Research Support Center. Independent research on host-microbe interactions.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
+                <h3 class="timeline-title">Ph.D. in Applied Biosciences</h3>
+                <div class="timeline-inst">Kyungpook National University</div>
+                <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">M.S. in Applied Biosciences</div>
+                <h3 class="timeline-title">Master of Science</h3>
+                <div class="timeline-inst">Kyungpook National University</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">B.S. in Applied Biosciences</div>
+                <h3 class="timeline-title">Bachelor of Science</h3>
+                <div class="timeline-inst">Kyungpook National University</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Awards & Conferences -->
+<section class="section section--alt" id="awards">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Awards &amp; Conferences</div>
+            <h2 class="section-title">Recognition &amp; Presentations</h2>
+        </div>
+        <div class="two-col reveal">
+            <div>
+                <div class="col-title">Awards</div>
+                <div class="list-items">
+                    <div class="list-item">
+                        <div class="list-item-title">Grand Prize for Oral Presentation</div>
+                        <div class="list-item-detail">KMB International Conference, Jun 2024</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-title">Encouragement Award in Oral Presentation</div>
+                        <div class="list-item-detail">BK21 FOUR Research Symposium, Jan 2024</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-title">Outstanding Poster Presentation Award</div>
+                        <div class="list-item-detail">KSABC International Conference, Jun 2022</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-title">Outstanding Oral Presentation Award</div>
+                        <div class="list-item-detail">KSABC/KMB International Symposium, Aug 2021</div>
+                    </div>
+                </div>
+            </div>
+            <div id="conferences">
+                <div class="col-title">Conferences</div>
+                <div class="list-items">
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> ASM Microbe 2025, Los Angeles, USA</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KMB International Conference 2025</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> MSK 2024</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Conference 2024 <span class="conf-award-badge">Grand Prize</span></div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2024</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> BK21 FOUR Research Symposium, Jan 2024 <span class="conf-award-badge">Award</span></div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ASM Microbe 2023, Houston, USA</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2022 <span class="conf-award-badge">Award</span></div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSM Ecology 2022</div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">Award</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grants -->
+        <div class="section-header reveal" style="margin-top:3rem;">
+            <div class="section-label">Grants &amp; Fellowships</div>
+            <h2 class="section-title" style="font-size:1.5rem;">Research Funding</h2>
+        </div>
+        <div class="grants-grid reveal">
+            <div class="list-item">
+                <div class="list-item-title">Sejong Science Fellowship</div>
+                <div class="list-item-detail">National Research Foundation of Korea (2026&ndash;2031)</div>
+                <div class="list-item-amount">~$450,000 (5 years)</div>
+            </div>
+            <div class="list-item">
+                <div class="list-item-title">Doctoral Student Research Fellowship</div>
+                <div class="list-item-detail">NRF / Ministry of Education (2023&ndash;2025)</div>
+                <div class="list-item-amount">$26,601</div>
+            </div>
+            <div class="list-item">
+                <div class="list-item-title">Graduate Teaching Assistantship</div>
+                <div class="list-item-detail">BK21 FOUR (2024&ndash;2025)</div>
+                <div class="list-item-amount">$35,529</div>
+            </div>
+            <div class="list-item">
+                <div class="list-item-title">BK21 Government Scholarship</div>
+                <div class="list-item-detail">2022&ndash;2023</div>
+                <div class="list-item-amount">$17,534</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section class="section" id="skills">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Technical Expertise</div>
+            <h2 class="section-title">Skills &amp; Tools</h2>
+        </div>
+        <div class="skills-grid reveal">
+            <div class="skill-group">
+                <h3 class="skill-group-title">Bioinformatics</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag--featured">QIIME2</span>
+                    <span class="skill-tag skill-tag--featured">MEGAHIT</span>
+                    <span class="skill-tag">metaSPAdes</span>
+                    <span class="skill-tag">MAG Binning</span>
+                    <span class="skill-tag skill-tag--featured">eggNOG</span>
+                    <span class="skill-tag">antiSMASH</span>
+                    <span class="skill-tag">RGI/CARD</span>
+                    <span class="skill-tag">GTDB-Tk</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Programming</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag--featured">Python</span>
+                    <span class="skill-tag skill-tag--featured">R</span>
+                    <span class="skill-tag skill-tag--featured">Bash</span>
+                    <span class="skill-tag">pandas</span>
+                    <span class="skill-tag">tidyverse</span>
+                    <span class="skill-tag">DESeq2</span>
+                    <span class="skill-tag">scikit-learn</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">AI / Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag--featured">PyTorch</span>
+                    <span class="skill-tag skill-tag--featured">Deep Learning</span>
+                    <span class="skill-tag">GNN</span>
+                    <span class="skill-tag">XGBoost</span>
+                    <span class="skill-tag">SHAP</span>
+                    <span class="skill-tag">Cross-Attention</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Multi-omics</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag--featured">Metagenomics</span>
+                    <span class="skill-tag skill-tag--featured">Amplicon Seq</span>
+                    <span class="skill-tag">Metabolomics</span>
+                    <span class="skill-tag">RNA-seq</span>
+                    <span class="skill-tag">Shotgun</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Statistics &amp; Ecology</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag--featured">Multivariate</span>
+                    <span class="skill-tag skill-tag--featured">SEM</span>
+                    <span class="skill-tag">Network Analysis</span>
+                    <span class="skill-tag">Null Models</span>
+                    <span class="skill-tag">PERMANOVA</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Infrastructure</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Linux/HPC</span>
+                    <span class="skill-tag">Conda</span>
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Snakemake</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Publications -->
-<section class="section" id="publications">
+<section class="section section--alt" id="publications">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Publications</div>
             <h2 class="section-title">Publication Record</h2>
-            <p class="section-subtitle">18 peer-reviewed papers (4 first-author), 2 under review, 2 in progress. <strong>Jeong, M.</strong> highlighted.</p>
+            <p class="section-subtitle">20+ peer-reviewed papers (4 first-author), 2 under review, 4 in press. <strong>Jeong, M.</strong> highlighted.</p>
         </div>
         <div class="reveal">
             <div class="pub-tabs" id="pubTabs">
-                <button class="pub-tab active" data-tab="all">All <span class="count">22</span></button>
+                <button class="pub-tab active" data-tab="all">All <span class="count">24</span></button>
                 <button class="pub-tab" data-tab="first">First Author <span class="count">4+4</span></button>
-                <button class="pub-tab" data-tab="coauthor">Co-Author <span class="count">14</span></button>
+                <button class="pub-tab" data-tab="coauthor">Co-Author <span class="count">16</span></button>
                 <button class="pub-tab" data-tab="review">Under Review <span class="count">4</span></button>
             </div>
 
@@ -640,9 +867,9 @@
                         <div class="pub-title">Seasonal community turnover, not direct environmental selection, shapes antimicrobial resistance gene dynamics in a weir-regulated river</div>
                         <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
                         <div class="pub-meta">
-                            <span class="pub-journal">Targeting Water Research</span>
+                            <span class="pub-journal">Water Research</span>
                             <span class="pub-badge pub-badge--if">IF 13.0</span>
-                            <span class="pub-badge pub-badge--status">In Progress</span>
+                            <span class="pub-badge pub-badge--status">In Press</span>
                             <span class="pub-badge pub-badge--first">1st Author</span>
                         </div>
                     </div>
@@ -650,10 +877,25 @@
                         <div class="pub-title">Cucumber gnotobiotic multi-omics: host genotype effects on microbiome assembly and biosynthetic potential</div>
                         <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
                         <div class="pub-meta">
-                            <span class="pub-journal">Targeting ISME Journal</span>
+                            <span class="pub-journal">ISME Journal</span>
                             <span class="pub-badge pub-badge--if">IF 11.0</span>
-                            <span class="pub-badge pub-badge--status">In Progress</span>
+                            <span class="pub-badge pub-badge--status">In Press</span>
                             <span class="pub-badge pub-badge--first">1st Author</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Soil microbiome-based machine learning classification of ginseng replant disease</div>
+                        <div class="pub-authors">Kwon, S.-M., <strong>Jeong, M.</strong>, Kim, R.-H. &amp; Shin, J.H. (2026)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Environmental Microbiome</span>
+                            <span class="pub-badge pub-badge--status">In Press</span>
+                        </div>
+                    </div>
+                    <div class="pub-item" data-type="coauthor">
+                        <div class="pub-title">Spatial heterogeneity in the relationship between cyanobacterial cell counts and microcystin concentrations in the Nakdong River</div>
+                        <div class="pub-authors">Yeo, S., <strong>Jeong, M.</strong>, Ryu, B. &amp; Lee, S. (2026)</div>
+                        <div class="pub-meta">
+                            <span class="pub-badge pub-badge--status">In Press</span>
                         </div>
                     </div>
                     <div class="pub-item" data-type="coauthor">
@@ -764,225 +1006,14 @@
                         <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span></div>
                     </div>
                 </div>
+                <button class="pub-show-more" id="pubShowMore">
+                    Show All Publications <span class="arrow">&#9660;</span>
+                </button>
             </div>
 
             <div class="pub-panel" id="panel-first"></div>
             <div class="pub-panel" id="panel-coauthor"></div>
             <div class="pub-panel" id="panel-review"></div>
-        </div>
-    </div>
-</section>
-
-<!-- Education -->
-<section class="section section--alt" id="education">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Education &amp; Experience</div>
-            <h2 class="section-title">Academic Background</h2>
-        </div>
-        <div class="timeline reveal">
-            <div class="timeline-item">
-                <div class="timeline-date">May 2026 &ndash; Present</div>
-                <h3 class="timeline-title">Research Professor</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-                <div class="timeline-desc">NGS Core Research Support Center. Sejong Science Fellowship (NRF).</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Sep 2025 &ndash; Apr 2026</div>
-                <h3 class="timeline-title">Postdoctoral Researcher</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-                <div class="timeline-desc">NGS Core Research Support Center. Independent research on host-microbe interactions.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
-                <h3 class="timeline-title">Ph.D. in Applied Biosciences</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-                <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">M.S. in Applied Biosciences</div>
-                <h3 class="timeline-title">Master of Science</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">B.S. in Applied Biosciences</div>
-                <h3 class="timeline-title">Bachelor of Science</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Awards & Conferences -->
-<section class="section" id="awards">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Awards &amp; Conferences</div>
-            <h2 class="section-title">Recognition &amp; Presentations</h2>
-        </div>
-        <div class="two-col reveal">
-            <div>
-                <div class="col-title">Awards</div>
-                <div class="list-items">
-                    <div class="list-item">
-                        <div class="list-item-title">Grand Prize for Oral Presentation</div>
-                        <div class="list-item-detail">KMB International Conference, Jun 2024</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-title">Encouragement Award in Oral Presentation</div>
-                        <div class="list-item-detail">BK21 FOUR Research Symposium, Jan 2024</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-title">Outstanding Poster Presentation Award</div>
-                        <div class="list-item-detail">KSABC International Conference, Jun 2022</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-title">Outstanding Oral Presentation Award</div>
-                        <div class="list-item-detail">KSABC/KMB International Symposium, Aug 2021</div>
-                    </div>
-                </div>
-            </div>
-            <div id="conferences">
-                <div class="col-title">Conferences</div>
-                <div class="list-items">
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> ASM Microbe 2025, Los Angeles, USA</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KMB International Conference 2025</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> MSK 2024</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Conference 2024 <span class="conf-award-badge">Grand Prize</span></div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2024</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> BK21 FOUR Research Symposium, Jan 2024 <span class="conf-award-badge">Award</span></div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ASM Microbe 2023, Houston, USA</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2022 <span class="conf-award-badge">Award</span></div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSM Ecology 2022</div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">Award</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Grants -->
-        <div class="section-header reveal" style="margin-top:3rem;">
-            <div class="section-label">Grants &amp; Fellowships</div>
-            <h2 class="section-title" style="font-size:1.5rem;">Research Funding</h2>
-        </div>
-        <div class="grants-grid reveal">
-            <div class="list-item">
-                <div class="list-item-title">Sejong Science Fellowship</div>
-                <div class="list-item-detail">National Research Foundation of Korea (2026&ndash;2031)</div>
-                <div class="list-item-amount">~$450,000 (5 years)</div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-title">Doctoral Student Research Fellowship</div>
-                <div class="list-item-detail">NRF / Ministry of Education (2023&ndash;2025)</div>
-                <div class="list-item-amount">$26,601</div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-title">Graduate Teaching Assistantship</div>
-                <div class="list-item-detail">BK21 FOUR (2024&ndash;2025)</div>
-                <div class="list-item-amount">$35,529</div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-title">BK21 Government Scholarship</div>
-                <div class="list-item-detail">2022&ndash;2023</div>
-                <div class="list-item-amount">$17,534</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills -->
-<section class="section section--alt" id="skills">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Technical Expertise</div>
-            <h2 class="section-title">Skills &amp; Tools</h2>
-        </div>
-        <div class="skills-grid reveal">
-            <div class="skill-group">
-                <h3 class="skill-group-title">Bioinformatics</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">QIIME2</span>
-                    <span class="skill-tag skill-tag--featured">MEGAHIT</span>
-                    <span class="skill-tag">metaSPAdes</span>
-                    <span class="skill-tag">MAG Binning</span>
-                    <span class="skill-tag skill-tag--featured">eggNOG</span>
-                    <span class="skill-tag">antiSMASH</span>
-                    <span class="skill-tag">RGI/CARD</span>
-                    <span class="skill-tag">GTDB-Tk</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3 class="skill-group-title">Programming</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">Python</span>
-                    <span class="skill-tag skill-tag--featured">R</span>
-                    <span class="skill-tag skill-tag--featured">Bash</span>
-                    <span class="skill-tag">pandas</span>
-                    <span class="skill-tag">tidyverse</span>
-                    <span class="skill-tag">DESeq2</span>
-                    <span class="skill-tag">scikit-learn</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3 class="skill-group-title">AI / Machine Learning</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">PyTorch</span>
-                    <span class="skill-tag skill-tag--featured">Deep Learning</span>
-                    <span class="skill-tag">GNN</span>
-                    <span class="skill-tag">XGBoost</span>
-                    <span class="skill-tag">SHAP</span>
-                    <span class="skill-tag">Cross-Attention</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3 class="skill-group-title">Multi-omics</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">Metagenomics</span>
-                    <span class="skill-tag skill-tag--featured">Amplicon Seq</span>
-                    <span class="skill-tag">Metabolomics</span>
-                    <span class="skill-tag">RNA-seq</span>
-                    <span class="skill-tag">Shotgun</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3 class="skill-group-title">Statistics &amp; Ecology</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">Multivariate</span>
-                    <span class="skill-tag skill-tag--featured">SEM</span>
-                    <span class="skill-tag">Network Analysis</span>
-                    <span class="skill-tag">Null Models</span>
-                    <span class="skill-tag">PERMANOVA</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3 class="skill-group-title">Infrastructure</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Linux/HPC</span>
-                    <span class="skill-tag">Conda</span>
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Snakemake</span>
-                    <span class="skill-tag">Docker</span>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -1211,6 +1242,21 @@
             document.getElementById('panel-' + tab.getAttribute('data-tab')).classList.add('active');
         });
     });
+
+    // Show More publications toggle
+    var showMoreBtn = document.getElementById('pubShowMore');
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', function() {
+            var list = document.querySelector('#panel-all .pub-list-items');
+            list.classList.toggle('expanded');
+            this.classList.toggle('expanded');
+            if (list.classList.contains('expanded')) {
+                this.innerHTML = 'Show Less <span class="arrow">&#9650;</span>';
+            } else {
+                this.innerHTML = 'Show All Publications <span class="arrow">&#9660;</span>';
+            }
+        });
+    }
 
     // Counter Animation
     document.querySelectorAll('.stat-number').forEach(function(stat) {
