@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +61,7 @@
         --radius-lg: 16px;
         --transition: 0.2s ease;
     }
-    [data-theme="light"] {
+    :root {
         --bg-primary: #ffffff;
         --bg-secondary: #f9fafb;
         --bg-card: #ffffff;
@@ -82,28 +82,6 @@
         --stats-bg: #f9fafb;
         --stats-text: #111827;
         --stats-border: #e5e7eb;
-    }
-    [data-theme="dark"] {
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --bg-card: #1e293b;
-        --bg-nav: rgba(15,23,42,0.92);
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
-        --text-tertiary: #64748b;
-        --accent: #60a5fa;
-        --accent-hover: #93bbfd;
-        --accent-light: rgba(96,165,250,0.12);
-        --accent-green: #34d399;
-        --accent-green-light: rgba(52,211,153,0.12);
-        --border-color: #334155;
-        --tag-bg: rgba(96,165,250,0.12);
-        --tag-text: #93c5fd;
-        --tag-bg-alt: rgba(52,211,153,0.12);
-        --tag-text-alt: #6ee7b7;
-        --stats-bg: #1e293b;
-        --stats-text: #f1f5f9;
-        --stats-border: #334155;
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -142,13 +120,6 @@
     }
     .gnb-menu > li > a:hover, .gnb-menu > li > a.active { color:var(--accent); }
     .gnb-right { display:flex; align-items:center; gap:0.5rem; }
-    .theme-toggle {
-        width:32px; height:32px; border:1px solid var(--border-color);
-        border-radius:var(--radius-sm); background:transparent;
-        color:var(--text-secondary); cursor:pointer; display:flex;
-        align-items:center; justify-content:center; font-size:0.9rem;
-    }
-    .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
     .lang-toggle {
         padding:0.3rem 0.75rem; border:1px solid var(--border-color);
         border-radius:100px; background:transparent;
@@ -238,10 +209,6 @@
         background:linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
         padding:1rem 1.5rem; text-align:center;
     }
-    [data-theme="dark"] .open-banner {
-        background:linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
-        border-top:1px solid var(--accent); border-bottom:1px solid var(--accent);
-    }
     .open-banner-inner {
         max-width:var(--max-width); margin:0 auto;
         display:flex; align-items:center; justify-content:center; gap:0.75rem; flex-wrap:wrap;
@@ -252,13 +219,10 @@
         background:rgba(255,255,255,0.2); font-size:0.7rem; font-weight:700;
         color:#fff; text-transform:uppercase; letter-spacing:0.08em;
     }
-    [data-theme="dark"] .open-banner-badge { background:rgba(96,165,250,0.25); color:var(--accent); }
     .open-banner-text {
         font-size:0.88rem; color:rgba(255,255,255,0.95); font-weight:500; line-height:1.5;
     }
-    [data-theme="dark"] .open-banner-text { color:var(--text-secondary); }
     .open-banner-text a { color:#fff; text-decoration:underline; text-underline-offset:2px; }
-    [data-theme="dark"] .open-banner-text a { color:var(--accent); }
 
     /* Stats */
     .stats-bar {
@@ -416,7 +380,6 @@
     .pub-badge--if { background:var(--tag-bg-alt); color:var(--tag-text-alt); }
     .pub-badge--status { background:rgba(251,191,36,0.12); color:#b45309; }
     .pub-badge--first { background:var(--accent-light); color:var(--accent); }
-    [data-theme="dark"] .pub-badge--status { color:#fbbf24; }
 
     /* Timeline */
     .timeline { max-width:700px; }
@@ -458,7 +421,6 @@
         font-size:0.65rem; font-weight:700; padding:0.08rem 0.35rem;
         border-radius:100px; background:rgba(251,191,36,0.12); color:#b45309; margin-left:0.25rem;
     }
-    [data-theme="dark"] .conf-award-badge { color:#fbbf24; }
 
     /* Skills */
     .skills-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.25rem; }
@@ -513,10 +475,14 @@
     .ref-email { font-size:0.82rem; }
 
     /* Grants */
-    .grants-grid {
-        display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-        gap:0.75rem; margin-top:2rem;
+    .grant-line {
+        display:flex; align-items:baseline; gap:0.5rem; padding:0.5rem 0;
+        border-bottom:1px solid var(--border-color); font-size:0.88rem;
     }
+    .grant-line:last-child { border-bottom:none; }
+    .grant-name { font-weight:600; }
+    .grant-meta { color:var(--text-secondary); font-size:0.8rem; }
+    .grant-amount { margin-left:auto; font-weight:600; color:var(--accent-green); white-space:nowrap; }
 
     /* Footer */
     .footer {
@@ -600,9 +566,6 @@
         </ul>
         <div class="gnb-right">
             <a href="/ko/" class="lang-toggle">KR</a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <span id="themeIcon">&#9790;</span>
-            </button>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -645,8 +608,8 @@
                     <div class="hero-hl-sub">Agricultural Biotechnology</div>
                 </div>
                 <div class="hero-hl">
-                    <div class="hero-hl-title">6 Awards</div>
-                    <div class="hero-hl-sub">Best Oral &amp; Poster Presentations</div>
+                    <div class="hero-hl-title">KMB 2024 Grand Prize</div>
+                    <div class="hero-hl-sub">Best Oral Presentation</div>
                 </div>
             </div>
         </div>
@@ -710,8 +673,13 @@
                 </div>
                 <div class="pipe-arrow">&rarr;</div>
                 <div class="pipe-step">
-                    <div class="pipe-step-title">Stats &amp; Deep Learning</div>
-                    <div class="pipe-step-desc">R, Python, PyTorch</div>
+                    <div class="pipe-step-title">Statistics</div>
+                    <div class="pipe-step-desc">R, DESeq2, varpart</div>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-step-title">AI &amp; Deep Learning</div>
+                    <div class="pipe-step-desc">PyTorch, GNN, YOLO</div>
                 </div>
             </div>
         </div>
@@ -890,27 +858,11 @@
             <div class="section-label">Grants &amp; Fellowships</div>
             <h2 class="section-title" style="font-size:1.5rem;">Research Funding</h2>
         </div>
-        <div class="grants-grid reveal">
-            <div class="list-item">
-                <div class="list-item-title">Sejong Science Fellowship</div>
-                <div class="list-item-detail">National Research Foundation of Korea (2026&ndash;2031)</div>
-                <div class="list-item-amount">~$450,000 (5 years)</div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-title">Doctoral Student Research Fellowship</div>
-                <div class="list-item-detail">NRF / Ministry of Education (2023&ndash;2025)</div>
-                <div class="list-item-amount">$26,601</div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-title">Graduate Teaching Assistantship</div>
-                <div class="list-item-detail">BK21 FOUR (2024&ndash;2025)</div>
-                <div class="list-item-amount">$35,529</div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-title">BK21 Government Scholarship</div>
-                <div class="list-item-detail">2022&ndash;2023</div>
-                <div class="list-item-amount">$17,534</div>
-            </div>
+        <div class="grants-list reveal" style="margin-top:1.5rem;">
+            <div class="grant-line"><span class="grant-name">Sejong Science Fellowship</span><span class="grant-meta">NRF (2026&ndash;2031)</span><span class="grant-amount">~$450,000</span></div>
+            <div class="grant-line"><span class="grant-name">Doctoral Research Fellowship</span><span class="grant-meta">NRF / MOE (2023&ndash;2025)</span><span class="grant-amount">$26,601</span></div>
+            <div class="grant-line"><span class="grant-name">Graduate Teaching Assistantship</span><span class="grant-meta">BK21 FOUR (2024&ndash;2025)</span><span class="grant-amount">$35,529</span></div>
+            <div class="grant-line"><span class="grant-name">BK21 Government Scholarship</span><span class="grant-meta">2022&ndash;2023</span><span class="grant-amount">$17,534</span></div>
         </div>
     </div>
 </section>
@@ -1350,22 +1302,6 @@
 <script>
 (function() {
     'use strict';
-
-    var html = document.documentElement;
-    var themeToggle = document.getElementById('themeToggle');
-    var themeIcon = document.getElementById('themeIcon');
-
-    function setTheme(theme) {
-        html.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        themeIcon.textContent = theme === 'dark' ? '\u2600' : '\u263E';
-    }
-    var stored = localStorage.getItem('theme');
-    if (stored) { setTheme(stored); }
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { setTheme('dark'); }
-    themeToggle.addEventListener('click', function() {
-        setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    });
 
     var hamburger = document.getElementById('hamburger');
     var gnbMenu = document.getElementById('gnbMenu');
