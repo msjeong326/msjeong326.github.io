@@ -199,6 +199,15 @@
     }
     .hero-contact a { color:var(--text-secondary); }
     .hero-contact a:hover { color:var(--accent); }
+    .hero-profiles {
+        display:flex; gap:1rem; margin-top:0.6rem; font-size:0.82rem;
+    }
+    .hero-profiles a {
+        color:var(--text-tertiary); font-weight:600;
+        text-decoration:none; border-bottom:1px dashed var(--border-color);
+        padding-bottom:1px; transition:all var(--transition);
+    }
+    .hero-profiles a:hover { color:var(--accent); border-bottom-color:var(--accent); }
     .email-reveal {
         display:inline-flex; align-items:center; gap:0.35rem;
         padding:0.2rem 0.6rem; border:1px dashed var(--border-color);
@@ -578,6 +587,11 @@
             <div class="hero-contact">
                 <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Click to show email</button>
                 <span>Daegu, Korea</span>
+            </div>
+            <div class="hero-profiles">
+                <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://orcid.org/0000-0002-5647-0402" target="_blank" rel="noopener">ORCID</a>
+                <a href="https://github.com/msjeong326" target="_blank" rel="noopener">GitHub</a>
             </div>
             <div class="hero-highlights">
                 <div class="hero-hl">
