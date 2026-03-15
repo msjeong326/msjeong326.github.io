@@ -200,15 +200,18 @@
     .hero-contact a { color:var(--text-secondary); }
     .hero-contact a:hover { color:var(--accent); }
     .hero-highlights {
-        margin-top:1.25rem; display:flex; flex-direction:column; gap:0.4rem;
+        margin-top:1.25rem; display:grid; grid-template-columns:1fr 1fr; gap:0.6rem;
     }
     .hero-hl {
-        display:flex; align-items:center; gap:0.6rem;
-        font-size:0.88rem; color:var(--text-secondary); line-height:1.5;
+        padding:0.65rem 0.85rem;
+        background:var(--bg-secondary); border:1px solid var(--border-color);
+        border-radius:var(--radius-sm);
     }
-    .hero-hl-dot {
-        width:5px; height:5px; border-radius:50%; background:var(--accent);
-        flex-shrink:0;
+    .hero-hl-title {
+        font-size:0.82rem; font-weight:700; color:var(--text-primary); line-height:1.35;
+    }
+    .hero-hl-sub {
+        font-size:0.72rem; color:var(--text-tertiary); margin-top:0.1rem;
     }
 
     /* Stats */
@@ -481,6 +484,7 @@
         .hero-inner { flex-direction:column; text-align:center; }
         .hero-photo { width:200px; height:200px; }
         .hero-contact { justify-content:center; }
+        .hero-highlights { grid-template-columns:1fr 1fr; }
         .card-grid { grid-template-columns:1fr; }
         .two-col { grid-template-columns:1fr; }
         .skills-grid { grid-template-columns:1fr; }
@@ -539,10 +543,22 @@
                 <span>Daegu, Korea</span>
             </div>
             <div class="hero-highlights">
-                <div class="hero-hl"><span class="hero-hl-dot"></span>Co-authored <i>Nature Communications</i> (IF 16.6)</div>
-                <div class="hero-hl"><span class="hero-hl-dot"></span><i>npj Biofilms and Microbiomes</i> (IF 9.2)</div>
-                <div class="hero-hl"><span class="hero-hl-dot"></span>4 Registered Patents in Agricultural Biotechnology</div>
-                <div class="hero-hl"><span class="hero-hl-dot"></span>6 Academic Awards incl. Best Oral &amp; Poster Presentations</div>
+                <div class="hero-hl">
+                    <div class="hero-hl-title"><i>Nature Communications</i></div>
+                    <div class="hero-hl-sub">IF 16.6 &middot; Co-authorship</div>
+                </div>
+                <div class="hero-hl">
+                    <div class="hero-hl-title"><i>npj Biofilms and Microbiomes</i></div>
+                    <div class="hero-hl-sub">IF 9.2 &middot; Co-authorship</div>
+                </div>
+                <div class="hero-hl">
+                    <div class="hero-hl-title">4 Patents</div>
+                    <div class="hero-hl-sub">Agricultural Biotechnology</div>
+                </div>
+                <div class="hero-hl">
+                    <div class="hero-hl-title">6 Awards</div>
+                    <div class="hero-hl-sub">Best Oral &amp; Poster Presentations</div>
+                </div>
             </div>
         </div>
     </div>
