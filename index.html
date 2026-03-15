@@ -214,6 +214,33 @@
         font-size:0.72rem; color:var(--text-tertiary); margin-top:0.1rem;
     }
 
+    /* Open-to Banner */
+    .open-banner {
+        background:linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+        padding:1rem 1.5rem; text-align:center;
+    }
+    [data-theme="dark"] .open-banner {
+        background:linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+        border-top:1px solid var(--accent); border-bottom:1px solid var(--accent);
+    }
+    .open-banner-inner {
+        max-width:var(--max-width); margin:0 auto;
+        display:flex; align-items:center; justify-content:center; gap:0.75rem; flex-wrap:wrap;
+    }
+    .open-banner-badge {
+        display:inline-flex; align-items:center; gap:0.4rem;
+        padding:0.25rem 0.7rem; border-radius:100px;
+        background:rgba(255,255,255,0.2); font-size:0.7rem; font-weight:700;
+        color:#fff; text-transform:uppercase; letter-spacing:0.08em;
+    }
+    [data-theme="dark"] .open-banner-badge { background:rgba(96,165,250,0.25); color:var(--accent); }
+    .open-banner-text {
+        font-size:0.88rem; color:rgba(255,255,255,0.95); font-weight:500; line-height:1.5;
+    }
+    [data-theme="dark"] .open-banner-text { color:var(--text-secondary); }
+    .open-banner-text a { color:#fff; text-decoration:underline; text-underline-offset:2px; }
+    [data-theme="dark"] .open-banner-text a { color:var(--accent); }
+
     /* Stats */
     .stats-bar {
         border-top:1px solid var(--border-color);
@@ -579,6 +606,14 @@
             <div class="stat-number" data-count="6">6</div>
             <div class="stat-label">Awards</div>
         </div>
+    </div>
+</div>
+
+<!-- Open-to Banner -->
+<div class="open-banner">
+    <div class="open-banner-inner">
+        <span class="open-banner-badge">Open to Opportunities</span>
+        <span class="open-banner-text">Funded by a portable NRF fellowship &mdash; available for visiting researcher positions, international collaboration, and joint appointments. <a href="mailto:msjeong326@gmail.com">Get in touch</a></span>
     </div>
 </div>
 
