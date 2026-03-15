@@ -113,6 +113,7 @@
         background: var(--bg-primary);
         color: var(--text-primary);
         line-height: 1.7;
+        word-break: keep-all;
         -webkit-font-smoothing: antialiased;
     }
     ::selection { background:var(--accent); color:#fff; }
@@ -198,6 +199,17 @@
     }
     .hero-contact a { color:var(--text-secondary); }
     .hero-contact a:hover { color:var(--accent); }
+    .hero-highlights {
+        margin-top:1.25rem; display:flex; flex-direction:column; gap:0.4rem;
+    }
+    .hero-hl {
+        display:flex; align-items:center; gap:0.6rem;
+        font-size:0.88rem; color:var(--text-secondary); line-height:1.5;
+    }
+    .hero-hl-dot {
+        width:5px; height:5px; border-radius:50%; background:var(--accent);
+        flex-shrink:0;
+    }
 
     /* Stats */
     .stats-bar {
@@ -243,6 +255,27 @@
         font-size:0.7rem; padding:0.2rem 0.55rem; border-radius:100px;
         background:var(--tag-bg); color:var(--tag-text); font-weight:500;
     }
+
+    /* Media Gallery */
+    .media-grid {
+        display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.25rem;
+    }
+    .media-card {
+        background:var(--bg-card); border:1px solid var(--border-color);
+        border-radius:var(--radius-md); overflow:hidden;
+        text-decoration:none; color:inherit; transition:all var(--transition);
+    }
+    .media-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+    .media-img-wrap { width:100%; aspect-ratio:16/9; overflow:hidden; background:var(--bg-secondary); }
+    .media-img { width:100%; height:100%; object-fit:cover; }
+    .media-placeholder {
+        width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+        color:var(--text-tertiary); font-size:0.85rem;
+    }
+    .media-body { padding:1rem 1.25rem; }
+    .media-date { font-size:0.72rem; font-weight:600; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.3rem; }
+    .media-title { font-size:0.92rem; font-weight:700; line-height:1.4; margin-bottom:0.3rem; color:var(--text-primary); }
+    .media-source { font-size:0.78rem; color:var(--text-tertiary); }
 
     /* Publications */
     .pub-tabs {
@@ -469,6 +502,7 @@
         <a href="#" class="gnb-logo">Minsoo Jeong</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#awards">Awards</a></li>
@@ -504,6 +538,12 @@
                 <a href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a>
                 <span>Daegu, Korea</span>
             </div>
+            <div class="hero-highlights">
+                <div class="hero-hl"><span class="hero-hl-dot"></span>Co-authored <i>Nature Communications</i> (IF 16.6)</div>
+                <div class="hero-hl"><span class="hero-hl-dot"></span><i>npj Biofilms and Microbiomes</i> (IF 9.2)</div>
+                <div class="hero-hl"><span class="hero-hl-dot"></span>4 Registered Patents in Agricultural Biotechnology</div>
+                <div class="hero-hl"><span class="hero-hl-dot"></span>6 Academic Awards incl. Best Oral &amp; Poster Presentations</div>
+            </div>
         </div>
     </div>
 </section>
@@ -511,14 +551,6 @@
 <!-- Stats Bar -->
 <div class="stats-bar">
     <div class="stats-bar-inner">
-        <div class="stat-item">
-            <div class="stat-number" data-count="18" data-suffix="+">18+</div>
-            <div class="stat-label">Publications</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number" data-count="4">4</div>
-            <div class="stat-label">First-Author</div>
-        </div>
         <div class="stat-item">
             <div class="stat-number" data-count="4">4</div>
             <div class="stat-label">Patents</div>
@@ -552,8 +584,30 @@
     </div>
 </section>
 
+<!-- News & Media -->
+<section class="section section--alt" id="media">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Media</div>
+            <h2 class="section-title">News &amp; Media</h2>
+        </div>
+        <div class="media-grid reveal">
+            <a class="media-card" href="#" target="_blank">
+                <div class="media-img-wrap">
+                    <img src="" alt="News placeholder" class="media-img" onerror="this.parentElement.innerHTML='<div class=\'media-placeholder\'>Image</div>'">
+                </div>
+                <div class="media-body">
+                    <div class="media-date">2026</div>
+                    <div class="media-title">Add your news article or media coverage here</div>
+                    <div class="media-source">Source Name</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- Research Interests -->
-<section class="section section--alt" id="research">
+<section class="section" id="research">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Research</div>
@@ -614,7 +668,7 @@
 </section>
 
 <!-- Education -->
-<section class="section" id="education">
+<section class="section section--alt" id="education">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Education &amp; Experience</div>
@@ -654,7 +708,7 @@
 </section>
 
 <!-- Awards & Conferences -->
-<section class="section section--alt" id="awards">
+<section class="section" id="awards">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Awards &amp; Conferences</div>
@@ -750,7 +804,7 @@
 </section>
 
 <!-- Skills -->
-<section class="section" id="skills">
+<section class="section section--alt" id="skills">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Technical Expertise</div>
@@ -828,7 +882,7 @@
 </section>
 
 <!-- Publications -->
-<section class="section section--alt" id="publications">
+<section class="section" id="publications">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Publications</div>
@@ -1019,7 +1073,7 @@
 </section>
 
 <!-- Patents & Teaching -->
-<section class="section" id="patents">
+<section class="section section--alt" id="patents">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Patents &amp; Teaching</div>
@@ -1069,7 +1123,7 @@
 </section>
 
 <!-- Contact -->
-<section class="section section--alt" id="contact">
+<section class="section" id="contact">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Contact</div>

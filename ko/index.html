@@ -115,6 +115,7 @@
         background: var(--bg-primary);
         color: var(--text-primary);
         line-height: 1.7;
+        word-break: keep-all;
         -webkit-font-smoothing: antialiased;
     }
     ::selection { background:var(--accent); color:#fff; }
@@ -198,6 +199,17 @@
     }
     .hero-contact a { color:var(--text-secondary); }
     .hero-contact a:hover { color:var(--accent); }
+    .hero-highlights {
+        margin-top:1.25rem; display:flex; flex-direction:column; gap:0.4rem;
+    }
+    .hero-hl {
+        display:flex; align-items:center; gap:0.6rem;
+        font-size:0.88rem; color:var(--text-secondary); line-height:1.5;
+    }
+    .hero-hl-dot {
+        width:5px; height:5px; border-radius:50%; background:var(--accent);
+        flex-shrink:0;
+    }
 
     .stats-bar {
         border-top:1px solid var(--border-color);
@@ -240,6 +252,27 @@
         font-size:0.7rem; padding:0.2rem 0.55rem; border-radius:100px;
         background:var(--tag-bg); color:var(--tag-text); font-weight:500;
     }
+
+    /* Media Gallery */
+    .media-grid {
+        display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.25rem;
+    }
+    .media-card {
+        background:var(--bg-card); border:1px solid var(--border-color);
+        border-radius:var(--radius-md); overflow:hidden;
+        text-decoration:none; color:inherit; transition:all var(--transition);
+    }
+    .media-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+    .media-img-wrap { width:100%; aspect-ratio:16/9; overflow:hidden; background:var(--bg-secondary); }
+    .media-img { width:100%; height:100%; object-fit:cover; }
+    .media-placeholder {
+        width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+        color:var(--text-tertiary); font-size:0.85rem;
+    }
+    .media-body { padding:1rem 1.25rem; }
+    .media-date { font-size:0.72rem; font-weight:600; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.3rem; }
+    .media-title { font-size:0.92rem; font-weight:700; line-height:1.4; margin-bottom:0.3rem; color:var(--text-primary); }
+    .media-source { font-size:0.78rem; color:var(--text-tertiary); }
 
     .pub-tabs {
         display:flex; gap:0; border-bottom:1px solid var(--border-color);
@@ -453,6 +486,7 @@
         <a href="#" class="gnb-logo">정민수 박사</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">소개</a></li>
+            <li><a href="#media">미디어</a></li>
             <li><a href="#research">연구분야</a></li>
             <li><a href="#education">학력</a></li>
             <li><a href="#awards">수상</a></li>
@@ -488,6 +522,12 @@
                 <a href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a>
                 <span>대구광역시</span>
             </div>
+            <div class="hero-highlights">
+                <div class="hero-hl"><span class="hero-hl-dot"></span><i>Nature Communications</i> (IF 16.6) 공저</div>
+                <div class="hero-hl"><span class="hero-hl-dot"></span><i>npj Biofilms and Microbiomes</i> (IF 9.2) 공저</div>
+                <div class="hero-hl"><span class="hero-hl-dot"></span>농업생명공학 분야 등록특허 4건</div>
+                <div class="hero-hl"><span class="hero-hl-dot"></span>우수 구두/포스터 발표상 등 학술상 6회 수상</div>
+            </div>
         </div>
     </div>
 </section>
@@ -495,14 +535,6 @@
 <!-- Stats Bar -->
 <div class="stats-bar">
     <div class="stats-bar-inner">
-        <div class="stat-item">
-            <div class="stat-number" data-count="18" data-suffix="+">18+</div>
-            <div class="stat-label">논문</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number" data-count="4">4</div>
-            <div class="stat-label">제1저자</div>
-        </div>
         <div class="stat-item">
             <div class="stat-number" data-count="4">4</div>
             <div class="stat-label">특허</div>
@@ -536,8 +568,30 @@
     </div>
 </section>
 
+<!-- 뉴스 & 미디어 -->
+<section class="section section--alt" id="media">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">미디어</div>
+            <h2 class="section-title">뉴스 &amp; 미디어</h2>
+        </div>
+        <div class="media-grid reveal">
+            <a class="media-card" href="#" target="_blank">
+                <div class="media-img-wrap">
+                    <img src="" alt="뉴스" class="media-img" onerror="this.parentElement.innerHTML='<div class=\'media-placeholder\'>이미지</div>'">
+                </div>
+                <div class="media-body">
+                    <div class="media-date">2026</div>
+                    <div class="media-title">뉴스 기사 또는 언론 보도를 여기에 추가하세요</div>
+                    <div class="media-source">출처</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- Research Interests -->
-<section class="section section--alt" id="research">
+<section class="section" id="research">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">연구 분야</div>
@@ -598,7 +652,7 @@
 </section>
 
 <!-- Education -->
-<section class="section" id="education">
+<section class="section section--alt" id="education">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">학력 및 경력</div>
@@ -638,7 +692,7 @@
 </section>
 
 <!-- Awards & Conferences -->
-<section class="section section--alt" id="awards">
+<section class="section" id="awards">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">수상 및 학회 발표</div>
@@ -734,7 +788,7 @@
 </section>
 
 <!-- Skills -->
-<section class="section" id="skills">
+<section class="section section--alt" id="skills">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">기술 역량</div>
@@ -812,7 +866,7 @@
 </section>
 
 <!-- Publications -->
-<section class="section section--alt" id="publications">
+<section class="section" id="publications">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">논문 목록</div>
@@ -1003,7 +1057,7 @@
 </section>
 
 <!-- Patents & Teaching -->
-<section class="section" id="patents">
+<section class="section section--alt" id="patents">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">특허 및 교육</div>
@@ -1053,7 +1107,7 @@
 </section>
 
 <!-- Contact -->
-<section class="section section--alt" id="contact">
+<section class="section" id="contact">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">연락처</div>
