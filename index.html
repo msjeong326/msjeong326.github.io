@@ -199,6 +199,16 @@
     }
     .hero-contact a { color:var(--text-secondary); }
     .hero-contact a:hover { color:var(--accent); }
+    .email-reveal {
+        display:inline-flex; align-items:center; gap:0.35rem;
+        padding:0.2rem 0.6rem; border:1px dashed var(--border-color);
+        border-radius:var(--radius-sm); background:transparent;
+        color:var(--text-tertiary); font-size:inherit; font-family:var(--font-sans);
+        cursor:pointer; transition:all var(--transition);
+    }
+    .email-reveal:hover { border-color:var(--accent); color:var(--accent); }
+    .email-revealed { border-style:solid; color:var(--text-secondary); cursor:default; }
+    .email-revealed:hover { color:var(--text-secondary); border-color:var(--border-color); }
     .hero-highlights {
         margin-top:1.25rem; display:grid; grid-template-columns:1fr 1fr; gap:0.6rem;
     }
@@ -566,7 +576,7 @@
                 <span class="hero-fellowship-amount">~$450K USD</span>
             </div>
             <div class="hero-contact">
-                <a href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a>
+                <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Click to show email</button>
                 <span>Daegu, Korea</span>
             </div>
             <div class="hero-highlights">
@@ -613,7 +623,7 @@
 <div class="open-banner">
     <div class="open-banner-inner">
         <span class="open-banner-badge">Independently Funded</span>
-        <span class="open-banner-text">I bring my own 5-year NRF research grant. Interested in collaboration, visiting appointments, or joint research? <a href="mailto:msjeong326@gmail.com">Let's talk</a></span>
+        <span class="open-banner-text">NRF Sejong Science Fellowship (5 years). Available for visiting positions, joint appointments, and international collaboration.</span>
     </div>
 </div>
 
@@ -1190,7 +1200,7 @@
                         </div>
                         <div>
                             <div class="contact-label">Email</div>
-                            <div class="contact-value"><a href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a></div>
+                            <div class="contact-value"><button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Click to show email</button></div>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -1223,17 +1233,17 @@
                     <div class="ref-card">
                         <div class="ref-name">Prof. Jae-Ho Shin</div>
                         <div class="ref-role">Supervisor -- Dept. of Applied Biosciences, KNU</div>
-                        <div class="ref-email"><a href="mailto:jhshin@knu.ac.kr">jhshin@knu.ac.kr</a></div>
+                        <div class="ref-email"><button class="email-reveal" data-u="jhshin" data-d="knu.ac.kr" onclick="revealEmail(this)">Click to show</button></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">Prof. Seungjun Lee</div>
                         <div class="ref-role">Dept. of Applied Biosciences, KNU</div>
-                        <div class="ref-email"><a href="mailto:paul5280@knu.ac.kr">paul5280@knu.ac.kr</a></div>
+                        <div class="ref-email"><button class="email-reveal" data-u="paul5280" data-d="knu.ac.kr" onclick="revealEmail(this)">Click to show</button></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">Prof. Jeong-Gu Lee</div>
                         <div class="ref-role">Dept. of Applied Biosciences, KNU</div>
-                        <div class="ref-email"><a href="mailto:jeonggu@knu.ac.kr">jeonggu@knu.ac.kr</a></div>
+                        <div class="ref-email"><button class="email-reveal" data-u="jeonggu" data-d="knu.ac.kr" onclick="revealEmail(this)">Click to show</button></div>
                     </div>
                 </div>
             </div>
@@ -1252,7 +1262,7 @@
             <a href="#about">About</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
-            <a href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a>
+            <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Click to show email</button>
         </div>
     </div>
     <div class="footer-bottom">
@@ -1382,6 +1392,18 @@
         cObs.observe(stat);
     });
 })();
+
+    // Email reveal (anti-scraping)
+    function revealEmail(btn) {
+        var u = btn.getAttribute('data-u');
+        var d = btn.getAttribute('data-d');
+        var email = u + '@' + d;
+        var link = document.createElement('a');
+        link.href = 'mailto:' + email;
+        link.textContent = email;
+        link.style.color = 'inherit';
+        btn.replaceWith(link);
+    }
 </script>
 </body>
 </html>
