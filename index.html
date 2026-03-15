@@ -305,10 +305,26 @@
         color:var(--text-primary); letter-spacing:-0.01em;
     }
     .about-card-desc { font-size:0.88rem; color:var(--text-secondary); line-height:1.65; }
-    .about-bottom {
-        text-align:center; font-size:0.9rem; font-weight:600;
-        color:var(--text-tertiary); letter-spacing:0.02em;
-        padding:1rem 0; border-top:1px solid var(--border-color);
+    .about-pipeline {
+        border-top:1px solid var(--border-color); padding-top:1.5rem;
+    }
+    .pipe-label {
+        font-size:0.7rem; font-weight:700; text-transform:uppercase;
+        letter-spacing:0.1em; color:var(--accent); margin-bottom:1rem;
+    }
+    .pipe-steps {
+        display:flex; align-items:flex-start; gap:0; justify-content:center;
+    }
+    .pipe-step { flex:1; text-align:center; }
+    .pipe-step-title {
+        font-size:0.82rem; font-weight:700; color:var(--text-primary); margin-bottom:0.25rem;
+    }
+    .pipe-step-desc {
+        font-size:0.72rem; color:var(--text-tertiary); line-height:1.4;
+    }
+    .pipe-arrow {
+        color:var(--accent); font-size:1.1rem; font-weight:700;
+        padding:0 0.4rem; padding-top:0.1rem; flex-shrink:0;
     }
 
     /* Cards */
@@ -675,8 +691,29 @@
                 <p class="about-card-desc">Real-time crop nutrient deficiency detection with YOLOv8, and microbial community dynamics prediction using GNN and Cross-Attention models.</p>
             </div>
         </div>
-        <div class="about-bottom reveal">
-            Experiment Design &rarr; Sequencing &rarr; Analysis &rarr; Modeling &mdash; I do it all myself
+        <div class="about-pipeline reveal">
+            <div class="pipe-label">Full-Stack Researcher</div>
+            <div class="pipe-steps">
+                <div class="pipe-step">
+                    <div class="pipe-step-title">Experiment Design</div>
+                    <div class="pipe-step-desc">Gnotobiotic, field trials</div>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-step-title">DNA &amp; Sequencing</div>
+                    <div class="pipe-step-desc">WMS, amplicon, ddPCR</div>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-step-title">Pipeline Building</div>
+                    <div class="pipe-step-desc">QIIME2, MAG, eggNOG</div>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-step-title">Stats &amp; Deep Learning</div>
+                    <div class="pipe-step-desc">R, Python, PyTorch</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
