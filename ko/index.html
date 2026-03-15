@@ -165,20 +165,13 @@
         font-size:0.75rem; font-weight:500; color:var(--text-secondary);
         margin-left:0.25rem;
     }
-    .hero-contact {
-        display:flex; gap:1.5rem; font-size:0.85rem; color:var(--text-secondary);
+    .hero-meta {
+        display:flex; flex-wrap:wrap; align-items:center; gap:0.4rem 1rem;
+        font-size:0.85rem; color:var(--text-secondary);
     }
-    .hero-contact a { color:var(--text-secondary); }
-    .hero-contact a:hover { color:var(--accent); }
-    .hero-profiles {
-        display:flex; gap:1rem; margin-top:0.6rem; font-size:0.82rem;
-    }
-    .hero-profiles a {
-        color:var(--text-tertiary); font-weight:600;
-        text-decoration:none; border-bottom:1px dashed var(--border-color);
-        padding-bottom:1px; transition:all var(--transition);
-    }
-    .hero-profiles a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+    .hero-meta a { color:var(--text-secondary); }
+    .hero-meta a:hover { color:var(--accent); }
+    .hero-meta-sep { color:var(--border-color); }
     .email-reveal {
         display:inline-flex; align-items:center; gap:0.35rem;
         padding:0.2rem 0.6rem; border:1px dashed var(--border-color);
@@ -517,7 +510,7 @@
         .hamburger { display:flex; }
         .hero-inner { flex-direction:column; text-align:center; }
         .hero-photo { width:200px; height:200px; }
-        .hero-contact { justify-content:center; }
+        .hero-meta { justify-content:center; }
         .hero-highlights { grid-template-columns:1fr 1fr; }
         .about-grid { grid-template-columns:1fr; }
         .card-grid { grid-template-columns:1fr; }
@@ -570,13 +563,15 @@
                 세종과학펠로우십 &middot; 5년 독립연구과제
                 <span class="hero-fellowship-amount">6억원</span>
             </div>
-            <div class="hero-contact">
+            <div class="hero-meta">
                 <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">이메일 보기</button>
+                <span class="hero-meta-sep">&middot;</span>
                 <span>대구광역시</span>
-            </div>
-            <div class="hero-profiles">
+                <span class="hero-meta-sep">&middot;</span>
                 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                <span class="hero-meta-sep">&middot;</span>
                 <a href="https://orcid.org/0000-0002-5647-0402" target="_blank" rel="noopener">ORCID</a>
+                <span class="hero-meta-sep">&middot;</span>
                 <a href="https://github.com/msjeong326" target="_blank" rel="noopener">GitHub</a>
             </div>
             <div class="hero-highlights">
