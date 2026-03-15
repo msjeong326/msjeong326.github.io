@@ -87,7 +87,7 @@
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:var(--nav-height); font-size:17px; }
+    html { scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-height) + 52px); font-size:17px; }
     body {
         font-family: var(--font-sans);
         background: var(--bg-primary);
@@ -208,6 +208,7 @@
     .open-banner {
         background:linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
         padding:1rem 1.5rem; text-align:center;
+        position:sticky; top:var(--nav-height); z-index:999;
     }
     .open-banner-inner {
         max-width:var(--max-width); margin:0 auto;
@@ -605,7 +606,7 @@
 <div class="open-banner">
     <div class="open-banner-inner">
         <span class="open-banner-badge">독립과제 보유</span>
-        <span class="open-banner-text">NRF 세종과학펠로우십 (5년) 수행 중. 파견 연구, 겸임, 국제 공동연구 가능.</span>
+        <span class="open-banner-text">NRF 세종과학펠로우십 (5년) 수행 중. 자체 연구비로 방문 연구 가능. 겸임, 공동연구 열려 있음.</span>
     </div>
 </div>
 

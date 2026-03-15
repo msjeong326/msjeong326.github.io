@@ -85,7 +85,7 @@
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:var(--nav-height); font-size:17px; }
+    html { scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-height) + 52px); font-size:17px; }
     body {
         font-family: var(--font-sans);
         background: var(--bg-primary);
@@ -208,6 +208,7 @@
     .open-banner {
         background:linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
         padding:1rem 1.5rem; text-align:center;
+        position:sticky; top:var(--nav-height); z-index:999;
     }
     .open-banner-inner {
         max-width:var(--max-width); margin:0 auto;
@@ -621,7 +622,7 @@
 <div class="open-banner">
     <div class="open-banner-inner">
         <span class="open-banner-badge">Independently Funded</span>
-        <span class="open-banner-text">NRF Sejong Science Fellowship (5 years). Available for visiting positions, joint appointments, and international collaboration.</span>
+        <span class="open-banner-text">NRF Sejong Science Fellowship (5 years). Available for visiting research with own funding, joint appointments, and collaboration.</span>
     </div>
 </div>
 
