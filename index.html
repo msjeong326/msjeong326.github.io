@@ -290,6 +290,27 @@
     }
     .section-header { margin-bottom:2.5rem; }
 
+    /* About Cards */
+    .about-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.25rem; margin-bottom:2rem; }
+    .about-card {
+        padding:1.5rem; border-left:3px solid var(--accent);
+        background:var(--bg-card); border-radius:0 var(--radius-md) var(--radius-md) 0;
+    }
+    .about-card-num {
+        font-size:0.7rem; font-weight:800; color:var(--accent);
+        letter-spacing:0.05em; margin-bottom:0.6rem; opacity:0.6;
+    }
+    .about-card-title {
+        font-size:1.1rem; font-weight:800; margin-bottom:0.5rem;
+        color:var(--text-primary); letter-spacing:-0.01em;
+    }
+    .about-card-desc { font-size:0.88rem; color:var(--text-secondary); line-height:1.65; }
+    .about-bottom {
+        text-align:center; font-size:0.9rem; font-weight:600;
+        color:var(--text-tertiary); letter-spacing:0.02em;
+        padding:1rem 0; border-top:1px solid var(--border-color);
+    }
+
     /* Cards */
     .card-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:1.25rem; }
     .card {
@@ -531,6 +552,7 @@
         .hero-photo { width:200px; height:200px; }
         .hero-contact { justify-content:center; }
         .hero-highlights { grid-template-columns:1fr 1fr; }
+        .about-grid { grid-template-columns:1fr; }
         .card-grid { grid-template-columns:1fr; }
         .two-col { grid-template-columns:1fr; }
         .skills-grid { grid-template-columns:1fr; }
@@ -552,12 +574,12 @@
         <a href="#" class="gnb-logo">Minsoo Jeong</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">About</a></li>
-            <li><a href="#media">Media</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#media">Media</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="gnb-right">
@@ -646,43 +668,33 @@
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">About</div>
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">What I Do</h2>
         </div>
-        <div class="reveal" style="max-width:760px;">
-            <p style="font-size:1rem; color:var(--text-secondary); line-height:1.8; margin-bottom:1rem;">
-                I grow cucumbers in germ-free systems to track what individual microbes actually do, and I analyze river metagenomes to understand how antimicrobial resistance genes spread across the Nakdong River watershed. I'm also studying how cyanobacterial blooms reshape the lettuce microbiome.
-            </p>
-            <p style="font-size:1rem; color:var(--text-secondary); line-height:1.8;">
-                I handle the entire research pipeline myself &mdash; from experimental design and sequencing to statistical modeling and analysis.
-            </p>
+        <div class="about-grid reveal">
+            <div class="about-card">
+                <div class="about-card-num">01</div>
+                <h3 class="about-card-title">Gnotobiotics</h3>
+                <p class="about-card-desc">Growing cucumbers in germ-free systems to track what each microbe actually does &mdash; which ones suppress disease, which ones promote growth.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-num">02</div>
+                <h3 class="about-card-title">River Metagenomics</h3>
+                <p class="about-card-desc">Analyzing how antimicrobial resistance genes spread across the Nakdong River watershed with seasonal community shifts.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-num">03</div>
+                <h3 class="about-card-title">Bloom Ecology</h3>
+                <p class="about-card-desc">Studying how cyanobacterial bloom water reshapes the lettuce microbiome from root to leaf.</p>
+            </div>
         </div>
-    </div>
-</section>
-
-<!-- News & Media -->
-<section class="section section--alt" id="media">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Media</div>
-            <h2 class="section-title">News &amp; Media</h2>
-        </div>
-        <div class="media-grid reveal">
-            <a class="media-card" href="https://www.knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=28&btin.bbs_cde=28&btin.doc_no=1336954&btin.appl_no=000000&btin.page=1&menu_idx=214" target="_blank" rel="noopener">
-                <div class="media-img-wrap">
-                    <img src="news-sejong.jpg" alt="KNU Sejong Science Fellowship 2026" class="media-img">
-                </div>
-                <div class="media-body">
-                    <div class="media-date">2026.03.13</div>
-                    <div class="media-title">7 KNU Researchers Selected for 2026 Sejong Science Fellowship</div>
-                    <div class="media-source">Kyungpook National University News</div>
-                </div>
-            </a>
+        <div class="about-bottom reveal">
+            Experiment Design &rarr; Sequencing &rarr; Analysis &rarr; Modeling &mdash; I do it all myself
         </div>
     </div>
 </section>
 
 <!-- Research Interests -->
-<section class="section" id="research">
+<section class="section section--alt" id="research">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Research</div>
@@ -743,7 +755,7 @@
 </section>
 
 <!-- Education -->
-<section class="section section--alt" id="education">
+<section class="section" id="education">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Education &amp; Experience</div>
@@ -783,7 +795,7 @@
 </section>
 
 <!-- Awards & Conferences -->
-<section class="section" id="awards">
+<section class="section section--alt" id="awards">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Awards &amp; Conferences</div>
@@ -879,7 +891,7 @@
 </section>
 
 <!-- Skills -->
-<section class="section section--alt" id="skills">
+<section class="section" id="skills">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Technical Expertise</div>
@@ -957,7 +969,7 @@
 </section>
 
 <!-- Publications -->
-<section class="section" id="publications">
+<section class="section section--alt" id="publications">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Publications</div>
@@ -1148,7 +1160,7 @@
 </section>
 
 <!-- Patents & Teaching -->
-<section class="section section--alt" id="patents">
+<section class="section" id="patents">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Patents &amp; Teaching</div>
@@ -1193,6 +1205,28 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- News & Media -->
+<section class="section section--alt" id="media">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Media</div>
+            <h2 class="section-title">News &amp; Media</h2>
+        </div>
+        <div class="media-grid reveal">
+            <a class="media-card" href="https://www.knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=28&btin.bbs_cde=28&btin.doc_no=1336954&btin.appl_no=000000&btin.page=1&menu_idx=214" target="_blank" rel="noopener">
+                <div class="media-img-wrap">
+                    <img src="news-sejong.jpg" alt="KNU Sejong Science Fellowship 2026" class="media-img">
+                </div>
+                <div class="media-body">
+                    <div class="media-date">2026.03.13</div>
+                    <div class="media-title">7 KNU Researchers Selected for 2026 Sejong Science Fellowship</div>
+                    <div class="media-source">Kyungpook National University News</div>
+                </div>
+            </a>
         </div>
     </div>
 </section>

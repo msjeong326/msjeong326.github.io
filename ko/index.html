@@ -288,6 +288,27 @@
     }
     .section-header { margin-bottom:2.5rem; }
 
+    /* About Cards */
+    .about-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.25rem; margin-bottom:2rem; }
+    .about-card {
+        padding:1.5rem; border-left:3px solid var(--accent);
+        background:var(--bg-card); border-radius:0 var(--radius-md) var(--radius-md) 0;
+    }
+    .about-card-num {
+        font-size:0.7rem; font-weight:800; color:var(--accent);
+        letter-spacing:0.05em; margin-bottom:0.6rem; opacity:0.6;
+    }
+    .about-card-title {
+        font-size:1.1rem; font-weight:800; margin-bottom:0.5rem;
+        color:var(--text-primary); letter-spacing:-0.01em;
+    }
+    .about-card-desc { font-size:0.88rem; color:var(--text-secondary); line-height:1.65; }
+    .about-bottom {
+        text-align:center; font-size:0.9rem; font-weight:600;
+        color:var(--text-tertiary); letter-spacing:0.02em;
+        padding:1rem 0; border-top:1px solid var(--border-color);
+    }
+
     .card-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:1.25rem; }
     .card {
         background:var(--bg-card); border:1px solid var(--border-color);
@@ -515,6 +536,7 @@
         .hero-photo { width:200px; height:200px; }
         .hero-contact { justify-content:center; }
         .hero-highlights { grid-template-columns:1fr 1fr; }
+        .about-grid { grid-template-columns:1fr; }
         .card-grid { grid-template-columns:1fr; }
         .two-col { grid-template-columns:1fr; }
         .skills-grid { grid-template-columns:1fr; }
@@ -536,12 +558,12 @@
         <a href="#" class="gnb-logo">정민수 박사</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">소개</a></li>
-            <li><a href="#media">미디어</a></li>
             <li><a href="#research">연구분야</a></li>
             <li><a href="#education">학력</a></li>
             <li><a href="#awards">수상</a></li>
             <li><a href="#skills">역량</a></li>
             <li><a href="#publications">논문</a></li>
+            <li><a href="#media">미디어</a></li>
             <li><a href="#contact">연락처</a></li>
         </ul>
         <div class="gnb-right">
@@ -630,43 +652,33 @@
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">소개</div>
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">What I Do</h2>
         </div>
-        <div class="reveal" style="max-width:760px;">
-            <p style="font-size:1rem; color:var(--text-secondary); line-height:1.8; margin-bottom:1rem;">
-                무균 환경에서 오이를 키워 개별 미생물의 역할을 추적하고, 낙동강 메타지놈에서 항생제 내성 유전자가 어떻게 퍼지는지 분석합니다. 녹조가 상추의 마이크로바이옴을 어떻게 바꾸는지도 연구 중입니다.
-            </p>
-            <p style="font-size:1rem; color:var(--text-secondary); line-height:1.8;">
-                실험 설계부터 시퀀싱, 데이터 분석, 통계 모델링까지 연구의 전 과정을 직접 수행합니다.
-            </p>
+        <div class="about-grid reveal">
+            <div class="about-card">
+                <div class="about-card-num">01</div>
+                <h3 class="about-card-title">Gnotobiotics</h3>
+                <p class="about-card-desc">무균 오이에서 미생물 하나하나의 역할을 추적합니다. 어떤 균이 병을 막고, 어떤 균이 성장을 돕는지.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-num">02</div>
+                <h3 class="about-card-title">River Metagenomics</h3>
+                <p class="about-card-desc">낙동강 메타지놈에서 항생제 내성 유전자가 계절에 따라 어떻게 퍼지는지 분석합니다.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-num">03</div>
+                <h3 class="about-card-title">Bloom Ecology</h3>
+                <p class="about-card-desc">녹조 발생수로 상추를 키우면 마이크로바이옴이 어떻게 변하는지 연구합니다.</p>
+            </div>
         </div>
-    </div>
-</section>
-
-<!-- 뉴스 & 미디어 -->
-<section class="section section--alt" id="media">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">미디어</div>
-            <h2 class="section-title">뉴스 &amp; 미디어</h2>
-        </div>
-        <div class="media-grid reveal">
-            <a class="media-card" href="https://www.knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=28&btin.bbs_cde=28&btin.doc_no=1336954&btin.appl_no=000000&btin.page=1&menu_idx=214" target="_blank" rel="noopener">
-                <div class="media-img-wrap">
-                    <img src="../news-sejong.jpg" alt="경북대 세종과학펠로우십 2026" class="media-img">
-                </div>
-                <div class="media-body">
-                    <div class="media-date">2026.03.13</div>
-                    <div class="media-title">경북대 연구자 7명, '2026 세종과학펠로우십' 선정</div>
-                    <div class="media-source">경북대학교 뉴스</div>
-                </div>
-            </a>
+        <div class="about-bottom reveal">
+            실험 설계 &rarr; 시퀀싱 &rarr; 분석 &rarr; 모델링 &mdash; 전 과정 직접 수행
         </div>
     </div>
 </section>
 
 <!-- Research Interests -->
-<section class="section" id="research">
+<section class="section section--alt" id="research">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">연구 분야</div>
@@ -727,7 +739,7 @@
 </section>
 
 <!-- Education -->
-<section class="section section--alt" id="education">
+<section class="section" id="education">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">학력 및 경력</div>
@@ -767,7 +779,7 @@
 </section>
 
 <!-- Awards & Conferences -->
-<section class="section" id="awards">
+<section class="section section--alt" id="awards">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">수상 및 학회 발표</div>
@@ -863,7 +875,7 @@
 </section>
 
 <!-- Skills -->
-<section class="section section--alt" id="skills">
+<section class="section" id="skills">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">기술 역량</div>
@@ -941,7 +953,7 @@
 </section>
 
 <!-- Publications -->
-<section class="section" id="publications">
+<section class="section section--alt" id="publications">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">논문 목록</div>
@@ -1132,7 +1144,7 @@
 </section>
 
 <!-- Patents & Teaching -->
-<section class="section section--alt" id="patents">
+<section class="section" id="patents">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">특허 및 교육</div>
@@ -1177,6 +1189,28 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- 뉴스 & 미디어 -->
+<section class="section section--alt" id="media">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">미디어</div>
+            <h2 class="section-title">뉴스 &amp; 미디어</h2>
+        </div>
+        <div class="media-grid reveal">
+            <a class="media-card" href="https://www.knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=28&btin.bbs_cde=28&btin.doc_no=1336954&btin.appl_no=000000&btin.page=1&menu_idx=214" target="_blank" rel="noopener">
+                <div class="media-img-wrap">
+                    <img src="../news-sejong.jpg" alt="경북대 세종과학펠로우십 2026" class="media-img">
+                </div>
+                <div class="media-body">
+                    <div class="media-date">2026.03.13</div>
+                    <div class="media-title">경북대 연구자 7명, '2026 세종과학펠로우십' 선정</div>
+                    <div class="media-source">경북대학교 뉴스</div>
+                </div>
+            </a>
         </div>
     </div>
 </section>
