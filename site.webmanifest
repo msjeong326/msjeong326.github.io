@@ -1,0 +1,14 @@
+{
+  "name": "Minsoo Jeong Academic Website",
+  "short_name": "MJ",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "browser"
+}
