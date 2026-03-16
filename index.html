@@ -325,6 +325,8 @@
     }
     .pub-tab:hover { color:var(--text-primary); }
     .pub-tab.active { color:var(--accent); border-bottom-color:var(--accent); }
+    .pub-tab--gray { color:#9ca3af; }
+    .pub-tab--gray.active { color:#6b7280; border-bottom-color:#9ca3af; }
     .pub-tab .count {
         font-size:0.75rem; font-weight:700; background:var(--accent-light);
         color:var(--accent); padding:0.1rem 0.4rem; border-radius:100px; margin-left:0.3rem;
@@ -425,11 +427,10 @@
     .skill-tag {
         font-size:0.8rem; font-weight:500; padding:0.2rem 0.6rem;
         border-radius:100px; background:var(--bg-secondary); color:var(--text-secondary);
-        border:1px solid var(--border-color);
+        border:1px solid var(--border-color); display:inline-flex; align-items:center;
     }
     .skill-tag:hover { background:var(--accent-light); border-color:var(--accent); color:var(--accent); }
-    .skill-icon { width:20px; height:20px; vertical-align:-3px; margin-right:3px; }
-    .skill-emoji { font-size:1.15em; margin-right:2px; }
+    .skill-icon { width:28px; height:28px; vertical-align:middle; margin-right:5px; }
     .skill-tag--featured {
         background:var(--tag-bg); color:var(--tag-text);
         border-color:transparent; font-weight:600;
@@ -599,12 +600,12 @@
                     <div class="hero-hl-sub">IF 9.2 &middot; Co-authorship</div>
                 </div>
                 <div class="hero-hl">
-                    <div class="hero-hl-title">4 Patents</div>
-                    <div class="hero-hl-sub">Agricultural Biotechnology</div>
+                    <div class="hero-hl-title">4 Patents (Filed/Registered)</div>
+                    <div class="hero-hl-sub">AI Crop Diagnostics &middot; Microbial Applications</div>
                 </div>
                 <div class="hero-hl">
                     <div class="hero-hl-title">KMB 2024 Grand Prize</div>
-                    <div class="hero-hl-sub">Best Oral Presentation</div>
+                    <div class="hero-hl-sub">Korean Society for Microbiology and Biotechnology</div>
                 </div>
             </div>
         </div>
@@ -651,8 +652,8 @@
             </div>
         </div>
         <div class="about-pipeline reveal">
-            <div class="pipe-label">Full-Stack Researcher</div>
-            <div class="pipe-desc">From bench to algorithm &mdash; every step handled in-house.</div>
+            <div class="pipe-label">End-to-End Research Pipeline</div>
+            <div class="pipe-desc">From experimental design to AI modeling &mdash; every stage executed independently.</div>
             <div class="pipe-steps">
                 <div class="pipe-step">
                     <div class="pipe-step-title">Experiment Design</div>
@@ -794,10 +795,11 @@
         </div>
         <div class="reveal">
             <div class="pub-tabs" id="pubTabs">
-                <button class="pub-tab active" data-tab="all">All <span class="count">34</span></button>
+                <button class="pub-tab active" data-tab="all">All <span class="count">30</span></button>
                 <button class="pub-tab" data-tab="first">1st Author <span class="count">4</span></button>
                 <button class="pub-tab" data-tab="coauthor">Co-Author <span class="count">26</span></button>
                 <button class="pub-tab" data-tab="review">Under Review <span class="count">1</span></button>
+                <button class="pub-tab pub-tab--gray" data-tab="inpress">In Press <span class="count">4</span></button>
             </div>
 
             <div class="pub-panel active" id="panel-all">
@@ -970,6 +972,31 @@
                         <div class="pub-authors">Kim, M.-S., Kim, S.-H., <strong>Jeong, M.</strong> et al. (2021)</div>
                         <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span></div>
                     </div>
+                </div>
+                <button class="pub-show-more" id="pubShowMore">
+                    Show All Publications <span class="arrow">&#9660;</span>
+                </button>
+            </div>
+
+            <div class="pub-panel" id="panel-review">
+                <div class="pub-list-items">
+                    <div class="pub-item first-author" data-type="first review">
+                        <div class="pub-title">Plastic film mulching with green manure reshapes depth-specific soil carbon pools and saturation dynamics in temperate maize fields</div>
+                        <div class="pub-authors"><strong>Jeong, M.</strong> &amp; Lee, J.G. (2025)</div>
+                        <div class="pub-meta">
+                            <span class="pub-journal">Soil Biology and Biochemistry</span>
+                            <span class="pub-badge pub-badge--status">Under Review</span>
+                            <span class="pub-badge pub-badge--first">1st Author</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-panel" id="panel-first"></div>
+            <div class="pub-panel" id="panel-coauthor"></div>
+
+            <div class="pub-panel" id="panel-inpress">
+                <div class="pub-list-items">
                     <div class="pub-item inpress first-author" data-type="first inpress">
                         <div class="pub-title">Seasonal community turnover, not direct environmental selection, shapes antimicrobial resistance gene dynamics in a weir-regulated river</div>
                         <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
@@ -1004,27 +1031,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="pub-show-more" id="pubShowMore">
-                    Show All Publications <span class="arrow">&#9660;</span>
-                </button>
             </div>
-
-            <div class="pub-panel" id="panel-review">
-                <div class="pub-list-items">
-                    <div class="pub-item first-author" data-type="first review">
-                        <div class="pub-title">Plastic film mulching with green manure reshapes depth-specific soil carbon pools and saturation dynamics in temperate maize fields</div>
-                        <div class="pub-authors"><strong>Jeong, M.</strong> &amp; Lee, J.G. (2025)</div>
-                        <div class="pub-meta">
-                            <span class="pub-journal">Soil Biology and Biochemistry</span>
-                            <span class="pub-badge pub-badge--status">Under Review</span>
-                            <span class="pub-badge pub-badge--first">1st Author</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pub-panel" id="panel-first"></div>
-            <div class="pub-panel" id="panel-coauthor"></div>
         </div>
     </div>
 </section>
@@ -1103,10 +1110,10 @@
         </div>
         <div class="grants-list reveal" style="margin-top:1.5rem;">
             <div class="grant-line"><span class="grant-name">Sejong Science Fellowship</span><span class="grant-meta">NRF (2026&ndash;2031)</span><span class="grant-amount">~$450,000 (5 yrs)</span></div>
-            <div class="grant-line"><span class="grant-name">Doctoral Research Fellowship</span><span class="grant-meta">NRF / MOE (2023&ndash;2025)</span><span class="grant-amount">$26,601 (3 yrs)</span></div>
-            <div class="grant-line"><span class="grant-name">Graduate Teaching Assistantship</span><span class="grant-meta">BK21 FOUR (2024&ndash;2025)</span><span class="grant-amount">$35,529 (2 yrs)</span></div>
+            <div class="grant-line"><span class="grant-name">Doctoral Research Fellowship</span><span class="grant-meta">NRF / MOE (2023&ndash;2025)</span><span class="grant-amount">~$27,000 (3 yrs)</span></div>
+            <div class="grant-line"><span class="grant-name">Graduate Teaching Assistantship</span><span class="grant-meta">BK21 FOUR (2024&ndash;2025)</span><span class="grant-amount">~$36,000 (2 yrs)</span></div>
             <div class="grant-line"><span class="grant-name">Research Assistantship (3rd Grade)</span><span class="grant-meta">KNU (2023&ndash;2024)</span></div>
-            <div class="grant-line"><span class="grant-name">BK21 Government Scholarship</span><span class="grant-meta">2022&ndash;2023</span><span class="grant-amount">$17,534 (2 yrs)</span></div>
+            <div class="grant-line"><span class="grant-name">BK21 Government Scholarship</span><span class="grant-meta">2022&ndash;2023</span><span class="grant-amount">~$18,000 (2 yrs)</span></div>
         </div>
     </div>
 </section>
@@ -1122,14 +1129,14 @@
             <div class="skill-group">
                 <h3 class="skill-group-title">Bioinformatics</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🔬</span> QIIME2</span>
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🧩</span> MEGAHIT</span>
-                    <span class="skill-tag"><span class="skill-emoji">🧬</span> metaSPAdes</span>
-                    <span class="skill-tag"><span class="skill-emoji">📦</span> MAG Binning</span>
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🏷️</span> eggNOG</span>
-                    <span class="skill-tag"><span class="skill-emoji">🧪</span> antiSMASH</span>
-                    <span class="skill-tag"><span class="skill-emoji">🛡️</span> RGI/CARD</span>
-                    <span class="skill-tag"><span class="skill-emoji">🌳</span> GTDB-Tk</span>
+                    <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://raw.githubusercontent.com/qiime2/logos/master/vector/qiime2-square.svg" alt="QIIME2"> QIIME2</span>
+                    <span class="skill-tag skill-tag--featured">MEGAHIT</span>
+                    <span class="skill-tag">metaSPAdes</span>
+                    <span class="skill-tag">MAG Binning</span>
+                    <span class="skill-tag skill-tag--featured">eggNOG-mapper</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://antismash.secondarymetabolites.org/images/antismash_logo.svg" alt="antiSMASH"> antiSMASH</span>
+                    <span class="skill-tag">RGI/CARD</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://ecogenomics.github.io/GTDBTk/_static/GTDBTk.svg" alt="GTDB-Tk"> GTDB-Tk</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -1139,40 +1146,40 @@
                     <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt=""> R</span>
                     <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt=""> Bash</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt=""> pandas</span>
-                    <span class="skill-tag"><span class="skill-emoji">🔧</span> tidyverse</span>
-                    <span class="skill-tag"><span class="skill-emoji">📊</span> DESeq2</span>
-                    <span class="skill-tag"><span class="skill-emoji">⚙️</span> scikit-learn</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/tidyverse.svg" alt="tidyverse"> tidyverse</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://raw.githubusercontent.com/Bioconductor/BiocStickers/devel/DESeq2/DESeq2.png" alt="DESeq2"> DESeq2</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://raw.githubusercontent.com/scikit-learn/scikit-learn/main/doc/logos/scikit-learn-logo-notext.png" alt="scikit-learn"> scikit-learn</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3 class="skill-group-title">AI / Machine Learning</h3>
                 <div class="skill-tags">
                     <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt=""> PyTorch</span>
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🧠</span> Deep Learning</span>
-                    <span class="skill-tag"><span class="skill-emoji">🕸️</span> GNN</span>
-                    <span class="skill-tag"><span class="skill-emoji">🌲</span> XGBoost</span>
-                    <span class="skill-tag"><span class="skill-emoji">📈</span> SHAP</span>
-                    <span class="skill-tag"><span class="skill-emoji">🔗</span> Cross-Attention</span>
+                    <span class="skill-tag skill-tag--featured">Deep Learning</span>
+                    <span class="skill-tag">GNN</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" alt="XGBoost"> XGBoost</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://raw.githubusercontent.com/shap/shap/master/docs/artwork/shap_logo.png" alt="SHAP"> SHAP</span>
+                    <span class="skill-tag">Cross-Attention</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3 class="skill-group-title">Multi-omics</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🧬</span> Metagenomics</span>
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🎯</span> Amplicon Seq</span>
-                    <span class="skill-tag"><span class="skill-emoji">⚗️</span> Metabolomics</span>
-                    <span class="skill-tag"><span class="skill-emoji">📋</span> RNA-seq</span>
-                    <span class="skill-tag"><span class="skill-emoji">🔀</span> Shotgun</span>
+                    <span class="skill-tag skill-tag--featured">Metagenomics</span>
+                    <span class="skill-tag skill-tag--featured">Amplicon Seq</span>
+                    <span class="skill-tag">Metabolomics</span>
+                    <span class="skill-tag">RNA-seq</span>
+                    <span class="skill-tag">Shotgun</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3 class="skill-group-title">Statistics &amp; Ecology</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">📊</span> Multivariate</span>
-                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">↗️</span> SEM</span>
-                    <span class="skill-tag"><span class="skill-emoji">🕸️</span> Network Analysis</span>
-                    <span class="skill-tag"><span class="skill-emoji">🎲</span> Null Models</span>
-                    <span class="skill-tag"><span class="skill-emoji">📐</span> PERMANOVA</span>
+                    <span class="skill-tag skill-tag--featured">Multivariate</span>
+                    <span class="skill-tag skill-tag--featured">SEM</span>
+                    <span class="skill-tag">Network Analysis</span>
+                    <span class="skill-tag">Null Models</span>
+                    <span class="skill-tag">PERMANOVA</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -1181,7 +1188,7 @@
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux/HPC</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt=""> Conda</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""> Git/GitHub</span>
-                    <span class="skill-tag"><span class="skill-emoji">🐍</span> Snakemake</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://raw.githubusercontent.com/snakemake/snakemake/main/images/logo.svg" alt="Snakemake"> Snakemake</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
                 </div>
             </div>
@@ -1198,7 +1205,7 @@
         </div>
         <div class="compact-grid reveal">
             <div>
-                <div class="col-title">Patents (4 PCT)</div>
+                <div class="col-title">Patents (4 Filed/Registered)</div>
                 <div class="compact-list">
                     <div class="compact-item">
                         <div class="compact-title">Deep learning-based corn nitrogen deficiency stress early diagnosis system and method</div>
@@ -1219,19 +1226,22 @@
                 </div>
             </div>
             <div>
-                <div class="col-title">Teaching</div>
+                <div class="col-title">Teaching Experience</div>
                 <div class="compact-list">
                     <div class="compact-item">
                         <div class="compact-title">Microbiology and Biochemistry Laboratory</div>
-                        <div class="compact-meta">Kyungpook National University</div>
+                        <div class="compact-meta">Teaching Assistant &middot; Undergraduate &middot; 2020&ndash;2021</div>
+                        <div class="compact-desc" style="font-size:0.78rem;color:var(--text-secondary);margin-top:2px;">Supervised wet-lab experiments: Gram staining, microbial culture, SDS-PAGE, PCR. Managed lab safety and graded lab reports for ~40 students per semester.</div>
                     </div>
                     <div class="compact-item">
                         <div class="compact-title">Fundamentals of Bioinformatics</div>
-                        <div class="compact-meta">Kyungpook National University</div>
+                        <div class="compact-meta">Teaching Assistant &middot; Undergraduate &middot; 2022&ndash;2024</div>
+                        <div class="compact-desc" style="font-size:0.78rem;color:var(--text-secondary);margin-top:2px;">Linux/CLI basics, BLAST sequence alignment, phylogenetic tree construction, and NCBI database navigation. Designed homework assignments and provided coding support.</div>
                     </div>
                     <div class="compact-item">
                         <div class="compact-title">Practical Training in Bioinformatics</div>
-                        <div class="compact-meta">Kyungpook National University</div>
+                        <div class="compact-meta">Lead Instructor &middot; Undergraduate/Graduate &middot; 2025&ndash;Present</div>
+                        <div class="compact-desc" style="font-size:0.78rem;color:var(--text-secondary);margin-top:2px;">Hands-on amplicon &amp; shotgun metagenome analysis using QIIME2, R, and Python. Designed full curriculum covering 16S/ITS pipeline, statistical ecology, and data visualization.</div>
                     </div>
                 </div>
             </div>
