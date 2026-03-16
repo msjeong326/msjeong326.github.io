@@ -420,7 +420,8 @@
         border:1px solid var(--border-color);
     }
     .skill-tag:hover { background:var(--accent-light); border-color:var(--accent); color:var(--accent); }
-    .skill-icon { width:14px; height:14px; vertical-align:-2px; margin-right:2px; }
+    .skill-icon { width:20px; height:20px; vertical-align:-3px; margin-right:3px; }
+    .skill-emoji { font-size:1.15em; margin-right:2px; }
     .skill-tag--featured {
         background:var(--tag-bg); color:var(--tag-text);
         border-color:transparent; font-weight:600;
@@ -564,7 +565,7 @@
             <div class="hero-meta">
                 <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">이메일 보기</button>
                 <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">이메일 보기</button>
-                <br>
+                <div style="flex-basis:100%;height:0"></div>
                 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
                 <span class="hero-meta-sep">&middot;</span>
                 <a href="https://orcid.org/0000-0002-5647-0402" target="_blank" rel="noopener">ORCID</a>
@@ -847,7 +848,6 @@
                         <div class="pub-authors">Jung, D.R., Choi, Y., <strong>Jeong, M.</strong>, Singh, V., Jeon, S.Y., Seo, I., ... &amp; Chong, G.O. (2025)</div>
                         <div class="pub-meta">
                             <span class="pub-journal">npj Biofilms and Microbiomes, 11(1), 105</span>
-                            <span class="pub-badge pub-badge--if">IF 9.2</span>
                         </div>
                     </div>
                     <div class="pub-item first-author" data-type="first">
@@ -855,7 +855,6 @@
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Kwon, S.-M. et al. (2025)</div>
                         <div class="pub-meta">
                             <span class="pub-journal">Scientific Reports, 15(1), 13810</span>
-                            <span class="pub-badge pub-badge--if">IF 4.6</span>
                             <span class="pub-badge pub-badge--first">제1저자</span>
                         </div>
                     </div>
@@ -864,7 +863,6 @@
                         <div class="pub-authors">Myeong, J., Lee, M., ..., <strong>Jeong, M.</strong>, ..., &amp; Jeong, Y. (2025)</div>
                         <div class="pub-meta">
                             <span class="pub-journal">Nature Communications, 16(1), 2327</span>
-                            <span class="pub-badge pub-badge--if">IF 16.6</span>
                         </div>
                     </div>
                     <div class="pub-item" data-type="coauthor">
@@ -877,7 +875,6 @@
                         <div class="pub-authors">Fentie, E.G., Lim, K., <strong>Jeong, M.</strong> &amp; Shin, J.H. (2024)</div>
                         <div class="pub-meta">
                             <span class="pub-journal">Comprehensive Reviews in Food Science and Food Safety, 23(5), e13424</span>
-                            <span class="pub-badge pub-badge--if">IF 12.0</span>
                         </div>
                     </div>
                     <div class="pub-item" data-type="coauthor">
@@ -910,7 +907,6 @@
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Tagele, S.B., Kim, M.-J. et al. (2023)</div>
                         <div class="pub-meta">
                             <span class="pub-journal">Frontiers in Forests and Global Change, 5(1), 1114390</span>
-                            <span class="pub-badge pub-badge--if">IF 3.0</span>
                             <span class="pub-badge pub-badge--first">제1저자</span>
                         </div>
                     </div>
@@ -964,7 +960,6 @@
                         <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
                         <div class="pub-meta">
                             <span class="pub-journal">Water Research</span>
-                            <span class="pub-badge pub-badge--if">IF 13.0</span>
                             <span class="pub-badge pub-badge--inpress">In Press</span>
                             <span class="pub-badge pub-badge--first">제1저자</span>
                         </div>
@@ -974,7 +969,6 @@
                         <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
                         <div class="pub-meta">
                             <span class="pub-journal">ISME Journal</span>
-                            <span class="pub-badge pub-badge--if">IF 11.0</span>
                             <span class="pub-badge pub-badge--inpress">In Press</span>
                             <span class="pub-badge pub-badge--first">제1저자</span>
                         </div>
@@ -1113,14 +1107,14 @@
             <div class="skill-group">
                 <h3 class="skill-group-title">생물정보학</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">QIIME2</span>
-                    <span class="skill-tag skill-tag--featured">MEGAHIT</span>
-                    <span class="skill-tag">metaSPAdes</span>
-                    <span class="skill-tag">MAG Binning</span>
-                    <span class="skill-tag skill-tag--featured">eggNOG</span>
-                    <span class="skill-tag">antiSMASH</span>
-                    <span class="skill-tag">RGI/CARD</span>
-                    <span class="skill-tag">GTDB-Tk</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🔬</span> QIIME2</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🧩</span> MEGAHIT</span>
+                    <span class="skill-tag"><span class="skill-emoji">🧬</span> metaSPAdes</span>
+                    <span class="skill-tag"><span class="skill-emoji">📦</span> MAG Binning</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🥚</span> eggNOG</span>
+                    <span class="skill-tag"><span class="skill-emoji">💎</span> antiSMASH</span>
+                    <span class="skill-tag"><span class="skill-emoji">🛡️</span> RGI/CARD</span>
+                    <span class="skill-tag"><span class="skill-emoji">🌳</span> GTDB-Tk</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -1130,40 +1124,40 @@
                     <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt=""> R</span>
                     <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt=""> Bash</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt=""> pandas</span>
-                    <span class="skill-tag">tidyverse</span>
-                    <span class="skill-tag">DESeq2</span>
-                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag"><span class="skill-emoji">📐</span> tidyverse</span>
+                    <span class="skill-tag"><span class="skill-emoji">📊</span> DESeq2</span>
+                    <span class="skill-tag"><span class="skill-emoji">⚙️</span> scikit-learn</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3 class="skill-group-title">AI / 머신러닝</h3>
                 <div class="skill-tags">
                     <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt=""> PyTorch</span>
-                    <span class="skill-tag skill-tag--featured">Deep Learning</span>
-                    <span class="skill-tag">GNN</span>
-                    <span class="skill-tag">XGBoost</span>
-                    <span class="skill-tag">SHAP</span>
-                    <span class="skill-tag">Cross-Attention</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🧠</span> Deep Learning</span>
+                    <span class="skill-tag"><span class="skill-emoji">🕸️</span> GNN</span>
+                    <span class="skill-tag"><span class="skill-emoji">🚀</span> XGBoost</span>
+                    <span class="skill-tag"><span class="skill-emoji">📈</span> SHAP</span>
+                    <span class="skill-tag"><span class="skill-emoji">🔗</span> Cross-Attention</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3 class="skill-group-title">멀티오믹스</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">Metagenomics</span>
-                    <span class="skill-tag skill-tag--featured">Amplicon Seq</span>
-                    <span class="skill-tag">Metabolomics</span>
-                    <span class="skill-tag">RNA-seq</span>
-                    <span class="skill-tag">Shotgun</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🧬</span> Metagenomics</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">🎯</span> Amplicon Seq</span>
+                    <span class="skill-tag"><span class="skill-emoji">⚗️</span> Metabolomics</span>
+                    <span class="skill-tag"><span class="skill-emoji">🧫</span> RNA-seq</span>
+                    <span class="skill-tag"><span class="skill-emoji">💥</span> Shotgun</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3 class="skill-group-title">통계 &amp; 생태학</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">Multivariate</span>
-                    <span class="skill-tag skill-tag--featured">SEM</span>
-                    <span class="skill-tag">Network Analysis</span>
-                    <span class="skill-tag">Null Models</span>
-                    <span class="skill-tag">PERMANOVA</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">📊</span> Multivariate</span>
+                    <span class="skill-tag skill-tag--featured"><span class="skill-emoji">↗️</span> SEM</span>
+                    <span class="skill-tag"><span class="skill-emoji">🕸️</span> Network Analysis</span>
+                    <span class="skill-tag"><span class="skill-emoji">🎲</span> Null Models</span>
+                    <span class="skill-tag"><span class="skill-emoji">📐</span> PERMANOVA</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -1172,7 +1166,7 @@
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux/HPC</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt=""> Conda</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""> Git/GitHub</span>
-                    <span class="skill-tag">Snakemake</span>
+                    <span class="skill-tag"><span class="skill-emoji">🐍</span> Snakemake</span>
                     <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
                 </div>
             </div>
