@@ -43,9 +43,9 @@
         },
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "Kyungpook National University" },
         "url": "https://msjeong326.github.io/",
-        "knowsAbout": ["Host-Microbe Interaction", "Gnotobiotics", "Untargeted Metabolomics", "WMS Profiling", "RNA-seq", "ddPCR", "Machine Learning", "Plant-Microbiome Interactions", "Metagenomics"],
+        "knowsAbout": ["Host-Microbe Interaction", "Gnotobiotics", "Untargeted Metabolomics", "WMS Profiling", "RNA-seq", "ddPCR", "Machine Learning", "Plant-Microbiome Interactions", "Metagenomics", "Agricultural Microbiome", "Environmental Metagenomics"],
         "award": ["Sejong Science Fellowship", "Grand Prize for Oral Presentation — KMB International Conference 2024"],
-        "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "Ph.D. in Applied Biosciences" },
+        "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "Ph.D. in Applied Biosciences (Agriculture)" },
         "sameAs": ["https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ", "https://orcid.org/0000-0002-5647-0402", "https://github.com/msjeong326", "https://www.linkedin.com/in/minsoojeong"]
     }
     </script>
@@ -365,8 +365,8 @@
     .pub-badge--if { background:var(--tag-bg-alt); color:var(--tag-text-alt); }
     .pub-badge--status { background:rgba(251,191,36,0.12); color:#b45309; }
     .pub-badge--first { background:var(--accent-light); color:var(--accent); }
-    .pub-badge--inpress { background:rgba(6, 182, 212, 0.12); color:#0891b2; }
-    .pub-item.inpress { border-left-color:#0891b2; background:rgba(6, 182, 212, 0.04); }
+    .pub-badge--inpress { background:rgba(107, 114, 128, 0.12); color:#6b7280; }
+    .pub-item.inpress { border-left-color:#d1d5db; background:rgba(107, 114, 128, 0.03); opacity:0.75; }
 
     /* Timeline */
     .timeline { max-width:700px; }
@@ -408,6 +408,10 @@
         font-size:0.75rem; font-weight:700; padding:0.08rem 0.35rem;
         border-radius:100px; background:rgba(251,191,36,0.12); color:#b45309; margin-left:0.25rem;
     }
+    .list-item.conf-hidden { display:none; }
+    .list-items.conf-expanded .conf-hidden { display:block; }
+    .conf-show-more { display:inline-block; margin-top:0.5rem; font-size:0.82rem; color:var(--accent); cursor:pointer; background:none; border:none; font-family:inherit; padding:0; }
+    .conf-show-more:hover { text-decoration:underline; }
 
     /* Skills */
     .skills-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.25rem; }
@@ -424,6 +428,7 @@
         border:1px solid var(--border-color);
     }
     .skill-tag:hover { background:var(--accent-light); border-color:var(--accent); color:var(--accent); }
+    .skill-icon { width:14px; height:14px; vertical-align:-2px; margin-right:2px; }
     .skill-tag--featured {
         background:var(--tag-bg); color:var(--tag-text);
         border-color:transparent; font-weight:600;
@@ -574,7 +579,7 @@
             <div class="hero-meta">
                 <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Click to show email</button>
                 <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">Click to show email</button>
-                <span class="hero-meta-sep">&middot;</span>
+                <br>
                 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
                 <span class="hero-meta-sep">&middot;</span>
                 <a href="https://orcid.org/0000-0002-5647-0402" target="_blank" rel="noopener">ORCID</a>
@@ -621,7 +626,7 @@
             <div class="section-label">About</div>
             <h2 class="section-title">What I Do</h2>
         </div>
-        <p class="section-subtitle" style="max-width:720px;">Microbiome researcher bridging wet lab and computation. From designing gnotobiotic experiments to building metagenome pipelines and deep learning models &mdash; I cover the full research stack independently.</p>
+        <p class="section-subtitle" style="max-width:720px;">Microbiome researcher at the intersection of agriculture and environmental science. From designing gnotobiotic crop experiments to building river metagenome pipelines and deep learning models &mdash; I cover the full research stack independently.</p>
         <div class="about-grid reveal">
             <div class="about-card">
                 <div class="about-card-num">01</div>
@@ -760,18 +765,18 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
-                <h3 class="timeline-title">Ph.D. in Applied Biosciences</h3>
+                <h3 class="timeline-title">Ph.D. in Applied Biosciences (Agriculture)</h3>
                 <div class="timeline-inst">Kyungpook National University</div>
                 <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">Mar 2020 &ndash; Feb 2022</div>
-                <h3 class="timeline-title">M.S. in Applied Biosciences</h3>
+                <h3 class="timeline-title">M.S. in Applied Biosciences (Agriculture)</h3>
                 <div class="timeline-inst">Kyungpook National University</div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">Mar 2014 &ndash; Feb 2020</div>
-                <h3 class="timeline-title">B.S. in Applied Biosciences</h3>
+                <h3 class="timeline-title">B.S. in Applied Biosciences (Agriculture)</h3>
                 <div class="timeline-inst">Kyungpook National University</div>
             </div>
         </div>
@@ -784,14 +789,13 @@
         <div class="section-header reveal">
             <div class="section-label">Publications</div>
             <h2 class="section-title">Publication Record</h2>
-            <p class="section-subtitle">35 publications (7 first-author) including <i>Nature Communications</i>, <i>Water Research</i>, <i>ISME Journal</i>. <strong>Jeong, M.</strong> notation.</p>
+            <p class="section-subtitle">35 publications (4 first-author) across agricultural microbiome and environmental metagenomics, including <i>Nature Communications</i>, <i>Water Research</i>, <i>ISME Journal</i>. <strong>Jeong, M.</strong> notation.</p>
         </div>
         <div class="reveal">
             <div class="pub-tabs" id="pubTabs">
-                <button class="pub-tab active" data-tab="all">Published <span class="count">30</span></button>
-                <button class="pub-tab" data-tab="first">1st Author <span class="count">7</span></button>
-                <button class="pub-tab" data-tab="coauthor">Co-Author <span class="count">28</span></button>
-                <button class="pub-tab" data-tab="inpress">In Press <span class="count">4</span></button>
+                <button class="pub-tab active" data-tab="all">All <span class="count">34</span></button>
+                <button class="pub-tab" data-tab="first">1st Author <span class="count">4</span></button>
+                <button class="pub-tab" data-tab="coauthor">Co-Author <span class="count">26</span></button>
                 <button class="pub-tab" data-tab="review">Under Review <span class="count">1</span></button>
             </div>
 
@@ -970,14 +974,6 @@
                         <div class="pub-authors">Kim, M.-S., Kim, S.-H., <strong>Jeong, M.</strong> et al. (2021)</div>
                         <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span></div>
                     </div>
-                </div>
-                <button class="pub-show-more" id="pubShowMore">
-                    Show All Publications <span class="arrow">&#9660;</span>
-                </button>
-            </div>
-
-            <div class="pub-panel" id="panel-inpress">
-                <div class="pub-list-items">
                     <div class="pub-item inpress first-author" data-type="first inpress">
                         <div class="pub-title">Seasonal community turnover, not direct environmental selection, shapes antimicrobial resistance gene dynamics in a weir-regulated river</div>
                         <div class="pub-authors"><strong>Jeong, M.</strong> et al.</div>
@@ -1014,6 +1010,9 @@
                         </div>
                     </div>
                 </div>
+                <button class="pub-show-more" id="pubShowMore">
+                    Show All Publications <span class="arrow">&#9660;</span>
+                </button>
             </div>
 
             <div class="pub-panel" id="panel-review">
@@ -1048,19 +1047,19 @@
                 <div class="col-title">Awards (Selected)</div>
                 <div class="list-items">
                     <div class="list-item">
-                        <div class="list-item-title">Grand Prize for Oral Presentation</div>
+                        <div class="list-item-title">Grand Prize for Oral Presentation 👑</div>
                         <div class="list-item-detail">KMB International Conference, Jun 2024</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-title">Encouragement Award in Oral Presentation</div>
+                        <div class="list-item-title">Encouragement Award in Oral Presentation 🥉</div>
                         <div class="list-item-detail">BK21 FOUR Research Symposium, Jan 2024</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-title">Outstanding Poster Presentation Award</div>
+                        <div class="list-item-title">Outstanding Poster Presentation Award 🥈</div>
                         <div class="list-item-detail">KSABC International Conference, Jun 2022</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-title">Outstanding Oral Presentation Award</div>
+                        <div class="list-item-title">Outstanding Oral Presentation Award 🥈</div>
                         <div class="list-item-detail">KSABC/KMB International Symposium, Aug 2021</div>
                     </div>
                 </div>
@@ -1078,27 +1077,28 @@
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> MSK 2024</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Conference 2024 <span class="conf-award-badge">Grand Prize</span></div>
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Conference 2024 <span class="conf-award-badge">Grand Prize 👑</span></div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2024</div>
                     </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> BK21 FOUR Research Symposium, Jan 2024 <span class="conf-award-badge">Award</span></div>
+                    <div class="list-item conf-hidden">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> BK21 FOUR Research Symposium, Jan 2024 <span class="conf-award-badge">🥉</span></div>
                     </div>
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ASM Microbe 2023, Houston, USA</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2022 <span class="conf-award-badge">Award</span></div>
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2022 <span class="conf-award-badge">🥈</span></div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSM Ecology 2022</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">Award</span></div>
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">🥈</span></div>
                     </div>
                 </div>
+                <button class="conf-show-more" id="confShowMore">Show more ▼</button>
             </div>
         </div>
 
@@ -1111,6 +1111,7 @@
             <div class="grant-line"><span class="grant-name">Sejong Science Fellowship</span><span class="grant-meta">NRF (2026&ndash;2031)</span><span class="grant-amount">~$450,000 (5 yrs)</span></div>
             <div class="grant-line"><span class="grant-name">Doctoral Research Fellowship</span><span class="grant-meta">NRF / MOE (2023&ndash;2025)</span><span class="grant-amount">$26,601 (3 yrs)</span></div>
             <div class="grant-line"><span class="grant-name">Graduate Teaching Assistantship</span><span class="grant-meta">BK21 FOUR (2024&ndash;2025)</span><span class="grant-amount">$35,529 (2 yrs)</span></div>
+            <div class="grant-line"><span class="grant-name">Research Assistantship (3rd Grade)</span><span class="grant-meta">KNU (2023&ndash;2024)</span></div>
             <div class="grant-line"><span class="grant-name">BK21 Government Scholarship</span><span class="grant-meta">2022&ndash;2023</span><span class="grant-amount">$17,534 (2 yrs)</span></div>
         </div>
     </div>
@@ -1140,10 +1141,10 @@
             <div class="skill-group">
                 <h3 class="skill-group-title">Programming</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">Python</span>
-                    <span class="skill-tag skill-tag--featured">R</span>
-                    <span class="skill-tag skill-tag--featured">Bash</span>
-                    <span class="skill-tag">pandas</span>
+                    <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""> Python</span>
+                    <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt=""> R</span>
+                    <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt=""> Bash</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt=""> pandas</span>
                     <span class="skill-tag">tidyverse</span>
                     <span class="skill-tag">DESeq2</span>
                     <span class="skill-tag">scikit-learn</span>
@@ -1152,7 +1153,7 @@
             <div class="skill-group">
                 <h3 class="skill-group-title">AI / Machine Learning</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag skill-tag--featured">PyTorch</span>
+                    <span class="skill-tag skill-tag--featured"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt=""> PyTorch</span>
                     <span class="skill-tag skill-tag--featured">Deep Learning</span>
                     <span class="skill-tag">GNN</span>
                     <span class="skill-tag">XGBoost</span>
@@ -1183,11 +1184,11 @@
             <div class="skill-group">
                 <h3 class="skill-group-title">Infrastructure</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Linux/HPC</span>
-                    <span class="skill-tag">Conda</span>
-                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux/HPC</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt=""> Conda</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""> Git/GitHub</span>
                     <span class="skill-tag">Snakemake</span>
-                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
                 </div>
             </div>
         </div>
@@ -1403,12 +1404,13 @@
     reveals.forEach(function(el) { observer.observe(el); });
 
     // Publication Tabs — collect from all source panels
-    var masterItems = document.querySelectorAll('#panel-all .pub-item, #panel-inpress .pub-item, #panel-review .pub-item');
+    var masterItems = document.querySelectorAll('#panel-all .pub-item, #panel-review .pub-item');
     var genPanels = { first: [], coauthor: [] };
     masterItems.forEach(function(item) {
         var type = item.getAttribute('data-type') || '';
-        if (type.indexOf('first') !== -1) genPanels.first.push(item.cloneNode(true));
-        if (type.indexOf('coauthor') !== -1) genPanels.coauthor.push(item.cloneNode(true));
+        var published = type.indexOf('inpress') === -1 && type.indexOf('review') === -1;
+        if (published && type.indexOf('first') !== -1) genPanels.first.push(item.cloneNode(true));
+        if (published && type.indexOf('coauthor') !== -1) genPanels.coauthor.push(item.cloneNode(true));
     });
     ['first', 'coauthor'].forEach(function(key) {
         var panel = document.getElementById('panel-' + key);
@@ -1438,6 +1440,16 @@
             } else {
                 this.innerHTML = 'Show All Publications <span class="arrow">&#9660;</span>';
             }
+        });
+    }
+
+    // Conference show more toggle
+    var confBtn = document.getElementById('confShowMore');
+    if (confBtn) {
+        confBtn.addEventListener('click', function() {
+            var list = this.previousElementSibling;
+            list.classList.toggle('conf-expanded');
+            this.textContent = list.classList.contains('conf-expanded') ? 'Show less ▲' : 'Show more ▼';
         });
     }
 
