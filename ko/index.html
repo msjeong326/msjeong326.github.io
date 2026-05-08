@@ -150,12 +150,34 @@
         max-width:var(--max-width); margin:0 auto;
         display:flex; align-items:center; gap:3rem;
     }
-    .hero-photo {
-        width:340px; height:440px; border-radius:4px; flex-shrink:0;
-        object-fit:cover; object-position:center top;
-        border:1px solid var(--border-color);
-        filter: contrast(1.04) saturate(0.85);
+    .hero-figure {
+        flex: 0 0 auto;
+        width: clamp(280px, 45%, 540px);
+        margin: 0;
     }
+    .hero-photo {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.06;
+        border-radius: 4px;
+        object-fit: contain;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        filter: none;
+    }
+    .hero-photo-credit {
+        margin-top: 0.7rem;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--text-tertiary);
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+    }
+    .hero-photo-credit a {
+        color: var(--text-tertiary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .hero-photo-credit a:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }
     .hero-text { flex:1; }
     .hero-name {
         font-family: var(--font-sans);
@@ -776,7 +798,8 @@
     @media (max-width: 768px) {
         .hero { padding: 4rem 1.25rem 3rem; }
         .hero-inner { flex-direction: column; gap: 2rem; }
-        .hero-photo { width: 100%; max-width: 320px; height: auto; aspect-ratio: 4/5; }
+        .hero-figure { width: 100%; max-width: 480px; }
+        .hero-photo { width: 100%; max-width: 100%; height: auto; aspect-ratio: 1.06; }
         .section { padding: 4rem 1.25rem; }
     }
     </style>
@@ -822,7 +845,6 @@
 <!-- Hero -->
 <section class="hero">
     <div class="hero-inner">
-        <img src="../profile.jpg" alt="정민수" class="hero-photo">
         <div class="hero-text">
             <h1 class="hero-name">정민수</h1>
             <div class="hero-name-kr">Minsoo Jeong, Ph.D.</div>
@@ -883,6 +905,14 @@
                 </div>
             </div>
         </div>
+        <figure class="hero-figure">
+            <img src="../hero-yolo.jpg" alt="YOLOv8s 콩잎 영양결핍 검출 결과 — bounding box 출력" class="hero-photo">
+            <figcaption class="hero-photo-credit">
+                YOLOv8s detection of soybean nutrient deficiencies (N&middot;P&middot;K).<br>
+                <strong>Jeong, M.</strong> et al., <i>Sci Rep</i> 15, 13810 (2025) &middot;
+                <a href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">CC&hairsp;BY 4.0</a>
+            </figcaption>
+        </figure>
     </div>
 </section>
 
