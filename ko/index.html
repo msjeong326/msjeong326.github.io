@@ -54,11 +54,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
     :root {
-        --font-sans: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        --font-sans: 'Pretendard Variable', 'Pretendard', 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        --font-display-en: 'Inter Tight', 'Pretendard Variable', system-ui, sans-serif;
+        --font-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
         --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
         --max-width: 960px;
         --nav-height: 56px;
@@ -68,26 +72,31 @@
         --transition: 0.2s ease;
     }
     :root {
-        --bg-primary: #ffffff;
-        --bg-secondary: #f9fafb;
-        --bg-card: #ffffff;
-        --bg-nav: rgba(255,255,255,0.92);
-        --text-primary: #111827;
-        --text-secondary: #6b7280;
-        --text-tertiary: #6b7280;
-        --accent: #2563eb;
-        --accent-hover: #1d4ed8;
-        --accent-light: #eff6ff;
-        --accent-green: #059669;
-        --accent-green-light: #ecfdf5;
-        --border-color: #e5e7eb;
-        --tag-bg: #eff6ff;
-        --tag-text: #1e40af;
-        --tag-bg-alt: #ecfdf5;
-        --tag-text-alt: #065f46;
-        --stats-bg: #f9fafb;
-        --stats-text: #111827;
-        --stats-border: #e5e7eb;
+        --bg-primary: #FAF8F4;
+        --bg-secondary: #F2EEE6;
+        --bg-card: #FFFFFF;
+        --bg-nav: rgba(250,248,244,0.88);
+        --text-primary: #1A1A1A;
+        --text-secondary: #5A5A5A;
+        --text-tertiary: #888888;
+        --accent: #3F7CAC;
+        --accent-hover: #2D5F88;
+        --accent-light: #E8EFF5;
+        --accent-green: #5E8F5E;
+        --accent-green-light: #EAF3EA;
+        --border-color: #E5E0D5;
+        --tag-bg: #E8EFF5;
+        --tag-text: #2D5F88;
+        --tag-bg-alt: #EAF3EA;
+        --tag-text-alt: #3D5F3D;
+        --stats-bg: #F2EEE6;
+        --stats-text: #1A1A1A;
+        --stats-border: #E5E0D5;
+        /* Domain accents (4 research areas) */
+        --c-gnoto: #E8B86D;
+        --c-river: #3F7CAC;
+        --c-bloom: #7BB47B;
+        --c-ai: #7C5CFF;
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -150,13 +159,22 @@
     .hero-photo {
         width:280px; height:280px; border-radius:50%; flex-shrink:0;
         object-fit:cover; border:4px solid var(--border-color);
+        filter: grayscale(0.85) contrast(1.05);
+        transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .hero-photo:hover { filter: none; }
     .hero-text { flex:1; }
     .hero-name {
-        font-size:3.2rem; font-weight:800; letter-spacing:-0.03em;
-        line-height:1.15; margin-bottom:0.3rem;
+        font-size: clamp(2.6rem, 6.4vw, 5.2rem);
+        font-weight:800; letter-spacing:-0.035em;
+        line-height:1.04; margin-bottom:0.3rem;
+        font-feature-settings: "ss01", "cv11";
     }
-    .hero-name-kr { font-size:1.1rem; color:var(--text-tertiary); font-weight:400; margin-bottom:0.6rem; }
+    .hero-name-kr {
+        font-family: var(--font-display-en);
+        font-size:1.35rem; color:var(--text-tertiary); font-weight:500;
+        letter-spacing:-0.01em; margin-bottom:0.6rem;
+    }
     .hero-title { font-size:1.2rem; color:var(--text-secondary); margin-bottom:1rem; line-height:1.5; }
     .hero-fellowship {
         display:inline-flex; align-items:center; gap:0.5rem;
@@ -529,6 +547,103 @@
     }
     @media (max-width:480px) {
     }
+
+    /* === Design refresh (lazyweb-medium) === */
+
+    /* Hero stat strip */
+    .hero-stats {
+        display:grid; grid-template-columns:repeat(4, 1fr);
+        gap:0; margin-top:1.5rem; margin-bottom:1.25rem;
+        border-top:1px solid var(--border-color);
+        border-bottom:1px solid var(--border-color);
+        padding:0.85rem 0;
+    }
+    .hero-stat { text-align:center; padding:0 0.5rem; position:relative; }
+    .hero-stat + .hero-stat::before {
+        content:''; position:absolute; left:0; top:15%; bottom:15%;
+        width:1px; background:var(--border-color);
+    }
+    .hero-stat-num {
+        font-family:var(--font-display-en);
+        font-size:1.7rem; font-weight:800; line-height:1;
+        letter-spacing:-0.03em; color:var(--text-primary);
+    }
+    .hero-stat-lbl {
+        margin-top:0.3rem;
+        font-size:0.68rem; font-weight:600; text-transform:uppercase;
+        letter-spacing:0.08em; color:var(--text-tertiary);
+    }
+    .hero-stat-foot {
+        grid-column:1 / -1; margin-top:0.5rem;
+        text-align:center; font-size:0.7rem;
+        color:var(--text-tertiary); font-style:italic;
+    }
+
+    /* Side progress nav (right edge, desktop only) */
+    .side-progress {
+        position:fixed; top:50%; right:1.25rem;
+        transform:translateY(-50%);
+        display:flex; flex-direction:column; gap:0.85rem;
+        z-index:900; padding:0.5rem 0;
+    }
+    .side-progress a {
+        position:relative; display:flex; align-items:center;
+        gap:0.6rem; color:transparent; text-decoration:none;
+        font-size:0.7rem; font-weight:600; letter-spacing:0.04em;
+        transition:color var(--transition);
+    }
+    .side-progress a::before {
+        content:''; display:block; width:7px; height:7px;
+        border-radius:50%; background:var(--border-color);
+        transition:all var(--transition);
+        order:2; flex-shrink:0;
+    }
+    .side-progress a.active::before {
+        background:var(--accent); transform:scale(1.6);
+        box-shadow:0 0 0 3px rgba(63,124,172,0.18);
+    }
+    .side-progress a:hover { color:var(--text-secondary); }
+    .side-progress a:hover::before { background:var(--accent); }
+    @media (max-width:1100px) { .side-progress { display:none; } }
+
+    /* Section wave divider (microbiome metaphor: undulating curve, auto via ::before) */
+    .section { position:relative; }
+    .section + .section::before {
+        content:''; position:absolute; top:-18px; left:0; right:0;
+        height:36px; pointer-events:none; z-index:5;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 36' preserveAspectRatio='none'><path d='M0,18 Q 75,4 150,18 T 300,18 T 450,18 T 600,18 T 750,18 T 900,18 T 1050,18 T 1200,18' stroke='%233F7CAC' stroke-width='1.3' fill='none' opacity='0.42'/></svg>");
+        background-size:1200px 36px; background-repeat:repeat-x;
+    }
+
+    /* About-card domain accents (4 research areas color-coded) */
+    #about .about-card:nth-child(1) { border-left-color:var(--c-gnoto); }
+    #about .about-card:nth-child(2) { border-left-color:var(--c-river); }
+    #about .about-card:nth-child(3) { border-left-color:var(--c-bloom); }
+    #about .about-card:nth-child(4) { border-left-color:var(--c-ai); }
+    #about .about-card:nth-child(1) .about-card-num { color:var(--c-gnoto); }
+    #about .about-card:nth-child(2) .about-card-num { color:var(--c-river); }
+    #about .about-card:nth-child(3) .about-card-num { color:var(--c-bloom); }
+    #about .about-card:nth-child(4) .about-card-num { color:var(--c-ai); }
+    #about .about-card { border-left-width:4px; }
+    #about .about-card:hover {
+        transform:translateX(2px);
+        transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* Section-title editorial flourish: subtle serif italic em */
+    .section-title em, .hero-title em { font-family:var(--font-serif); font-style:italic; font-weight:500; }
+
+    /* Hero-fellowship soften */
+    .hero-fellowship {
+        background:var(--bg-secondary); border-color:var(--border-color);
+        color:var(--accent);
+    }
+
+    @media (max-width:768px) {
+        .hero-stats { grid-template-columns:repeat(2, 1fr); gap:0.75rem 0; }
+        .hero-stat:nth-child(2)::before { display:none; }
+        .hero-stat-foot { grid-column:1 / -1; }
+    }
     </style>
 </head>
 <body>
@@ -556,6 +671,19 @@
     </div>
 </nav>
 
+<!-- Side progress nav (desktop) -->
+<nav class="side-progress" id="sideProgress" aria-label="섹션 진행">
+    <a href="#about" data-section="about">소개</a>
+    <a href="#research" data-section="research">연구</a>
+    <a href="#education" data-section="education">학력</a>
+    <a href="#publications" data-section="publications">논문</a>
+    <a href="#awards" data-section="awards">수상</a>
+    <a href="#skills" data-section="skills">역량</a>
+    <a href="#patents" data-section="patents">특허</a>
+    <a href="#media" data-section="media">미디어</a>
+    <a href="#contact" data-section="contact">연락</a>
+</nav>
+
 <!-- Hero -->
 <section class="hero">
     <div class="hero-inner">
@@ -579,6 +707,25 @@
                 <div style="flex-basis:100%;height:0"></div>
                 <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">이메일 보기</button>
                 <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">이메일 보기</button>
+            </div>
+            <div class="hero-stats" aria-label="연구 실적 지표">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">30</div>
+                    <div class="hero-stat-lbl">Publications</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">11</div>
+                    <div class="hero-stat-lbl">h-index</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">285</div>
+                    <div class="hero-stat-lbl">Citations</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">4</div>
+                    <div class="hero-stat-lbl">Patents</div>
+                </div>
+                <div class="hero-stat-foot">Google Scholar 기준 (2026-05)</div>
             </div>
             <div class="hero-highlights">
                 <div class="hero-hl">
@@ -1376,6 +1523,8 @@
 
     var gnb = document.getElementById('gnb');
     var navAnchors = gnbMenu.querySelectorAll('a[href^="#"]');
+    var sideProgress = document.getElementById('sideProgress');
+    var sideAnchors = sideProgress ? sideProgress.querySelectorAll('a[href^="#"]') : [];
 
     function onScroll() {
         var scrollY = window.scrollY;
@@ -1384,6 +1533,10 @@
             if (s.offsetTop - 120 <= scrollY) { current = s.getAttribute('id'); }
         });
         navAnchors.forEach(function(a) {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + current) { a.classList.add('active'); }
+        });
+        sideAnchors.forEach(function(a) {
             a.classList.remove('active');
             if (a.getAttribute('href') === '#' + current) { a.classList.add('active'); }
         });
