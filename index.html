@@ -160,11 +160,15 @@
     .hero-name {
         font-family: var(--font-sans);
         font-weight: 900;
-        font-size: clamp(3.8rem, 10.5vw, 8.4rem);
+        font-size: clamp(3rem, 9vw, 8rem);
         letter-spacing: -0.05em;
         line-height: 0.94;
         margin-bottom: 0.5rem;
         color: var(--text-primary);
+        white-space: nowrap;
+    }
+    @media (max-width: 480px) {
+        .hero-name { white-space: normal; }
     }
     .hero-name-kr {
         font-family: var(--font-sans);
