@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Hero Image Candidates · Minsoo Jeong</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size:17px; }
+  body {
+    font-family:'Pretendard Variable', system-ui, sans-serif;
+    background:#FFFFFF; color:#111827; line-height:1.5;
+    padding:3rem 2rem 5rem;
+  }
+  .wrap { max-width:1280px; margin:0 auto; }
+  h1 {
+    font-size:clamp(2.2rem, 4vw, 3.4rem); font-weight:900;
+    letter-spacing:-0.04em; line-height:1.05; margin-bottom:0.5rem;
+  }
+  .sub {
+    color:#4B5563; font-size:0.98rem; margin-bottom:3rem;
+    max-width:680px; line-height:1.55;
+  }
+  .meta-line {
+    font-family:'JetBrains Mono', mono;
+    font-size:0.78rem; color:#6B7280;
+    text-transform:uppercase; letter-spacing:0.1em;
+    margin-bottom:0.4rem;
+  }
+  .grid {
+    display:grid; grid-template-columns:repeat(2, 1fr);
+    gap:2rem;
+  }
+  @media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+
+  .card {
+    background:#FFFFFF; border:1px solid #E5E7EB;
+    border-radius:8px; overflow:hidden;
+    transition:all 0.25s ease;
+  }
+  .card:hover {
+    border-color:#2563EB;
+    box-shadow:0 8px 24px rgba(0,0,0,0.06);
+    transform:translateY(-2px);
+  }
+
+  .label-bar {
+    padding:1rem 1.25rem 0.85rem;
+    border-bottom:1px solid #F3F4F6;
+    background:#F9FAFB;
+  }
+  .pick-letter {
+    display:inline-block;
+    font-family:'JetBrains Mono', mono;
+    font-size:0.75rem; font-weight:700;
+    background:#111827; color:#fff;
+    padding:0.15rem 0.5rem; border-radius:3px;
+    letter-spacing:0.04em; margin-right:0.5rem;
+  }
+  .card-title {
+    font-size:1.1rem; font-weight:700;
+    letter-spacing:-0.015em; margin-bottom:0.3rem;
+  }
+  .card-meta {
+    font-size:0.85rem; color:#6B7280; line-height:1.5;
+  }
+  .card-meta b { color:#111827; font-weight:600; }
+
+  .img-frame {
+    background:#FAFAFA; padding:1rem;
+    aspect-ratio:16/10;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .img-frame img { max-width:100%; max-height:100%; object-fit:contain; }
+
+  .vibe {
+    padding:1rem 1.25rem 1.25rem;
+    font-size:0.88rem; color:#374151; line-height:1.6;
+  }
+  .vibe .when { color:#6B7280; font-size:0.82rem; margin-top:0.4rem; }
+
+  .pick-bar {
+    margin-top:3.5rem; padding:1.75rem 2rem;
+    background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px;
+    text-align:center;
+  }
+  .pick-bar h2 {
+    font-size:1.15rem; font-weight:700; margin-bottom:0.4rem;
+    letter-spacing:-0.015em;
+  }
+  .pick-bar p { color:#4B5563; font-size:0.92rem; }
+  .pick-bar code {
+    font-family:'JetBrains Mono', monospace;
+    background:#fff; padding:0.15rem 0.5rem;
+    border-radius:4px; color:#2563EB; font-size:0.85rem;
+    border:1px solid #E5E7EB;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Hero Image Candidates</h1>
+  <p class="sub">Anthropic처럼 큰 비주얼을 hero에 추가. 본인 1저자 published / PREP 논문에서 끌어온 figure 후보 8개. 한 번 보시고 골라주세요. 또는 직접 다른 figure 경로 알려주셔도 됩니다.</p>
+
+  <div class="grid">
+
+    <!-- A1 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">Sci Rep · 2025 · 1저자</div>
+        <div class="card-title"><span class="pick-letter">A1</span> YOLOv8s 콩 영양결핍 검출</div>
+        <div class="card-meta">DOI 10.1038/s41598-024-83295-6 · CC-BY · 페이지 7</div>
+      </div>
+      <div class="img-frame"><img src="hero/A_yolo_p7.png" alt="YOLOv8s soybean detection"></div>
+      <div class="vibe">
+        AI × 작물 정밀농업 시그니처. 본인의 가장 visible한 1저자 published 논문.
+        <div class="when">Anthropic-style impact: ★★★★★ (annotated photos = visually striking)</div>
+      </div>
+    </div>
+
+    <!-- A2 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">Sci Rep · 2025 · 1저자</div>
+        <div class="card-title"><span class="pick-letter">A2</span> YOLOv8s 검출 결과 페이지</div>
+        <div class="card-meta">동일 논문 · 페이지 8</div>
+      </div>
+      <div class="img-frame"><img src="hero/A_yolo_p8.png" alt="YOLOv8s detection results page"></div>
+      <div class="vibe">
+        같은 논문의 다른 figure 페이지. mAP/Precision 표 + 검출 결과 비교.
+        <div class="when">Anthropic-style impact: ★★★★ (data-richer, but more textual)</div>
+      </div>
+    </div>
+
+    <!-- B1 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">Curr Res Microb Sci · 2025 · 1저자</div>
+        <div class="card-title"><span class="pick-letter">B1</span> CRMS 녹조 cross-domain network</div>
+        <div class="card-meta">DOI 10.1016/j.crmicr.2025.100500 · CC-BY · 분석 v2 viz</div>
+      </div>
+      <div class="img-frame"><img src="hero/B_crms_network.png" alt="CRMS cross-domain network"></div>
+      <div class="vibe">
+        식물-미생물-대사체 cross-domain network. 가장 최신 1저자 + bloom 브랜드 narrative.
+        <div class="when">Anthropic-style impact: ★★★★★ (network = 지적 시그니처)</div>
+      </div>
+    </div>
+
+    <!-- B2 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">Curr Res Microb Sci · 2025 · 1저자</div>
+        <div class="card-title"><span class="pick-letter">B2</span> CRMS summary dashboard</div>
+        <div class="card-meta">동일 논문 · multi-panel summary</div>
+      </div>
+      <div class="img-frame"><img src="hero/B_crms_dashboard.png" alt="CRMS summary dashboard"></div>
+      <div class="vibe">
+        멀티-패널 dashboard. 종합 narrative, 한 컷에 다 들어감.
+        <div class="when">Anthropic-style impact: ★★★ (좋지만 정보 밀도 높음)</div>
+      </div>
+    </div>
+
+    <!-- B3 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">Curr Res Microb Sci · 2025 · 1저자</div>
+        <div class="card-title"><span class="pick-letter">B3</span> CRMS biclustering heatmap</div>
+        <div class="card-meta">동일 논문 · biclustering</div>
+      </div>
+      <div class="img-frame"><img src="hero/B_crms_heatmap.png" alt="CRMS biclustering heatmap"></div>
+      <div class="vibe">
+        biclustering heatmap. 깔끔한 grid 미학.
+        <div class="when">Anthropic-style impact: ★★★★ (clean dataviz)</div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">PREP · 낙동강 ARG · WR 타겟</div>
+        <div class="card-title"><span class="pick-letter">C</span> 낙동강 site profile cards</div>
+        <div class="card-meta">파이썬 figure factory · 미발표</div>
+      </div>
+      <div class="img-frame"><img src="hero/C_nakdong_sites.png" alt="Nakdong site profiles"></div>
+      <div class="vibe">
+        강 site별 profile card. 장소 기반 narrative. 미발표지만 비주얼 강함.
+        <div class="when">Anthropic-style impact: ★★★★★ (place-based storytelling)</div>
+      </div>
+    </div>
+
+    <!-- D1 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">PREP · 오이 PM · ISME/NatComm 타겟</div>
+        <div class="card-title"><span class="pick-letter">D1</span> 오이 BGC functional heatmap</div>
+        <div class="card-meta">59 analyses 중 하나 · 미발표</div>
+      </div>
+      <div class="img-frame"><img src="hero/D_cucumber_heatmap.png" alt="Cucumber BGC heatmap"></div>
+      <div class="vibe">
+        BGC functional heatmap. 미니멀, 색 절제, 격자 미학.
+        <div class="when">Anthropic-style impact: ★★★★ (minimalist grid)</div>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="card">
+      <div class="label-bar">
+        <div class="meta-line">PREP · 오이 PM · ISME/NatComm 타겟</div>
+        <div class="card-title"><span class="pick-letter">D2</span> 오이 QMP beta PCoA</div>
+        <div class="card-meta">동일 프로젝트 · ordination</div>
+      </div>
+      <div class="img-frame"><img src="hero/D_cucumber_pcoa.png" alt="Cucumber QMP PCoA"></div>
+      <div class="vibe">
+        ordination scatter. 단순, 자신감 있는 비주얼.
+        <div class="when">Anthropic-style impact: ★★★ (단순, 강력)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pick-bar">
+    <h2>골라서 알려주세요</h2>
+    <p>채팅에 <code>A1</code>, <code>A2</code>, <code>B1</code>, <code>B2</code>, <code>B3</code>, <code>C</code>, <code>D1</code>, <code>D2</code> 중 하나 입력. 또는 다른 figure 경로/원하는 비주얼 직접 지정.</p>
+  </div>
+</div>
+</body>
+</html>
