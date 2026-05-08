@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Design Character Comparison · Minsoo Jeong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size:17px; }
+  body {
+    font-family: 'Pretendard Variable', 'Inter Tight', system-ui, sans-serif;
+    background:#0F0F0F; color:#EAEAEA; line-height:1.5;
+    padding:3rem 2rem 5rem;
+  }
+  .wrap { max-width:1320px; margin:0 auto; }
+  h1 {
+    font-family:'Inter Tight','Pretendard Variable',sans-serif;
+    font-size:clamp(2rem, 4vw, 3rem); font-weight:800;
+    letter-spacing:-0.03em; line-height:1.05; margin-bottom:0.5rem;
+  }
+  .sub {
+    color:#888; font-size:0.95rem; margin-bottom:3rem;
+    max-width:600px;
+  }
+  .sub em { font-family:'Source Serif 4', serif; font-style:italic; color:#ccc; }
+  .grid {
+    display:grid; grid-template-columns:repeat(3, 1fr);
+    gap:1.75rem;
+  }
+  @media (max-width:1100px) { .grid { grid-template-columns:1fr; } }
+
+  .card {
+    background:#1A1A1A; border:1px solid #2A2A2A;
+    border-radius:12px; overflow:hidden;
+    transition:all 0.25s ease;
+  }
+  .card:hover { border-color:#444; transform:translateY(-3px); }
+
+  .label {
+    padding:1.1rem 1.25rem 0.85rem;
+    border-bottom:1px solid #2A2A2A;
+    background:#141414;
+  }
+  .char-letter {
+    font-family:'Inter Tight',sans-serif;
+    font-size:0.7rem; font-weight:700;
+    letter-spacing:0.18em; color:#666;
+    text-transform:uppercase; margin-bottom:0.4rem;
+  }
+  .char-title {
+    font-size:1.15rem; font-weight:700;
+    letter-spacing:-0.01em; margin-bottom:0.3rem;
+  }
+  .char-ref {
+    font-family:'Source Serif 4',serif; font-style:italic;
+    font-size:0.8rem; color:#888;
+  }
+  .char-A .char-letter { color:#D4B896; }
+  .char-B .char-letter { color:#5EEAD4; }
+  .char-C .char-letter { color:#FF6B6B; }
+
+  .shot-frame {
+    background:#000; aspect-ratio:16/10;
+    overflow:hidden; position:relative;
+  }
+  .shot-frame img {
+    width:100%; height:100%; object-fit:cover; object-position:top;
+    display:block;
+  }
+  .shot-frame.split { display:grid; grid-template-rows:1fr 1fr; }
+  .shot-frame.split img { aspect-ratio:auto; }
+
+  .meta {
+    padding:1rem 1.25rem 1.25rem;
+    font-size:0.83rem; color:#aaa; line-height:1.6;
+  }
+  .meta b { color:#EAEAEA; font-weight:600; }
+  .meta .row { margin-top:0.4rem; }
+  .swatch {
+    display:inline-block; width:14px; height:14px; border-radius:3px;
+    vertical-align:middle; margin-right:6px; border:1px solid #333;
+  }
+  .vibe {
+    margin-top:0.85rem; padding-top:0.85rem;
+    border-top:1px dashed #333;
+    font-family:'Source Serif 4',serif; font-style:italic;
+    font-size:0.88rem; color:#bbb;
+  }
+
+  .pick-bar {
+    margin-top:3.5rem; padding:2rem 2rem;
+    background:#1A1A1A; border:1px solid #2A2A2A; border-radius:12px;
+    text-align:center;
+  }
+  .pick-bar h2 {
+    font-family:'Inter Tight',sans-serif;
+    font-size:1.2rem; font-weight:700; margin-bottom:0.3rem;
+  }
+  .pick-bar p { color:#888; font-size:0.92rem; }
+  .pick-bar code {
+    font-family:'JetBrains Mono', monospace;
+    background:#0F0F0F; padding:0.15rem 0.5rem;
+    border-radius:4px; color:#5EEAD4; font-size:0.85rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>3 Design Characters</h1>
+  <p class="sub">현재 사이트(Medium tier)는 <em>"별로"</em> 판정. 진짜 세련/섹시는 더하는 게 아니라 빼는 것. 셋 중에 캐릭터 하나만 골라서 갑니다.</p>
+
+  <div class="grid">
+
+    <!-- Character A -->
+    <div class="card char-A">
+      <div class="label">
+        <div class="char-letter">Character A</div>
+        <div class="char-title">Editorial Light</div>
+        <div class="char-ref">ref · anthropic.com / NYT Magazine</div>
+      </div>
+      <div class="shot-frame">
+        <img src="anthropic.png" alt="Anthropic homepage">
+      </div>
+      <div class="meta">
+        <div><b>BG</b> <span class="swatch" style="background:#FFFFFF"></span> <code style="color:#FF6B6B; background:#0F0F0F; padding:1px 5px; border-radius:3px; font-family:'JetBrains Mono',mono; font-size:0.8em">#FFFFFF</code> 순백</div>
+        <div class="row"><b>Type</b> Source Serif 4 (이름 거대 200px) + Pretendard 보조</div>
+        <div class="row"><b>Accent</b> 잉크 블랙. 선택적 em에 ONE editorial red.</div>
+        <div class="row"><b>Photo</b> 큰 비대칭 크롭. 원형 아님.</div>
+        <div class="row"><b>장식</b> divider 0, badge 0, side nav 0.</div>
+        <div class="vibe">"잡지 표지처럼 읽힌다. 점잖은 연구자."</div>
+      </div>
+    </div>
+
+    <!-- Character B -->
+    <div class="card char-B">
+      <div class="label">
+        <div class="char-letter">Character B</div>
+        <div class="char-title">Tech-luxe Dark</div>
+        <div class="char-ref">ref · linear.app / leerob.com</div>
+      </div>
+      <div class="shot-frame split">
+        <img src="linear.png" alt="Linear homepage">
+        <img src="leerob.png" alt="Lee Robinson homepage">
+      </div>
+      <div class="meta">
+        <div><b>BG</b> <span class="swatch" style="background:#0A0A0A"></span> <code style="color:#5EEAD4; background:#0F0F0F; padding:1px 5px; border-radius:3px; font-family:'JetBrains Mono',mono; font-size:0.8em">#0A0A0A</code> 근검은색</div>
+        <div class="row"><b>Type</b> Inter Tight 800/900 (이름 140px) + JetBrains Mono (날짜)</div>
+        <div class="row"><b>Accent</b> 단 하나의 mint <span class="swatch" style="background:#5EEAD4"></span> <code style="color:#5EEAD4; background:#0F0F0F; padding:1px 5px; border-radius:3px; font-family:'JetBrains Mono',mono; font-size:0.8em">#5EEAD4</code></div>
+        <div class="row"><b>Photo</b> <em style="color:#888">없음</em>. 텍스트 only hero.</div>
+        <div class="row"><b>Animation</b> cursor-follow soft glow 한 장면만.</div>
+        <div class="vibe">"스탭 엔지니어 출신 연구자. AI 계 채용 타깃."</div>
+      </div>
+    </div>
+
+    <!-- Character C -->
+    <div class="card char-C">
+      <div class="label">
+        <div class="char-letter">Character C</div>
+        <div class="char-title">Korean Moderne</div>
+        <div class="char-ref">ref · brittanychiang.com 미니멀 + 한글 주연</div>
+      </div>
+      <div class="shot-frame">
+        <img src="brittany.png" alt="Brittany Chiang homepage (minimal reference)">
+      </div>
+      <div class="meta">
+        <div><b>BG</b> <span class="swatch" style="background:#FFFFFF"></span> <code style="color:#FF6B6B; background:#0F0F0F; padding:1px 5px; border-radius:3px; font-family:'JetBrains Mono',mono; font-size:0.8em">#FFFFFF</code> 순백</div>
+        <div class="row"><b>Type</b> Pretendard Variable 900 ("정민수" 160px+) + Inter Tight 보조</div>
+        <div class="row"><b>Accent</b> 단 하나의 brand red <span class="swatch" style="background:#C4302B"></span> <code style="color:#FF6B6B; background:#0F0F0F; padding:1px 5px; border-radius:3px; font-family:'JetBrains Mono',mono; font-size:0.8em">#C4302B</code> (선택적)</div>
+        <div class="row"><b>Photo</b> 작은 B&W 스탬프. 메인 아님.</div>
+        <div class="row"><b>장식</b> divider 0, badge 0.</div>
+        <div class="vibe">"한글이 visual의 주연. 한국 임용/한국어 독자 타깃."</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pick-bar">
+    <h2>고르신 후 채팅에 알려주세요</h2>
+    <p>채팅에 <code>A</code>, <code>B</code>, <code>C</code> 중 하나 입력하시면 해당 캐릭터로 사이트 전체 다시 짭니다.</p>
+  </div>
+</div>
+</body>
+</html>
