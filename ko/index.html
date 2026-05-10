@@ -150,34 +150,62 @@
         max-width:var(--max-width); margin:0 auto;
         display:flex; align-items:center; gap:3rem;
     }
-    .hero-figure {
-        flex: 0 0 auto;
-        width: clamp(280px, 45%, 540px);
-        margin: 0;
-    }
     .hero-photo {
-        width: 100%;
+        width: clamp(280px, 38%, 420px);
         height: auto;
-        aspect-ratio: 1.06;
+        aspect-ratio: 4/5;
         border-radius: 4px;
-        object-fit: contain;
-        background: var(--bg-secondary);
+        object-fit: cover;
+        object-position: center top;
         border: 1px solid var(--border-color);
-        filter: none;
+        flex-shrink: 0;
     }
-    .hero-photo-credit {
-        margin-top: 0.7rem;
+
+    /* Publication figure preview popup (hover to activate) */
+    .pub-preview {
+        position: fixed;
+        bottom: 1.5rem; right: 1.5rem;
+        width: 340px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 0.65rem;
+        border-radius: 6px;
+        box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+        opacity: 0; visibility: hidden;
+        transform: translateY(12px);
+        transition: opacity 0.25s, visibility 0.25s, transform 0.25s cubic-bezier(0.4,0,0.2,1);
+        z-index: 800;
+    }
+    .pub-preview.visible {
+        opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .pub-preview-img {
+        width: 100%; height: auto; max-height: 280px;
+        object-fit: contain; border-radius: 3px;
+        background: var(--bg-secondary);
+        display: block;
+    }
+    .pub-preview-cap {
+        margin-top: 0.5rem;
         font-family: var(--font-mono);
         font-size: 0.72rem;
         color: var(--text-tertiary);
-        line-height: 1.55;
+        line-height: 1.5;
         letter-spacing: 0.01em;
     }
-    .hero-photo-credit a {
-        color: var(--text-tertiary);
-        border-bottom: 1px solid var(--border-color);
+    .pub-item[data-fig] { cursor: pointer; }
+    .pub-item[data-fig]::after {
+        content: '';
+        position: absolute; right: 0.5rem; top: 1rem;
+        width: 8px; height: 8px;
+        border-radius: 50%; background: var(--accent);
+        opacity: 0.35;
+        transition: opacity 0.2s;
     }
-    .hero-photo-credit a:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }
+    .pub-item[data-fig]:hover::after { opacity: 1; }
+    @media (max-width: 768px) {
+        .pub-preview { display: none; }
+    }
     .hero-text { flex:1; }
     .hero-name {
         font-family: var(--font-sans);
@@ -845,6 +873,7 @@
 <!-- Hero -->
 <section class="hero">
     <div class="hero-inner">
+        <img src="../profile.jpg" alt="정민수" class="hero-photo">
         <div class="hero-text">
             <h1 class="hero-name">정민수</h1>
             <div class="hero-name-kr">Minsoo Jeong, Ph.D.</div>
@@ -905,14 +934,6 @@
                 </div>
             </div>
         </div>
-        <figure class="hero-figure">
-            <img src="../hero-yolo.jpg" alt="YOLOv8s 콩잎 영양결핍 검출 결과 — bounding box 출력" class="hero-photo">
-            <figcaption class="hero-photo-credit">
-                YOLOv8s detection of soybean nutrient deficiencies (N&middot;P&middot;K).<br>
-                <strong>Jeong, M.</strong> et al., <i>Sci Rep</i> 15, 13810 (2025) &middot;
-                <a href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">CC&hairsp;BY 4.0</a>
-            </figcaption>
-        </figure>
     </div>
 </section>
 
@@ -1151,7 +1172,7 @@
                         <div class="pub-authors">Han, H., <strong>Jeong, M.</strong> &amp; Shin, J.H. (2025)</div>
                         <div class="pub-meta"><span class="pub-journal">Korean Journal of Microbiology and Biotechnology, 53(4), 641&ndash;643</span></div>
                     </div>
-                    <div class="pub-item first-author" data-type="first">
+                    <div class="pub-item first-author" data-type="first" data-fig="../figs/crms-network.jpg" data-fig-cap="Cross-domain network — bloom water exposure modifies plant&ndash;microbe&ndash;metabolite coupling. <i>Curr Res Microb Sci</i> 2025.">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Multi-omics insights into plant&ndash;microbe dysbiosis caused by cyanobacterial bloom-affected water</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Jeong, S., Park, S., Yeo, S., Ryu, B., Shin, J.H. &amp; Lee, S. (2025)</div>
                         <div class="pub-meta">
@@ -1164,14 +1185,14 @@
                         <div class="pub-authors">Hathurusinghe, S.H.K., Bashizi, T.F., <strong>Jeong, M.</strong>, Kim, M.J., Pande, A. &amp; Shin, J.H. (2025)</div>
                         <div class="pub-meta"><span class="pub-journal">Plant Growth Regulation, 105(5), 1723&ndash;1738</span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor">
+                    <div class="pub-item" data-type="coauthor" data-fig="../figs/npj-hpv.png" data-fig-cap="Vaginal microbiome shifts with HPV 16/18 infection. <i>npj Biofilms Microbiomes</i> 2025 (IF 9.2).">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41522-025-00747-1" target="_blank" rel="noopener">Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18</a></div>
                         <div class="pub-authors">Jung, D.R., Choi, Y., <strong>Jeong, M.</strong>, Singh, V., Jeon, S.Y., Seo, I., ... &amp; Chong, G.O. (2025)</div>
                         <div class="pub-meta">
                             <span class="pub-journal">npj Biofilms and Microbiomes, 11(1), 105</span>
                         </div>
                     </div>
-                    <div class="pub-item first-author" data-type="first">
+                    <div class="pub-item first-author" data-type="first" data-fig="../figs/scirep-yolo.jpg" data-fig-cap="YOLOv8s detection of N/P/K deficiency in soybean leaves. <i>Sci Rep</i> 2025 &middot; 1저자.">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Kwon, S.-M. et al. (2025)</div>
                         <div class="pub-meta">
@@ -1179,7 +1200,7 @@
                             <span class="pub-badge pub-badge--first">제1저자</span>
                         </div>
                     </div>
-                    <div class="pub-item" data-type="coauthor">
+                    <div class="pub-item" data-type="coauthor" data-fig="../figs/natcomm-cervical.png" data-fig-cap="Microbial metabolites regulating cervical stem-cell renewal. <i>Nat Commun</i> 2025 (IF 16.6).">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41467-025-57323-6" target="_blank" rel="noopener">Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells</a></div>
                         <div class="pub-authors">Myeong, J., Lee, M., ..., <strong>Jeong, M.</strong>, ..., &amp; Jeong, Y. (2025)</div>
                         <div class="pub-meta">
@@ -1223,7 +1244,7 @@
                         <div class="pub-authors">Tagele, S.B., Kim, R.-H., <strong>Jeong, M.</strong> et al. (2023)</div>
                         <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14(1), 1072216</span></div>
                     </div>
-                    <div class="pub-item first-author" data-type="first">
+                    <div class="pub-item first-author" data-type="first" data-fig="../figs/ffgc-fir.jpg" data-fig-cap="Korean fir die-off &harr; soil symbiotic fungi shift. <i>Front For Glob Change</i> 2023 &middot; 1저자.">
                         <div class="pub-title"><a href="https://doi.org/10.3389/ffgc.2022.1114390" target="_blank" rel="noopener">The death of Korean fir affects soil symbiotic fungal microbiome</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Tagele, S.B., Kim, M.-J. et al. (2023)</div>
                         <div class="pub-meta">
@@ -1241,7 +1262,7 @@
                         <div class="pub-authors">Tagele, S.B., Kim, R.-H., <strong>Jeong, M.</strong>, Jung, D.R., Lee, D. &amp; Shin, J.H. (2022)</div>
                         <div class="pub-meta"><span class="pub-journal">Chemical and Biological Technologies in Agriculture, 9(1), 99</span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor">
+                    <div class="pub-item" data-type="coauthor" data-fig="../figs/fmicb-alopecia.jpg" data-fig-cap="Skin&ndash;gut axis links scalp + gut microbiome to AGA. <i>Front Microbiol</i> 2022.">
                         <div class="pub-title"><a href="https://doi.org/10.3389/fmicb.2022.1076242" target="_blank" rel="noopener">Comparative analysis of scalp and gut microbiome in androgenetic alopecia</a></div>
                         <div class="pub-authors">Jung, D.-R., Yoo, H.-Y., ..., <strong>Jeong, M.</strong> et al. (2022)</div>
                         <div class="pub-meta"><span class="pub-journal">Frontiers in Microbiology, 13(1), 1076242</span></div>
@@ -1251,7 +1272,7 @@
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A. et al. (2022)</div>
                         <div class="pub-meta"><span class="pub-journal">Data in Brief, 42, 108022</span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor">
+                    <div class="pub-item" data-type="coauthor" data-fig="../figs/scirep-tej.png" data-fig-cap="Mixed starter culture for Tej (Ethiopian honey wine). <i>Sci Rep</i> 2022.">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-022-17594-1" target="_blank" rel="noopener">Development of mixed starter culture for the fermentation of Ethiopian honey wine</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
                         <div class="pub-meta"><span class="pub-journal">Scientific Reports, 12(1), 13431</span></div>
@@ -1678,6 +1699,12 @@
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
+<!-- Publication figure preview (floating) -->
+<div class="pub-preview" id="pubPreview" aria-hidden="true">
+    <img class="pub-preview-img" id="pubPreviewImg" src="" alt="">
+    <div class="pub-preview-cap" id="pubPreviewCap"></div>
+</div>
+
 <script>
 (function() {
     'use strict';
@@ -1718,6 +1745,27 @@
     document.getElementById('backToTop').addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Publication figure preview (hover, event delegation for cloned tab items)
+    var pubPreview = document.getElementById('pubPreview');
+    var pubPreviewImg = document.getElementById('pubPreviewImg');
+    var pubPreviewCap = document.getElementById('pubPreviewCap');
+    if (pubPreview) {
+        document.addEventListener('mouseover', function(e) {
+            var item = e.target.closest && e.target.closest('.pub-item[data-fig]');
+            if (!item) return;
+            if (item.contains(e.relatedTarget)) return;
+            pubPreviewImg.src = item.getAttribute('data-fig');
+            pubPreviewCap.innerHTML = item.getAttribute('data-fig-cap') || '';
+            pubPreview.classList.add('visible');
+        });
+        document.addEventListener('mouseout', function(e) {
+            var item = e.target.closest && e.target.closest('.pub-item[data-fig]');
+            if (!item) return;
+            if (item.contains(e.relatedTarget)) return;
+            pubPreview.classList.remove('visible');
+        });
+    }
 
     var reveals = document.querySelectorAll('.reveal');
     var observer = new IntersectionObserver(function(entries) {
