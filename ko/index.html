@@ -177,6 +177,78 @@
         padding: 1.3rem 1.5rem 1.5rem;
     }
 
+    /* Conference photo gallery — asymmetric editorial layout */
+    .gallery {
+        display: flex; flex-direction: column; gap: 0.85rem;
+    }
+    .gallery-row {
+        display: flex; gap: 0.85rem;
+    }
+    .gallery-row-feature { height: clamp(280px, 32vw, 420px); }
+    .gallery-row-feature .g-kmb { flex: 1.55; }
+    .gallery-row-feature .g-asm-talk { flex: 1; }
+    .gallery-row-secondary { height: clamp(180px, 22vw, 260px); }
+    .gallery-row-secondary > .gallery-card { flex: 1; }
+    .gallery-card {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        overflow: hidden;
+        color: #fff;
+        text-decoration: none;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .gallery-card:hover {
+        transform: translateY(-4px) scale(1.005);
+        box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+    }
+    .gallery-card::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.78) 100%);
+    }
+    .gallery-cap {
+        position: absolute; bottom: 1.1rem; left: 1.1rem; right: 1.1rem;
+        z-index: 2;
+    }
+    .gallery-tag {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        opacity: 0.92;
+        margin-bottom: 0.3rem;
+        color: #fff;
+    }
+    .gallery-title {
+        font-family: var(--font-sans);
+        font-weight: 700;
+        font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+        letter-spacing: -0.015em;
+        line-height: 1.3;
+        color: #fff;
+    }
+    .gallery-card.feature .gallery-title { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
+    .gallery-badge {
+        display: inline-block;
+        margin-top: 0.4rem;
+        padding: 0.2rem 0.6rem;
+        background: var(--accent);
+        color: #fff;
+        font-family: var(--font-sans);
+        font-size: 0.72rem;
+        font-weight: 700;
+        border-radius: 100px;
+        letter-spacing: -0.01em;
+    }
+    @media (max-width: 768px) {
+        .gallery-row { flex-direction: column; height: auto; }
+        .gallery-row > .gallery-card { height: 220px; flex: none; }
+    }
+
     /* Inline pub thumbnails (absolute positioned, only on items with data-fig) */
     .pub-item { position: relative; }
     .pub-item[data-fig] { padding-right: 76px; }
@@ -866,6 +938,7 @@
             <li><a href="#research">연구분야</a></li>
             <li><a href="#education">학력</a></li>
             <li><a href="#awards">수상</a></li>
+            <li><a href="#highlights">발표</a></li>
             <li><a href="#skills">역량</a></li>
             <li><a href="#publications">논문</a></li>
             <li><a href="#media">미디어</a></li>
@@ -1491,6 +1564,54 @@
             <div class="grant-line"><span class="grant-name">대학원 조교</span><span class="grant-meta">BK21 FOUR (2024&ndash;2025)</span><span class="grant-amount">약 3,600만원 (2년)</span></div>
             <div class="grant-line"><span class="grant-name">BK21 정부장학금</span><span class="grant-meta">2022&ndash;2023</span><span class="grant-amount">약 1,800만원 (2년)</span></div>
             <div class="grant-line"><span class="grant-name">연구조교 (3급)</span><span class="grant-meta">경북대학교 (2023&ndash;2024)</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- Conference Highlights (photo gallery) -->
+<section class="section section--alt" id="highlights">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">발표 현장</div>
+            <h2 class="section-title">학회 활동</h2>
+            <p class="section-subtitle">대구에서 휴스턴, LA까지. 4년간의 발표 현장.</p>
+        </div>
+        <div class="gallery reveal">
+            <div class="gallery-row gallery-row-feature">
+                <a class="gallery-card feature g-kmb" style="background-image: url('../photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
+                    <div class="gallery-cap">
+                        <div class="gallery-tag">KMB International Conference &middot; June 2024</div>
+                        <div class="gallery-title">한국미생물&middot;생명공학회 구두발표 대상</div>
+                        <span class="gallery-badge">Grand Prize 👑</span>
+                    </div>
+                </a>
+                <a class="gallery-card g-asm-talk" style="background-image: url('../photos/asm-2023-talk.jpg')" aria-label="ASM Microbe 2023 oral presentation">
+                    <div class="gallery-cap">
+                        <div class="gallery-tag">ASM Microbe 2023 &middot; Houston</div>
+                        <div class="gallery-title">미국미생물학회 구두발표</div>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-row gallery-row-secondary">
+                <a class="gallery-card g-asm-stage" style="background-image: url('../photos/asm-2023-stage.jpg')" aria-label="ASM Microbe 2023 stage">
+                    <div class="gallery-cap">
+                        <div class="gallery-tag">ASM Microbe 2023</div>
+                        <div class="gallery-title">Houston, USA</div>
+                    </div>
+                </a>
+                <a class="gallery-card g-asm-poster" style="background-image: url('../photos/asm-2023-poster.jpg')" aria-label="ASM 2023 poster session">
+                    <div class="gallery-cap">
+                        <div class="gallery-tag">ASM Microbe 2023</div>
+                        <div class="gallery-title">Poster Session</div>
+                    </div>
+                </a>
+                <a class="gallery-card g-ksabc" style="background-image: url('../photos/ksabc-2021.jpg')" aria-label="KSABC 2021">
+                    <div class="gallery-cap">
+                        <div class="gallery-tag">KSABC International &middot; 2021</div>
+                        <div class="gallery-title">한국응용생명화학회 우수 발표</div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
