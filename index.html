@@ -151,7 +151,7 @@
         display:flex; align-items:center; gap:3rem;
     }
     .hero-photo {
-        width: clamp(280px, 38%, 420px);
+        width: clamp(180px, 24%, 280px);
         height: auto;
         aspect-ratio: 4/5;
         border-radius: 4px;
@@ -160,6 +160,38 @@
         border: 1px solid var(--border-color);
         flex-shrink: 0;
     }
+
+    /* About card decorative images */
+    #about .about-card {
+        padding: 0 !important;
+        overflow: hidden;
+    }
+    .about-card-img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        display: block;
+        background: var(--bg-secondary);
+    }
+    .about-card-body {
+        padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    /* Inline pub thumbnails (absolute positioned, only on items with data-fig) */
+    .pub-item { position: relative; }
+    .pub-item[data-fig] { padding-right: 76px; }
+    .pub-thumb {
+        position: absolute;
+        right: 0.5rem; top: 0.85rem;
+        width: 56px; height: 56px;
+        border-radius: 4px;
+        object-fit: cover;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        opacity: 0.9;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+    .pub-item[data-fig]:hover .pub-thumb { opacity: 1; transform: scale(1.06); }
 
     /* Publication figure preview popup (hover to activate) */
     .pub-preview {
@@ -194,15 +226,6 @@
         letter-spacing: 0.01em;
     }
     .pub-item[data-fig] { cursor: pointer; }
-    .pub-item[data-fig]::after {
-        content: '';
-        position: absolute; right: 0.5rem; top: 1rem;
-        width: 8px; height: 8px;
-        border-radius: 50%; background: var(--accent);
-        opacity: 0.35;
-        transition: opacity 0.2s;
-    }
-    .pub-item[data-fig]:hover::after { opacity: 1; }
     @media (max-width: 768px) {
         .pub-preview { display: none; }
     }
@@ -210,15 +233,15 @@
     .hero-name {
         font-family: var(--font-sans);
         font-weight: 900;
-        font-size: clamp(3rem, 9vw, 8rem);
-        letter-spacing: -0.05em;
-        line-height: 0.94;
+        font-size: clamp(2.6rem, 7vw, 6rem);
+        letter-spacing: -0.045em;
+        line-height: 0.96;
         margin-bottom: 0.5rem;
         color: var(--text-primary);
         white-space: nowrap;
     }
-    @media (max-width: 480px) {
-        .hero-name { white-space: normal; }
+    @media (max-width: 520px) {
+        .hero-name { white-space: normal; font-size: clamp(2rem, 9vw, 3rem); }
     }
     .hero-name-kr {
         font-family: var(--font-sans);
@@ -971,24 +994,36 @@
         <p class="section-subtitle" style="max-width:720px;">Microbiome researcher at the intersection of agriculture and environmental science. From designing gnotobiotic crop experiments to building river metagenome pipelines and deep learning models &mdash; I cover the full research stack independently.</p>
         <div class="about-grid reveal">
             <div class="about-card">
-                <div class="about-card-num">01</div>
-                <h3 class="about-card-title">Gnotobiotics</h3>
-                <p class="about-card-desc">Growing cucumbers in germ-free systems to track what each microbe actually does &mdash; which ones suppress disease, which ones promote growth.</p>
+                <img class="about-card-img" src="about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
+                <div class="about-card-body">
+                    <div class="about-card-num">01</div>
+                    <h3 class="about-card-title">Gnotobiotics</h3>
+                    <p class="about-card-desc">Growing cucumbers in germ-free systems to track what each microbe actually does &mdash; which ones suppress disease, which ones promote growth.</p>
+                </div>
             </div>
             <div class="about-card">
-                <div class="about-card-num">02</div>
-                <h3 class="about-card-title">River Metagenomics</h3>
-                <p class="about-card-desc">Analyzing how antimicrobial resistance genes spread across the Nakdong River watershed with seasonal community shifts.</p>
+                <img class="about-card-img" src="about/river.jpg" alt="Nakdong River site schematic" loading="lazy">
+                <div class="about-card-body">
+                    <div class="about-card-num">02</div>
+                    <h3 class="about-card-title">River Metagenomics</h3>
+                    <p class="about-card-desc">Analyzing how antimicrobial resistance genes spread across the Nakdong River watershed with seasonal community shifts.</p>
+                </div>
             </div>
             <div class="about-card">
-                <div class="about-card-num">03</div>
-                <h3 class="about-card-title">Bloom Ecology</h3>
-                <p class="about-card-desc">Studying how cyanobacterial bloom water reshapes the lettuce microbiome from root to leaf.</p>
+                <img class="about-card-img" src="about/bloom.jpg" alt="Bloom water cross-domain microbe-metabolite network" loading="lazy">
+                <div class="about-card-body">
+                    <div class="about-card-num">03</div>
+                    <h3 class="about-card-title">Bloom Ecology</h3>
+                    <p class="about-card-desc">Studying how cyanobacterial bloom water reshapes the lettuce microbiome from root to leaf.</p>
+                </div>
             </div>
             <div class="about-card">
-                <div class="about-card-num">04</div>
-                <h3 class="about-card-title">AI &amp; Deep Learning</h3>
-                <p class="about-card-desc">Published YOLOv8-based real-time crop nutrient deficiency detection (<i>Scientific Reports</i>, 1st author). Microbial community dynamics prediction using GNN and Cross-Attention models. AI API integration for automated research workflows.</p>
+                <img class="about-card-img" src="about/ai.jpg" alt="YOLOv8 crop nutrient deficiency detection" loading="lazy">
+                <div class="about-card-body">
+                    <div class="about-card-num">04</div>
+                    <h3 class="about-card-title">AI &amp; Deep Learning</h3>
+                    <p class="about-card-desc">Published YOLOv8-based real-time crop nutrient deficiency detection (<i>Scientific Reports</i>, 1st author). Microbial community dynamics prediction using GNN and Cross-Attention models. AI API integration for automated research workflows.</p>
+                </div>
             </div>
         </div>
         <div class="about-pipeline reveal">
@@ -1188,6 +1223,7 @@
                         <div class="pub-meta"><span class="pub-journal">Korean Journal of Microbiology and Biotechnology, 53(4), 641&ndash;643</span></div>
                     </div>
                     <div class="pub-item first-author" data-type="first" data-fig="figs/crms-network.jpg" data-fig-cap="Cross-domain network &mdash; bloom water exposure modifies plant&ndash;microbe&ndash;metabolite coupling. <i>Curr Res Microb Sci</i> 2025.">
+                        <img class="pub-thumb" src="figs/crms-network.jpg" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Multi-omics insights into plant&ndash;microbe dysbiosis caused by cyanobacterial bloom-affected water</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Jeong, S., Park, S., Yeo, S., Ryu, B., Shin, J.H. &amp; Lee, S. (2025)</div>
                         <div class="pub-meta">
@@ -1201,6 +1237,7 @@
                         <div class="pub-meta"><span class="pub-journal">Plant Growth Regulation, 105(5), 1723&ndash;1738</span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-fig="figs/npj-hpv.png" data-fig-cap="Vaginal microbiome shifts with HPV 16/18 infection. <i>npj Biofilms Microbiomes</i> 2025 (IF 9.2).">
+                        <img class="pub-thumb" src="figs/npj-hpv.png" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41522-025-00747-1" target="_blank" rel="noopener">Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18</a></div>
                         <div class="pub-authors">Jung, D.R., Choi, Y., <strong>Jeong, M.</strong>, Singh, V., Jeon, S.Y., Seo, I., ... &amp; Chong, G.O. (2025)</div>
                         <div class="pub-meta">
@@ -1208,6 +1245,7 @@
                         </div>
                     </div>
                     <div class="pub-item first-author" data-type="first" data-fig="figs/scirep-yolo.jpg" data-fig-cap="YOLOv8s detection of N/P/K deficiency in soybean leaves. <i>Sci Rep</i> 2025 &middot; 1st author.">
+                        <img class="pub-thumb" src="figs/scirep-yolo.jpg" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Kwon, S.-M. et al. (2025)</div>
                         <div class="pub-meta">
@@ -1216,6 +1254,7 @@
                         </div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-fig="figs/natcomm-cervical.png" data-fig-cap="Microbial metabolites regulating cervical stem-cell renewal. <i>Nat Commun</i> 2025 (IF 16.6).">
+                        <img class="pub-thumb" src="figs/natcomm-cervical.png" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41467-025-57323-6" target="_blank" rel="noopener">Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells</a></div>
                         <div class="pub-authors">Myeong, J., Lee, M., ..., <strong>Jeong, M.</strong>, ..., &amp; Jeong, Y. (2025)</div>
                         <div class="pub-meta">
@@ -1260,6 +1299,7 @@
                         <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14(1), 1072216</span></div>
                     </div>
                     <div class="pub-item first-author" data-type="first" data-fig="figs/ffgc-fir.jpg" data-fig-cap="Korean fir die-off &harr; soil symbiotic fungi shift. <i>Front For Glob Change</i> 2023 &middot; 1st author.">
+                        <img class="pub-thumb" src="figs/ffgc-fir.jpg" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.3389/ffgc.2022.1114390" target="_blank" rel="noopener">The death of Korean fir affects soil symbiotic fungal microbiome</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Tagele, S.B., Kim, M.-J. et al. (2023)</div>
                         <div class="pub-meta">
@@ -1278,6 +1318,7 @@
                         <div class="pub-meta"><span class="pub-journal">Chemical and Biological Technologies in Agriculture, 9(1), 99</span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-fig="figs/fmicb-alopecia.jpg" data-fig-cap="Skin&ndash;gut axis links scalp + gut microbiome to AGA. <i>Front Microbiol</i> 2022.">
+                        <img class="pub-thumb" src="figs/fmicb-alopecia.jpg" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.3389/fmicb.2022.1076242" target="_blank" rel="noopener">Comparative analysis of scalp and gut microbiome in androgenetic alopecia</a></div>
                         <div class="pub-authors">Jung, D.-R., Yoo, H.-Y., ..., <strong>Jeong, M.</strong> et al. (2022)</div>
                         <div class="pub-meta"><span class="pub-journal">Frontiers in Microbiology, 13(1), 1076242</span></div>
@@ -1288,6 +1329,7 @@
                         <div class="pub-meta"><span class="pub-journal">Data in Brief, 42, 108022</span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-fig="figs/scirep-tej.png" data-fig-cap="Mixed starter culture for Tej (Ethiopian honey wine). <i>Sci Rep</i> 2022.">
+                        <img class="pub-thumb" src="figs/scirep-tej.png" alt="" loading="lazy">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-022-17594-1" target="_blank" rel="noopener">Development of mixed starter culture for the fermentation of Ethiopian honey wine</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong> et al. (2022)</div>
                         <div class="pub-meta"><span class="pub-journal">Scientific Reports, 12(1), 13431</span></div>
