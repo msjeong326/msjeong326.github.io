@@ -177,24 +177,30 @@
     .about-card-body {
         padding: 1.3rem 1.5rem 1.5rem;
     }
-    .about-offclock {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--border-color);
-        text-align: center;
-        font-size: 0.92rem;
-        color: var(--text-secondary);
-        line-height: 1.6;
+    /* Hobby (Off the clock) masonry gallery */
+    .hobby-grid {
+        column-count: 3;
+        column-gap: 0.9rem;
+        margin-top: 1.5rem;
     }
-    .about-offclock-tag {
-        display: inline-block;
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.14em;
-        color: var(--text-tertiary);
-        margin-right: 0.5rem;
+    .hobby-grid img {
+        width: 100%;
+        margin: 0 0 0.9rem;
+        break-inside: avoid;
+        display: block;
+        border-radius: 6px;
+        background: var(--bg-secondary);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s, filter 0.35s;
+        cursor: zoom-in;
+        filter: saturate(0.95);
     }
+    .hobby-grid img:hover {
+        transform: translateY(-3px) scale(1.012);
+        box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+        filter: saturate(1.05);
+    }
+    @media (max-width: 900px) { .hobby-grid { column-count: 2; } }
+    @media (max-width: 540px) { .hobby-grid { column-count: 1; } }
 
     /* Conference photo gallery — asymmetric editorial layout */
     .gallery {
@@ -1171,10 +1177,6 @@
                 </div>
             </div>
         </div>
-        <p class="about-offclock reveal">
-            <span class="about-offclock-tag">Off the clock</span>
-            아마추어 축구와 풋살, 주말 러닝, 가끔 테니스.
-        </p>
     </div>
 </section>
 
@@ -1826,6 +1828,32 @@
                     <div class="media-source">경북대학교 뉴스</div>
                 </div>
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- Off the Clock (hobby gallery) -->
+<section class="section" id="offclock">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">취미</div>
+            <h2 class="section-title">Off the clock</h2>
+            <p class="section-subtitle">아마추어 축구와 풋살, 주말 러닝, 가끔 테니스. 실험실 밖의 한 컷들.</p>
+        </div>
+        <div class="hobby-grid reveal">
+            <img src="../photos/hobby/img_4005.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_3186.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_0608.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_4575.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_1709.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_5201.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_0051.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_5656.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_0642.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_7794.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_1364.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_4074.jpg" alt="Off the clock" loading="lazy">
+            <img src="../photos/hobby/img_7695.jpg" alt="Off the clock" loading="lazy">
         </div>
     </div>
 </section>
