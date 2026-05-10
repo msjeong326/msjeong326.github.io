@@ -168,8 +168,9 @@
     }
     .about-card-img {
         width: 100%;
-        height: 140px;
-        object-fit: cover;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        object-fit: contain;
         display: block;
         background: var(--bg-secondary);
     }
@@ -678,7 +679,7 @@
         }
         .hamburger { display:flex; }
         .hero-inner { flex-direction:column; text-align:center; }
-        .hero-photo { width:200px; height:200px; }
+        .hero-photo { width:200px; height:auto; aspect-ratio:4/5; }
         .hero-meta { justify-content:center; }
         .hero-highlights { grid-template-columns:1fr 1fr; }
         .about-grid { grid-template-columns:1fr; }
@@ -921,8 +922,7 @@
     @media (max-width: 768px) {
         .hero { padding: 4rem 1.25rem 3rem; }
         .hero-inner { flex-direction: column; gap: 2rem; }
-        .hero-figure { width: 100%; max-width: 480px; }
-        .hero-photo { width: 100%; max-width: 100%; height: auto; aspect-ratio: 1.06; }
+        .hero-photo { width: min(220px, 70vw); max-width: 220px; height: auto; aspect-ratio: 4/5; }
         .section { padding: 4rem 1.25rem; }
     }
     </style>
@@ -1498,7 +1498,7 @@
                 <div class="col-title">수상 (대표 실적)</div>
                 <div class="list-items">
                     <div class="list-item">
-                        <div class="list-item-title">구두발표 대상 👑</div>
+                        <div class="list-item-title">구두발표 대상</div>
                         <div class="list-item-detail">한국미생물&middot;생명공학회 (KMB) 국제학술대회, 2024년 6월</div>
                     </div>
                     <div class="list-item">
@@ -1528,7 +1528,7 @@
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국미생물학회 (MSK) 2024</div>
                     </div>
                     <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제학술대회 2024 <span class="conf-award-badge">대상 👑</span></div>
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제학술대회 2024 <span class="conf-award-badge">대상</span></div>
                     </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국응용생명화학회 국제학술대회 2024</div>
@@ -1569,20 +1569,20 @@
 </section>
 
 <!-- Conference Highlights (photo gallery) -->
-<section class="section section--alt" id="highlights">
+<section class="section" id="highlights">
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">발표 현장</div>
             <h2 class="section-title">학회 활동</h2>
-            <p class="section-subtitle">대구에서 휴스턴, LA까지. 4년간의 발표 현장.</p>
+            <p class="section-subtitle">국내 학회와 ASM Microbe Houston에서 이어진 발표 현장.</p>
         </div>
         <div class="gallery reveal">
             <div class="gallery-row gallery-row-feature">
                 <a class="gallery-card feature g-kmb" style="background-image: url('../photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
                     <div class="gallery-cap">
-                        <div class="gallery-tag">KMB International Conference &middot; June 2024</div>
+                        <div class="gallery-tag">KMB International Conference &middot; BEXCO Busan &middot; June 2024</div>
                         <div class="gallery-title">한국미생물&middot;생명공학회 구두발표 대상</div>
-                        <span class="gallery-badge">Grand Prize 👑</span>
+                        <span class="gallery-badge">대상 수상</span>
                     </div>
                 </a>
                 <a class="gallery-card g-asm-talk" style="background-image: url('../photos/asm-2023-talk.jpg')" aria-label="ASM Microbe 2023 oral presentation">
@@ -1596,7 +1596,7 @@
                 <a class="gallery-card g-asm-stage" style="background-image: url('../photos/asm-2023-stage.jpg')" aria-label="ASM Microbe 2023 stage">
                     <div class="gallery-cap">
                         <div class="gallery-tag">ASM Microbe 2023</div>
-                        <div class="gallery-title">Houston, USA</div>
+                        <div class="gallery-title">ASM Microbe 현장</div>
                     </div>
                 </a>
                 <a class="gallery-card g-asm-poster" style="background-image: url('../photos/asm-2023-poster.jpg')" aria-label="ASM 2023 poster session">
