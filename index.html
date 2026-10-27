@@ -1074,6 +1074,37 @@
         .institution-logo-ucdavis { width: 150px; }
         .institution-logo-knu { width: 210px; }
     }
+
+    /* Full-frame personal photographs with captions outside the image. */
+    .about-intro {
+        display: grid; grid-template-columns: minmax(0, 1fr) 220px;
+        gap: 3rem; align-items: center; margin-bottom: 2rem;
+    }
+    .doctoral-portrait { margin: 0; }
+    .doctoral-portrait a, .activity-photo-card a { display: block; }
+    .doctoral-portrait img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .doctoral-portrait figcaption {
+        font-size: 0.78rem; line-height: 1.5; color: var(--text-secondary);
+        text-align: center; padding-top: 0.65rem;
+    }
+    .activity-photo-grid { columns: 2; column-gap: 1rem; }
+    .activity-photo-card {
+        break-inside: avoid; margin: 0 0 1rem; border-radius: 8px;
+        overflow: hidden; border: 1px solid var(--border-color);
+        background: var(--bg-primary);
+    }
+    .activity-photo-card img { display: block; width: 100%; height: auto; }
+    .activity-photo-card figcaption { padding: 1rem 1.1rem 1.15rem; }
+    .activity-photo-card .activity-kicker {
+        color: var(--text-secondary); font-family: var(--font-mono);
+        font-size: 0.72rem; line-height: 1.6; margin-bottom: 0.35rem;
+    }
+    .activity-photo-card .activity-title { font-size: 1rem; font-weight: 650; line-height: 1.5; }
+    @media (max-width: 768px) {
+        .about-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+        .doctoral-portrait { width: min(240px, 100%); margin: 0 auto; }
+        .activity-photo-grid { columns: 1; }
+    }
     </style>
 </head>
 <body>
@@ -1186,7 +1217,15 @@
             <div class="section-label">About</div>
             <h2 class="section-title">What I Do</h2>
         </div>
-        <p class="section-subtitle" style="max-width:720px;">I study how environmental conditions reshape plant-associated microbial communities and their contribution to plant health. I am a postdoctoral researcher in the Melotto Lab at UC Davis, combining gnotobiotic experiments, multi-omics, and computational ecology with research on crop and aquatic microbiomes.</p>
+        <div class="about-intro reveal">
+            <p class="section-subtitle" style="max-width:720px;">I study how environmental conditions reshape plant-associated microbial communities and their contribution to plant health. I am a postdoctoral researcher in the Melotto Lab at UC Davis, combining gnotobiotic experiments, multi-omics, and computational ecology with research on crop and aquatic microbiomes.</p>
+            <figure class="doctoral-portrait" data-added-photo="3">
+                <a href="photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="Minsoo Jeong in doctoral graduation regalia">
+                    <img src="photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="Minsoo Jeong in doctoral graduation regalia">
+                </a>
+                <figcaption>Doctoral graduation portrait · Kyungpook National University</figcaption>
+            </figure>
+        </div>
         <div class="about-grid reveal">
             <div class="about-card">
                 <img class="about-card-img" src="about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
@@ -1272,6 +1311,32 @@
                     <div class="isme-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
                 </figcaption>
             </figure>
+            <div class="activity-photo-grid">
+                <figure class="activity-photo-card" data-added-photo="5">
+                    <a href="photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="Outstanding Poster Presentation Award">
+                        <img src="photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Outstanding Poster Presentation Award">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB Yeongnam Branch Symposium · 2026</div><div class="activity-title">Outstanding Poster Presentation Award</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="4">
+                    <a href="photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="Oral presentation · Gwangju, Republic of Korea">
+                        <img src="photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Oral presentation · Gwangju, Republic of Korea">
+                    </a>
+                    <figcaption><div class="activity-kicker">Korean Society of Environmental Health · November 2025</div><div class="activity-title">Oral presentation · Gwangju, Republic of Korea</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="2">
+                    <a href="photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="Poster presentation · Plant–microbe interactions">
+                        <img src="photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="Poster presentation · Plant–microbe interactions">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2025 · Los Angeles</div><div class="activity-title">Poster presentation · Plant–microbe interactions</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="1">
+                    <a href="photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="Cucumber and powdery mildew research">
+                        <img src="photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Cucumber and powdery mildew research">
+                    </a>
+                    <figcaption><div class="activity-kicker">Research seminar</div><div class="activity-title">Cucumber and powdery mildew research</div></figcaption>
+                </figure>
+            </div>
             <div class="gallery-row gallery-row-feature">
                 <a class="gallery-card feature g-kmb" style="background-image: url('photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
                     <div class="gallery-cap">
@@ -1631,7 +1696,7 @@
         <div class="two-col reveal">
             <div>
                 <div class="col-title">Awards (Selected)</div>
-                <div class="list-items">
+                <div class="list-items"><div class="list-item"><div class="list-item-title">Outstanding Poster Presentation Award</div><div class="list-item-detail">KMB Yeongnam Branch Symposium, 2026</div></div>
                     <div class="list-item">
                         <div class="list-item-title">Grand Prize for Oral Presentation</div>
                         <div class="list-item-detail">KMB International Conference, Jun 2024</div>

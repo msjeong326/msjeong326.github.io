@@ -1059,6 +1059,37 @@
         .institution-logo-ucdavis { width: 150px; }
         .institution-logo-knu { width: 210px; }
     }
+
+    /* Full-frame personal photographs with captions outside the image. */
+    .about-intro {
+        display: grid; grid-template-columns: minmax(0, 1fr) 220px;
+        gap: 3rem; align-items: center; margin-bottom: 2rem;
+    }
+    .doctoral-portrait { margin: 0; }
+    .doctoral-portrait a, .activity-photo-card a { display: block; }
+    .doctoral-portrait img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .doctoral-portrait figcaption {
+        font-size: 0.78rem; line-height: 1.5; color: var(--text-secondary);
+        text-align: center; padding-top: 0.65rem;
+    }
+    .activity-photo-grid { columns: 2; column-gap: 1rem; }
+    .activity-photo-card {
+        break-inside: avoid; margin: 0 0 1rem; border-radius: 8px;
+        overflow: hidden; border: 1px solid var(--border-color);
+        background: var(--bg-primary);
+    }
+    .activity-photo-card img { display: block; width: 100%; height: auto; }
+    .activity-photo-card figcaption { padding: 1rem 1.1rem 1.15rem; }
+    .activity-photo-card .activity-kicker {
+        color: var(--text-secondary); font-family: var(--font-mono);
+        font-size: 0.72rem; line-height: 1.6; margin-bottom: 0.35rem;
+    }
+    .activity-photo-card .activity-title { font-size: 1rem; font-weight: 650; line-height: 1.5; }
+    @media (max-width: 768px) {
+        .about-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+        .doctoral-portrait { width: min(240px, 100%); margin: 0 auto; }
+        .activity-photo-grid { columns: 1; }
+    }
     </style>
 </head>
 <body>
@@ -1171,7 +1202,15 @@
             <div class="section-label">소개</div>
             <h2 class="section-title">연구 소개</h2>
         </div>
-        <p class="section-subtitle" style="max-width:720px;">환경 조건이 식물 연관 미생물 군집과 식물 건강에 미치는 영향을 연구합니다. UC Davis 식물과학과 Melotto 연구실에서 박사후연구원으로 일하며, 무균 식물 실험과 멀티오믹스·전산생태학을 작물 및 수생태계 마이크로바이옴 연구에 연결하고 있습니다.</p>
+        <div class="about-intro reveal">
+            <p class="section-subtitle" style="max-width:720px;">환경 조건이 식물 연관 미생물 군집과 식물 건강에 미치는 영향을 연구합니다. UC Davis 식물과학과 Melotto 연구실에서 박사후연구원으로 일하며, 무균 식물 실험과 멀티오믹스·전산생태학을 작물 및 수생태계 마이크로바이옴 연구에 연결하고 있습니다.</p>
+            <figure class="doctoral-portrait" data-added-photo="3">
+                <a href="../photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="정민수의 박사학위 기념사진">
+                    <img src="../photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="정민수의 박사학위 기념사진">
+                </a>
+                <figcaption>박사학위 기념사진 · 경북대학교</figcaption>
+            </figure>
+        </div>
         <div class="about-grid reveal">
             <div class="about-card">
                 <img class="about-card-img" src="../about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
@@ -1257,6 +1296,32 @@
                     <div class="isme-title">제20회 국제미생물생태학회(ISME20) 구두발표</div>
                 </figcaption>
             </figure>
+            <div class="activity-photo-grid">
+                <figure class="activity-photo-card" data-added-photo="5">
+                    <a href="../photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="우수포스터발표상 수상">
+                        <img src="../photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="우수포스터발표상 수상">
+                    </a>
+                    <figcaption><div class="activity-kicker">한국미생물·생명공학회 영남지부 학술대회 · 2026</div><div class="activity-title">우수포스터발표상 수상</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="4">
+                    <a href="../photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="한국환경보건학회 추계학술대회 구두발표">
+                        <img src="../photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="한국환경보건학회 추계학술대회 구두발표">
+                    </a>
+                    <figcaption><div class="activity-kicker">2025년 11월 · 광주</div><div class="activity-title">한국환경보건학회 추계학술대회 구두발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="2">
+                    <a href="../photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="식물–미생물 상호작용 연구 포스터 발표">
+                        <img src="../photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="식물–미생물 상호작용 연구 포스터 발표">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2025 · 미국 로스앤젤레스</div><div class="activity-title">식물–미생물 상호작용 연구 포스터 발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="1">
+                    <a href="../photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="오이와 흰가루병 연구 세미나">
+                        <img src="../photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="오이와 흰가루병 연구 세미나">
+                    </a>
+                    <figcaption><div class="activity-kicker">연구 세미나</div><div class="activity-title">오이와 흰가루병 연구 세미나</div></figcaption>
+                </figure>
+            </div>
             <div class="gallery-row gallery-row-feature">
                 <a class="gallery-card feature g-kmb" style="background-image: url('../photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
                     <div class="gallery-cap">
@@ -1616,7 +1681,7 @@
         <div class="two-col reveal">
             <div>
                 <div class="col-title">수상 (대표 실적)</div>
-                <div class="list-items">
+                <div class="list-items"><div class="list-item"><div class="list-item-title">우수포스터발표상</div><div class="list-item-detail">한국미생물·생명공학회 영남지부 학술대회, 2026</div></div>
                     <div class="list-item">
                         <div class="list-item-title">구두발표 대상</div>
                         <div class="list-item-detail">한국미생물&middot;생명공학회 (KMB) 국제학술대회, 2024년 6월</div>
