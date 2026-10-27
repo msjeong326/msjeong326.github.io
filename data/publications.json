@@ -1,0 +1,1653 @@
+{
+  "updated": "2026-10-27",
+  "scope": "Published journal articles and publicly available early online articles; issue year is preserved for future-dated journal issues.",
+  "publications": [
+    {
+      "doi": "10.1016/j.jspr.2026.103261",
+      "title": "Stage-specific shifts in bacterial and fungal amplicon profiles of garlic bulbs during cold storage",
+      "journal": "Journal of Stored Products Research",
+      "year": 2027,
+      "volume": "120",
+      "issue": null,
+      "pages": "103261",
+      "article_number": "103261",
+      "authors": [
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Og, H.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.",
+          "self": false
+        },
+        {
+          "display": "Lee, J.W.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        }
+      ],
+      "first_author": true,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": {
+        "en": "Online · January 2027 issue",
+        "ko": "온라인 공개 · 2027년 1월호"
+      },
+      "source": "https://api.crossref.org/works/10.1016/j.jspr.2026.103261",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1016/j.apsoil.2026.107429",
+      "title": "Soil bacteriome-based screening model for predicting ginseng replant status with independent cohort validation",
+      "journal": "Applied Soil Ecology",
+      "year": 2026,
+      "volume": "227",
+      "issue": null,
+      "pages": "107429",
+      "article_number": "107429",
+      "authors": [
+        {
+          "display": "Kwon, S.M.",
+          "self": false
+        },
+        {
+          "display": "Park, Y.J.",
+          "self": false
+        },
+        {
+          "display": "Park, M.K.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": true,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1016/j.apsoil.2026.107429",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3390/nu18203445",
+      "title": "Five-Year Trends in Dietary Intake by Gender Among Korean Preschoolers (2017–2021): Nationwide Survey-Based Surveillance Amid Rising Demand for Medical Care for Precocious Puberty",
+      "journal": "Nutrients",
+      "year": 2026,
+      "volume": "18",
+      "issue": "20",
+      "pages": "3445",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Yang, J.",
+          "self": false
+        },
+        {
+          "display": "Lee, J.",
+          "self": false
+        },
+        {
+          "display": "Og, H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3390/nu18203445",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1186/s12863-026-01489-5",
+      "title": "Complete genome sequence of Cupriavidus sp. PB-02, a potential new species with putative ability to degrade PBAT, isolated from soil",
+      "journal": "BMC Genomic Data",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Kim, M.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": true,
+      "online_status": {
+        "en": "Early online · October 3, 2026",
+        "ko": "온라인 선공개 · 2026년 10월 3일"
+      },
+      "source": "https://api.crossref.org/works/10.1186/s12863-026-01489-5",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1016/j.jfoodeng.2025.112764",
+      "title": "Unstructured kinetic modeling of mixed-culture honey-wine fermentation systems involving dual substrate and product dynamics",
+      "journal": "Journal of Food Engineering",
+      "year": 2026,
+      "volume": "404",
+      "issue": null,
+      "pages": "112764",
+      "article_number": "112764",
+      "authors": [
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Emire, S.A.",
+          "self": false
+        },
+        {
+          "display": "Demsash, H.D.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1016/j.jfoodeng.2025.112764",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.48022/mbl.2511.11012",
+      "title": "Complete Genome Sequence of Caballeronia sp. KNU42, Isolated from the Maize Rhizosphere",
+      "journal": "Microbiology and Biotechnology Letters",
+      "year": 2026,
+      "volume": "54",
+      "issue": null,
+      "pages": null,
+      "article_number": "e2511012",
+      "authors": [
+        {
+          "display": "Kim, I.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Lee, D.S.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.48022/mbl.2511.11012",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.48022/mbl.2508.08018",
+      "title": "Complete Genome Sequence of Priestia aryabhattai KNU45 Isolated from the Rhizosphere of Maize ( Zea mays L.)",
+      "journal": "Microbiology and Biotechnology Letters",
+      "year": 2026,
+      "volume": "54",
+      "issue": null,
+      "pages": null,
+      "article_number": "e2508018",
+      "authors": [
+        {
+          "display": "Kwon, M.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.48022/mbl.2508.08018",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.48022/mbl.2509.09002",
+      "title": "Draft Genome Sequence of Arthrobacter sp. KNU-44 Isolated from Long-Term Maize Rotation Soil in Korea",
+      "journal": "Microbiology and Biotechnology Letters",
+      "year": 2026,
+      "volume": "54",
+      "issue": null,
+      "pages": null,
+      "article_number": "e2509002",
+      "authors": [
+        {
+          "display": "Kwon, S.M.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.48022/mbl.2509.09002",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.48022/mbl.2508.08021",
+      "title": "Genome Analysis of Bacillus mycoides KNU-41 from a Long-Term Fertilized Maize Rhizosphere",
+      "journal": "Microbiology and Biotechnology Letters",
+      "year": 2026,
+      "volume": "54",
+      "issue": null,
+      "pages": null,
+      "article_number": "e2508021",
+      "authors": [
+        {
+          "display": "Hyun, Y.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.48022/mbl.2508.08021",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.48022/mbl.2508.08015",
+      "title": "Complete Genome Sequence of Arthrobacter sp. KNU40, Isolated from Nitrogen-Deficient Corn-Cultivated Soil",
+      "journal": "Microbiology and Biotechnology Letters",
+      "year": 2025,
+      "volume": "53",
+      "issue": "4",
+      "pages": "641-643",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Hwang, H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.48022/mbl.2508.08015",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1128/mra.01011-24",
+      "title": "Complete genome sequence of Bacillus licheniformis KNU11, isolated from soil",
+      "journal": "Microbiology Resource Announcements",
+      "year": 2025,
+      "volume": "14",
+      "issue": "12",
+      "pages": null,
+      "article_number": "e01011-24",
+      "authors": [
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": true,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1128/mra.01011-24",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3389/fpls.2025.1712997",
+      "title": "Soil microbial load modulation improves plant–microbe interactions and bioinoculant efficacy in pathogen-stressed soils",
+      "journal": "Frontiers in Plant Science",
+      "year": 2025,
+      "volume": "16",
+      "issue": null,
+      "pages": null,
+      "article_number": "1712997",
+      "authors": [
+        {
+          "display": "Andargie, Y.E.",
+          "self": false
+        },
+        {
+          "display": "Lee, G.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Azizoglu, U.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3389/fpls.2025.1712997",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1007/s10725-025-01376-6",
+      "title": "Enhancing cucumber growth and disease resistance against Sclerotinia sclerotiorum by exogenous co-inoculation of Bacillus amyloliquefaciens KACC17029 and Salicylic acid",
+      "journal": "Plant Growth Regulation",
+      "year": 2025,
+      "volume": "105",
+      "issue": "5",
+      "pages": "1723-1738",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Hathurusinghe, S.H.K.",
+          "self": false
+        },
+        {
+          "display": "Bashizi, T.F.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Pande, A.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1007/s10725-025-01376-6",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1038/s41522-025-00747-1",
+      "title": "Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18",
+      "journal": "npj Biofilms and Microbiomes",
+      "year": 2025,
+      "volume": "11",
+      "issue": "1",
+      "pages": null,
+      "article_number": "105",
+      "authors": [
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Choi, Y.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Singh, V.",
+          "self": false
+        },
+        {
+          "display": "Jeon, S.Y.",
+          "self": false
+        },
+        {
+          "display": "Seo, I.",
+          "self": false
+        },
+        {
+          "display": "Park, N.J.Y.",
+          "self": false
+        },
+        {
+          "display": "Lee, Y.H.",
+          "self": false
+        },
+        {
+          "display": "Park, J.Y.",
+          "self": false
+        },
+        {
+          "display": "Han, H.S.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        },
+        {
+          "display": "Chong, G.O.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1038/s41522-025-00747-1",
+      "checked": "2026-10-27",
+      "figure": "figs/npj-hpv.png"
+    },
+    {
+      "doi": "10.1038/s41598-024-83295-6",
+      "title": "Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement",
+      "journal": "Scientific Reports",
+      "year": 2025,
+      "volume": "15",
+      "issue": "1",
+      "pages": null,
+      "article_number": "13810",
+      "authors": [
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Park, S.",
+          "self": false
+        },
+        {
+          "display": "Kwon, S.M.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Lee, H.S.",
+          "self": false
+        },
+        {
+          "display": "Kim, H.J.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": true,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1038/s41598-024-83295-6",
+      "checked": "2026-10-27",
+      "figure": "figs/scirep-yolo.jpg"
+    },
+    {
+      "doi": "10.1038/s41467-025-57323-6",
+      "title": "Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells",
+      "journal": "Nature Communications",
+      "year": 2025,
+      "volume": "16",
+      "issue": "1",
+      "pages": null,
+      "article_number": "2327",
+      "authors": [
+        {
+          "display": "Myeong, J.",
+          "self": false
+        },
+        {
+          "display": "Lee, M.",
+          "self": false
+        },
+        {
+          "display": "Lee, B.",
+          "self": false
+        },
+        {
+          "display": "Kim, J.H.",
+          "self": false
+        },
+        {
+          "display": "Nam, Y.",
+          "self": false
+        },
+        {
+          "display": "Choi, Y.",
+          "self": false
+        },
+        {
+          "display": "Kim, J.",
+          "self": false
+        },
+        {
+          "display": "Jeon, S.Y.",
+          "self": false
+        },
+        {
+          "display": "Shim, H.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Shin, Y.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Oh, B.",
+          "self": false
+        },
+        {
+          "display": "Jung, J.",
+          "self": false
+        },
+        {
+          "display": "Kim, C.S.",
+          "self": false
+        },
+        {
+          "display": "Han, H.S.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        },
+        {
+          "display": "Lee, Y.H.",
+          "self": false
+        },
+        {
+          "display": "Park, N.J.Y.",
+          "self": false
+        },
+        {
+          "display": "Chong, G.O.",
+          "self": false
+        },
+        {
+          "display": "Jeong, Y.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1038/s41467-025-57323-6",
+      "checked": "2026-10-27",
+      "figure": "figs/natcomm-cervical.png"
+    },
+    {
+      "doi": "10.1016/j.crmicr.2025.100500",
+      "title": "Multi-omics insights into plant-microbe dysbiosis caused by cyanobacterial bloom-affected water",
+      "journal": "Current Research in Microbial Sciences",
+      "year": 2025,
+      "volume": "9",
+      "issue": null,
+      "pages": "100500",
+      "article_number": "100500",
+      "authors": [
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Park, S.",
+          "self": false
+        },
+        {
+          "display": "Jeong, S.",
+          "self": false
+        },
+        {
+          "display": "Park, S.",
+          "self": false
+        },
+        {
+          "display": "Yeo, S.",
+          "self": false
+        },
+        {
+          "display": "Ryu, B.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": true,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1016/j.crmicr.2025.100500",
+      "checked": "2026-10-27",
+      "figure": "figs/crms-network.jpg"
+    },
+    {
+      "doi": "10.3390/foods13193102",
+      "title": "Solubilized β-Glucan Supplementation in C57BL/6J Mice Dams Augments Neurodevelopment and Cognition in the Offspring Driven by Gut Microbiome Remodeling",
+      "journal": "Foods",
+      "year": 2024,
+      "volume": "13",
+      "issue": "19",
+      "pages": "3102",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Katimbwa, D.A.",
+          "self": false
+        },
+        {
+          "display": "Kim, Y.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Lim, J.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3390/foods13193102",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3390/agronomy14102225",
+      "title": "Biofumigation-Derived Soil Microbiome Modification and Its Effects on Tomato (Solanum lycopersicum L.) Health under Drought",
+      "journal": "Agronomy",
+      "year": 2024,
+      "volume": "14",
+      "issue": "10",
+      "pages": "2225",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Lee, D.",
+          "self": false
+        },
+        {
+          "display": "Park, T.H.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Nam, G.",
+          "self": false
+        },
+        {
+          "display": "Kim, W.C.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3390/agronomy14102225",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1111/1541-4337.13424",
+      "title": "A comprehensive review of the characterization, host interactions, and stabilization advancements on probiotics: Addressing the challenges in functional food diversification",
+      "journal": "Comprehensive Reviews in Food Science and Food Safety",
+      "year": 2024,
+      "volume": "23",
+      "issue": "5",
+      "pages": null,
+      "article_number": "e13424",
+      "authors": [
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1111/1541-4337.13424",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1007/s11356-023-31643-w",
+      "title": "Impact of propiconazole fungicide on soil microbiome (bacterial and fungal) diversity, functional profile, and associated dehydrogenase activity",
+      "journal": "Environmental Science and Pollution Research",
+      "year": 2024,
+      "volume": "31",
+      "issue": "5",
+      "pages": "8240-8253",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Sliti, A.",
+          "self": false
+        },
+        {
+          "display": "Singh, V.",
+          "self": false
+        },
+        {
+          "display": "Ibal, J.C.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1007/s11356-023-31643-w",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3390/microorganisms11010098",
+      "title": "Bacterial Profiles of Brain in Downer Cattle with Unknown Etiology",
+      "journal": "Microorganisms",
+      "year": 2023,
+      "volume": "11",
+      "issue": "1",
+      "pages": "98",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Park, Y.J.",
+          "self": false
+        },
+        {
+          "display": "Kang, G.U.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Singh, V.",
+          "self": false
+        },
+        {
+          "display": "Kim, J.",
+          "self": false
+        },
+        {
+          "display": "Lee, K.",
+          "self": false
+        },
+        {
+          "display": "Choi, E.J.",
+          "self": false
+        },
+        {
+          "display": "Kim, H.J.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.Y.",
+          "self": false
+        },
+        {
+          "display": "Oem, J.K.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3390/microorganisms11010098",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3389/fpls.2023.1301698",
+      "title": "Deciphering key factors in pathogen-suppressive microbiome assembly in the rhizosphere",
+      "journal": "Frontiers in Plant Science",
+      "year": 2023,
+      "volume": "14",
+      "issue": null,
+      "pages": null,
+      "article_number": "1301698",
+      "authors": [
+        {
+          "display": "Andargie, Y.E.",
+          "self": false
+        },
+        {
+          "display": "Lee, G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3389/fpls.2023.1301698",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1038/s41598-023-31204-8",
+      "title": "Spinach (Spinacia oleracea) as green manure modifies the soil nutrients and microbiota structure for enhanced pepper productivity",
+      "journal": "Scientific Reports",
+      "year": 2023,
+      "volume": "13",
+      "issue": "1",
+      "pages": null,
+      "article_number": "4140",
+      "authors": [
+        {
+          "display": "Kim, R.H.",
+          "self": false
+        },
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Lee, D.",
+          "self": false
+        },
+        {
+          "display": "Park, T.",
+          "self": false
+        },
+        {
+          "display": "Tino, B.F.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.A.",
+          "self": false
+        },
+        {
+          "display": "Park, Y.J.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1038/s41598-023-31204-8",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3389/fpls.2023.1072216",
+      "title": "Soil amendment with cow dung modifies the soil nutrition and microbiota to reduce the ginseng replanting problem",
+      "journal": "Frontiers in Plant Science",
+      "year": 2023,
+      "volume": "14",
+      "issue": null,
+      "pages": null,
+      "article_number": "1072216",
+      "authors": [
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Kim, R.H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Lee, D.",
+          "self": false
+        },
+        {
+          "display": "Kim, W.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3389/fpls.2023.1072216",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3389/ffgc.2022.1114390",
+      "title": "The death of Korean fir (Abies koreana) affects soil symbiotic fungal microbiome: Preliminary findings",
+      "journal": "Frontiers in Forests and Global Change",
+      "year": 2023,
+      "volume": "5",
+      "issue": null,
+      "pages": null,
+      "article_number": "1114390",
+      "authors": [
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Ko, S.H.",
+          "self": false
+        },
+        {
+          "display": "Kim, K.S.",
+          "self": false
+        },
+        {
+          "display": "Koh, J.G.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Jo, Y.",
+          "self": false
+        },
+        {
+          "display": "Jung, Y.",
+          "self": false
+        },
+        {
+          "display": "Park, Y.J.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.S.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": true,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3389/ffgc.2022.1114390",
+      "checked": "2026-10-27",
+      "figure": "figs/ffgc-fir.jpg"
+    },
+    {
+      "doi": "10.1186/s40538-022-00365-5",
+      "title": "An optimized biofumigant improves pepper yield without exerting detrimental effects on soil microbial diversity",
+      "journal": "Chemical and Biological Technologies in Agriculture",
+      "year": 2022,
+      "volume": "9",
+      "issue": "1",
+      "pages": null,
+      "article_number": "99",
+      "authors": [
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Kim, R.H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Lee, D.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1186/s40538-022-00365-5",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3389/fmicb.2022.1076242",
+      "title": "Comparative analysis of scalp and gut microbiome in androgenetic alopecia: A Korean cross-sectional study",
+      "journal": "Frontiers in Microbiology",
+      "year": 2022,
+      "volume": "13",
+      "issue": null,
+      "pages": null,
+      "article_number": "1076242",
+      "authors": [
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Yoo, H.Y.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Singh, V.",
+          "self": false
+        },
+        {
+          "display": "Park, S.H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Park, B.J.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3389/fmicb.2022.1076242",
+      "checked": "2026-10-27",
+      "figure": "figs/fmicb-alopecia.jpg"
+    },
+    {
+      "doi": "10.1128/mra.00734-22",
+      "title": "Complete Genome Sequence of Bacillus amyloliquefaciens KNU-28 Isolated from Peach Leaves (Prunus Persica [L.] Batsch)",
+      "journal": "Microbiology Resource Announcements",
+      "year": 2022,
+      "volume": "11",
+      "issue": "10",
+      "pages": null,
+      "article_number": "e00734-22",
+      "authors": [
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Park, T.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Lee, G.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1128/mra.00734-22",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1038/s41598-022-17594-1",
+      "title": "Development of mixed starter culture for the fermentation of Ethiopian honey wine, Tej",
+      "journal": "Scientific Reports",
+      "year": 2022,
+      "volume": "12",
+      "issue": "1",
+      "pages": null,
+      "article_number": "13431",
+      "authors": [
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Emire, S.A.",
+          "self": false
+        },
+        {
+          "display": "Demsash, H.D.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.C.",
+          "self": false
+        },
+        {
+          "display": "Lim, K.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1038/s41598-022-17594-1",
+      "checked": "2026-10-27",
+      "figure": "figs/scirep-tej.png"
+    },
+    {
+      "doi": "10.1016/j.dib.2022.108022",
+      "title": "Microbiome dataset of spontaneously fermented Ethiopian honey wine, Tej",
+      "journal": "Data in Brief",
+      "year": 2022,
+      "volume": "42",
+      "issue": null,
+      "pages": "108022",
+      "article_number": "108022",
+      "authors": [
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Emire, S.A.",
+          "self": false
+        },
+        {
+          "display": "Demsash, H.D.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.A.",
+          "self": false
+        },
+        {
+          "display": "Jeon, H.J.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.E.",
+          "self": false
+        },
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Park, Y.J.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1016/j.dib.2022.108022",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1016/j.lwt.2021.112927",
+      "title": "Fermentation dynamics of spontaneously fermented Ethiopian honey wine, Tej",
+      "journal": "LWT",
+      "year": 2022,
+      "volume": "155",
+      "issue": null,
+      "pages": "112927",
+      "article_number": "112927",
+      "authors": [
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Emire, S.A.",
+          "self": false
+        },
+        {
+          "display": "Demsash, H.D.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.A.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1016/j.lwt.2021.112927",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.1016/j.foodres.2021.110765",
+      "title": "Physicochemical properties, antioxidant activities and microbial communities of Ethiopian honey wine, Tej",
+      "journal": "Food Research International",
+      "year": 2022,
+      "volume": "152",
+      "issue": null,
+      "pages": "110765",
+      "article_number": "110765",
+      "authors": [
+        {
+          "display": "Fentie, E.G.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Emire, S.A.",
+          "self": false
+        },
+        {
+          "display": "Demsash, H.D.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.A.",
+          "self": false
+        },
+        {
+          "display": "Jeon, H.J.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.E.",
+          "self": false
+        },
+        {
+          "display": "Tagele, S.B.",
+          "self": false
+        },
+        {
+          "display": "Park, Y.J.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.1016/j.foodres.2021.110765",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.2147/jir.s338212",
+      "title": "Alterations and Prediction of Functional Profiles of Gut Microbiota After Fecal Microbiota Transplantation for Iranian Recurrent Clostridioides difficile Infection with Underlying Inflammatory Bowel Disease: A Pilot Study",
+      "journal": "Journal of Inflammation Research",
+      "year": 2022,
+      "volume": "Volume 15",
+      "issue": null,
+      "pages": "105-116",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Azimirad, M.",
+          "self": false
+        },
+        {
+          "display": "Jo, Y.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.S.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Shahrokh, S.",
+          "self": false
+        },
+        {
+          "display": "Asadzadeh Aghdaei, H.",
+          "self": false
+        },
+        {
+          "display": "Zali, M.R.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        },
+        {
+          "display": "Yadegar, A.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.2147/jir.s338212",
+      "checked": "2026-10-27"
+    },
+    {
+      "doi": "10.3390/agronomy11101914",
+      "title": "Fermented Coffee Grounds Diminish Livestock Odors: A Microbiome Study",
+      "journal": "Agronomy",
+      "year": 2021,
+      "volume": "11",
+      "issue": "10",
+      "pages": "1914",
+      "article_number": null,
+      "authors": [
+        {
+          "display": "Kim, M.S.",
+          "self": false
+        },
+        {
+          "display": "Kim, S.H.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Park, M.K.",
+          "self": false
+        },
+        {
+          "display": "Jo, Y.",
+          "self": false
+        },
+        {
+          "display": "Kang, G.U.",
+          "self": false
+        },
+        {
+          "display": "Jung, D.R.",
+          "self": false
+        },
+        {
+          "display": "Lee, C.I.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": false,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://api.crossref.org/works/10.3390/agronomy11101914",
+      "checked": "2026-10-27"
+    }
+  ]
+}
