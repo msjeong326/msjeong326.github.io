@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정민수, Ph.D. — UC Davis 방문연구원 | 식물·마이크로바이옴</title>
-    <meta name="description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 방문연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
+    <title>정민수, Ph.D. — UC Davis 박사후연구원 | 식물·마이크로바이옴</title>
+    <meta name="description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 박사후연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
     <meta name="keywords" content="정민수, 정민수 박사, 경북대 정민수, 경북대학교 정민수, 차세대시퀀싱 정민수, 마이크로바이옴, 메타지놈, 차세대시퀀싱, 경북대학교, 세종과학펠로우십, 생물정보학, 멀티오믹스, 딥러닝, 식물-미생물 상호작용">
     <meta name="author" content="Minsoo Jeong">
     <meta name="google-site-verification" content="SmsIlWhq2hSwpYq4ycepgG6Y4JhAzDD_LtudoHQBkgc" />
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="정민수, Ph.D. — UC Davis 방문연구원 | 식물·마이크로바이옴">
-    <meta property="og:description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 방문연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
+    <meta property="og:title" content="정민수, Ph.D. — UC Davis 박사후연구원 | 식물·마이크로바이옴">
+    <meta property="og:description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 박사후연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://msjeong326.github.io/ko/">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="정민수 학술 웹사이트">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="정민수, Ph.D. — UC Davis 방문연구원 | 식물·마이크로바이옴">
-    <meta name="twitter:description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 방문연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
+    <meta name="twitter:title" content="정민수, Ph.D. — UC Davis 박사후연구원 | 식물·마이크로바이옴">
+    <meta name="twitter:description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 박사후연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
 
     <link rel="canonical" href="https://msjeong326.github.io/ko/">
     <link rel="alternate" hreflang="en" href="https://msjeong326.github.io/">
@@ -35,7 +35,7 @@
     "name": "Minsoo Jeong",
     "alternateName": "정민수",
     "honorificSuffix": "Ph.D.",
-    "jobTitle": "Visiting Scholar",
+    "jobTitle": "Postdoctoral Researcher",
     "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "경북대학교"
@@ -1028,6 +1028,37 @@
             margin: 0.1rem 0 0.5rem 0.75rem;
         }
     }
+
+    /* Institutional affiliations: preserve official artwork and clear space. */
+    .institution-logos {
+        display: flex; flex-wrap: wrap; align-items: center;
+        gap: 2.5rem; margin: 1.4rem 0 1.8rem;
+    }
+    .institution-logos a { display: inline-flex; align-items: center; padding: 0.5rem 0; }
+    .institution-logos img { display: block; height: auto; max-width: 100%; }
+    .institution-logo-ucdavis { width: 172px; }
+    .institution-logo-knu { width: 220px; }
+    .isme-feature {
+        margin: 0; overflow: hidden; border-radius: 8px;
+        border: 1px solid var(--border-color); background: var(--bg-primary);
+    }
+    .isme-feature a { display: block; }
+    .isme-feature img { display: block; width: 100%; height: auto; }
+    .isme-feature figcaption { padding: 1.1rem 1.25rem 1.2rem; }
+    .isme-feature .isme-kicker {
+        font-family: var(--font-mono); font-size: 0.73rem;
+        color: var(--text-secondary); margin-bottom: 0.35rem; line-height: 1.6;
+    }
+    .isme-feature .isme-title { font-size: 1.1rem; font-weight: 650; line-height: 1.45; }
+    @media (max-width: 768px) {
+        .institution-logos { justify-content: center; gap: 1.25rem 2rem; }
+        .isme-feature figcaption { padding: 0.9rem 1rem 1rem; }
+        .isme-feature .isme-title { font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+        .institution-logo-ucdavis { width: 150px; }
+        .institution-logo-knu { width: 210px; }
+    }
     </style>
 </head>
 <body>
@@ -1076,8 +1107,16 @@
         <div class="hero-text">
             <h1 class="hero-name">정민수</h1>
             <div class="hero-name-kr">Minsoo Jeong, Ph.D.</div>
-            <p class="hero-title"><em>UC Davis 방문연구원</em><br>식물과학과 · Maeli Melotto 연구실.<br>식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p>
+            <p class="hero-title"><em>UC Davis 박사후연구원</em><br>식물과학과 · Maeli Melotto 연구실.<br>식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p>
             <p class="hero-affil"><em>세종과학펠로우십 연구책임자</em> · 한국연구재단 (2026–2031)<br>경북대학교 박사후연구원</p>
+            <div class="institution-logos" aria-label="소속 기관">
+                <a href="https://www.ucdavis.edu/" target="_blank" rel="noopener" aria-label="University of California, Davis">
+                    <img class="institution-logo-ucdavis" src="../logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis">
+                </a>
+                <a href="https://www.knu.ac.kr/" target="_blank" rel="noopener" aria-label="Kyungpook National University">
+                    <img class="institution-logo-knu" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University">
+                </a>
+            </div>
             <div class="hero-meta">
                 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img class="hero-link-icon" src="https://cdn.simpleicons.org/googlescholar" alt="Google Scholar"> Scholar</a>
                 <span class="hero-meta-sep">&middot;</span>
@@ -1132,7 +1171,7 @@
             <div class="section-label">소개</div>
             <h2 class="section-title">연구 소개</h2>
         </div>
-        <p class="section-subtitle" style="max-width:720px;">환경 조건이 식물 연관 미생물 군집과 식물 건강에 미치는 영향을 연구합니다. UC Davis 식물과학과 Melotto 연구실에서 방문연구원으로 일하며, 무균 식물 실험과 멀티오믹스·전산생태학을 작물 및 수생태계 마이크로바이옴 연구에 연결하고 있습니다.</p>
+        <p class="section-subtitle" style="max-width:720px;">환경 조건이 식물 연관 미생물 군집과 식물 건강에 미치는 영향을 연구합니다. UC Davis 식물과학과 Melotto 연구실에서 박사후연구원으로 일하며, 무균 식물 실험과 멀티오믹스·전산생태학을 작물 및 수생태계 마이크로바이옴 연구에 연결하고 있습니다.</p>
         <div class="about-grid reveal">
             <div class="about-card">
                 <img class="about-card-img" src="../about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
@@ -1206,9 +1245,18 @@
         <div class="section-header reveal">
             <div class="section-label">발표 현장</div>
             <h2 class="section-title">학회 활동</h2>
-            <p class="section-subtitle">국내 학회와 ASM Microbe Houston에서 이어진 발표 현장.</p>
+            <p class="section-subtitle">뉴질랜드 오클랜드, 미국 휴스턴과 국내 학회에서의 구두발표·포스터 발표 현장.</p>
         </div>
         <div class="gallery reveal">
+            <figure class="isme-feature">
+                <a href="../photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="ISME20 발표 사진 원본 보기">
+                    <img src="../photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="뉴질랜드 오클랜드 ISME20에서 구두발표하는 정민수">
+                </a>
+                <figcaption>
+                    <div class="isme-kicker">ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div>
+                    <div class="isme-title">제20회 국제미생물생태학회(ISME20) 구두발표</div>
+                </figcaption>
+            </figure>
             <div class="gallery-row gallery-row-feature">
                 <a class="gallery-card feature g-kmb" style="background-image: url('../photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
                     <div class="gallery-cap">
@@ -1319,7 +1367,7 @@
         <div class="timeline reveal">
             <div class="timeline-item">
                 <div class="timeline-date">2026년 10월 – 현재</div>
-                <h3 class="timeline-title">방문연구원 (Visiting Scholar)</h3>
+                <h3 class="timeline-title">박사후연구원 (Postdoctoral Researcher)</h3>
                 <div class="timeline-inst">University of California, Davis</div>
                 <div class="timeline-desc">식물과학과 · Maeli Melotto 연구실. 세종과학펠로우십 지원.</div>
             </div>
@@ -1885,7 +1933,7 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">정민수 박사</div>
-            <p>UC Davis 식물과학과 방문연구원. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p>
+            <p>UC Davis 식물과학과 박사후연구원. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p>
         </div>
         <div class="footer-links">
             <a href="#about">소개</a>

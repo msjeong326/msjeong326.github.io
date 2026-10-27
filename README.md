@@ -7,7 +7,7 @@ English: https://msjeong326.github.io/
 Static bilingual academic website, hosted by GitHub Pages from the root of
 the `master` branch. `.nojekyll` keeps the existing HTML and asset paths intact.
 
-Current appointment: Visiting Scholar, Department of Plant Sciences,
+Current appointment: Postdoctoral Researcher, Department of Plant Sciences,
 University of California, Davis, Melotto Lab. Sejong Science Fellow and
 Postdoctoral Researcher, Kyungpook National University.
 
@@ -35,3 +35,11 @@ publication filters, expanded list, email links, navigation and image assets.
 Commit only selected public website files. Local management records, archives,
 original CVs and administrative documents do not belong in this repository's
 public commits.
+
+The public postdoctoral title follows the current Melotto Lab profile:
+https://melotto.ucdavis.edu/people/min-soo-jeong
+
+Institution logos use original official artwork, displayed proportionally:
+UC Davis wordmark from the campus Brand Communications Guide and the KNU
+English signature from its official logo/UI download. The ISME20 Auckland
+conference photograph was supplied by Minsoo and is served unchanged.

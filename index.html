@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minsoo Jeong, Ph.D. — Visiting Scholar, UC Davis | Plant & Microbiome Research</title>
-    <meta name="description" content="Minsoo Jeong — Visiting Scholar in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
+    <title>Minsoo Jeong, Ph.D. — Postdoctoral Researcher, UC Davis | Plant & Microbiome Research</title>
+    <meta name="description" content="Minsoo Jeong — Postdoctoral Researcher in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
     <meta name="keywords" content="Minsoo Jeong, 정민수, microbiome, metagenomics, host-microbe interaction, gnotobiotics, multi-omics, RNA-seq, ddPCR, machine learning, deep learning, UC Davis, University of California Davis, Melotto Lab, Plant Sciences, Kyungpook National University, 경북대학교, Sejong Science Fellowship, 세종과학펠로우십, bioinformatics">
     <meta name="author" content="Minsoo Jeong">
     <meta name="google-site-verification" content="SmsIlWhq2hSwpYq4ycepgG6Y4JhAzDD_LtudoHQBkgc" />
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Minsoo Jeong, Ph.D. — Visiting Scholar, UC Davis | Plant &amp; Microbiome Research">
-    <meta property="og:description" content="Minsoo Jeong — Visiting Scholar in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
+    <meta property="og:title" content="Minsoo Jeong, Ph.D. — Postdoctoral Researcher, UC Davis | Plant &amp; Microbiome Research">
+    <meta property="og:description" content="Minsoo Jeong — Postdoctoral Researcher in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://msjeong326.github.io/">
     <meta property="og:locale" content="en_US">
@@ -20,8 +20,8 @@
     <link rel="alternate" hreflang="ko" href="https://msjeong326.github.io/ko/">
     <link rel="alternate" hreflang="x-default" href="https://msjeong326.github.io/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Minsoo Jeong, Ph.D. — Visiting Scholar, UC Davis | Plant &amp; Microbiome Research">
-    <meta name="twitter:description" content="Minsoo Jeong — Visiting Scholar in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
+    <meta name="twitter:title" content="Minsoo Jeong, Ph.D. — Postdoctoral Researcher, UC Davis | Plant &amp; Microbiome Research">
+    <meta name="twitter:description" content="Minsoo Jeong — Postdoctoral Researcher in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
     <meta property="og:image" content="https://msjeong326.github.io/profile.jpg">
     <meta name="twitter:image" content="https://msjeong326.github.io/profile.jpg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -34,7 +34,7 @@
     "name": "Minsoo Jeong",
     "alternateName": "정민수",
     "honorificSuffix": "Ph.D.",
-    "jobTitle": "Visiting Scholar",
+    "jobTitle": "Postdoctoral Researcher",
     "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "Kyungpook National University"
@@ -1043,6 +1043,37 @@
             margin: 0.1rem 0 0.5rem 0.75rem;
         }
     }
+
+    /* Institutional affiliations: preserve official artwork and clear space. */
+    .institution-logos {
+        display: flex; flex-wrap: wrap; align-items: center;
+        gap: 2.5rem; margin: 1.4rem 0 1.8rem;
+    }
+    .institution-logos a { display: inline-flex; align-items: center; padding: 0.5rem 0; }
+    .institution-logos img { display: block; height: auto; max-width: 100%; }
+    .institution-logo-ucdavis { width: 172px; }
+    .institution-logo-knu { width: 220px; }
+    .isme-feature {
+        margin: 0; overflow: hidden; border-radius: 8px;
+        border: 1px solid var(--border-color); background: var(--bg-primary);
+    }
+    .isme-feature a { display: block; }
+    .isme-feature img { display: block; width: 100%; height: auto; }
+    .isme-feature figcaption { padding: 1.1rem 1.25rem 1.2rem; }
+    .isme-feature .isme-kicker {
+        font-family: var(--font-mono); font-size: 0.73rem;
+        color: var(--text-secondary); margin-bottom: 0.35rem; line-height: 1.6;
+    }
+    .isme-feature .isme-title { font-size: 1.1rem; font-weight: 650; line-height: 1.45; }
+    @media (max-width: 768px) {
+        .institution-logos { justify-content: center; gap: 1.25rem 2rem; }
+        .isme-feature figcaption { padding: 0.9rem 1rem 1rem; }
+        .isme-feature .isme-title { font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+        .institution-logo-ucdavis { width: 150px; }
+        .institution-logo-knu { width: 210px; }
+    }
     </style>
 </head>
 <body>
@@ -1091,8 +1122,16 @@
         <div class="hero-text">
             <h1 class="hero-name">Minsoo Jeong</h1>
             <div class="hero-name-kr">&#51221;&#48124;&#49688;, Ph.D.</div>
-            <p class="hero-title"><em>Visiting Scholar · UC Davis</em><br>Department of Plant Sciences · Melotto Lab.<br>Plant–microbe interactions, multi-omics, and environmental microbiomes.</p>
+            <p class="hero-title"><em>Postdoctoral Researcher · UC Davis</em><br>Department of Plant Sciences · Melotto Lab.<br>Plant–microbe interactions, multi-omics, and environmental microbiomes.</p>
             <p class="hero-affil"><em>Sejong Science Fellow</em> · NRF (2026–2031)<br>Postdoctoral Researcher, Kyungpook National University</p>
+            <div class="institution-logos" aria-label="Institutional affiliations">
+                <a href="https://www.ucdavis.edu/" target="_blank" rel="noopener" aria-label="University of California, Davis">
+                    <img class="institution-logo-ucdavis" src="logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis">
+                </a>
+                <a href="https://www.knu.ac.kr/" target="_blank" rel="noopener" aria-label="Kyungpook National University">
+                    <img class="institution-logo-knu" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University">
+                </a>
+            </div>
             <div class="hero-meta">
                 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img class="hero-link-icon" src="https://cdn.simpleicons.org/googlescholar" alt="Google Scholar"> Scholar</a>
                 <span class="hero-meta-sep">&middot;</span>
@@ -1147,7 +1186,7 @@
             <div class="section-label">About</div>
             <h2 class="section-title">What I Do</h2>
         </div>
-        <p class="section-subtitle" style="max-width:720px;">I study how environmental conditions reshape plant-associated microbial communities and their contribution to plant health. I am a visiting scholar in the Melotto Lab at UC Davis, combining gnotobiotic experiments, multi-omics, and computational ecology with research on crop and aquatic microbiomes.</p>
+        <p class="section-subtitle" style="max-width:720px;">I study how environmental conditions reshape plant-associated microbial communities and their contribution to plant health. I am a postdoctoral researcher in the Melotto Lab at UC Davis, combining gnotobiotic experiments, multi-omics, and computational ecology with research on crop and aquatic microbiomes.</p>
         <div class="about-grid reveal">
             <div class="about-card">
                 <img class="about-card-img" src="about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
@@ -1221,9 +1260,18 @@
         <div class="section-header reveal">
             <div class="section-label">Conferences</div>
             <h2 class="section-title">On the podium</h2>
-            <p class="section-subtitle">Conference talks and poster sessions from Korean meetings to ASM Microbe Houston.</p>
+            <p class="section-subtitle">Conference talks and poster sessions in Auckland, Houston, and Korea.</p>
         </div>
         <div class="gallery reveal">
+            <figure class="isme-feature">
+                <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="View the original ISME20 presentation photograph">
+                    <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
+                </a>
+                <figcaption>
+                    <div class="isme-kicker">ISME20 · Auckland, New Zealand · August 2026</div>
+                    <div class="isme-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
+                </figcaption>
+            </figure>
             <div class="gallery-row gallery-row-feature">
                 <a class="gallery-card feature g-kmb" style="background-image: url('photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
                     <div class="gallery-cap">
@@ -1334,7 +1382,7 @@
         <div class="timeline reveal">
             <div class="timeline-item">
                 <div class="timeline-date">Oct 2026 – Present</div>
-                <h3 class="timeline-title">Visiting Scholar</h3>
+                <h3 class="timeline-title">Postdoctoral Researcher</h3>
                 <div class="timeline-inst">University of California, Davis</div>
                 <div class="timeline-desc">Department of Plant Sciences · Maeli Melotto Lab. Supported by the Sejong Science Fellowship.</div>
             </div>
@@ -1900,7 +1948,7 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">Minsoo Jeong, Ph.D.</div>
-            <p>Visiting Scholar, Department of Plant Sciences, University of California, Davis. Plant–microbe interactions, multi-omics, and environmental microbiomes.</p>
+            <p>Postdoctoral Researcher, Department of Plant Sciences, University of California, Davis. Plant–microbe interactions, multi-omics, and environmental microbiomes.</p>
         </div>
         <div class="footer-links">
             <a href="#about">About</a>
