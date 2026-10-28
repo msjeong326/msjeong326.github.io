@@ -1014,12 +1014,13 @@
         .activity-photo-grid { columns: 1; }
     }
 
-    /* Balanced academic introduction: portrait and logos share a visual column. */
+    /* Center the content-width introduction independently of the logo row. */
     .hero { padding: 4.25rem 1.5rem 3rem; }
-    .hero .hero-inner {
-        display: grid; grid-template-columns: 260px minmax(0, 1fr);
-        column-gap: clamp(2rem, 5vw, 4rem); row-gap: 1.75rem;
-        align-items: start;
+    .hero .hero-inner { display: block; }
+    .hero .hero-intro {
+        display: grid; grid-template-columns: 260px minmax(0, max-content);
+        column-gap: clamp(2rem, 5vw, 4rem); align-items: stretch;
+        width: fit-content; max-width: 100%; margin: 0 auto;
     }
     .hero-visual { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
     .hero .hero-photo {
@@ -1045,14 +1046,17 @@
     .hero .institution-logo-knu { width: 240px; }
     .hero-home-affiliation { display: block; }
     .hero-funding-source { white-space: nowrap; }
-    .hero .hero-meta { margin: 0; font-size: 0.88rem; gap: 0.5rem 0.85rem; }
+    .hero .hero-meta {
+        margin: 0; font-size: 0.88rem; gap: 0.5rem 0.85rem;
+        contain: inline-size;
+    }
     @media (max-width: 768px) {
         .hero { padding: 3rem 1.25rem 2.5rem; }
         .hero .hero-inner {
-            grid-template-columns: minmax(0, 1fr); row-gap: 1.4rem;
+            display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 1.4rem;
             grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'meta';
         }
-        .hero-visual, .hero .hero-text { display: contents; }
+        .hero .hero-intro, .hero-visual, .hero .hero-text { display: contents; }
         .hero .hero-photo { grid-area: portrait; width: 208px; max-width: 68vw; margin: 0 auto; }
         .hero-heading { grid-area: heading; text-align: center; }
         .hero-bio { grid-area: bio; text-align: center; }
@@ -1189,7 +1193,7 @@
         grid-column: 1 / -1; display: flex; flex-direction: row; flex-wrap: nowrap;
         align-items: center; justify-content: center; justify-self: center;
         gap: clamp(0.6rem, 2.6vw, 2.25rem); width: 100%; max-width: 1050px;
-        margin: 0.25rem 0 0; padding: 0;
+        margin: 2rem auto 0; padding: 0;
     }
     .hero .institution-logos > * { display: block; min-width: 0; padding: 0; }
     .hero .institution-logos > :nth-child(1) { flex: 172 1 0; max-width: 172px; }
@@ -1208,7 +1212,7 @@
     }
     .funding-conversion-note a { color: inherit; text-underline-offset: 0.15em; }
     /* Keep the portrait and biography on the same desktop baseline. */
-    .hero .hero-inner { grid-template-columns: 300px minmax(0, 1fr); }
+    .hero .hero-intro { grid-template-columns: 300px minmax(0, max-content); }
     .hero-visual { position: relative; align-self: stretch; min-height: 360px; }
     .hero .hero-photo {
         position: absolute; inset: 0; width: 100%; max-width: 100%; height: 100%;
@@ -1300,7 +1304,7 @@
 
 <!-- Hero -->
 <section class="hero">
-<div class="hero-inner"><div class="hero-visual"><img alt="정민수" class="hero-photo" src="../profile.jpg"/></div>
+<div class="hero-inner"><div class="hero-intro"><div class="hero-visual"><img alt="정민수" class="hero-photo" src="../profile.jpg"/></div>
 <div class="hero-text"><div class="hero-heading"><h1 class="hero-name">정민수</h1><div class="hero-name-kr">Minsoo Jeong, Ph.D.</div></div><div class="hero-bio"><p class="hero-title"><em>UC Davis 박사후연구원</em><br/>식물과학과 · Maeli Melotto 연구실.<br/>식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p><p class="hero-affil"><em>세종과학펠로우십 연구책임자</em><span class="hero-funding-source"><span class="hero-funding-separator"> · </span>한국연구재단 (2026–2031)</span><span class="hero-home-affiliation">경북대학교 박사후연구원</span></p></div>
 <div class="hero-meta">
 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" rel="noopener" target="_blank" title="Google Scholar"><img alt="Google Scholar" class="hero-link-icon" src="https://cdn.simpleicons.org/googlescholar"/> Scholar</a>
@@ -1329,6 +1333,7 @@
 <div class="hero-hl">
 <div class="hero-hl-title">한국미생물·생명공학회 2024 대상</div>
 <div class="hero-hl-sub">구두발표 대상 수상</div>
+</div>
 </div>
 </div>
 </div>
