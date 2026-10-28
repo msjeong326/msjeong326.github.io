@@ -1126,7 +1126,7 @@
         .hero { padding: 3rem 1.25rem 2.5rem; }
         .hero .hero-inner {
             grid-template-columns: minmax(0, 1fr); row-gap: 1.4rem;
-            grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'meta';
+            grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'research-logos' 'meta';
         }
         .hero-visual, .hero .hero-text { display: contents; }
         .hero .hero-photo { grid-area: portrait; width: 208px; max-width: 68vw; margin: 0 auto; }
@@ -1258,6 +1258,21 @@
         text-underline-offset: 0.2em;
     }
     .pub-figure-actions a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* Wide research-center marks share a row without stretching the portrait column. */
+    .research-affiliation-logos {
+        grid-column: 1 / -1; display: flex; flex-wrap: wrap;
+        align-items: center; justify-content: center;
+        gap: 1.5rem 3.5rem; margin-top: 0.25rem;
+    }
+    .research-affiliation-logos img { display: block; max-width: 100%; height: auto; }
+    .research-logo-ngs { width: 260px; }
+    .research-logo-quality { width: 370px; }
+    @media (max-width: 768px) {
+        .research-affiliation-logos { grid-area: research-logos; gap: 1.25rem; margin-top: 0; }
+        .research-logo-ngs { width: 260px; }
+        .research-logo-quality { width: 345px; }
+    }
     </style>
 </head>
 <body>
@@ -1339,6 +1354,10 @@
 <div class="hero-hl-sub">Korean Society for Microbiology and Biotechnology</div>
 </div>
 </div>
+</div>
+<div class="research-affiliation-logos" aria-label="Research centers">
+    <img class="research-logo-ngs" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center (Next-Generation Sequencing Research Center)" decoding="async">
+    <img class="research-logo-quality" src="logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="Institute for Agricultural Product Quality and Safety Assessment, Kyungpook National University" decoding="async">
 </div>
 </div>
 </section>
