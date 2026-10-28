@@ -1130,6 +1130,55 @@
         .hero .institution-logo-knu { width: 210px; }
         .hero .hero-meta { grid-area: meta; justify-content: center; }
     }
+
+    /* Compact research questions replace decorative topic cards. */
+    .research-focus { margin: 0 0 2rem; }
+    .research-focus-heading {
+        display: flex; justify-content: space-between; align-items: baseline;
+        gap: 1rem; margin-bottom: 1rem;
+    }
+    .research-focus-heading h3 {
+        font-size: 1rem; font-weight: 650; line-height: 1.5; margin: 0;
+    }
+    .research-focus-all {
+        font-size: 0.8rem; color: var(--text-secondary); text-decoration: none;
+        white-space: nowrap; padding: 0.25rem 0;
+    }
+    .research-focus-row {
+        display: grid; grid-template-columns: minmax(170px, 0.8fr) minmax(0, 2.2fr);
+        gap: 2rem; padding: 1.2rem 0; border-top: 1px solid var(--border-color);
+    }
+    .research-focus-topic {
+        font-size: 0.8rem; font-weight: 600; line-height: 1.55;
+        color: var(--text-secondary); padding-top: 0.15rem;
+    }
+    .research-focus-question {
+        font-size: 1.12rem; font-weight: 650; line-height: 1.4;
+        letter-spacing: -0.015em; margin: 0 0 0.4rem;
+    }
+    .research-focus-desc {
+        font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary); margin: 0;
+    }
+    .research-focus-evidence {
+        display: inline-flex; align-items: center; gap: 0.45rem;
+        min-height: 32px; margin-top: 0.35rem; padding: 0.2rem 0;
+        font-size: 0.78rem; line-height: 1.5; color: var(--accent);
+        text-decoration: underline; text-decoration-color: var(--border-color);
+        text-underline-offset: 0.25em;
+    }
+    .research-focus-all:hover, .research-focus-evidence:hover {
+        color: var(--text-primary); text-decoration: underline;
+    }
+    .research-focus a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (max-width: 640px) {
+        .research-focus-row { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; padding: 1rem 0; }
+        .research-focus-topic { padding-top: 0; font-size: 0.75rem; }
+        .research-focus-question { font-size: 1.02rem; }
+        .research-focus-desc { font-size: 0.84rem; }
+        .research-focus-heading { gap: 0.6rem; }
+        .research-focus-heading h3 { font-size: 0.9rem; }
+        .research-focus-all { font-size: 0.73rem; }
+    }
     </style>
 </head>
 <body>
@@ -1240,39 +1289,42 @@
                 <figcaption>박사학위 기념사진 · 경북대학교</figcaption>
             </figure>
         </div>
-        <div class="about-grid reveal">
-            <div class="about-card">
-                <img class="about-card-img" src="../about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">01</div>
-                    <h3 class="about-card-title">Gnotobiotics</h3>
-                    <p class="about-card-desc">무균 오이에서 미생물 하나하나의 역할을 추적합니다. 어떤 균이 병을 막고, 어떤 균이 성장을 돕는지.</p>
-                </div>
+        <div class="research-focus reveal" aria-labelledby="research-focus-title">
+            <div class="research-focus-heading">
+                <h3 id="research-focus-title">연구를 이끄는 질문</h3>
+                <a class="research-focus-all" href="#publications">전체 논문 <span aria-hidden="true">→</span></a>
             </div>
-            <div class="about-card">
-                <img class="about-card-img" src="../about/river.jpg" alt="Nakdong River site schematic" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">02</div>
-                    <h3 class="about-card-title">River Metagenomics</h3>
-                    <p class="about-card-desc">낙동강 메타지놈에서 항생제 내성 유전자가 계절에 따라 어떻게 퍼지는지 분석합니다.</p>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">식물–미생물 상호작용</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">어떤 미생물이 식물의 병 저항성을 도울까?</h4>
+                    <p class="research-focus-desc">무균 오이 실험계를 이용해 미생물이 생장과 병 억제에 기여하는 방식을 연구합니다.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">관련 오이 연구 논문 <span aria-hidden="true">↗</span></a>
                 </div>
-            </div>
-            <div class="about-card">
-                <img class="about-card-img" src="../about/bloom.jpg" alt="Bloom water cross-domain microbe-metabolite network" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">03</div>
-                    <h3 class="about-card-title">Bloom Ecology</h3>
-                    <p class="about-card-desc">녹조가 발생한 물로 상추를 키우면 마이크로바이옴이 어떻게 변하는지 연구합니다.</p>
+            </article>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">하천 메타게놈</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">강을 따라 미생물 군집은 어떻게 달라질까?</h4>
+                    <p class="research-focus-desc">낙동강 유역의 항생제 내성 유전자 분포와 계절별 미생물 군집 변화를 분석합니다.</p>
                 </div>
-            </div>
-            <div class="about-card">
-                <img class="about-card-img" src="../about/ai.jpg" alt="YOLOv8 crop nutrient deficiency detection" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">04</div>
-                    <h3 class="about-card-title">AI &amp; Deep Learning</h3>
-                    <p class="about-card-desc">YOLOv8 기반 작물 영양결핍 실시간 객체탐지 논문 출판 (<i>Scientific Reports</i>, 1저자). GNN/Cross-Attention으로 미생물 군집 동태 예측. AI API 연동 자동화 연구 워크플로우 구축.</p>
+            </article>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">녹조 생태학</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">녹조수에 노출된 작물에는 어떤 변화가 생길까?</h4>
+                    <p class="research-focus-desc">멀티오믹스로 상추 뿌리부터 잎까지 마이크로바이옴의 변화를 살펴봅니다.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">녹조–작물 멀티오믹스 논문 <span aria-hidden="true">↗</span></a>
                 </div>
-            </div>
+            </article>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">작물 표현형과 AI</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">AI로 작물의 영양 결핍을 찾아낼 수 있을까?</h4>
+                    <p class="research-focus-desc">YOLOv8 기반 모델로 콩의 영양 결핍을 탐지합니다.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">YOLOv8 연구 논문 <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
         </div>
         <div class="about-pipeline reveal">
             <div class="pipe-label">End-to-End Research Pipeline</div>

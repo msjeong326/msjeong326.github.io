@@ -1145,6 +1145,55 @@
         .hero .institution-logo-knu { width: 210px; }
         .hero .hero-meta { grid-area: meta; justify-content: center; }
     }
+
+    /* Compact research questions replace decorative topic cards. */
+    .research-focus { margin: 0 0 2rem; }
+    .research-focus-heading {
+        display: flex; justify-content: space-between; align-items: baseline;
+        gap: 1rem; margin-bottom: 1rem;
+    }
+    .research-focus-heading h3 {
+        font-size: 1rem; font-weight: 650; line-height: 1.5; margin: 0;
+    }
+    .research-focus-all {
+        font-size: 0.8rem; color: var(--text-secondary); text-decoration: none;
+        white-space: nowrap; padding: 0.25rem 0;
+    }
+    .research-focus-row {
+        display: grid; grid-template-columns: minmax(170px, 0.8fr) minmax(0, 2.2fr);
+        gap: 2rem; padding: 1.2rem 0; border-top: 1px solid var(--border-color);
+    }
+    .research-focus-topic {
+        font-size: 0.8rem; font-weight: 600; line-height: 1.55;
+        color: var(--text-secondary); padding-top: 0.15rem;
+    }
+    .research-focus-question {
+        font-size: 1.12rem; font-weight: 650; line-height: 1.4;
+        letter-spacing: -0.015em; margin: 0 0 0.4rem;
+    }
+    .research-focus-desc {
+        font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary); margin: 0;
+    }
+    .research-focus-evidence {
+        display: inline-flex; align-items: center; gap: 0.45rem;
+        min-height: 32px; margin-top: 0.35rem; padding: 0.2rem 0;
+        font-size: 0.78rem; line-height: 1.5; color: var(--accent);
+        text-decoration: underline; text-decoration-color: var(--border-color);
+        text-underline-offset: 0.25em;
+    }
+    .research-focus-all:hover, .research-focus-evidence:hover {
+        color: var(--text-primary); text-decoration: underline;
+    }
+    .research-focus a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (max-width: 640px) {
+        .research-focus-row { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; padding: 1rem 0; }
+        .research-focus-topic { padding-top: 0; font-size: 0.75rem; }
+        .research-focus-question { font-size: 1.02rem; }
+        .research-focus-desc { font-size: 0.84rem; }
+        .research-focus-heading { gap: 0.6rem; }
+        .research-focus-heading h3 { font-size: 0.9rem; }
+        .research-focus-all { font-size: 0.73rem; }
+    }
     </style>
 </head>
 <body>
@@ -1255,39 +1304,42 @@
                 <figcaption>Doctoral graduation portrait · Kyungpook National University</figcaption>
             </figure>
         </div>
-        <div class="about-grid reveal">
-            <div class="about-card">
-                <img class="about-card-img" src="about/gnoto.jpg" alt="Gnotobiotic cucumber microbiome ordination" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">01</div>
-                    <h3 class="about-card-title">Gnotobiotics</h3>
-                    <p class="about-card-desc">Growing cucumbers in germ-free systems to track what each microbe actually does &mdash; which ones suppress disease, which ones promote growth.</p>
-                </div>
+        <div class="research-focus reveal" aria-labelledby="research-focus-title">
+            <div class="research-focus-heading">
+                <h3 id="research-focus-title">Research questions</h3>
+                <a class="research-focus-all" href="#publications">All publications <span aria-hidden="true">→</span></a>
             </div>
-            <div class="about-card">
-                <img class="about-card-img" src="about/river.jpg" alt="Nakdong River site schematic" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">02</div>
-                    <h3 class="about-card-title">River Metagenomics</h3>
-                    <p class="about-card-desc">Analyzing how antimicrobial resistance genes spread across the Nakdong River watershed with seasonal community shifts.</p>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">Plant–microbe interactions</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">Which microbes help plants resist disease?</h4>
+                    <p class="research-focus-desc">Gnotobiotic cucumber systems to study microbial contributions to growth and disease suppression.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">Read a related cucumber study <span aria-hidden="true">↗</span></a>
                 </div>
-            </div>
-            <div class="about-card">
-                <img class="about-card-img" src="about/bloom.jpg" alt="Bloom water cross-domain microbe-metabolite network" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">03</div>
-                    <h3 class="about-card-title">Bloom Ecology</h3>
-                    <p class="about-card-desc">Studying how cyanobacterial bloom water reshapes the lettuce microbiome from root to leaf.</p>
+            </article>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">River metagenomics</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">How do river microbiomes change across a watershed?</h4>
+                    <p class="research-focus-desc">Mapping antimicrobial resistance genes and seasonal community shifts in the Nakdong River.</p>
                 </div>
-            </div>
-            <div class="about-card">
-                <img class="about-card-img" src="about/ai.jpg" alt="YOLOv8 crop nutrient deficiency detection" loading="lazy">
-                <div class="about-card-body">
-                    <div class="about-card-num">04</div>
-                    <h3 class="about-card-title">AI &amp; Deep Learning</h3>
-                    <p class="about-card-desc">Published YOLOv8-based real-time crop nutrient deficiency detection (<i>Scientific Reports</i>, 1st author). Microbial community dynamics prediction using GNN and Cross-Attention models. AI API integration for automated research workflows.</p>
+            </article>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">Bloom ecology</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">What happens when bloom water reaches a crop?</h4>
+                    <p class="research-focus-desc">Multi-omics to investigate changes in the lettuce microbiome from root to leaf.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Read the bloom study <span aria-hidden="true">↗</span></a>
                 </div>
-            </div>
+            </article>
+            <article class="research-focus-row">
+                <div class="research-focus-topic">AI for crop phenotyping</div>
+                <div class="research-focus-content">
+                    <h4 class="research-focus-question">Can AI detect nutrient stress in crops?</h4>
+                    <p class="research-focus-desc">YOLOv8-based detection of nutrient deficiencies in soybean.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Read the YOLOv8 paper <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
         </div>
         <div class="about-pipeline reveal">
             <div class="pipe-label">End-to-End Research Pipeline</div>
