@@ -242,61 +242,8 @@
     @media (max-width: 900px) { .hobby-grid { column-count: 2; } }
     @media (max-width: 540px) { .hobby-grid { column-count: 1; } }
 
-    /* Conference photo gallery — asymmetric editorial layout */
-    .gallery {
-        display: flex; flex-direction: column; gap: 0.85rem;
-    }
-    .gallery-row {
-        display: flex; gap: 0.85rem;
-    }
-    .gallery-row-feature { height: clamp(280px, 32vw, 420px); }
-    .gallery-row-feature .g-kmb { flex: 1.55; }
-    .gallery-row-feature .g-asm-talk { flex: 1; }
-    .gallery-row-secondary { height: clamp(180px, 22vw, 260px); }
-    .gallery-row-secondary > .gallery-card { flex: 1; }
-    .gallery-card {
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        border-radius: 8px;
-        overflow: hidden;
-        color: #fff;
-        text-decoration: none;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .gallery-card:hover {
-        transform: translateY(-4px) scale(1.005);
-        box-shadow: 0 16px 36px rgba(0,0,0,0.18);
-    }
-    .gallery-card::after {
-        content: '';
-        position: absolute; inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.78) 100%);
-    }
-    .gallery-cap {
-        position: absolute; bottom: 1.1rem; left: 1.1rem; right: 1.1rem;
-        z-index: 2;
-    }
-    .gallery-tag {
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        opacity: 0.92;
-        margin-bottom: 0.3rem;
-        color: #fff;
-    }
-    .gallery-title {
-        font-family: var(--font-sans);
-        font-weight: 700;
-        font-size: clamp(0.95rem, 1.2vw, 1.15rem);
-        letter-spacing: -0.015em;
-        line-height: 1.3;
-        color: #fff;
-    }
-    .gallery-card.feature .gallery-title { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
+    /* Conference photos share full-frame images and below-image captions. */
+    .gallery { display: block; }
     .gallery-badge {
         display: inline-block;
         margin-top: 0.4rem;
@@ -308,10 +255,6 @@
         font-weight: 700;
         border-radius: 100px;
         letter-spacing: -0.01em;
-    }
-    @media (max-width: 768px) {
-        .gallery-row { flex-direction: column; height: auto; }
-        .gallery-row > .gallery-card { height: 220px; flex: none; }
     }
 
     /* Inline pub thumbnails (absolute positioned, only on items with data-fig) */
@@ -1045,11 +988,8 @@
     }
 
     /* Full-frame personal photographs with captions outside the image. */
-    .about-intro {
-        display: grid; grid-template-columns: minmax(0, 1fr) 220px;
-        gap: 3rem; align-items: center; margin-bottom: 2rem;
-    }
-    .doctoral-portrait { margin: 0; }
+    .about-intro { margin-bottom: 2rem; }
+    .doctoral-portrait { width: min(240px, 100%); margin: 0; justify-self: center; align-self: start; }
     .doctoral-portrait a, .activity-photo-card a { display: block; }
     .doctoral-portrait img { display: block; width: 100%; height: auto; border-radius: 8px; }
     .doctoral-portrait figcaption {
@@ -1070,7 +1010,6 @@
     }
     .activity-photo-card .activity-title { font-size: 1rem; font-weight: 650; line-height: 1.5; }
     @media (max-width: 768px) {
-        .about-intro { grid-template-columns: 1fr; gap: 1.5rem; }
         .doctoral-portrait { width: min(240px, 100%); margin: 0 auto; }
         .activity-photo-grid { columns: 1; }
     }
@@ -1111,7 +1050,7 @@
         .hero { padding: 3rem 1.25rem 2.5rem; }
         .hero .hero-inner {
             grid-template-columns: minmax(0, 1fr); row-gap: 1.4rem;
-            grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'research-logos' 'meta';
+            grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'meta';
         }
         .hero-visual, .hero .hero-text { display: contents; }
         .hero .hero-photo { grid-area: portrait; width: 208px; max-width: 68vw; margin: 0 auto; }
@@ -1196,11 +1135,12 @@
         position: absolute; top: 0.75rem; right: 0.75rem;
         width: 44px; height: 44px; display: grid; place-items: center;
         padding: 0; border: 1px solid rgba(255, 255, 255, 0.4);
-        border-radius: 50%; background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%; background: rgba(5, 9, 18, 0.82);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
         color: #fff; font: inherit; font-size: 1.8rem; line-height: 1;
         cursor: pointer;
     }
-    .image-viewer-close:hover { background: rgba(255, 255, 255, 0.2); }
+    .image-viewer-close:hover { background: rgba(5, 9, 18, 0.95); }
     .image-viewer-close:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
     .image-viewer-figure {
         display: grid; grid-template-rows: minmax(0, 1fr) auto;
@@ -1244,20 +1184,29 @@
     }
     .pub-figure-actions a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-    /* Wide research-center marks share a row without stretching the portrait column. */
-    .research-affiliation-logos {
-        grid-column: 1 / -1; display: flex; flex-wrap: wrap;
-        align-items: center; justify-content: center;
-        gap: 1.5rem 3.5rem; margin-top: 0.25rem;
+    /* All four original marks stay together in one responsive row. */
+    .hero .institution-logos {
+        grid-column: 1 / -1; display: flex; flex-direction: row; flex-wrap: nowrap;
+        align-items: center; justify-content: center; justify-self: center;
+        gap: clamp(0.6rem, 2.6vw, 2.25rem); width: 100%; max-width: 1050px;
+        margin: 0.25rem 0 0; padding: 0;
     }
-    .research-affiliation-logos img { display: block; max-width: 100%; height: auto; }
-    .research-logo-ngs { width: 260px; }
-    .research-logo-quality { width: 370px; }
+    .hero .institution-logos > * { display: block; min-width: 0; padding: 0; }
+    .hero .institution-logos > :nth-child(1) { flex: 172 1 0; max-width: 172px; }
+    .hero .institution-logos > :nth-child(2) { flex: 240 1 0; max-width: 240px; }
+    .hero .institution-logos > :nth-child(3) { flex: 210 1 0; max-width: 210px; }
+    .hero .institution-logos > :nth-child(4) { flex: 300 1 0; max-width: 300px; }
+    .hero .institution-logos img { display: block; width: 100%; max-width: 100%; height: auto; }
     @media (max-width: 768px) {
-        .research-affiliation-logos { grid-area: research-logos; gap: 1.25rem; margin-top: 0; }
-        .research-logo-ngs { width: 260px; }
-        .research-logo-quality { width: 345px; }
+        .hero .institution-logos { grid-area: logos; margin-top: 0; }
     }
+    .grant-amount { max-width: 100%; white-space: normal; }
+    .grant-period { display: block; font-size: 0.75rem; font-weight: 400; line-height: 1.5; }
+    .funding-conversion-note {
+        margin-top: 1rem; max-width: 90ch; color: var(--text-secondary);
+        font-size: 0.75rem; line-height: 1.6;
+    }
+    .funding-conversion-note a { color: inherit; text-underline-offset: 0.15em; }
     </style>
 </head>
 <body>
@@ -1301,14 +1250,7 @@
 
 <!-- Hero -->
 <section class="hero">
-<div class="hero-inner"><div class="hero-visual"><img alt="정민수" class="hero-photo" src="../profile.jpg"/><div aria-label="소속 기관" class="institution-logos">
-<a aria-label="University of California, Davis" href="https://www.ucdavis.edu/" rel="noopener" target="_blank">
-<img alt="University of California, Davis" class="institution-logo-ucdavis" height="41" src="../logos/uc-davis-wordmark.gif" width="238"/>
-</a>
-<a aria-label="Kyungpook National University" href="https://www.knu.ac.kr/" rel="noopener" target="_blank">
-<img alt="Kyungpook National University" class="institution-logo-knu" height="82" src="../logos/kyungpook-national-university.jpg" width="714"/>
-</a>
-</div></div>
+<div class="hero-inner"><div class="hero-visual"><img alt="정민수" class="hero-photo" src="../profile.jpg"/></div>
 <div class="hero-text"><div class="hero-heading"><h1 class="hero-name">정민수</h1><div class="hero-name-kr">Minsoo Jeong, Ph.D.</div></div><div class="hero-bio"><p class="hero-title"><em>UC Davis 박사후연구원</em><br/>식물과학과 · Maeli Melotto 연구실.<br/>식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p><p class="hero-affil"><em>세종과학펠로우십 연구책임자</em><span class="hero-funding-source"><span class="hero-funding-separator"> · </span>한국연구재단 (2026–2031)</span><span class="hero-home-affiliation">경북대학교 박사후연구원</span></p></div>
 <div class="hero-meta">
 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" rel="noopener" target="_blank" title="Google Scholar"><img alt="Google Scholar" class="hero-link-icon" src="https://cdn.simpleicons.org/googlescholar"/> Scholar</a>
@@ -1340,9 +1282,15 @@
 </div>
 </div>
 </div>
-<div class="research-affiliation-logos" aria-label="연구센터 및 연구소">
-    <img class="research-logo-ngs" src="../logos/ngs-center.png" width="558" height="133" alt="NGS Center · 차세대 시퀀싱 연구센터" decoding="async">
-    <img class="research-logo-quality" src="../logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="경북대학교 농산품품질·안전성평가연구소" decoding="async">
+<div class="institution-logos" aria-label="소속 기관 및 연구센터">
+<a aria-label="University of California, Davis" href="https://www.ucdavis.edu/" rel="noopener" target="_blank">
+<img alt="University of California, Davis" class="institution-logo-ucdavis" height="41" src="../logos/uc-davis-wordmark.gif" width="238"/>
+</a>
+<a aria-label="Kyungpook National University" href="https://www.knu.ac.kr/" rel="noopener" target="_blank">
+<img alt="Kyungpook National University" class="institution-logo-knu" height="82" src="../logos/kyungpook-national-university.jpg" width="714"/>
+</a>
+    <span class="research-logo-mark"><img class="research-logo-ngs" src="../logos/ngs-center.png" width="558" height="133" alt="NGS Center · 차세대 시퀀싱 연구센터" decoding="async"></span>
+    <span class="research-logo-mark"><img class="research-logo-quality" src="../logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="경북대학교 농산품품질·안전성평가연구소" decoding="async"></span>
 </div>
 </div>
 </section>
@@ -1364,13 +1312,7 @@
             <h2 class="section-title">연구 소개</h2>
         </div>
         <div class="about-intro reveal">
-            <p class="section-subtitle" style="max-width:720px;">환경 조건이 식물 연관 미생물 군집과 식물 건강에 미치는 영향을 연구합니다. UC Davis 식물과학과 Melotto 연구실에서 박사후연구원으로 일하며, 무균 식물 실험과 멀티오믹스·전산생태학을 작물 및 수생태계 마이크로바이옴 연구에 연결하고 있습니다.</p>
-            <figure class="doctoral-portrait" data-added-photo="3">
-                <a href="../photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="정민수의 박사학위 기념사진">
-                    <img src="../photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="정민수의 박사학위 기념사진">
-                </a>
-                <figcaption>박사학위 기념사진 · 경북대학교</figcaption>
-            </figure>
+            <p class="section-subtitle" style="max-width:880px;">식물–미생물 상호작용을 검증하는 통제 실험을 설계하고, 미생물·숙주 멀티오믹스를 통합하며, 재현 가능한 분석 파이프라인을 개발합니다. 노토바이오틱 오이 실험부터 하천 메타유전체, AI 기반 작물 표현형 분석까지 작물 건강과 환경 마이크로바이옴을 연결합니다.</p>
         </div>
         <div class="research-focus reveal" aria-labelledby="research-focus-title">
             <div class="research-focus-heading">
@@ -1485,41 +1427,36 @@
                     </a>
                     <figcaption><div class="activity-kicker">연구 세미나</div><div class="activity-title">오이와 흰가루병 연구 세미나</div></figcaption>
                 </figure>
-            </div>
-            <div class="gallery-row gallery-row-feature">
-                <a class="gallery-card feature g-kmb" href="../photos/kmb-2024-grand.jpg" style="background-image: url('../photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
-                    <div class="gallery-cap">
-                        <div class="gallery-tag">KMB International Conference &middot; BEXCO Busan &middot; June 2024</div>
-                        <div class="gallery-title">한국미생물&middot;생명공학회 구두발표 대상</div>
-                        <span class="gallery-badge">대상 수상</span>
-                    </div>
-                </a>
-                <a class="gallery-card g-asm-talk" href="../photos/asm-2023-talk.jpg" style="background-image: url('../photos/asm-2023-talk.jpg')" aria-label="ASM Microbe 2023 oral presentation">
-                    <div class="gallery-cap">
-                        <div class="gallery-tag">ASM Microbe 2023 &middot; Houston</div>
-                        <div class="gallery-title">미국미생물학회 구두발표</div>
-                    </div>
-                </a>
-            </div>
-            <div class="gallery-row gallery-row-secondary">
-                <a class="gallery-card g-asm-stage" href="../photos/asm-2023-stage.jpg" style="background-image: url('../photos/asm-2023-stage.jpg')" aria-label="ASM Microbe 2023 stage">
-                    <div class="gallery-cap">
-                        <div class="gallery-tag">ASM Microbe 2023</div>
-                        <div class="gallery-title">ASM Microbe 현장</div>
-                    </div>
-                </a>
-                <a class="gallery-card g-asm-poster" href="../photos/asm-2023-poster.jpg" style="background-image: url('../photos/asm-2023-poster.jpg')" aria-label="ASM 2023 poster session">
-                    <div class="gallery-cap">
-                        <div class="gallery-tag">ASM Microbe 2023</div>
-                        <div class="gallery-title">Poster Session</div>
-                    </div>
-                </a>
-                <a class="gallery-card g-ksabc" href="../photos/ksabc-2021.jpg" style="background-image: url('../photos/ksabc-2021.jpg')" aria-label="KSABC 2021">
-                    <div class="gallery-cap">
-                        <div class="gallery-tag">KSABC International &middot; 2021</div>
-                        <div class="gallery-title">한국응용생명화학회 우수 발표</div>
-                    </div>
-                </a>
+                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
+                    <a href="../photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
+                        <img src="../photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">한국미생물·생명공학회 구두발표 대상</div><span class="gallery-badge">대상 수상</span></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
+                    <a href="../photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
+                        <img src="../photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">미국미생물학회 구두발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
+                    <a href="../photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 stage">
+                        <img src="../photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 stage">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">ASM Microbe 현장</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
+                    <a href="../photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
+                        <img src="../photos/asm-2023-poster.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="ASM 2023 poster session">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
+                    <a href="../photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
+                        <img src="../photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
+                    </a>
+                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">한국응용생명화학회 우수 발표</div></figcaption>
+                </figure>
             </div>
         </div>
     </div>
@@ -1911,13 +1848,14 @@
             <h2 class="section-title" style="font-size:1.5rem;">연구 지원</h2>
         </div>
         <div class="grants-list reveal">
-<div class="grant-line"><span class="grant-name">세종과학펠로우십</span><span class="grant-meta">한국연구재단 · 연구책임자 · 2026–2031</span></div>
-<div class="grant-line"><span class="grant-name">우수 신진연구자 연구지원</span><span class="grant-meta">경북대학교 · 선정 · 2026–2027</span><span class="grant-amount">1,000만원</span></div>
-<div class="grant-line"><span class="grant-name">박사과정생 연구장려금</span><span class="grant-meta">한국연구재단 · 연구책임자 · 2023–2025</span><span class="grant-amount">총 4,000만원</span></div>
-<div class="grant-line"><span class="grant-name">대학원 교육조교</span><span class="grant-meta">BK21 FOUR · 2024.05–2025.02</span><span class="grant-amount">총 500만원</span></div>
+<div class="grant-line"><span class="grant-name">세종과학펠로우십</span><span class="grant-meta">한국연구재단 · 연구책임자 · 2026–2031</span><span class="grant-amount">약 US$89,500<span class="grant-period">2026–2027 연간 예산</span></span></div>
+<div class="grant-line"><span class="grant-name">우수 신진연구자 연구지원</span><span class="grant-meta">경북대학교 · 선정 · 2026–2027</span><span class="grant-amount">약 US$7,500</span></div>
+<div class="grant-line"><span class="grant-name">박사과정생 연구장려금</span><span class="grant-meta">한국연구재단 · 연구책임자 · 2023–2025</span><span class="grant-amount">총 약 US$30,200</span></div>
+<div class="grant-line"><span class="grant-name">대학원 교육조교</span><span class="grant-meta">BK21 FOUR · 2024.05–2025.02</span><span class="grant-amount">총 약 US$3,800</span></div>
 <div class="grant-line"><span class="grant-name">박사과정 펠로우십</span><span class="grant-meta">BK21 FOUR · 2022–2023</span></div>
 <div class="grant-line"><span class="grant-name">연구조교 (3급)</span><span class="grant-meta">경북대학교 · 2023–2024</span></div>
         </div>
+        <p class="funding-conversion-note">미화 환산액이며 $100 단위로 반올림했습니다. US$1 = 1,325.06원 · <a href="https://fred.stlouisfed.org/series/DEXKOUS" target="_blank" rel="noopener">미 연방준비제도 / FRED, 2026년 10월 23일 기준</a>.</p>
     </div>
 </section>
 
@@ -2048,6 +1986,12 @@
             <h2 class="section-title">뉴스 &amp; 미디어</h2>
         </div>
         <div class="media-grid reveal">
+            <figure class="doctoral-portrait" data-added-photo="3">
+                <a href="../photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="정민수의 박사학위 기념사진">
+                    <img src="../photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="정민수의 박사학위 기념사진">
+                </a>
+                <figcaption>박사학위 기념사진 · 경북대학교</figcaption>
+            </figure>
             <a class="media-card" href="https://www.knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=28&btin.bbs_cde=28&btin.doc_no=1336954&btin.appl_no=000000&btin.page=1&menu_idx=214" target="_blank" rel="noopener">
                 <div class="media-img-wrap">
                     <img src="../news-sejong.jpg" alt="경북대 세종과학펠로우십 2026" class="media-img" loading="lazy" width="468" height="320">
@@ -2368,6 +2312,27 @@
         };
     }
 
+    // Anchor the close control to the actual contained image, including portrait images.
+    function positionCloseButton() {
+        if (!viewer.open) return;
+        if (image.hidden || !image.complete || !image.naturalWidth) {
+            closeButton.style.removeProperty('left');
+            closeButton.style.removeProperty('right');
+            closeButton.style.removeProperty('top');
+            return;
+        }
+        var bounds = image.getBoundingClientRect();
+        var dialogBounds = viewer.getBoundingClientRect();
+        var size = closeButton.getBoundingClientRect().width;
+        closeButton.style.right = 'auto';
+        closeButton.style.left = Math.max(8, bounds.right - dialogBounds.left - size - 8) + 'px';
+        closeButton.style.top = Math.max(8, bounds.top - dialogBounds.top + 8) + 'px';
+    }
+
+    function scheduleClosePosition() {
+        window.requestAnimationFrame(positionCloseButton);
+    }
+
     function openImage(trigger) {
         var details = imageDetails(trigger);
         if (!details.src) return;
@@ -2380,6 +2345,8 @@
         image.src = details.src;
         document.documentElement.classList.add('image-viewer-open');
         if (!viewer.open) viewer.showModal();
+        positionCloseButton();
+        scheduleClosePosition();
         closeButton.focus({ preventScroll: true });
     }
 
@@ -2428,6 +2395,9 @@
         var previousScrollBehavior = root.style.scrollBehavior;
         root.style.scrollBehavior = 'auto';
         root.classList.remove('image-viewer-open');
+        closeButton.style.removeProperty('left');
+        closeButton.style.removeProperty('right');
+        closeButton.style.removeProperty('top');
         image.removeAttribute('src');
         image.hidden = true;
         error.hidden = true;
@@ -2438,11 +2408,21 @@
         scrollPosition = null;
         opener = null;
     });
-    image.addEventListener('load', function() { error.hidden = true; });
+    window.addEventListener('resize', scheduleClosePosition);
+    if (typeof ResizeObserver === 'function') {
+        var imageResizeObserver = new ResizeObserver(scheduleClosePosition);
+        imageResizeObserver.observe(image);
+        imageResizeObserver.observe(viewer.querySelector('.image-viewer-stage'));
+    }
+    image.addEventListener('load', function() {
+        error.hidden = true;
+        scheduleClosePosition();
+    });
     image.addEventListener('error', function() {
         if (!viewer.open) return;
         image.hidden = true;
         error.hidden = false;
+        positionCloseButton();
     });
 })();
 </script>
