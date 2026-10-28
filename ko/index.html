@@ -1247,6 +1247,14 @@
         .research-focus-figure > a { min-height: 0; }
         .research-focus-figure img { max-height: 320px; }
     }
+    .conference-extra { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color); }
+    .conference-extra summary { width: fit-content; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
+    .conference-extra summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .conference-extra[open] summary { margin-bottom: 1.25rem; }
+    .hobby-new-photos { column-count: 4; }
+    .hobby-new-photos > img { height: auto; }
+    @media (max-width: 900px) { .hobby-new-photos { column-count: 2; } }
+    @media (max-width: 540px) { .hobby-new-photos { column-count: 2; } }
     </style>
 </head>
 <body>
@@ -1264,6 +1272,7 @@
             <li><a href="#skills">역량</a></li>
             <li><a href="#publications">논문</a></li>
             <li><a href="#media">미디어</a></li>
+            <li><a href="#offclock">일상</a></li>
             <li><a href="#contact">연락처</a></li>
         </ul>
         <div class="gnb-right">
@@ -1285,6 +1294,7 @@
     <a href="#skills" data-section="skills">역량</a>
     <a href="#patents" data-section="patents">특허</a>
     <a href="#media" data-section="media">미디어</a>
+    <a href="#offclock" data-section="offclock">일상</a>
     <a href="#contact" data-section="contact">연락</a>
 </nav>
 
@@ -1362,15 +1372,17 @@
             <article class="research-focus-row" data-research-theme="plant">
                 <div class="research-focus-copy">
                     <div class="research-focus-topic">식물–미생물 상호작용</div>
-                    <h4 class="research-focus-question">어떤 미생물이 식물의 병 저항성을 도울까?</h4>
-                    <p class="research-focus-desc">미생물이 식물 생장과 병 억제에 기여하는 방식을 통제된 식물–미생물 실험으로 연구합니다.</p>
-                    <a class="research-focus-evidence" href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">논문 보기 <span aria-hidden="true">↗</span></a>
+                    <h4 class="research-focus-question">미생물은 식물 건강과 어떻게 연결될까?</h4>
+                    <p class="research-focus-desc">노토바이오틱 오이 실험과 식물에 공생하는 미생물 군집을 연구합니다.</p>
+                    <p class="research-paper-title">The death of Korean fir (<i>Abies koreana</i>) affects soil symbiotic fungal microbiome: Preliminary findings</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.3389/ffgc.2022.1114390" target="_blank" rel="noopener">관련 제1저자 논문 <span aria-hidden="true">↗</span></a>
+                    <span class="research-paper-status">Jeong et al. · Frontiers in Forests and Global Change (2023)</span>
                 </div>
                 <figure class="research-focus-figure">
-                    <a href="../figs/pub-10-1007-s10725-025-01376-6-figure.png" data-image-viewer aria-haspopup="dialog" aria-label="그림 확대: 오이와 병원균 반응을 보여주는 게재 논문 피규어">
-                        <img src="../figs/pub-10-1007-s10725-025-01376-6-figure.png" width="2056" height="1896" loading="lazy" decoding="async" alt="오이와 병원균 반응을 보여주는 게재 논문 피규어">
+                    <a href="../figs/plant-treatment-design.png" data-image-viewer aria-haspopup="dialog" aria-label="모식도 확대: 정민수가 제공한 오이 노토바이오틱 처리 설계 모식도">
+                        <img src="../figs/plant-treatment-design.png" width="5763" height="2984" loading="lazy" decoding="async" alt="정민수가 제공한 오이 노토바이오틱 처리 설계 모식도">
                     </a>
-                    <figcaption>Hathurusinghe et al. · Plant Growth Regulation (2025) · Figure 1<div class="research-figure-links"><a href="https://link.springer.com/article/10.1007/s10725-025-01376-6/figures/1" target="_blank" rel="noopener">그림 출처</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
+                    <figcaption>정민수 제공 실험 모식도 · 노토바이오틱 오이 실험</figcaption>
                 </figure>
             </article>
             <article class="research-focus-row" data-research-theme="river">
@@ -1395,10 +1407,10 @@
                     <a class="research-focus-evidence" href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">논문 보기 <span aria-hidden="true">↗</span></a>
                 </div>
                 <figure class="research-focus-figure">
-                    <a href="../figs/research-bloom-published-figure.jpg" data-image-viewer aria-haspopup="dialog" aria-label="그림 확대: 녹조 영향을 받은 물에 대한 상추 생장 반응 피규어">
-                        <img src="../figs/research-bloom-published-figure.jpg" width="749" height="483" loading="lazy" decoding="async" alt="녹조 영향을 받은 물에 대한 상추 생장 반응 피규어">
+                    <a href="../figs/bloom-graphical-abstract.jpg" data-image-viewer aria-haspopup="dialog" aria-label="그림 확대: 녹조 영향을 받은 관개수와 식물–미생물 반응 논문의 그래피컬 초록">
+                        <img src="../figs/bloom-graphical-abstract.jpg" width="618" height="443" loading="lazy" decoding="async" alt="녹조 영향을 받은 관개수와 식물–미생물 반응 논문의 그래피컬 초록">
                     </a>
-                    <figcaption>Jeong et al. · Current Research in Microbial Sciences (2025) · Figure 1<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12615344/#fig0001" target="_blank" rel="noopener">그림 출처</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></div></figcaption>
+                    <figcaption>Jeong et al. · Current Research in Microbial Sciences (2025) · Graphical abstract<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12615344/#fig0005" target="_blank" rel="noopener">그림 출처</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></div></figcaption>
                 </figure>
             </article>
             <article class="research-focus-row" data-research-theme="ai">
@@ -1409,10 +1421,10 @@
                     <a class="research-focus-evidence" href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">논문 보기 <span aria-hidden="true">↗</span></a>
                 </div>
                 <figure class="research-focus-figure">
-                    <a href="../figs/research-ai-published-figure.jpg" data-image-viewer aria-haspopup="dialog" aria-label="그림 확대: YOLOv8s 콩 영양 결핍 탐지 결과 피규어">
-                        <img src="../figs/research-ai-published-figure.jpg" width="755" height="714" loading="lazy" decoding="async" alt="YOLOv8s 콩 영양 결핍 탐지 결과 피규어">
+                    <a href="../figs/ai-yolov8-figure-7.jpg" data-image-viewer aria-haspopup="dialog" aria-label="그림 확대: Figure 7: 콩 영양 결핍 탐지를 위한 YOLOv8 네트워크 구조">
+                        <img src="../figs/ai-yolov8-figure-7.jpg" width="798" height="715" loading="lazy" decoding="async" alt="Figure 7: 콩 영양 결핍 탐지를 위한 YOLOv8 네트워크 구조">
                     </a>
-                    <figcaption>Jeong et al. · Scientific Reports (2025) · Figure 4<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12012061/#Fig4" target="_blank" rel="noopener">그림 출처</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
+                    <figcaption>Jeong et al. · Scientific Reports (2025) · Figure 7<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12012061/#Fig7" target="_blank" rel="noopener">그림 출처</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
                 </figure>
             </article>
         </div>
@@ -1455,10 +1467,10 @@
         <div class="section-header reveal">
             <div class="section-label">발표 현장</div>
             <h2 class="section-title">학회 활동</h2>
-            <p class="section-subtitle">뉴질랜드 오클랜드와 미국 로스앤젤레스·휴스턴에서의 구두발표·포스터 발표 현장.</p>
+            <p class="section-subtitle">뉴질랜드·미국·국내에서 진행한 학회 구두발표와 연구 세미나.</p>
         </div>
         <div class="gallery reveal">
-            <div class="activity-photo-grid">
+            <div class="activity-photo-grid" data-conference-group="talks">
                 <figure class="activity-photo-card" id="isme20-photo">
                     <a href="../photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="ISME20 발표 사진 확대">
                         <img src="../photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="뉴질랜드 오클랜드 ISME20에서 구두발표하는 정민수">
@@ -1468,23 +1480,51 @@
                         <div class="activity-title">제20회 국제미생물생태학회(ISME20) 구두발표</div>
                     </figcaption>
                 </figure>
+                <figure class="activity-photo-card" data-added-photo="4">
+                    <a href="../photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="한국환경보건학회 추계학술대회 구두발표">
+                        <img src="../photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="한국환경보건학회 추계학술대회 구두발표">
+                    </a>
+                    <figcaption><div class="activity-kicker">2025년 11월 · 광주</div><div class="activity-title">한국환경보건학회 추계학술대회 구두발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
+                    <a href="../photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
+                        <img src="../photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">한국미생물·생명공학회 구두발표 대상</div><span class="gallery-badge">대상 수상</span></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
+                    <a href="../photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
+                        <img src="../photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">미국미생물학회 구두발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
+                    <a href="../photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
+                        <img src="../photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
+                    </a>
+                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">한국응용생명화학회 우수 발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="1">
+                    <a href="../photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="오이와 흰가루병 연구 세미나">
+                        <img src="../photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="오이와 흰가루병 연구 세미나">
+                    </a>
+                    <figcaption><div class="activity-kicker">연구 세미나</div><div class="activity-title">오이와 흰가루병 연구 세미나</div></figcaption>
+                </figure>
+            </div>
+            <details class="conference-extra">
+                <summary>추가 학회 사진 (4)</summary>
+                <div class="activity-photo-grid" data-conference-group="additional">
                 <figure class="activity-photo-card" data-added-photo="2">
                     <a href="../photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="식물–미생물 상호작용 연구 포스터 발표">
                         <img src="../photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="식물–미생물 상호작용 연구 포스터 발표">
                     </a>
                     <figcaption><div class="activity-kicker">ASM Microbe 2025 · 미국 로스앤젤레스</div><div class="activity-title">식물–미생물 상호작용 연구 포스터 발표</div></figcaption>
                 </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
-                    <a href="../photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
-                        <img src="../photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                <figure class="activity-photo-card" data-added-photo="5">
+                    <a href="../photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="우수포스터발표상 수상">
+                        <img src="../photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="우수포스터발표상 수상">
                     </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">미국미생물학회 구두발표</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
-                    <a href="../photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 stage">
-                        <img src="../photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 stage">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">ASM Microbe 현장</div></figcaption>
+                    <figcaption><div class="activity-kicker">한국미생물·생명공학회 영남지부 학술대회 · 2026</div><div class="activity-title">우수포스터발표상 수상</div></figcaption>
                 </figure>
                 <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
                     <a href="../photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
@@ -1492,7 +1532,14 @@
                     </a>
                     <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
                 </figure>
-            </div>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
+                    <a href="../photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 poster presentation">
+                        <img src="../photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 poster presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">미국미생물학회 포스터 발표</div></figcaption>
+                </figure>
+                </div>
+            </details>
         </div>
     </div>
 </section>
@@ -2041,15 +2088,16 @@
         <div class="section-header reveal">
             <div class="section-label">취미</div>
             <h2 class="section-title">Off the clock</h2>
-            <p class="section-subtitle">아마추어 축구와 풋살, 주말 러닝, 가끔 테니스. 실험실 밖의 한 컷들.</p>
+            <p class="section-subtitle">연구실 밖에서 즐기는 운동과 여행, 일상의 순간들.</p>
         </div>
-        <div class="hobby-grid reveal">
-            <figure class="doctoral-portrait" data-added-photo="3">
-                <a href="../photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="정민수의 박사학위 기념사진">
-                    <img src="../photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="정민수의 박사학위 기념사진">
-                </a>
-                <figcaption>박사학위 기념사진 · 경북대학교</figcaption>
-            </figure>
+        <div class="hobby-grid hobby-new-photos" aria-label="새로 추가한 일상 사진">
+            <img src="../photos/hobby/tennis-friends.png" width="1440" height="1080" alt="친구들과 함께한 야간 테니스" loading="lazy" decoding="async" data-new-personal-photo>
+            <img src="../photos/hobby/day-off-travel.png" width="1080" height="1440" alt="여행 중 즐긴 일상" loading="lazy" decoding="async" data-new-personal-photo>
+            <img src="../photos/hobby/hiking-rocks.png" width="1080" height="1440" alt="바위 지형에서의 하이킹" loading="lazy" decoding="async" data-new-personal-photo>
+            <img src="../photos/hobby/football-stadium.png" width="1080" height="1440" alt="축구장에서 경기 관람" loading="lazy" decoding="async" data-new-personal-photo>
+        </div>
+        <div class="hobby-grid">
+
             <img src="../photos/hobby/img_4005.jpg" alt="Off the clock" loading="lazy">
             <img src="../photos/hobby/img_3186.jpg" alt="Off the clock" loading="lazy">
             <img src="../photos/hobby/img_0608.jpg" alt="Off the clock" loading="lazy">
@@ -2063,6 +2111,12 @@
             <img src="../photos/hobby/img_1364.jpg" alt="Off the clock" loading="lazy">
             <img src="../photos/hobby/img_4074.jpg" alt="Off the clock" loading="lazy">
             <img src="../photos/hobby/img_7695.jpg" alt="Off the clock" loading="lazy">
+            <figure class="doctoral-portrait" data-added-photo="3">
+                <a href="../photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="정민수의 박사학위 기념사진">
+                    <img src="../photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="정민수의 박사학위 기념사진">
+                </a>
+                <figcaption>박사학위 기념사진 · 경북대학교</figcaption>
+            </figure>
         </div>
     </div>
 </section>

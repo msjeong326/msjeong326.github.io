@@ -1262,6 +1262,14 @@
         .research-focus-figure > a { min-height: 0; }
         .research-focus-figure img { max-height: 320px; }
     }
+    .conference-extra { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color); }
+    .conference-extra summary { width: fit-content; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
+    .conference-extra summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .conference-extra[open] summary { margin-bottom: 1.25rem; }
+    .hobby-new-photos { column-count: 4; }
+    .hobby-new-photos > img { height: auto; }
+    @media (max-width: 900px) { .hobby-new-photos { column-count: 2; } }
+    @media (max-width: 540px) { .hobby-new-photos { column-count: 2; } }
     </style>
 </head>
 <body>
@@ -1279,6 +1287,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#media">Media</a></li>
+            <li><a href="#offclock">Life</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="gnb-right">
@@ -1300,6 +1309,7 @@
     <a href="#skills" data-section="skills">Skills</a>
     <a href="#patents" data-section="patents">Patents</a>
     <a href="#media" data-section="media">News</a>
+    <a href="#offclock" data-section="offclock">Life</a>
     <a href="#contact" data-section="contact">Contact</a>
 </nav>
 
@@ -1377,15 +1387,17 @@
             <article class="research-focus-row" data-research-theme="plant">
                 <div class="research-focus-copy">
                     <div class="research-focus-topic">Plant–microbe interactions</div>
-                    <h4 class="research-focus-question">Which microbes help plants resist disease?</h4>
-                    <p class="research-focus-desc">Controlled plant–microbe experiments to study microbial contributions to growth and disease suppression.</p>
-                    <a class="research-focus-evidence" href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+                    <h4 class="research-focus-question">How do microbes relate to plant health?</h4>
+                    <p class="research-focus-desc">Gnotobiotic cucumber experiments and research on plant-associated microbial communities.</p>
+                    <p class="research-paper-title">The death of Korean fir (<i>Abies koreana</i>) affects soil symbiotic fungal microbiome: Preliminary findings</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.3389/ffgc.2022.1114390" target="_blank" rel="noopener">Related first-author paper <span aria-hidden="true">↗</span></a>
+                    <span class="research-paper-status">Jeong et al. · Frontiers in Forests and Global Change (2023)</span>
                 </div>
                 <figure class="research-focus-figure">
-                    <a href="figs/pub-10-1007-s10725-025-01376-6-figure.png" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Published cucumber and pathogen-response figure">
-                        <img src="figs/pub-10-1007-s10725-025-01376-6-figure.png" width="2056" height="1896" loading="lazy" decoding="async" alt="Published cucumber and pathogen-response figure">
+                    <a href="figs/plant-treatment-design.png" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge schematic: Gnotobiotic cucumber treatment design supplied by Minsoo Jeong">
+                        <img src="figs/plant-treatment-design.png" width="5763" height="2984" loading="lazy" decoding="async" alt="Gnotobiotic cucumber treatment design supplied by Minsoo Jeong">
                     </a>
-                    <figcaption>Hathurusinghe et al. · Plant Growth Regulation (2025) · Figure 1<div class="research-figure-links"><a href="https://link.springer.com/article/10.1007/s10725-025-01376-6/figures/1" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
+                    <figcaption>Treatment schematic supplied by Minsoo Jeong · Gnotobiotic cucumber experiments</figcaption>
                 </figure>
             </article>
             <article class="research-focus-row" data-research-theme="river">
@@ -1410,10 +1422,10 @@
                     <a class="research-focus-evidence" href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
                 </div>
                 <figure class="research-focus-figure">
-                    <a href="figs/research-bloom-published-figure.jpg" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Published lettuce growth response to bloom-affected water">
-                        <img src="figs/research-bloom-published-figure.jpg" width="749" height="483" loading="lazy" decoding="async" alt="Published lettuce growth response to bloom-affected water">
+                    <a href="figs/bloom-graphical-abstract.jpg" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge image: Published graphical abstract: bloom-affected irrigation water and plant–microbe responses">
+                        <img src="figs/bloom-graphical-abstract.jpg" width="618" height="443" loading="lazy" decoding="async" alt="Published graphical abstract: bloom-affected irrigation water and plant–microbe responses">
                     </a>
-                    <figcaption>Jeong et al. · Current Research in Microbial Sciences (2025) · Figure 1<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12615344/#fig0001" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></div></figcaption>
+                    <figcaption>Jeong et al. · Current Research in Microbial Sciences (2025) · Graphical abstract<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12615344/#fig0005" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></div></figcaption>
                 </figure>
             </article>
             <article class="research-focus-row" data-research-theme="ai">
@@ -1424,10 +1436,10 @@
                     <a class="research-focus-evidence" href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
                 </div>
                 <figure class="research-focus-figure">
-                    <a href="figs/research-ai-published-figure.jpg" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Published YOLOv8s soybean nutrient deficiency detection results">
-                        <img src="figs/research-ai-published-figure.jpg" width="755" height="714" loading="lazy" decoding="async" alt="Published YOLOv8s soybean nutrient deficiency detection results">
+                    <a href="figs/ai-yolov8-figure-7.jpg" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge image: Figure 7: YOLOv8 network architecture for soybean nutrient deficiency detection">
+                        <img src="figs/ai-yolov8-figure-7.jpg" width="798" height="715" loading="lazy" decoding="async" alt="Figure 7: YOLOv8 network architecture for soybean nutrient deficiency detection">
                     </a>
-                    <figcaption>Jeong et al. · Scientific Reports (2025) · Figure 4<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12012061/#Fig4" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
+                    <figcaption>Jeong et al. · Scientific Reports (2025) · Figure 7<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12012061/#Fig7" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
                 </figure>
             </article>
         </div>
@@ -1470,10 +1482,10 @@
         <div class="section-header reveal">
             <div class="section-label">Conferences</div>
             <h2 class="section-title">On the podium</h2>
-            <p class="section-subtitle">Conference talks and poster sessions in Auckland, Los Angeles, and Houston.</p>
+            <p class="section-subtitle">Talks and research seminars in New Zealand, the United States, and Korea.</p>
         </div>
         <div class="gallery reveal">
-            <div class="activity-photo-grid">
+            <div class="activity-photo-grid" data-conference-group="talks">
                 <figure class="activity-photo-card" id="isme20-photo">
                     <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="Enlarge the ISME20 presentation photograph">
                         <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
@@ -1483,23 +1495,51 @@
                         <div class="activity-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
                     </figcaption>
                 </figure>
+                <figure class="activity-photo-card" data-added-photo="4">
+                    <a href="photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="Oral presentation · Gwangju, Republic of Korea">
+                        <img src="photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Oral presentation · Gwangju, Republic of Korea">
+                    </a>
+                    <figcaption><div class="activity-kicker">Korean Society of Environmental Health · November 2025</div><div class="activity-title">Oral presentation · Gwangju, Republic of Korea</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
+                    <a href="photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
+                        <img src="photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">Korean Society for Microbiology &amp; Biotechnology — Oral Presentation</div><span class="gallery-badge">Grand Prize</span></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
+                    <a href="photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
+                        <img src="photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">American Society for Microbiology — Oral Presentation</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
+                    <a href="photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
+                        <img src="photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
+                    </a>
+                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">KSABC — Excellence in Presentation</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="1">
+                    <a href="photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="Cucumber and powdery mildew research">
+                        <img src="photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Cucumber and powdery mildew research">
+                    </a>
+                    <figcaption><div class="activity-kicker">Research seminar</div><div class="activity-title">Cucumber and powdery mildew research</div></figcaption>
+                </figure>
+            </div>
+            <details class="conference-extra">
+                <summary>More conference photos (4)</summary>
+                <div class="activity-photo-grid" data-conference-group="additional">
                 <figure class="activity-photo-card" data-added-photo="2">
                     <a href="photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="Poster presentation · Plant–microbe interactions">
                         <img src="photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="Poster presentation · Plant–microbe interactions">
                     </a>
                     <figcaption><div class="activity-kicker">ASM Microbe 2025 · Los Angeles</div><div class="activity-title">Poster presentation · Plant–microbe interactions</div></figcaption>
                 </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
-                    <a href="photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
-                        <img src="photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                <figure class="activity-photo-card" data-added-photo="5">
+                    <a href="photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="Outstanding Poster Presentation Award">
+                        <img src="photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Outstanding Poster Presentation Award">
                     </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">American Society for Microbiology — Oral Presentation</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
-                    <a href="photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 stage">
-                        <img src="photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 stage">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">ASM Microbe venue</div></figcaption>
+                    <figcaption><div class="activity-kicker">KMB Yeongnam Branch Symposium · 2026</div><div class="activity-title">Outstanding Poster Presentation Award</div></figcaption>
                 </figure>
                 <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
                     <a href="photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
@@ -1507,7 +1547,14 @@
                     </a>
                     <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
                 </figure>
-            </div>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
+                    <a href="photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 poster presentation">
+                        <img src="photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 poster presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">American Society for Microbiology — Poster Presentation</div></figcaption>
+                </figure>
+                </div>
+            </details>
         </div>
     </div>
 </section>
@@ -2056,15 +2103,16 @@
         <div class="section-header reveal">
             <div class="section-label">Hobby</div>
             <h2 class="section-title">Off the clock</h2>
-            <p class="section-subtitle">Amateur football and futsal, weekend running, occasional tennis. Frames from outside the lab.</p>
+            <p class="section-subtitle">Sports, travel, and everyday life outside the lab.</p>
         </div>
-        <div class="hobby-grid reveal">
-            <figure class="doctoral-portrait" data-added-photo="3">
-                <a href="photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="Minsoo Jeong in doctoral graduation regalia">
-                    <img src="photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="Minsoo Jeong in doctoral graduation regalia">
-                </a>
-                <figcaption>Doctoral graduation portrait · Kyungpook National University</figcaption>
-            </figure>
+        <div class="hobby-grid hobby-new-photos" aria-label="Personal photo highlights">
+            <img src="photos/hobby/tennis-friends.png" width="1440" height="1080" alt="Tennis with friends at night" loading="lazy" decoding="async" data-new-personal-photo>
+            <img src="photos/hobby/day-off-travel.png" width="1080" height="1440" alt="A day off while traveling" loading="lazy" decoding="async" data-new-personal-photo>
+            <img src="photos/hobby/hiking-rocks.png" width="1080" height="1440" alt="Hiking on a rocky landscape" loading="lazy" decoding="async" data-new-personal-photo>
+            <img src="photos/hobby/football-stadium.png" width="1080" height="1440" alt="Watching football at the stadium" loading="lazy" decoding="async" data-new-personal-photo>
+        </div>
+        <div class="hobby-grid">
+
             <img src="photos/hobby/img_4005.jpg" alt="Off the clock" loading="lazy">
             <img src="photos/hobby/img_3186.jpg" alt="Off the clock" loading="lazy">
             <img src="photos/hobby/img_0608.jpg" alt="Off the clock" loading="lazy">
@@ -2078,6 +2126,12 @@
             <img src="photos/hobby/img_1364.jpg" alt="Off the clock" loading="lazy">
             <img src="photos/hobby/img_4074.jpg" alt="Off the clock" loading="lazy">
             <img src="photos/hobby/img_7695.jpg" alt="Off the clock" loading="lazy">
+            <figure class="doctoral-portrait" data-added-photo="3">
+                <a href="photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="Minsoo Jeong in doctoral graduation regalia">
+                    <img src="photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="Minsoo Jeong in doctoral graduation regalia">
+                </a>
+                <figcaption>Doctoral graduation portrait · Kyungpook National University</figcaption>
+            </figure>
         </div>
     </div>
 </section>
