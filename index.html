@@ -1194,6 +1194,53 @@
         .research-focus-heading h3 { font-size: 0.9rem; }
         .research-focus-all { font-size: 0.73rem; }
     }
+
+    /* Original images open in an accessible, full-frame modal viewer. */
+    [data-image-viewer] { cursor: zoom-in; }
+    [data-image-viewer]:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    html.image-viewer-open { overflow: hidden; }
+    .image-viewer-open .pub-preview { visibility: hidden; opacity: 0; }
+    .image-viewer {
+        position: fixed; inset: 0; width: 100%; height: 100%;
+        max-width: none; max-height: none; margin: 0; border: 0;
+        padding: 4.25rem 1.25rem 1.25rem; box-sizing: border-box;
+        background: transparent; color: #fff; overflow: hidden;
+    }
+    .image-viewer[open] { display: grid; }
+    .image-viewer::backdrop { background: rgba(5, 9, 18, 0.94); }
+    .image-viewer-close {
+        position: absolute; top: 0.75rem; right: 0.75rem;
+        width: 44px; height: 44px; display: grid; place-items: center;
+        padding: 0; border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%; background: rgba(255, 255, 255, 0.08);
+        color: #fff; font: inherit; font-size: 1.8rem; line-height: 1;
+        cursor: pointer;
+    }
+    .image-viewer-close:hover { background: rgba(255, 255, 255, 0.2); }
+    .image-viewer-close:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .image-viewer-figure {
+        display: grid; grid-template-rows: minmax(0, 1fr) auto;
+        gap: 1rem; min-height: 0; min-width: 0; margin: 0;
+    }
+    .image-viewer-stage {
+        display: flex; justify-content: center; align-items: center;
+        min-width: 0; min-height: 0; height: 100%;
+    }
+    .image-viewer-image {
+        display: block; max-width: 100%; max-height: 100%; width: auto; height: auto;
+        object-fit: contain;
+    }
+    .image-viewer-image[hidden] { display: none; }
+    .image-viewer-caption {
+        justify-self: center; max-width: 80ch; max-height: 4.5em; overflow: auto;
+        font-size: 0.85rem; line-height: 1.5; text-align: center;
+        color: rgba(255, 255, 255, 0.88); overflow-wrap: anywhere;
+    }
+    .image-viewer-error { color: #fff; font-size: 0.95rem; text-align: center; }
+    @media (max-width: 640px) {
+        .image-viewer { padding: 4rem 0.75rem 0.9rem; }
+        .image-viewer-caption { font-size: 0.78rem; }
+    }
     </style>
 </head>
 <body>
@@ -1383,16 +1430,16 @@
             <p class="section-subtitle">Conference talks and poster sessions in Auckland, Houston, and Korea.</p>
         </div>
         <div class="gallery reveal">
-            <figure class="isme-feature">
-                <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="View the original ISME20 presentation photograph">
-                    <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
-                </a>
-                <figcaption>
-                    <div class="isme-kicker">ISME20 · Auckland, New Zealand · August 2026</div>
-                    <div class="isme-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
-                </figcaption>
-            </figure>
             <div class="activity-photo-grid">
+                <figure class="activity-photo-card" id="isme20-photo">
+                    <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="Enlarge the ISME20 presentation photograph">
+                        <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
+                    </a>
+                    <figcaption>
+                        <div class="activity-kicker">ISME20 · Auckland, New Zealand · August 2026</div>
+                        <div class="activity-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
+                    </figcaption>
+                </figure>
                 <figure class="activity-photo-card" data-added-photo="5">
                     <a href="photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="Outstanding Poster Presentation Award">
                         <img src="photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Outstanding Poster Presentation Award">
@@ -1419,14 +1466,14 @@
                 </figure>
             </div>
             <div class="gallery-row gallery-row-feature">
-                <a class="gallery-card feature g-kmb" style="background-image: url('photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
+                <a class="gallery-card feature g-kmb" href="photos/kmb-2024-grand.jpg" style="background-image: url('photos/kmb-2024-grand.jpg')" aria-label="KMB 2024 Grand Prize">
                     <div class="gallery-cap">
                         <div class="gallery-tag">KMB International Conference &middot; BEXCO Busan &middot; June 2024</div>
                         <div class="gallery-title">Korean Society for Microbiology &amp; Biotechnology &mdash; Oral Presentation</div>
                         <span class="gallery-badge">Grand Prize</span>
                     </div>
                 </a>
-                <a class="gallery-card g-asm-talk" style="background-image: url('photos/asm-2023-talk.jpg')" aria-label="ASM Microbe 2023 oral presentation">
+                <a class="gallery-card g-asm-talk" href="photos/asm-2023-talk.jpg" style="background-image: url('photos/asm-2023-talk.jpg')" aria-label="ASM Microbe 2023 oral presentation">
                     <div class="gallery-cap">
                         <div class="gallery-tag">ASM Microbe 2023 &middot; Houston</div>
                         <div class="gallery-title">American Society for Microbiology &mdash; Oral Presentation</div>
@@ -1434,19 +1481,19 @@
                 </a>
             </div>
             <div class="gallery-row gallery-row-secondary">
-                <a class="gallery-card g-asm-stage" style="background-image: url('photos/asm-2023-stage.jpg')" aria-label="ASM Microbe 2023 stage">
+                <a class="gallery-card g-asm-stage" href="photos/asm-2023-stage.jpg" style="background-image: url('photos/asm-2023-stage.jpg')" aria-label="ASM Microbe 2023 stage">
                     <div class="gallery-cap">
                         <div class="gallery-tag">ASM Microbe 2023</div>
                         <div class="gallery-title">ASM Microbe venue</div>
                     </div>
                 </a>
-                <a class="gallery-card g-asm-poster" style="background-image: url('photos/asm-2023-poster.jpg')" aria-label="ASM 2023 poster session">
+                <a class="gallery-card g-asm-poster" href="photos/asm-2023-poster.jpg" style="background-image: url('photos/asm-2023-poster.jpg')" aria-label="ASM 2023 poster session">
                     <div class="gallery-cap">
                         <div class="gallery-tag">ASM Microbe 2023</div>
                         <div class="gallery-title">Poster Session</div>
                     </div>
                 </a>
-                <a class="gallery-card g-ksabc" style="background-image: url('photos/ksabc-2021.jpg')" aria-label="KSABC 2021">
+                <a class="gallery-card g-ksabc" href="photos/ksabc-2021.jpg" style="background-image: url('photos/ksabc-2021.jpg')" aria-label="KSABC 2021">
                     <div class="gallery-cap">
                         <div class="gallery-tag">KSABC International &middot; 2021</div>
                         <div class="gallery-title">KSABC &mdash; Excellence in Presentation</div>
@@ -2112,6 +2159,18 @@
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
+<!-- On-page image viewer -->
+<dialog class="image-viewer" id="imageViewer" aria-label="Image preview" aria-describedby="imageViewerCaption" data-open-label="Enlarge image">
+    <button class="image-viewer-close" type="button" aria-label="Close image" autofocus><span aria-hidden="true">×</span></button>
+    <figure class="image-viewer-figure">
+        <div class="image-viewer-stage">
+            <img class="image-viewer-image" id="imageViewerImage" alt="" hidden>
+            <p class="image-viewer-error" id="imageViewerError" role="status" hidden>The image could not be loaded. Please close this preview and try again.</p>
+        </div>
+        <figcaption class="image-viewer-caption" id="imageViewerCaption"></figcaption>
+    </figure>
+</dialog>
+
 <!-- Publication figure preview (floating) -->
 <div class="pub-preview" id="pubPreview" aria-hidden="true">
     <img class="pub-preview-img" id="pubPreviewImg" src="" alt="">
@@ -2252,6 +2311,119 @@
         link.style.color = 'inherit';
         btn.replaceWith(link);
     }
+</script>
+<script>
+(function() {
+    'use strict';
+    var viewer = document.getElementById('imageViewer');
+    if (!viewer || typeof viewer.showModal !== 'function') return;
+
+    var image = document.getElementById('imageViewerImage');
+    var caption = document.getElementById('imageViewerCaption');
+    var error = document.getElementById('imageViewerError');
+    var closeButton = viewer.querySelector('.image-viewer-close');
+    var opener = null;
+    var scrollPosition = null;
+    var triggers = document.querySelectorAll(
+        '.activity-photo-card a, .doctoral-portrait a, .gallery-card, ' +
+        '.hero-photo, .hobby-grid img, .pub-thumb'
+    );
+
+    function imageDetails(trigger) {
+        var thumbnail = trigger.matches('img') ? trigger : trigger.querySelector('img');
+        var figure = trigger.closest('figure');
+        var figureCaption = figure && figure.querySelector('figcaption');
+        var galleryCaption = trigger.querySelector('.gallery-cap');
+        var publication = trigger.closest('.pub-item[data-fig]');
+        var description = figureCaption || galleryCaption;
+        var text = description ? description.innerText : '';
+        if (!text && publication) text = publication.getAttribute('data-fig-cap') || '';
+        var alt = thumbnail ? thumbnail.alt : trigger.getAttribute('aria-label');
+        return {
+            src: publication ? publication.getAttribute('data-fig') :
+                (trigger.getAttribute('href') || (thumbnail && (thumbnail.currentSrc || thumbnail.src))),
+            alt: alt || '',
+            caption: (text || alt || '').replace(/\s+/g, ' ').trim()
+        };
+    }
+
+    function openImage(trigger) {
+        var details = imageDetails(trigger);
+        if (!details.src) return;
+        opener = trigger;
+        if (!viewer.open) scrollPosition = { x: window.scrollX, y: window.scrollY };
+        error.hidden = true;
+        image.hidden = false;
+        image.alt = details.alt;
+        caption.textContent = details.caption;
+        image.src = details.src;
+        document.documentElement.classList.add('image-viewer-open');
+        if (!viewer.open) viewer.showModal();
+        closeButton.focus({ preventScroll: true });
+    }
+
+    triggers.forEach(function(trigger) {
+        trigger.setAttribute('data-image-viewer', '');
+        trigger.setAttribute('aria-haspopup', 'dialog');
+        if (!trigger.matches('a, button')) {
+            trigger.setAttribute('role', 'button');
+            trigger.tabIndex = 0;
+            trigger.setAttribute('aria-label', viewer.getAttribute('data-open-label') + ': ' +
+                (trigger.getAttribute('alt') || imageDetails(trigger).caption));
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+            event.metaKey || event.shiftKey || event.altKey) return;
+        var trigger = event.target.closest('[data-image-viewer]');
+        if (!trigger) return;
+        event.preventDefault();
+        openImage(trigger);
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        var trigger = event.target.closest('[data-image-viewer][role="button"]');
+        if (!trigger) return;
+        event.preventDefault();
+        openImage(trigger);
+    });
+
+    // The close button is the viewer's only interactive control.
+    viewer.addEventListener('keydown', function(event) {
+        if (event.key !== 'Tab') return;
+        event.preventDefault();
+        closeButton.focus({ preventScroll: true });
+    });
+
+    closeButton.addEventListener('click', function() { viewer.close(); });
+    viewer.addEventListener('click', function(event) {
+        if (event.target === viewer || event.target.classList.contains('image-viewer-stage') ||
+            event.target.classList.contains('image-viewer-figure')) viewer.close();
+    });
+    viewer.addEventListener('close', function() {
+        var root = document.documentElement;
+        var previousScrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+        root.classList.remove('image-viewer-open');
+        image.removeAttribute('src');
+        image.hidden = true;
+        error.hidden = true;
+        caption.textContent = '';
+        if (opener && opener.isConnected) opener.focus({ preventScroll: true });
+        if (scrollPosition) window.scrollTo(scrollPosition.x, scrollPosition.y);
+        root.style.scrollBehavior = previousScrollBehavior;
+        scrollPosition = null;
+        opener = null;
+    });
+    image.addEventListener('load', function() { error.hidden = true; });
+    image.addEventListener('error', function() {
+        if (!viewer.open) return;
+        image.hidden = true;
+        error.hidden = false;
+    });
+})();
 </script>
 </body>
 </html>
