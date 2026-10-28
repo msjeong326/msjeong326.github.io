@@ -837,21 +837,6 @@
         border-radius: 100px;
     }
 
-    .hero-stats {
-        display: block;
-        border: none; padding: 0; margin: 1.5rem 0 0;
-        font-family: var(--font-mono);
-        font-size: 0.82rem;
-        color: var(--text-tertiary);
-        line-height: 1.7;
-        letter-spacing: 0.01em;
-    }
-    .hero-stats > * { display: none; }
-    .hero-stats::before {
-        content: '35 articles · 5 first/co-first · UC Davis · Sejong Science Fellowship';
-        display: block;
-    }
-
     .open-banner {
         background: var(--bg-secondary);
         border-bottom: 1px solid var(--border-color);
@@ -1138,18 +1123,11 @@
     .hero-home-affiliation { display: block; }
     .hero-funding-source { white-space: nowrap; }
     .hero .hero-meta { margin: 0; font-size: 0.88rem; gap: 0.5rem 0.85rem; }
-    .hero-summary {
-        grid-column: 1 / -1; display: flex; flex-wrap: wrap;
-        gap: 0.6rem 2rem; align-items: baseline;
-        border-top: 1px solid var(--border-color); padding-top: 1.2rem;
-        color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;
-    }
-    .hero-summary strong { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-right: 0.3rem; }
     @media (max-width: 768px) {
         .hero { padding: 3rem 1.25rem 2.5rem; }
         .hero .hero-inner {
             grid-template-columns: minmax(0, 1fr); row-gap: 1.4rem;
-            grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'meta' 'summary';
+            grid-template-areas: 'portrait' 'heading' 'bio' 'logos' 'meta';
         }
         .hero-visual, .hero .hero-text { display: contents; }
         .hero .hero-photo { grid-area: portrait; width: 208px; max-width: 68vw; margin: 0 auto; }
@@ -1166,7 +1144,6 @@
         .hero .institution-logo-ucdavis { width: 150px; }
         .hero .institution-logo-knu { width: 210px; }
         .hero .hero-meta { grid-area: meta; justify-content: center; }
-        .hero-summary { grid-area: summary; justify-content: center; text-align: center; gap: 0.5rem 1.25rem; padding-top: 1rem; }
     }
     </style>
 </head>
@@ -1250,7 +1227,7 @@
 </div>
 </div>
 </div>
-<div aria-label="Research record summary" class="hero-summary"><span><strong>35</strong> published / online articles</span><span><strong>5</strong> first- and co-first-author papers</span></div></div>
+</div>
 </section>
 
 
