@@ -1222,6 +1222,46 @@
         font-size: 0.75rem; line-height: 1.6;
     }
     .funding-conversion-note a { color: inherit; text-underline-offset: 0.15em; }
+    /* Keep the portrait and biography on the same desktop baseline. */
+    .hero .hero-inner { grid-template-columns: 300px minmax(0, 1fr); }
+    .hero-visual { position: relative; align-self: stretch; min-height: 360px; }
+    .hero .hero-photo {
+        position: absolute; inset: 0; width: 100%; max-width: 100%; height: 100%;
+        min-height: 0; aspect-ratio: auto; object-fit: cover; object-position: center 38%;
+    }
+    /* Research is shown with original figures, citations and full-image previews. */
+    .research-focus-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: clamp(1.5rem, 4vw, 3rem); align-items: center; padding: 1.75rem 0;
+    }
+    .research-focus-topic { margin-bottom: 0.6rem; }
+    .research-paper-title {
+        margin: 0.8rem 0 0; font-size: 0.8rem; line-height: 1.6;
+        color: var(--text-secondary); overflow-wrap: anywhere;
+    }
+    .research-paper-status { display: block; font-size: 0.75rem; margin-top: 0.4rem; color: var(--text-secondary); }
+    .research-focus-figure { min-width: 0; margin: 0; }
+    .research-focus-figure > a {
+        display: flex; align-items: center; justify-content: center;
+        min-height: 220px; padding: 0.75rem; background: #fff;
+        border: 1px solid var(--border-color); border-radius: 6px;
+    }
+    .research-focus-figure img {
+        display: block; width: auto; height: auto; max-width: 100%; max-height: 300px;
+    }
+    .research-focus-figure figcaption { margin-top: 0.65rem; font-size: 0.7rem; line-height: 1.6; color: var(--text-secondary); }
+    .research-figure-links { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; margin-top: 0.25rem; }
+    .research-figure-links a { color: inherit; text-underline-offset: 0.2em; }
+    #offclock .doctoral-portrait { width: 100%; margin: 0 0 0.9rem; break-inside: avoid; }
+    #offclock .doctoral-portrait img { margin: 0; filter: none; }
+    @media (max-width: 768px) {
+        .hero .hero-inner { grid-template-columns: minmax(0, 1fr); }
+        .hero-visual { position: static; min-height: 0; }
+        .hero .hero-photo { position: static; inset: auto; width: 208px; height: auto; aspect-ratio: 4 / 5; }
+        .research-focus-row { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.5rem 0; }
+        .research-focus-figure > a { min-height: 0; }
+        .research-focus-figure img { max-height: 320px; }
+    }
     </style>
 </head>
 <body>
@@ -1331,39 +1371,64 @@
         </div>
         <div class="research-focus reveal" aria-labelledby="research-focus-title">
             <div class="research-focus-heading">
-                <h3 id="research-focus-title">Research questions</h3>
+                <h3 id="research-focus-title">Research in figures</h3>
                 <a class="research-focus-all" href="#publications">All publications <span aria-hidden="true">→</span></a>
             </div>
-            <article class="research-focus-row">
-                <div class="research-focus-topic">Plant–microbe interactions</div>
-                <div class="research-focus-content">
+            <article class="research-focus-row" data-research-theme="plant">
+                <div class="research-focus-copy">
+                    <div class="research-focus-topic">Plant–microbe interactions</div>
                     <h4 class="research-focus-question">Which microbes help plants resist disease?</h4>
-                    <p class="research-focus-desc">Gnotobiotic cucumber systems to study microbial contributions to growth and disease suppression.</p>
-                    <a class="research-focus-evidence" href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">Read a related cucumber study <span aria-hidden="true">↗</span></a>
+                    <p class="research-focus-desc">Controlled plant–microbe experiments to study microbial contributions to growth and disease suppression.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
                 </div>
+                <figure class="research-focus-figure">
+                    <a href="figs/pub-10-1007-s10725-025-01376-6-figure.png" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Published cucumber and pathogen-response figure">
+                        <img src="figs/pub-10-1007-s10725-025-01376-6-figure.png" width="2056" height="1896" loading="lazy" decoding="async" alt="Published cucumber and pathogen-response figure">
+                    </a>
+                    <figcaption>Hathurusinghe et al. · Plant Growth Regulation (2025) · Figure 1<div class="research-figure-links"><a href="https://link.springer.com/article/10.1007/s10725-025-01376-6/figures/1" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
+                </figure>
             </article>
-            <article class="research-focus-row">
-                <div class="research-focus-topic">River metagenomics</div>
-                <div class="research-focus-content">
+            <article class="research-focus-row" data-research-theme="river">
+                <div class="research-focus-copy">
+                    <div class="research-focus-topic">River metagenomics</div>
                     <h4 class="research-focus-question">How do river microbiomes change across a watershed?</h4>
-                    <p class="research-focus-desc">Mapping antimicrobial resistance genes and seasonal community shifts in the Nakdong River.</p>
+                    <p class="research-focus-desc">Genome-resolved metagenomics of microbial communities and resistance-candidate profiles in the Nakdong River.</p>
+                    <p class="research-paper-title">Antibiotic resistance gene classes show no detectable shift despite extensive microcystin-associated river microbiome reorganization</p><span class="research-paper-status">Research manuscript · Figure 1</span>
                 </div>
+                <figure class="research-focus-figure">
+                    <a href="figs/nakdong-arg-manuscript-figure-1.png" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Nakdong River study area, environmental conditions and microbial-community figure">
+                        <img src="figs/nakdong-arg-manuscript-figure-1.png" width="4220" height="3336" loading="lazy" decoding="async" alt="Nakdong River study area, environmental conditions and microbial-community figure">
+                    </a>
+                    <figcaption>Jeong, Yeo et al. · Research manuscript · Figure 1</figcaption>
+                </figure>
             </article>
-            <article class="research-focus-row">
-                <div class="research-focus-topic">Bloom ecology</div>
-                <div class="research-focus-content">
+            <article class="research-focus-row" data-research-theme="bloom">
+                <div class="research-focus-copy">
+                    <div class="research-focus-topic">Bloom ecology</div>
                     <h4 class="research-focus-question">What happens when bloom water reaches a crop?</h4>
-                    <p class="research-focus-desc">Multi-omics to investigate changes in the lettuce microbiome from root to leaf.</p>
-                    <a class="research-focus-evidence" href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Read the bloom study <span aria-hidden="true">↗</span></a>
+                    <p class="research-focus-desc">Tracing plant and microbial responses to bloom-affected irrigation water.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
                 </div>
+                <figure class="research-focus-figure">
+                    <a href="figs/research-bloom-published-figure.jpg" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Published lettuce growth response to bloom-affected water">
+                        <img src="figs/research-bloom-published-figure.jpg" width="749" height="483" loading="lazy" decoding="async" alt="Published lettuce growth response to bloom-affected water">
+                    </a>
+                    <figcaption>Jeong et al. · Current Research in Microbial Sciences (2025) · Figure 1<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12615344/#fig0001" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></div></figcaption>
+                </figure>
             </article>
-            <article class="research-focus-row">
-                <div class="research-focus-topic">AI for crop phenotyping</div>
-                <div class="research-focus-content">
+            <article class="research-focus-row" data-research-theme="ai">
+                <div class="research-focus-copy">
+                    <div class="research-focus-topic">AI for crop phenotyping</div>
                     <h4 class="research-focus-question">Can AI detect nutrient stress in crops?</h4>
-                    <p class="research-focus-desc">YOLOv8-based detection of nutrient deficiencies in soybean.</p>
-                    <a class="research-focus-evidence" href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Read the YOLOv8 paper <span aria-hidden="true">↗</span></a>
+                    <p class="research-focus-desc">YOLOv8s-based detection of nutrient deficiency symptoms in soybean.</p>
+                    <a class="research-focus-evidence" href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
                 </div>
+                <figure class="research-focus-figure">
+                    <a href="figs/research-ai-published-figure.jpg" data-image-viewer aria-haspopup="dialog" aria-label="Enlarge figure: Published YOLOv8s soybean nutrient deficiency detection results">
+                        <img src="figs/research-ai-published-figure.jpg" width="755" height="714" loading="lazy" decoding="async" alt="Published YOLOv8s soybean nutrient deficiency detection results">
+                    </a>
+                    <figcaption>Jeong et al. · Scientific Reports (2025) · Figure 4<div class="research-figure-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12012061/#Fig4" target="_blank" rel="noopener">Figure source</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></div></figcaption>
+                </figure>
             </article>
         </div>
         <div class="about-pipeline reveal">
@@ -1405,7 +1470,7 @@
         <div class="section-header reveal">
             <div class="section-label">Conferences</div>
             <h2 class="section-title">On the podium</h2>
-            <p class="section-subtitle">Conference talks and poster sessions in Auckland, Houston, and Korea.</p>
+            <p class="section-subtitle">Conference talks and poster sessions in Auckland, Los Angeles, and Houston.</p>
         </div>
         <div class="gallery reveal">
             <div class="activity-photo-grid">
@@ -1418,35 +1483,11 @@
                         <div class="activity-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
                     </figcaption>
                 </figure>
-                <figure class="activity-photo-card" data-added-photo="5">
-                    <a href="photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="Outstanding Poster Presentation Award">
-                        <img src="photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Outstanding Poster Presentation Award">
-                    </a>
-                    <figcaption><div class="activity-kicker">KMB Yeongnam Branch Symposium · 2026</div><div class="activity-title">Outstanding Poster Presentation Award</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="4">
-                    <a href="photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="Oral presentation · Gwangju, Republic of Korea">
-                        <img src="photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Oral presentation · Gwangju, Republic of Korea">
-                    </a>
-                    <figcaption><div class="activity-kicker">Korean Society of Environmental Health · November 2025</div><div class="activity-title">Oral presentation · Gwangju, Republic of Korea</div></figcaption>
-                </figure>
                 <figure class="activity-photo-card" data-added-photo="2">
                     <a href="photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="Poster presentation · Plant–microbe interactions">
                         <img src="photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="Poster presentation · Plant–microbe interactions">
                     </a>
                     <figcaption><div class="activity-kicker">ASM Microbe 2025 · Los Angeles</div><div class="activity-title">Poster presentation · Plant–microbe interactions</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="1">
-                    <a href="photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="Cucumber and powdery mildew research">
-                        <img src="photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Cucumber and powdery mildew research">
-                    </a>
-                    <figcaption><div class="activity-kicker">Research seminar</div><div class="activity-title">Cucumber and powdery mildew research</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
-                    <a href="photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
-                        <img src="photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
-                    </a>
-                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">Korean Society for Microbiology &amp; Biotechnology — Oral Presentation</div><span class="gallery-badge">Grand Prize</span></figcaption>
                 </figure>
                 <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
                     <a href="photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
@@ -1465,12 +1506,6 @@
                         <img src="photos/asm-2023-poster.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="ASM 2023 poster session">
                     </a>
                     <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
-                    <a href="photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
-                        <img src="photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
-                    </a>
-                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">KSABC — Excellence in Presentation</div></figcaption>
                 </figure>
             </div>
         </div>
@@ -2001,12 +2036,6 @@
             <h2 class="section-title">News &amp; Media</h2>
         </div>
         <div class="media-grid reveal">
-            <figure class="doctoral-portrait" data-added-photo="3">
-                <a href="photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="Minsoo Jeong in doctoral graduation regalia">
-                    <img src="photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="Minsoo Jeong in doctoral graduation regalia">
-                </a>
-                <figcaption>Doctoral graduation portrait · Kyungpook National University</figcaption>
-            </figure>
             <a class="media-card" href="https://www.knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=28&btin.bbs_cde=28&btin.doc_no=1336954&btin.appl_no=000000&btin.page=1&menu_idx=214" target="_blank" rel="noopener">
                 <div class="media-img-wrap">
                     <img src="news-sejong.jpg" alt="KNU Sejong Science Fellowship 2026" class="media-img" loading="lazy" width="468" height="320">
@@ -2030,6 +2059,12 @@
             <p class="section-subtitle">Amateur football and futsal, weekend running, occasional tennis. Frames from outside the lab.</p>
         </div>
         <div class="hobby-grid reveal">
+            <figure class="doctoral-portrait" data-added-photo="3">
+                <a href="photos/phd-graduation-portrait.png" target="_blank" rel="noopener" aria-label="Minsoo Jeong in doctoral graduation regalia">
+                    <img src="photos/phd-graduation-portrait.png" width="960" height="1440" loading="lazy" decoding="async" alt="Minsoo Jeong in doctoral graduation regalia">
+                </a>
+                <figcaption>Doctoral graduation portrait · Kyungpook National University</figcaption>
+            </figure>
             <img src="photos/hobby/img_4005.jpg" alt="Off the clock" loading="lazy">
             <img src="photos/hobby/img_3186.jpg" alt="Off the clock" loading="lazy">
             <img src="photos/hobby/img_0608.jpg" alt="Off the clock" loading="lazy">
@@ -2305,8 +2340,8 @@
     var opener = null;
     var scrollPosition = null;
     var triggers = document.querySelectorAll(
-        '.activity-photo-card a, .doctoral-portrait a, .gallery-card, ' +
-        '.hero-photo, .hobby-grid img, .pub-thumb, .pub-figure-link[data-image-viewer]'
+        '.activity-photo-card a, .doctoral-portrait a, .research-focus-figure > a, ' +
+        '.hero-photo, .hobby-grid > img, .pub-thumb, .pub-figure-link[data-image-viewer]'
     );
 
     function imageDetails(trigger) {
