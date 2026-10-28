@@ -576,7 +576,7 @@
     .pub-item:last-child { border-bottom:none; }
     .pub-item:hover { border-left-color:var(--accent); }
     .pub-item.first-author { border-left-color:var(--accent); background:var(--accent-light); }
-    .pub-list-items .pub-item:nth-child(n+6) { display:none; }
+    #panel-all .pub-list-items:not(.expanded) .pub-item:nth-child(n+6) { display:none; }
     .pub-list-items.expanded .pub-item:nth-child(n+6) { display:block; }
     .pub-show-more {
         display:flex; align-items:center; justify-content:center; gap:0.5rem;
@@ -943,7 +943,6 @@
         border-left-color: var(--text-primary);
         background: var(--bg-secondary);
     }
-    .pub-list-items .pub-item[data-fig] { display: block !important; }
     .pub-title a {
         font-family: var(--font-sans);
         font-weight: 600;
@@ -1241,6 +1240,24 @@
         .image-viewer { padding: 4rem 0.75rem 0.9rem; }
         .image-viewer-caption { font-size: 0.78rem; }
     }
+
+    /* Figure access is explicit and works without hover or a mouse. */
+    .pub-preview { pointer-events: none; }
+    .pub-item[data-fig] { padding-right: 1.25rem; cursor: auto; }
+    .pub-figure-actions { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+    .pub-figure-link {
+        display: inline-flex; align-items: center; min-height: 28px;
+        padding: 0.12rem 0.55rem; border: 1px solid var(--border-color);
+        border-radius: 100px; font-size: 0.73rem; font-weight: 600;
+        color: var(--accent); background: var(--bg-primary); text-decoration: none;
+    }
+    .pub-figure-link:hover { border-color: var(--accent); text-decoration: underline; }
+    .pub-figure-source, .pub-figure-license {
+        font-size: 0.7rem; line-height: 1.5; color: var(--text-secondary);
+        text-decoration: underline; text-decoration-color: var(--border-color);
+        text-underline-offset: 0.2em;
+    }
+    .pub-figure-actions a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     </style>
 </head>
 <body>
@@ -1628,180 +1645,180 @@
             </div>
             <div class="pub-panel active" id="panel-all">
                 <div class="pub-list-items">
-                    <div class="pub-item first-author" data-type="first" data-doi="10.1016/j.jspr.2026.103261">
+                    <div class="pub-item first-author" data-type="first" data-doi="10.1016/j.jspr.2026.103261" data-fig="figs/pub-10-1016-j-jspr-2026-103261-figure.jpg" data-fig-cap="Published figure · Stage-specific shifts in bacterial and fungal amplicon profiles of garlic bulbs during cold storage">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.jspr.2026.103261" target="_blank" rel="noopener">Stage-specific shifts in bacterial and fungal amplicon profiles of garlic bulbs during cold storage</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Og, H., Kim, M., Lee, J.W., Jung, D.R., Shin, J.H., Lee, S. (2027)</div>
-                        <div class="pub-meta"><span class="pub-journal">Journal of Stored Products Research, 120, 103261</span> <span class="pub-badge pub-badge--first">First author</span> <span class="pub-badge pub-badge--status">Online · January 2027 issue</span></div>
+                        <div class="pub-meta"><span class="pub-journal">Journal of Stored Products Research, 120, 103261</span> <span class="pub-badge pub-badge--first">First author</span> <span class="pub-badge pub-badge--status">Online · January 2027 issue</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1016-j-jspr-2026-103261-figure.jpg" aria-label="View figure: Stage-specific shifts in bacterial and fungal amplicon profiles of garlic bulbs during cold storage" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.sciencedirect.com/science/article/pii/S0022474X26003140" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor corresponding" data-doi="10.1016/j.apsoil.2026.107429">
+                    <div class="pub-item" data-type="coauthor corresponding" data-doi="10.1016/j.apsoil.2026.107429" data-fig="figs/pub-10-1016-j-apsoil-2026-107429-figure.jpg" data-fig-cap="Published figure · Soil bacteriome-based screening model for predicting ginseng replant status with independent cohort validation">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.apsoil.2026.107429" target="_blank" rel="noopener">Soil bacteriome-based screening model for predicting ginseng replant status with independent cohort validation</a></div>
                         <div class="pub-authors">Kwon, S.M., Park, Y.J., Park, M.K., Lee, S., Shin, J.H., <strong>Jeong, M.</strong> (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Applied Soil Ecology, 227, 107429</span> <span class="pub-badge pub-badge--first">Corresponding author</span></div>
+                        <div class="pub-meta"><span class="pub-journal">Applied Soil Ecology, 227, 107429</span> <span class="pub-badge pub-badge--first">Corresponding author</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1016-j-apsoil-2026-107429-figure.jpg" aria-label="View figure: Soil bacteriome-based screening model for predicting ginseng replant status with independent cohort validation" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.sciencedirect.com/science/article/pii/S0929139326006499" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/nu18203445">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/nu18203445" data-fig="figs/pub-10-3390-nu18203445-figure.webp" data-fig-cap="Figure 1 · Five-Year Trends in Dietary Intake by Gender Among Korean Preschoolers (2017–2021): Nationwide Survey-Based Surveillance Amid Rising Demand for Medical Care for Precocious Puberty">
                         <div class="pub-title"><a href="https://doi.org/10.3390/nu18203445" target="_blank" rel="noopener">Five-Year Trends in Dietary Intake by Gender Among Korean Preschoolers (2017–2021): Nationwide Survey-Based Surveillance Amid Rising Demand for Medical Care for Precocious Puberty</a></div>
                         <div class="pub-authors">Yang, J., Lee, J., Og, H., <strong>Jeong, M.</strong>, Lee, S. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Nutrients, 18(20), 3445</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Nutrients, 18(20), 3445</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3390-nu18203445-figure.webp" aria-label="View figure: Five-Year Trends in Dietary Intake by Gender Among Korean Preschoolers (2017–2021): Nationwide Survey-Based Surveillance Amid Rising Demand for Medical Care for Precocious Puberty" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13708578/#nutrients-18-03445-f001" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor corresponding" data-doi="10.1186/s12863-026-01489-5">
+                    <div class="pub-item" data-type="coauthor corresponding" data-doi="10.1186/s12863-026-01489-5" data-fig="figs/pub-10-1186-s12863-026-01489-5-data-file-5.png" data-fig-cap="Data file 5 · Phylogenetic tree · Rendered from published supplementary PDF · Complete genome sequence of Cupriavidus sp. PB-02, a potential new species with putative ability to degrade PBAT, isolated from soil">
                         <div class="pub-title"><a href="https://doi.org/10.1186/s12863-026-01489-5" target="_blank" rel="noopener">Complete genome sequence of Cupriavidus sp. PB-02, a potential new species with putative ability to degrade PBAT, isolated from soil</a></div>
                         <div class="pub-authors">Kim, M., <strong>Jeong, M.</strong>, Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">BMC Genomic Data</span> <span class="pub-badge pub-badge--first">Corresponding author</span> <span class="pub-badge pub-badge--status">Early online · October 3, 2026</span></div>
+                        <div class="pub-meta"><span class="pub-journal">BMC Genomic Data</span> <span class="pub-badge pub-badge--first">Corresponding author</span> <span class="pub-badge pub-badge--status">Early online · October 3, 2026</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1186-s12863-026-01489-5-data-file-5.png" aria-label="Supplement figure: Complete genome sequence of Cupriavidus sp. PB-02, a potential new species with putative ability to degrade PBAT, isolated from soil" data-image-viewer aria-haspopup="dialog">Supplement figure</a> <a class="pub-figure-source" href="https://doi.org/10.6084/m9.figshare.32031510" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1016/j.jfoodeng.2025.112764">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.jfoodeng.2025.112764" target="_blank" rel="noopener">Unstructured kinetic modeling of mixed-culture honey-wine fermentation systems involving dual substrate and product dynamics</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D., Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Journal of Food Engineering, 404, 112764</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Journal of Food Engineering, 404, 112764</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="https://ars.els-cdn.com/content/image/1-s2.0-S0260877425002997-gr1.jpg" aria-label="Publisher figure ↗: Unstructured kinetic modeling of mixed-culture honey-wine fermentation systems involving dual substrate and product dynamics" target="_blank" rel="noopener">Publisher figure ↗</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2511.11012">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2511.11012" data-fig="figs/pub-10-48022-mbl-2511-11012-figure.jpg" data-fig-cap="Fig. 1 · Complete Genome Sequence of Caballeronia sp. KNU42, Isolated from the Maize Rhizosphere">
                         <div class="pub-title"><a href="https://doi.org/10.48022/mbl.2511.11012" target="_blank" rel="noopener">Complete Genome Sequence of Caballeronia sp. KNU42, Isolated from the Maize Rhizosphere</a></div>
                         <div class="pub-authors">Kim, I., <strong>Jeong, M.</strong>, Lee, D.S., Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2511012</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2511012</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-48022-mbl-2511-11012-figure.jpg" aria-label="View figure: Complete Genome Sequence of Caballeronia sp. KNU42, Isolated from the Maize Rhizosphere" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2511.11012#F1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2508.08018">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2508.08018" data-fig="figs/pub-10-48022-mbl-2508-08018-figure.jpg" data-fig-cap="Fig. 1 · Complete Genome Sequence of Priestia aryabhattai KNU45 Isolated from the Rhizosphere of Maize ( Zea mays L.)">
                         <div class="pub-title"><a href="https://doi.org/10.48022/mbl.2508.08018" target="_blank" rel="noopener">Complete Genome Sequence of Priestia aryabhattai KNU45 Isolated from the Rhizosphere of Maize ( Zea mays L.)</a></div>
                         <div class="pub-authors">Kwon, M., <strong>Jeong, M.</strong>, Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2508018</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2508018</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-48022-mbl-2508-08018-figure.jpg" aria-label="View figure: Complete Genome Sequence of Priestia aryabhattai KNU45 Isolated from the Rhizosphere of Maize ( Zea mays L.)" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2508.08018#F1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2509.09002">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2509.09002" data-fig="figs/pub-10-48022-mbl-2509-09002-figure.jpg" data-fig-cap="Fig. 1 · Draft Genome Sequence of Arthrobacter sp. KNU-44 Isolated from Long-Term Maize Rotation Soil in Korea">
                         <div class="pub-title"><a href="https://doi.org/10.48022/mbl.2509.09002" target="_blank" rel="noopener">Draft Genome Sequence of Arthrobacter sp. KNU-44 Isolated from Long-Term Maize Rotation Soil in Korea</a></div>
                         <div class="pub-authors">Kwon, S.M., <strong>Jeong, M.</strong>, Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2509002</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2509002</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-48022-mbl-2509-09002-figure.jpg" aria-label="View figure: Draft Genome Sequence of Arthrobacter sp. KNU-44 Isolated from Long-Term Maize Rotation Soil in Korea" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2509.09002#F1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2508.08021">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2508.08021" data-fig="figs/pub-10-48022-mbl-2508-08021-figure.jpg" data-fig-cap="Fig. 1 · Genome Analysis of Bacillus mycoides KNU-41 from a Long-Term Fertilized Maize Rhizosphere">
                         <div class="pub-title"><a href="https://doi.org/10.48022/mbl.2508.08021" target="_blank" rel="noopener">Genome Analysis of Bacillus mycoides KNU-41 from a Long-Term Fertilized Maize Rhizosphere</a></div>
                         <div class="pub-authors">Hyun, Y., <strong>Jeong, M.</strong>, Shin, J.H. (2026)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2508021</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 54, e2508021</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-48022-mbl-2508-08021-figure.jpg" aria-label="View figure: Genome Analysis of Bacillus mycoides KNU-41 from a Long-Term Fertilized Maize Rhizosphere" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2508.08021#F1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2508.08015">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.48022/mbl.2508.08015" data-fig="figs/pub-10-48022-mbl-2508-08015-figure.jpg" data-fig-cap="Fig. 1 · Complete Genome Sequence of Arthrobacter sp. KNU40, Isolated from Nitrogen-Deficient Corn-Cultivated Soil">
                         <div class="pub-title"><a href="https://doi.org/10.48022/mbl.2508.08015" target="_blank" rel="noopener">Complete Genome Sequence of Arthrobacter sp. KNU40, Isolated from Nitrogen-Deficient Corn-Cultivated Soil</a></div>
                         <div class="pub-authors">Hwang, H., <strong>Jeong, M.</strong>, Shin, J.H. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 53(4), 641-643</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology and Biotechnology Letters, 53(4), 641-643</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-48022-mbl-2508-08015-figure.jpg" aria-label="View figure: Complete Genome Sequence of Arthrobacter sp. KNU40, Isolated from Nitrogen-Deficient Corn-Cultivated Soil" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2508.08015#F1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span></div>
                     </div>
-                    <div class="pub-item first-author" data-type="first" data-doi="10.1128/mra.01011-24">
+                    <div class="pub-item first-author" data-type="first" data-doi="10.1128/mra.01011-24" data-fig="figs/pub-10-1128-mra-01011-24-figure.jpg" data-fig-cap="Fig 1 · Complete genome sequence of Bacillus licheniformis KNU11, isolated from soil">
                         <div class="pub-title"><a href="https://doi.org/10.1128/mra.01011-24" target="_blank" rel="noopener">Complete genome sequence of Bacillus licheniformis KNU11, isolated from soil</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Kim, M.J., Shin, J.H. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology Resource Announcements, 14(12), e01011-24</span> <span class="pub-badge pub-badge--first">First author</span></div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology Resource Announcements, 14(12), e01011-24</span> <span class="pub-badge pub-badge--first">First author</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1128-mra-01011-24-figure.jpg" aria-label="View figure: Complete genome sequence of Bacillus licheniformis KNU11, isolated from soil" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12697142/#F1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3389/fpls.2025.1712997">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3389/fpls.2025.1712997" data-fig="figs/pub-10-3389-fpls-2025-1712997-figure.jpg" data-fig-cap="Figure 1 · Soil microbial load modulation improves plant–microbe interactions and bioinoculant efficacy in pathogen-stressed soils">
                         <div class="pub-title"><a href="https://doi.org/10.3389/fpls.2025.1712997" target="_blank" rel="noopener">Soil microbial load modulation improves plant–microbe interactions and bioinoculant efficacy in pathogen-stressed soils</a></div>
                         <div class="pub-authors">Andargie, Y.E., Lee, G., Kim, M.J., Fentie, E.G., <strong>Jeong, M.</strong>, Tagele, S.B., Lim, K., Azizoglu, U., Shin, J.H. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 16, 1712997</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 16, 1712997</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3389-fpls-2025-1712997-figure.jpg" aria-label="View figure: Soil microbial load modulation improves plant–microbe interactions and bioinoculant efficacy in pathogen-stressed soils" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12711777/#f1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.1007/s10725-025-01376-6">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.1007/s10725-025-01376-6" data-fig="figs/pub-10-1007-s10725-025-01376-6-figure.png" data-fig-cap="Published figure · Enhancing cucumber growth and disease resistance against Sclerotinia sclerotiorum by exogenous co-inoculation of Bacillus amyloliquefaciens KACC17029 and Salicylic acid">
                         <div class="pub-title"><a href="https://doi.org/10.1007/s10725-025-01376-6" target="_blank" rel="noopener">Enhancing cucumber growth and disease resistance against Sclerotinia sclerotiorum by exogenous co-inoculation of Bacillus amyloliquefaciens KACC17029 and Salicylic acid</a></div>
                         <div class="pub-authors">Hathurusinghe, S.H.K., Bashizi, T.F., <strong>Jeong, M.</strong>, Kim, M.J., Pande, A., Shin, J.H. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Plant Growth Regulation, 105(5), 1723-1738</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Plant Growth Regulation, 105(5), 1723-1738</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1007-s10725-025-01376-6-figure.png" aria-label="View figure: Enhancing cucumber growth and disease resistance against Sclerotinia sclerotiorum by exogenous co-inoculation of Bacillus amyloliquefaciens KACC17029 and Salicylic acid" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://link.springer.com/article/10.1007/s10725-025-01376-6/figures/1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1038/s41522-025-00747-1" data-fig="figs/npj-hpv.png" data-fig-cap="Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41522-025-00747-1" target="_blank" rel="noopener">Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18</a></div>
                         <div class="pub-authors">Jung, D.R., Choi, Y., <strong>Jeong, M.</strong>, Singh, V., Jeon, S.Y., Seo, I., Park, N.J.Y., Lee, Y.H., Park, J.Y., Han, H.S., Shin, J.H., Chong, G.O. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">npj Biofilms and Microbiomes, 11(1), 105</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">npj Biofilms and Microbiomes, 11(1), 105</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/npj-hpv.png" aria-label="View figure: Metagenomic insight into the vaginal microbiome in women infected with HPV 16 and 18" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
                     <div class="pub-item first-author" data-type="first" data-doi="10.1038/s41598-024-83295-6" data-fig="figs/scirep-yolo.jpg" data-fig-cap="Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-024-83295-6" target="_blank" rel="noopener">Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Kwon, S.M., Lim, K., Jung, D.R., Lee, H.S., Kim, H.J., Shin, J.H. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 15(1), 13810</span> <span class="pub-badge pub-badge--first">First author</span></div>
+                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 15(1), 13810</span> <span class="pub-badge pub-badge--first">First author</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/scirep-yolo.jpg" aria-label="View figure: Rapid detection of soybean nutrient deficiencies with YOLOv8s for precision agriculture advancement" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1038/s41467-025-57323-6" data-fig="figs/natcomm-cervical.png" data-fig-cap="Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41467-025-57323-6" target="_blank" rel="noopener">Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells</a></div>
                         <div class="pub-authors">Myeong, J., Lee, M., Lee, B., Kim, J.H., Nam, Y., Choi, Y., Kim, J., Jeon, S.Y., Shim, H., Jung, D.R., Shin, Y., <strong>Jeong, M.</strong>, Oh, B., Jung, J., Kim, C.S., Han, H.S., Shin, J.H., Lee, Y.H., Park, N.J.Y., Chong, G.O., Jeong, Y. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Nature Communications, 16(1), 2327</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Nature Communications, 16(1), 2327</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/natcomm-cervical.png" aria-label="View figure: Microbial metabolites control self-renewal and precancerous progression of human cervical stem cells" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
                     <div class="pub-item first-author" data-type="first" data-doi="10.1016/j.crmicr.2025.100500" data-fig="figs/crms-network.jpg" data-fig-cap="Multi-omics insights into plant-microbe dysbiosis caused by cyanobacterial bloom-affected water">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.crmicr.2025.100500" target="_blank" rel="noopener">Multi-omics insights into plant-microbe dysbiosis caused by cyanobacterial bloom-affected water</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Park, S., Jeong, S., Park, S., Yeo, S., Ryu, B., Shin, J.H., Lee, S. (2025)</div>
-                        <div class="pub-meta"><span class="pub-journal">Current Research in Microbial Sciences, 9, 100500</span> <span class="pub-badge pub-badge--first">Co-first author</span></div>
+                        <div class="pub-meta"><span class="pub-journal">Current Research in Microbial Sciences, 9, 100500</span> <span class="pub-badge pub-badge--first">Co-first author</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/crms-network.jpg" aria-label="View figure: Multi-omics insights into plant-microbe dysbiosis caused by cyanobacterial bloom-affected water" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/foods13193102">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/foods13193102" data-fig="figs/pub-10-3390-foods13193102-figure.jpg" data-fig-cap="Figure 1 · Solubilized β-Glucan Supplementation in C57BL/6J Mice Dams Augments Neurodevelopment and Cognition in the Offspring Driven by Gut Microbiome Remodeling">
                         <div class="pub-title"><a href="https://doi.org/10.3390/foods13193102" target="_blank" rel="noopener">Solubilized β-Glucan Supplementation in C57BL/6J Mice Dams Augments Neurodevelopment and Cognition in the Offspring Driven by Gut Microbiome Remodeling</a></div>
                         <div class="pub-authors">Katimbwa, D.A., Kim, Y., Kim, M.J., <strong>Jeong, M.</strong>, Lim, J. (2024)</div>
-                        <div class="pub-meta"><span class="pub-journal">Foods, 13(19), 3102</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Foods, 13(19), 3102</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3390-foods13193102-figure.jpg" aria-label="View figure: Solubilized β-Glucan Supplementation in C57BL/6J Mice Dams Augments Neurodevelopment and Cognition in the Offspring Driven by Gut Microbiome Remodeling" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11476385/#foods-13-03102-f001" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/agronomy14102225">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/agronomy14102225" data-fig="figs/pub-10-3390-agronomy14102225-figure.png" data-fig-cap="Published figure · Biofumigation-Derived Soil Microbiome Modification and Its Effects on Tomato (Solanum lycopersicum L.) Health under Drought">
                         <div class="pub-title"><a href="https://doi.org/10.3390/agronomy14102225" target="_blank" rel="noopener">Biofumigation-Derived Soil Microbiome Modification and Its Effects on Tomato (Solanum lycopersicum L.) Health under Drought</a></div>
                         <div class="pub-authors">Lee, D., Park, T.H., Lim, K., <strong>Jeong, M.</strong>, Nam, G., Kim, W.C., Shin, J.H. (2024)</div>
-                        <div class="pub-meta"><span class="pub-journal">Agronomy, 14(10), 2225</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Agronomy, 14(10), 2225</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3390-agronomy14102225-figure.png" aria-label="View figure: Biofumigation-Derived Soil Microbiome Modification and Its Effects on Tomato (Solanum lycopersicum L.) Health under Drought" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mdpi.com/2073-4395/14/10/2225" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1111/1541-4337.13424">
                         <div class="pub-title"><a href="https://doi.org/10.1111/1541-4337.13424" target="_blank" rel="noopener">A comprehensive review of the characterization, host interactions, and stabilization advancements on probiotics: Addressing the challenges in functional food diversification</a></div>
                         <div class="pub-authors">Fentie, E.G., Lim, K., <strong>Jeong, M.</strong>, Shin, J. (2024)</div>
-                        <div class="pub-meta"><span class="pub-journal">Comprehensive Reviews in Food Science and Food Safety, 23(5), e13424</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Comprehensive Reviews in Food Science and Food Safety, 23(5), e13424</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="https://ift.onlinelibrary.wiley.com/doi/10.1111/1541-4337.13424#crf313424-fig-0001" aria-label="Publisher figure ↗: A comprehensive review of the characterization, host interactions, and stabilization advancements on probiotics: Addressing the challenges in functional food diversification" target="_blank" rel="noopener">Publisher figure ↗</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1007/s11356-023-31643-w">
                         <div class="pub-title"><a href="https://doi.org/10.1007/s11356-023-31643-w" target="_blank" rel="noopener">Impact of propiconazole fungicide on soil microbiome (bacterial and fungal) diversity, functional profile, and associated dehydrogenase activity</a></div>
                         <div class="pub-authors">Sliti, A., Singh, V., Ibal, J.C., <strong>Jeong, M.</strong>, Shin, J.H. (2024)</div>
-                        <div class="pub-meta"><span class="pub-journal">Environmental Science and Pollution Research, 31(5), 8240-8253</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Environmental Science and Pollution Research, 31(5), 8240-8253</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11356-023-31643-w/MediaObjects/11356_2023_31643_Fig1_HTML.png" aria-label="Publisher figure ↗: Impact of propiconazole fungicide on soil microbiome (bacterial and fungal) diversity, functional profile, and associated dehydrogenase activity" target="_blank" rel="noopener">Publisher figure ↗</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/microorganisms11010098">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/microorganisms11010098" data-fig="figs/pub-10-3390-microorganisms11010098-figure.jpg" data-fig-cap="Figure 1 · Bacterial Profiles of Brain in Downer Cattle with Unknown Etiology">
                         <div class="pub-title"><a href="https://doi.org/10.3390/microorganisms11010098" target="_blank" rel="noopener">Bacterial Profiles of Brain in Downer Cattle with Unknown Etiology</a></div>
                         <div class="pub-authors">Park, Y.J., Kang, G.U., <strong>Jeong, M.</strong>, Singh, V., Kim, J., Lee, K., Choi, E.J., Kim, H.J., Lee, S., Lee, S.Y., Oem, J.K., Shin, J.H. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microorganisms, 11(1), 98</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microorganisms, 11(1), 98</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3390-microorganisms11010098-figure.jpg" aria-label="View figure: Bacterial Profiles of Brain in Downer Cattle with Unknown Etiology" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9862898/#microorganisms-11-00098-f001" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3389/fpls.2023.1301698">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3389/fpls.2023.1301698" data-fig="figs/pub-10-3389-fpls-2023-1301698-figure.jpg" data-fig-cap="Figure 1 · Deciphering key factors in pathogen-suppressive microbiome assembly in the rhizosphere">
                         <div class="pub-title"><a href="https://doi.org/10.3389/fpls.2023.1301698" target="_blank" rel="noopener">Deciphering key factors in pathogen-suppressive microbiome assembly in the rhizosphere</a></div>
                         <div class="pub-authors">Andargie, Y.E., Lee, G., <strong>Jeong, M.</strong>, Tagele, S.B., Shin, J.H. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14, 1301698</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14, 1301698</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3389-fpls-2023-1301698-figure.jpg" aria-label="View figure: Deciphering key factors in pathogen-suppressive microbiome assembly in the rhizosphere" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10728675/#f1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.1038/s41598-023-31204-8">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.1038/s41598-023-31204-8" data-fig="figs/pub-10-1038-s41598-023-31204-8-figure.jpg" data-fig-cap="Figure 1 · Spinach (Spinacia oleracea) as green manure modifies the soil nutrients and microbiota structure for enhanced pepper productivity">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-023-31204-8" target="_blank" rel="noopener">Spinach (Spinacia oleracea) as green manure modifies the soil nutrients and microbiota structure for enhanced pepper productivity</a></div>
                         <div class="pub-authors">Kim, R.H., Tagele, S.B., <strong>Jeong, M.</strong>, Jung, D.R., Lee, D., Park, T., Tino, B.F., Lim, K., Kim, M.A., Park, Y.J., Shin, J.H. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 13(1), 4140</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 13(1), 4140</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1038-s41598-023-31204-8-figure.jpg" aria-label="View figure: Spinach (Spinacia oleracea) as green manure modifies the soil nutrients and microbiota structure for enhanced pepper productivity" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10011398/#Fig1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3389/fpls.2023.1072216">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3389/fpls.2023.1072216" data-fig="figs/pub-10-3389-fpls-2023-1072216-figure.jpg" data-fig-cap="Figure 1 · Soil amendment with cow dung modifies the soil nutrition and microbiota to reduce the ginseng replanting problem">
                         <div class="pub-title"><a href="https://doi.org/10.3389/fpls.2023.1072216" target="_blank" rel="noopener">Soil amendment with cow dung modifies the soil nutrition and microbiota to reduce the ginseng replanting problem</a></div>
                         <div class="pub-authors">Tagele, S.B., Kim, R.H., <strong>Jeong, M.</strong>, Lim, K., Jung, D.R., Lee, D., Kim, W., Shin, J.H. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14, 1072216</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Plant Science, 14, 1072216</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3389-fpls-2023-1072216-figure.jpg" aria-label="View figure: Soil amendment with cow dung modifies the soil nutrition and microbiota to reduce the ginseng replanting problem" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9902886/#f1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
                     <div class="pub-item first-author" data-type="first" data-doi="10.3389/ffgc.2022.1114390" data-fig="figs/ffgc-fir.jpg" data-fig-cap="The death of Korean fir (Abies koreana) affects soil symbiotic fungal microbiome: Preliminary findings">
                         <div class="pub-title"><a href="https://doi.org/10.3389/ffgc.2022.1114390" target="_blank" rel="noopener">The death of Korean fir (Abies koreana) affects soil symbiotic fungal microbiome: Preliminary findings</a></div>
                         <div class="pub-authors"><strong>Jeong, M.</strong>, Tagele, S.B., Kim, M.J., Ko, S.H., Kim, K.S., Koh, J.G., Jung, D.R., Jo, Y., Jung, Y., Park, Y.J., Kim, M.S., Lim, K., Shin, J.H. (2023)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Forests and Global Change, 5, 1114390</span> <span class="pub-badge pub-badge--first">First author</span></div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Forests and Global Change, 5, 1114390</span> <span class="pub-badge pub-badge--first">First author</span> <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/ffgc-fir.jpg" aria-label="View figure: The death of Korean fir (Abies koreana) affects soil symbiotic fungal microbiome: Preliminary findings" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.1186/s40538-022-00365-5">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.1186/s40538-022-00365-5" data-fig="figs/pub-10-1186-s40538-022-00365-5-figure.png" data-fig-cap="Published figure · An optimized biofumigant improves pepper yield without exerting detrimental effects on soil microbial diversity">
                         <div class="pub-title"><a href="https://doi.org/10.1186/s40538-022-00365-5" target="_blank" rel="noopener">An optimized biofumigant improves pepper yield without exerting detrimental effects on soil microbial diversity</a></div>
                         <div class="pub-authors">Tagele, S.B., Kim, R.H., <strong>Jeong, M.</strong>, Jung, D.R., Lee, D., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Chemical and Biological Technologies in Agriculture, 9(1), 99</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Chemical and Biological Technologies in Agriculture, 9(1), 99</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1186-s40538-022-00365-5-figure.png" aria-label="View figure: An optimized biofumigant improves pepper yield without exerting detrimental effects on soil microbial diversity" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://link.springer.com/article/10.1186/s40538-022-00365-5/figures/1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.3389/fmicb.2022.1076242" data-fig="figs/fmicb-alopecia.jpg" data-fig-cap="Comparative analysis of scalp and gut microbiome in androgenetic alopecia: A Korean cross-sectional study">
                         <div class="pub-title"><a href="https://doi.org/10.3389/fmicb.2022.1076242" target="_blank" rel="noopener">Comparative analysis of scalp and gut microbiome in androgenetic alopecia: A Korean cross-sectional study</a></div>
                         <div class="pub-authors">Jung, D.R., Yoo, H.Y., Kim, M.J., Singh, V., Park, S.H., <strong>Jeong, M.</strong>, Park, B.J., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Frontiers in Microbiology, 13, 1076242</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Frontiers in Microbiology, 13, 1076242</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/fmicb-alopecia.jpg" aria-label="View figure: Comparative analysis of scalp and gut microbiome in androgenetic alopecia: A Korean cross-sectional study" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.1128/mra.00734-22">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.1128/mra.00734-22" data-fig="figs/pub-10-1128-mra-00734-22-figure.jpg" data-fig-cap="FIG 1 · Complete Genome Sequence of Bacillus amyloliquefaciens KNU-28 Isolated from Peach Leaves (Prunus Persica [L.] Batsch)">
                         <div class="pub-title"><a href="https://doi.org/10.1128/mra.00734-22" target="_blank" rel="noopener">Complete Genome Sequence of Bacillus amyloliquefaciens KNU-28 Isolated from Peach Leaves (Prunus Persica [L.] Batsch)</a></div>
                         <div class="pub-authors">Kim, M.J., Park, T., <strong>Jeong, M.</strong>, Lee, G., Jung, D.R., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Microbiology Resource Announcements, 11(10), e00734-22</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Microbiology Resource Announcements, 11(10), e00734-22</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1128-mra-00734-22-figure.jpg" aria-label="View figure: Complete Genome Sequence of Bacillus amyloliquefaciens KNU-28 Isolated from Peach Leaves (Prunus Persica [L.] Batsch)" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9583795/#fig1" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1038/s41598-022-17594-1" data-fig="figs/scirep-tej.png" data-fig-cap="Development of mixed starter culture for the fermentation of Ethiopian honey wine, Tej">
                         <div class="pub-title"><a href="https://doi.org/10.1038/s41598-022-17594-1" target="_blank" rel="noopener">Development of mixed starter culture for the fermentation of Ethiopian honey wine, Tej</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D., Kim, M.C., Lim, K., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 12(1), 13431</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Scientific Reports, 12(1), 13431</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/scirep-tej.png" aria-label="View figure: Development of mixed starter culture for the fermentation of Ethiopian honey wine, Tej" data-image-viewer aria-haspopup="dialog">View figure</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.1016/j.dib.2022.108022">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.1016/j.dib.2022.108022" data-fig="figs/pub-10-1016-j-dib-2022-108022-figure.jpg" data-fig-cap="Fig. 1 · Microbiome dataset of spontaneously fermented Ethiopian honey wine, Tej">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.dib.2022.108022" target="_blank" rel="noopener">Microbiome dataset of spontaneously fermented Ethiopian honey wine, Tej</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D., Kim, M.A., Jeon, H.J., Lee, S.E., Tagele, S.B., Park, Y.J., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Data in Brief, 42, 108022</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Data in Brief, 42, 108022</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1016-j-dib-2022-108022-figure.jpg" aria-label="View figure: Microbiome dataset of spontaneously fermented Ethiopian honey wine, Tej" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8933813/#fig0001" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.1016/j.lwt.2021.112927">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.1016/j.lwt.2021.112927" data-fig="figs/pub-10-1016-j-lwt-2021-112927-figure.jpg" data-fig-cap="Published figure · Fermentation dynamics of spontaneously fermented Ethiopian honey wine, Tej">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.lwt.2021.112927" target="_blank" rel="noopener">Fermentation dynamics of spontaneously fermented Ethiopian honey wine, Tej</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D., Kim, M.A., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">LWT, 155, 112927</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">LWT, 155, 112927</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-1016-j-lwt-2021-112927-figure.jpg" aria-label="View figure: Fermentation dynamics of spontaneously fermented Ethiopian honey wine, Tej" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.sciencedirect.com/science/article/pii/S0023643821020806" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></span></div>
                     </div>
                     <div class="pub-item" data-type="coauthor" data-doi="10.1016/j.foodres.2021.110765">
                         <div class="pub-title"><a href="https://doi.org/10.1016/j.foodres.2021.110765" target="_blank" rel="noopener">Physicochemical properties, antioxidant activities and microbial communities of Ethiopian honey wine, Tej</a></div>
                         <div class="pub-authors">Fentie, E.G., <strong>Jeong, M.</strong>, Emire, S.A., Demsash, H.D., Kim, M.A., Jeon, H.J., Lee, S.E., Tagele, S.B., Park, Y.J., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Food Research International, 152, 110765</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Food Research International, 152, 110765</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="https://ars.els-cdn.com/content/image/1-s2.0-S0963996921006657-gr1.jpg" aria-label="Publisher figure ↗: Physicochemical properties, antioxidant activities and microbial communities of Ethiopian honey wine, Tej" target="_blank" rel="noopener">Publisher figure ↗</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.2147/jir.s338212">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.2147/jir.s338212" data-fig="figs/pub-10-2147-jir-s338212-figure.jpg" data-fig-cap="Figure 1 · Alterations and Prediction of Functional Profiles of Gut Microbiota After Fecal Microbiota Transplantation for Iranian Recurrent Clostridioides difficile Infection with Underlying Inflammatory Bowel Disease: A Pilot Study">
                         <div class="pub-title"><a href="https://doi.org/10.2147/jir.s338212" target="_blank" rel="noopener">Alterations and Prediction of Functional Profiles of Gut Microbiota After Fecal Microbiota Transplantation for Iranian Recurrent Clostridioides difficile Infection with Underlying Inflammatory Bowel Disease: A Pilot Study</a></div>
                         <div class="pub-authors">Azimirad, M., Jo, Y., Kim, M.S., <strong>Jeong, M.</strong>, Shahrokh, S., Asadzadeh Aghdaei, H., Zali, M.R., Lee, S., Yadegar, A., Shin, J.H. (2022)</div>
-                        <div class="pub-meta"><span class="pub-journal">Journal of Inflammation Research, Volume 15, 105-116</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Journal of Inflammation Research, Volume 15, 105-116</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-2147-jir-s338212-figure.jpg" aria-label="View figure: Alterations and Prediction of Functional Profiles of Gut Microbiota After Fecal Microbiota Transplantation for Iranian Recurrent Clostridioides difficile Infection with Underlying Inflammatory Bowel Disease: A Pilot Study" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8747792/#f0001" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC 3.0</a></span></div>
                     </div>
-                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/agronomy11101914">
+                    <div class="pub-item" data-type="coauthor" data-doi="10.3390/agronomy11101914" data-fig="figs/pub-10-3390-agronomy11101914-figure.png" data-fig-cap="Published figure · Fermented Coffee Grounds Diminish Livestock Odors: A Microbiome Study">
                         <div class="pub-title"><a href="https://doi.org/10.3390/agronomy11101914" target="_blank" rel="noopener">Fermented Coffee Grounds Diminish Livestock Odors: A Microbiome Study</a></div>
                         <div class="pub-authors">Kim, M.S., Kim, S.H., <strong>Jeong, M.</strong>, Park, M.K., Jo, Y., Kang, G.U., Jung, D.R., Lee, C.I., Shin, J.H. (2021)</div>
-                        <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span> </div>
+                        <div class="pub-meta"><span class="pub-journal">Agronomy, 11(10), 1914</span>  <span class="pub-figure-actions"><a class="pub-figure-link" href="figs/pub-10-3390-agronomy11101914-figure.png" aria-label="View figure: Fermented Coffee Grounds Diminish Livestock Odors: A Microbiome Study" data-image-viewer aria-haspopup="dialog">View figure</a> <a class="pub-figure-source" href="https://www.mdpi.com/2073-4395/11/10/1914" target="_blank" rel="noopener">Source</a> <a class="pub-figure-license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
                     </div>
                 </div>
                 <button class="pub-show-more" id="pubShowMore">Show All Publications <span class="arrow">&#9660;</span></button>
@@ -2228,7 +2245,7 @@
             if (!item) return;
             if (item.contains(e.relatedTarget)) return;
             pubPreviewImg.src = item.getAttribute('data-fig');
-            pubPreviewCap.innerHTML = item.getAttribute('data-fig-cap') || '';
+            pubPreviewCap.textContent = item.getAttribute('data-fig-cap') || '';
             pubPreview.classList.add('visible');
         });
         document.addEventListener('mouseout', function(e) {
@@ -2326,7 +2343,7 @@
     var scrollPosition = null;
     var triggers = document.querySelectorAll(
         '.activity-photo-card a, .doctoral-portrait a, .gallery-card, ' +
-        '.hero-photo, .hobby-grid img, .pub-thumb'
+        '.hero-photo, .hobby-grid img, .pub-thumb, .pub-figure-link[data-image-viewer]'
     );
 
     function imageDetails(trigger) {

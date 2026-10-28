@@ -49,7 +49,15 @@
         "ko": "온라인 공개 · 2027년 1월호"
       },
       "source": "https://api.crossref.org/works/10.1016/j.jspr.2026.103261",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1016-j-jspr-2026-103261-figure.jpg",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://www.sciencedirect.com/science/article/pii/S0022474X26003140",
+      "figure_asset_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0022474X26003140-gr1.jpg",
+      "figure_license": "http://creativecommons.org/licenses/by/4.0/",
+      "figure_status": "available",
+      "figure_sha256": "d5ce71f212bd56006349f8e9d2d4bab78458a1515eae14d5b15db52fafeef708",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1016/j.apsoil.2026.107429",
@@ -91,7 +99,15 @@
       "corresponding_author": true,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1016/j.apsoil.2026.107429",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1016-j-apsoil-2026-107429-figure.jpg",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://www.sciencedirect.com/science/article/pii/S0929139326006499",
+      "figure_asset_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0929139326006499-gr1.jpg",
+      "figure_license": "http://creativecommons.org/licenses/by/4.0/",
+      "figure_status": "available",
+      "figure_sha256": "e37cca7437338843ffcfad1450394dbb8a146c4809c69535c167a2bb60609dcd",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3390/nu18203445",
@@ -129,7 +145,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3390/nu18203445",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3390-nu18203445-figure.webp",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13708578/#nutrients-18-03445-f001",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13708578.1/nutrients-18-03445-g001.webp?md5=9f803d81130080e78195aaf9b0bf26a0",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 3,
+      "figure_status": "available",
+      "figure_sha256": "5dd03a851556bb72c4a89cbace67e683db691257c91154d7eef49cffea607f4b",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1186/s12863-026-01489-5",
@@ -162,7 +187,17 @@
         "ko": "온라인 선공개 · 2026년 10월 3일"
       },
       "source": "https://api.crossref.org/works/10.1186/s12863-026-01489-5",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1186-s12863-026-01489-5-data-file-5.png",
+      "figure_label": "Data file 5 · Phylogenetic tree · Rendered from published supplementary PDF",
+      "figure_source_url": "https://doi.org/10.6084/m9.figshare.32031510",
+      "figure_asset_url": "https://ndownloader.figshare.com/files/63781017",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_kind": "supplement",
+      "figure_transform": "One-page published supplementary PDF rendered in full at 144 dpi; no cropping or data changes.",
+      "figure_status": "available",
+      "figure_sha256": "430c55a73fa71eadd71984e0c77d86a210dfbc631018449a27907d7770c8e0db",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1016/j.jfoodeng.2025.112764",
@@ -200,7 +235,12 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1016/j.jfoodeng.2025.112764",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure_external_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0260877425002997-gr1.jpg",
+      "figure_source_url": "https://www.sciencedirect.com/science/article/pii/S0260877425002997",
+      "figure_label": "Publisher figure",
+      "figure_status": "publisher",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.48022/mbl.2511.11012",
@@ -234,7 +274,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.48022/mbl.2511.11012",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-48022-mbl-2511-11012-figure.jpg",
+      "figure_label": "Fig. 1",
+      "figure_source_url": "https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2511.11012#F1",
+      "figure_asset_url": "https://pdf.medrang.co.kr/MBL/2026/054/mbl-54-e2511012-f1.jpg",
+      "figure_license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "figure_count": 3,
+      "figure_status": "available",
+      "figure_sha256": "99e826589209fdb81069dcc57aed49ebfe68daa21fc5a7bf45d081af7d9c37ec",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.48022/mbl.2508.08018",
@@ -264,7 +313,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.48022/mbl.2508.08018",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-48022-mbl-2508-08018-figure.jpg",
+      "figure_label": "Fig. 1",
+      "figure_source_url": "https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2508.08018#F1",
+      "figure_asset_url": "https://pdf.medrang.co.kr/MBL/2026/054/mbl-54-e2508018-f1.jpg",
+      "figure_license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "figure_count": 1,
+      "figure_status": "available",
+      "figure_sha256": "fe44e7ba92ea699ecdb113d251b12dd136dfd0a70afebf556e3dd8f9e97dc4a4",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.48022/mbl.2509.09002",
@@ -294,7 +352,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.48022/mbl.2509.09002",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-48022-mbl-2509-09002-figure.jpg",
+      "figure_label": "Fig. 1",
+      "figure_source_url": "https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2509.09002#F1",
+      "figure_asset_url": "https://pdf.medrang.co.kr/MBL/2026/054/mbl-54-e2509002-f1.jpg",
+      "figure_license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "figure_count": 1,
+      "figure_status": "available",
+      "figure_sha256": "d14922f1efa6f0c5174a9e20aee549d6692663bdafdcff514d96d5f853a8b463",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.48022/mbl.2508.08021",
@@ -324,7 +391,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.48022/mbl.2508.08021",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-48022-mbl-2508-08021-figure.jpg",
+      "figure_label": "Fig. 1",
+      "figure_source_url": "https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2508.08021#F1",
+      "figure_asset_url": "https://pdf.medrang.co.kr/MBL/2026/054/mbl-54-e2508021-f1.jpg",
+      "figure_license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "figure_count": 2,
+      "figure_status": "available",
+      "figure_sha256": "2a1417fa2a128ce50d122fafef02f6aef15552f6f61db4b288904e26457e794c",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.48022/mbl.2508.08015",
@@ -354,7 +430,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.48022/mbl.2508.08015",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-48022-mbl-2508-08015-figure.jpg",
+      "figure_label": "Fig. 1",
+      "figure_source_url": "https://www.mbl.or.kr/journal/view.html?doi=10.48022/mbl.2508.08015#F1",
+      "figure_asset_url": "https://pdf.medrang.co.kr/MBL/2025/053/mbl-53-4-641-f1.jpg",
+      "figure_license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "figure_count": 2,
+      "figure_status": "available",
+      "figure_sha256": "4dcbba554dff7d781b0b7ee0bd0a10a69711eda42ba6c293fbfe36e497440570",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1128/mra.01011-24",
@@ -384,7 +469,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1128/mra.01011-24",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1128-mra-01011-24-figure.jpg",
+      "figure_label": "Fig 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12697142/#F1",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12697142.1/mra.01011-24.f001.jpg?md5=a5f5e6f0391d5252efbdd1aaba218c84",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 1,
+      "figure_status": "available",
+      "figure_sha256": "db22037491f5eb377cbe6b3e677e7d387d0cf93a878c2f458eca337de8096e2a",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3389/fpls.2025.1712997",
@@ -438,7 +532,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3389/fpls.2025.1712997",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3389-fpls-2025-1712997-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12711777/#f1",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12711777.1/fpls-16-1712997-g001.jpg?md5=3558cad32a5dbf1a5839f52c59b785ef",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 8,
+      "figure_status": "available",
+      "figure_sha256": "c4471e53c25b0095c984fc0849a77f9cd027fdb7501e461530a6cc36c3e6bd0a",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1007/s10725-025-01376-6",
@@ -480,7 +583,15 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1007/s10725-025-01376-6",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1007-s10725-025-01376-6-figure.png",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://link.springer.com/article/10.1007/s10725-025-01376-6/figures/1",
+      "figure_asset_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10725-025-01376-6/MediaObjects/10725_2025_1376_Fig1_HTML.png",
+      "figure_license": "https://creativecommons.org/licenses/by-nc-nd/4.0",
+      "figure_status": "available",
+      "figure_sha256": "fa099883308898ca018112ab0d08ba3143bda283ffc1c53cc2b16fc2d00c6c49",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1038/s41522-025-00747-1",
@@ -547,7 +658,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1038/s41522-025-00747-1",
       "checked": "2026-10-27",
-      "figure": "figs/npj-hpv.png"
+      "figure": "figs/npj-hpv.png",
+      "figure_status": "existing",
+      "figure_sha256": "a20269880f3eb93ab37f17ed7cd0c95db036e17bd3179eebf2e0d3f909365ac7"
     },
     {
       "doi": "10.1038/s41598-024-83295-6",
@@ -598,7 +711,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1038/s41598-024-83295-6",
       "checked": "2026-10-27",
-      "figure": "figs/scirep-yolo.jpg"
+      "figure": "figs/scirep-yolo.jpg",
+      "figure_status": "existing",
+      "figure_sha256": "1def6c353d527468ceef125b47f3d9a229d7ea2c4f729e142bf33a6cc1b4118d"
     },
     {
       "doi": "10.1038/s41467-025-57323-6",
@@ -701,7 +816,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1038/s41467-025-57323-6",
       "checked": "2026-10-27",
-      "figure": "figs/natcomm-cervical.png"
+      "figure": "figs/natcomm-cervical.png",
+      "figure_status": "existing",
+      "figure_sha256": "44ca7ae1e53b0780817d2e810d058b51d9bbd04dce29515d6044f09436eb3f0c"
     },
     {
       "doi": "10.1016/j.crmicr.2025.100500",
@@ -752,7 +869,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1016/j.crmicr.2025.100500",
       "checked": "2026-10-27",
-      "figure": "figs/crms-network.jpg"
+      "figure": "figs/crms-network.jpg",
+      "figure_status": "existing",
+      "figure_sha256": "7daffe0c93fb8638efd3aab32e9ac062fae4757821c8415f148ed77687bac1c1"
     },
     {
       "doi": "10.3390/foods13193102",
@@ -790,7 +909,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3390/foods13193102",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3390-foods13193102-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11476385/#foods-13-03102-f001",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11476385.1/foods-13-03102-g001.jpg?md5=2f6ca754805fd7d4b3931a1a97beb936",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 11,
+      "figure_status": "available",
+      "figure_sha256": "7f9bff2010a10940a49976931ae0c5ee800fcc3f98e31db7a5cf91a373ac0592",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3390/agronomy14102225",
@@ -836,7 +964,15 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3390/agronomy14102225",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3390-agronomy14102225-figure.png",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://www.mdpi.com/2073-4395/14/10/2225",
+      "figure_asset_url": "https://mdpi-res.com/d_attachment/agronomy/agronomy-14-02225/article_deploy/html/images/agronomy-14-02225-g001.png",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_status": "available",
+      "figure_sha256": "81a626d4f2d7470d38de6d59c0b0454078d869dda91ccec922925b80901fe41c",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1111/1541-4337.13424",
@@ -870,7 +1006,12 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1111/1541-4337.13424",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure_external_url": "https://ift.onlinelibrary.wiley.com/doi/10.1111/1541-4337.13424#crf313424-fig-0001",
+      "figure_source_url": "https://ift.onlinelibrary.wiley.com/doi/10.1111/1541-4337.13424#crf313424-fig-0001",
+      "figure_label": "Figure 1",
+      "figure_status": "publisher",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1007/s11356-023-31643-w",
@@ -908,7 +1049,12 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1007/s11356-023-31643-w",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure_external_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11356-023-31643-w/MediaObjects/11356_2023_31643_Fig1_HTML.png",
+      "figure_source_url": "https://link.springer.com/article/10.1007/s11356-023-31643-w/figures/1",
+      "figure_label": "Published figure",
+      "figure_status": "publisher",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3390/microorganisms11010098",
@@ -974,7 +1120,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3390/microorganisms11010098",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3390-microorganisms11010098-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9862898/#microorganisms-11-00098-f001",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9862898.1/microorganisms-11-00098-g001.jpg?md5=0f1a4fbe26f0a7337eb96be06da3fce8",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 4,
+      "figure_status": "available",
+      "figure_sha256": "dbed48919440a19bccbb35be1fa304bf628e405d125eec4c0abea2cf9d2b8a94",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3389/fpls.2023.1301698",
@@ -1012,7 +1167,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3389/fpls.2023.1301698",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3389-fpls-2023-1301698-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10728675/#f1",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10728675.1/fpls-14-1301698-g001.jpg?md5=cfb02d407100940956713665080f7180",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 3,
+      "figure_status": "available",
+      "figure_sha256": "be4289d35f26063d94346fec64848bbce9836b1b6069cf39d1c5e551d0e7b931",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1038/s41598-023-31204-8",
@@ -1074,7 +1238,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1038/s41598-023-31204-8",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1038-s41598-023-31204-8-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10011398/#Fig1",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10011398.1/41598_2023_31204_Fig1_HTML.jpg?md5=61c50649d777b31f8cb48e6d2e47cafb",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 5,
+      "figure_status": "available",
+      "figure_sha256": "2bf6bbe49c4dd98c8c2545db40e759a8c372062623822f94039a91ec3bb689ad",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3389/fpls.2023.1072216",
@@ -1124,7 +1297,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3389/fpls.2023.1072216",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3389-fpls-2023-1072216-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9902886/#f1",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9902886.1/fpls-14-1072216-g001.jpg?md5=2844e95ca6624dfe654808480ee0da8c",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 5,
+      "figure_status": "available",
+      "figure_sha256": "90c4dcc6d094cf57c41f8a53b4b898f0ce646f8237605e76b27e1f2dc3c14979",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3389/ffgc.2022.1114390",
@@ -1195,7 +1377,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3389/ffgc.2022.1114390",
       "checked": "2026-10-27",
-      "figure": "figs/ffgc-fir.jpg"
+      "figure": "figs/ffgc-fir.jpg",
+      "figure_status": "existing",
+      "figure_sha256": "22c59607637eac36726888dec55e6dba99ff1ca5ad137f16e07e3949a3baf735"
     },
     {
       "doi": "10.1186/s40538-022-00365-5",
@@ -1237,7 +1421,15 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1186/s40538-022-00365-5",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1186-s40538-022-00365-5-figure.png",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://link.springer.com/article/10.1186/s40538-022-00365-5/figures/1",
+      "figure_asset_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs40538-022-00365-5/MediaObjects/40538_2022_365_Fig1_HTML.png",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0",
+      "figure_status": "available",
+      "figure_sha256": "f16a0fe664816c53b9bf8cdc692b2b402acf92a1bef444baa90988dc7d58acb8",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3389/fmicb.2022.1076242",
@@ -1288,7 +1480,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3389/fmicb.2022.1076242",
       "checked": "2026-10-27",
-      "figure": "figs/fmicb-alopecia.jpg"
+      "figure": "figs/fmicb-alopecia.jpg",
+      "figure_status": "existing",
+      "figure_sha256": "b34ea2ce4a1aa22b78768569b2d970a84b1c30a8e1b557471953e544dfd2a119"
     },
     {
       "doi": "10.1128/mra.00734-22",
@@ -1330,7 +1524,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1128/mra.00734-22",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1128-mra-00734-22-figure.jpg",
+      "figure_label": "FIG 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9583795/#fig1",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9583795.1/mra.00734-22-f001.jpg?md5=e873bee515dd3715974188fc628d4e15",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 1,
+      "figure_status": "available",
+      "figure_sha256": "4128bbbc64714ef79a034ec9b93895d76ee990b2508676c41e2fb524b639aed2",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1038/s41598-022-17594-1",
@@ -1377,7 +1580,9 @@
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1038/s41598-022-17594-1",
       "checked": "2026-10-27",
-      "figure": "figs/scirep-tej.png"
+      "figure": "figs/scirep-tej.png",
+      "figure_status": "existing",
+      "figure_sha256": "0045b47a0d0ab1f5251e2e380a3a5dac298df94fae2c6f429fc045d6a525141f"
     },
     {
       "doi": "10.1016/j.dib.2022.108022",
@@ -1435,7 +1640,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1016/j.dib.2022.108022",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1016-j-dib-2022-108022-figure.jpg",
+      "figure_label": "Fig. 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8933813/#fig0001",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8933813.1/gr1.jpg?md5=39df1ecab1dd8c0e01750d341abddb70",
+      "figure_license": "http://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 2,
+      "figure_status": "available",
+      "figure_sha256": "57538a578e73874cd77e86320229e7ee9af199ddcfebea63d69fc4126fd87e7f",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1016/j.lwt.2021.112927",
@@ -1477,7 +1691,15 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1016/j.lwt.2021.112927",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-1016-j-lwt-2021-112927-figure.jpg",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://www.sciencedirect.com/science/article/pii/S0023643821020806",
+      "figure_asset_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0023643821020806-gr1.jpg",
+      "figure_license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "figure_status": "available",
+      "figure_sha256": "a75f3410b3ea8cd1824f10294e76416063fe57c6d6d8d781c80bf2137169ffa3",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.1016/j.foodres.2021.110765",
@@ -1535,7 +1757,12 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.1016/j.foodres.2021.110765",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure_external_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0963996921006657-gr1.jpg",
+      "figure_source_url": "https://www.sciencedirect.com/science/article/pii/S0963996921006657",
+      "figure_label": "Publisher figure",
+      "figure_status": "publisher",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.2147/jir.s338212",
@@ -1593,7 +1820,16 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.2147/jir.s338212",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-2147-jir-s338212-figure.jpg",
+      "figure_label": "Figure 1",
+      "figure_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747792/#f0001",
+      "figure_asset_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8747792.1/JIR-15-105-g0001.jpg?md5=39c2ad327fdd0a1a6ce9969bac6783c1",
+      "figure_license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "figure_count": 4,
+      "figure_status": "available",
+      "figure_sha256": "8c943e2a3d218b8447b59e7dd71dfa64e1b83d4d19c0f940d47b364dfa4573ba",
+      "figure_verified_at": "2026-10-28"
     },
     {
       "doi": "10.3390/agronomy11101914",
@@ -1647,7 +1883,15 @@
       "corresponding_author": false,
       "online_status": null,
       "source": "https://api.crossref.org/works/10.3390/agronomy11101914",
-      "checked": "2026-10-27"
+      "checked": "2026-10-27",
+      "figure": "figs/pub-10-3390-agronomy11101914-figure.png",
+      "figure_label": "Published figure",
+      "figure_source_url": "https://www.mdpi.com/2073-4395/11/10/1914",
+      "figure_asset_url": "https://mdpi-res.com/d_attachment/agronomy/agronomy-11-01914/article_deploy/html/images/agronomy-11-01914-g001.png",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_status": "available",
+      "figure_sha256": "2341bad71cee6f689ab5d940028d5dd6af2bd0590a7d221da48be523cb31b167",
+      "figure_verified_at": "2026-10-28"
     }
   ]
 }

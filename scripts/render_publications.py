@@ -4,15 +4,78 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import re
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- PUBLICATIONS:START -->"
 END = "<!-- PUBLICATIONS:END -->"
+
+
+def figure_control(item: dict, language: str) -> str:
+    """Offer an explicit preview or a verified publisher figure link."""
+    korean = language == "ko"
+    figure = item.get("figure")
+    external = item.get("figure_external_url")
+    if not figure and not external:
+        return ""
+    if figure:
+        href = ("../" if korean else "") + figure
+        label = "그림 보기" if korean else "View figure"
+        if item.get("figure_kind") == "supplement":
+            label = "보충 그림" if korean else "Supplement figure"
+        attributes = ' data-image-viewer aria-haspopup="dialog"'
+    else:
+        href = external
+        label = "출판사 그림 ↗" if korean else "Publisher figure ↗"
+        attributes = ' target="_blank" rel="noopener"'
+    description = f"{label}: {item['title']}"
+    control = (
+        f'<a class="pub-figure-link" href="{html.escape(href, quote=True)}"'
+        f' aria-label="{html.escape(description, quote=True)}"{attributes}>'
+        f'{label}</a>'
+    )
+    source_url = item.get("figure_source_url")
+    if figure and source_url:
+        source_label = "출처" if korean else "Source"
+        control += (
+            f' <a class="pub-figure-source" href="{html.escape(source_url, quote=True)}"'
+            f' target="_blank" rel="noopener">{source_label}</a>'
+        )
+    license_url = item.get("figure_license")
+    if figure and license_url:
+        parts = urlparse(license_url).path.strip("/").split("/")
+        license_name = f"CC {parts[1].upper()} {parts[2]}"
+        control += (
+            f' <a class="pub-figure-license" href="{html.escape(license_url, quote=True)}"'
+            f' target="_blank" rel="noopener">{html.escape(license_name)}</a>'
+        )
+    return f'<span class="pub-figure-actions">{control}</span>'
+
+
+def validate_figures(items: list[dict]) -> None:
+    """Require a recorded figure decision when adding a publication."""
+    for item in items:
+        status = item.get("figure_status")
+        if status not in {"existing", "available", "publisher", "none", "unavailable"}:
+            raise ValueError(f"Figure availability has not been reviewed: {item['doi']}")
+        if status in {"none", "unavailable"}:
+            if not item.get("figure_note") or item.get("figure") or item.get("figure_external_url"):
+                raise ValueError(f"Invalid figure-availability decision: {item['doi']}")
+            continue
+        if item.get("figure"):
+            path = ROOT / item["figure"]
+            if not path.is_file() or not path.resolve().is_relative_to((ROOT / "figs").resolve()):
+                raise ValueError(f"Missing or invalid figure asset: {item['doi']}")
+            if item.get("figure_sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != item["figure_sha256"]:
+                raise ValueError(f"Figure asset changed without review: {item['doi']}")
+        elif not item.get("figure_external_url", "").startswith("https://"):
+            raise ValueError(f"Missing verified figure access: {item['doi']}")
 
 
 def render_item(item: dict, language: str) -> str:
@@ -42,7 +105,10 @@ def render_item(item: dict, language: str) -> str:
     if item.get("figure"):
         figure_path = ("../" if korean else "") + item["figure"]
         figure = f' data-fig="{html.escape(figure_path, quote=True)}"'
-        figure += f' data-fig-cap="{html.escape(item["title"], quote=True)}"'
+        caption = item["title"]
+        if item.get("figure_label"):
+            caption = f"{item['figure_label']} · {caption}"
+        figure += f' data-fig-cap="{html.escape(caption, quote=True)}"'
     classes = "pub-item first-author" if first else "pub-item"
     citation = ", ".join(filter(None, [
         item["journal"],
@@ -55,7 +121,7 @@ def render_item(item: dict, language: str) -> str:
     return f'''                    <div class="{classes}" data-type="{' '.join(types)}" data-doi="{doi}"{figure}>
                         <div class="pub-title"><a href="https://doi.org/{doi}" target="_blank" rel="noopener">{html.escape(item['title'])}</a></div>
                         <div class="pub-authors">{', '.join(authors)} ({item['year']})</div>
-                        <div class="pub-meta"><span class="pub-journal">{html.escape(citation)}</span> {' '.join(badges)}</div>
+                        <div class="pub-meta"><span class="pub-journal">{html.escape(citation)}</span> {' '.join(badges)} {figure_control(item, language)}</div>
                     </div>'''
 
 
@@ -130,6 +196,7 @@ def main() -> None:
     dois = [x["doi"].lower() for x in data["publications"]]
     if len(dois) != len(set(dois)):
         raise ValueError("Duplicate DOI in publication inventory")
+    validate_figures(data["publications"])
     for language, filename in [("en", "index.html"), ("ko", "ko/index.html")]:
         path = ROOT / filename
         source = path.read_text()
