@@ -415,16 +415,6 @@
     .hero-meta a:hover .hero-link-icon { opacity:0.8; }
     .hero-link-icon { width:22px; height:22px; vertical-align:middle; }
     .hero-meta-sep { color:var(--border-color); }
-    .email-reveal {
-        display:inline-flex; align-items:center; gap:0.35rem;
-        padding:0.2rem 0.6rem; border:1px dashed var(--border-color);
-        border-radius:var(--radius-sm); background:transparent;
-        color:var(--text-tertiary); font-size:inherit; font-family:var(--font-sans);
-        cursor:pointer; transition:all var(--transition);
-    }
-    .email-reveal:hover { border-color:var(--accent); color:var(--accent); }
-    .email-revealed { border-style:solid; color:var(--text-secondary); cursor:default; }
-    .email-revealed:hover { color:var(--text-secondary); border-color:var(--border-color); }
     .hero-highlights {
         margin-top:1.25rem; display:grid; grid-template-columns:1fr 1fr; gap:0.6rem;
     }
@@ -847,12 +837,6 @@
     .hero-meta a:hover { border-bottom-color: var(--text-primary); }
     .hero-meta a .hero-link-icon { display: none; }
     .hero-meta-sep { color: var(--text-tertiary); }
-    .hero-meta .email-reveal {
-        border: 1px solid var(--border-color);
-        color: var(--text-secondary);
-        padding: 0.18rem 0.55rem;
-        border-radius: 100px;
-    }
 
     .open-banner {
         background: var(--bg-secondary);
@@ -1029,10 +1013,6 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.75rem 1rem;
-        }
-        .footer-links .email-reveal {
-            max-width: 100%;
-            white-space: normal;
         }
         .section { padding: 4rem 1.25rem; }
     }
@@ -1356,6 +1336,24 @@
     @media (max-width:480px) {
         .activity-photo-card--featured .activity-title { font-size:1.02rem; }
     }
+
+    /* Visible email addresses use simple text links throughout the site. */
+    .email-link {
+        color: var(--text-secondary); font-weight: 400;
+        text-decoration: underline; text-decoration-color: var(--border-color);
+        text-underline-offset: 3px; overflow-wrap: anywhere;
+    }
+    .email-link:hover { color: var(--text-primary); text-decoration-color: currentColor; }
+    .email-list { display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; min-width: 0; max-width: 100%; }
+    .hero-meta .email-list { flex-basis: 100%; }
+    .hero-meta .email-link { display: block; max-width: 100%; padding: 0; border: 0; font-size: 0.84rem; font-weight: 400; line-height: 1.65; color: var(--text-secondary); text-decoration: underline; text-decoration-color: var(--border-color); }
+    .contact-card > div:last-child { min-width: 0; }
+    .contact-value .email-link { font-weight: 400; }
+    .footer-links { flex-wrap: wrap; align-items: flex-start; }
+    @media (max-width: 768px) {
+        .hero-meta .email-list, .footer-links .email-list { align-items: center; }
+        .footer-links .email-list { flex-basis: 100%; }
+    }
     </style>
 </head>
 <body>
@@ -1366,12 +1364,12 @@
         <a href="#" class="gnb-logo">Minsoo Jeong</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">About</a></li>
-            <li><a href="#highlights">Talks</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#highlights">Conferences</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#publications">Publications</a></li>
             <li><a href="#media">Media</a></li>
             <li><a href="#offclock">Life</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -1388,9 +1386,9 @@
 <!-- Side progress nav (desktop) -->
 <nav class="side-progress" id="sideProgress" aria-label="Section progress">
     <a href="#about" data-section="about">About</a>
+    <a href="#publications" data-section="publications">Pubs</a>
     <a href="#research" data-section="research">Research</a>
     <a href="#education" data-section="education">Education</a>
-    <a href="#publications" data-section="publications">Pubs</a>
     <a href="#awards" data-section="awards">Awards</a>
     <a href="#skills" data-section="skills">Skills</a>
     <a href="#patents" data-section="patents">Patents</a>
@@ -1411,8 +1409,7 @@
 <a href="https://github.com/msjeong326" rel="noopener" target="_blank" title="GitHub"><img alt="GitHub" class="hero-link-icon" src="https://cdn.simpleicons.org/github"/> GitHub</a>
 <span class="hero-meta-sep">·</span>
 <a href="https://www.linkedin.com/in/minsoojeong" rel="noopener" target="_blank" title="LinkedIn"><img alt="LinkedIn" class="hero-link-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"/> LinkedIn</a>
-<div style="flex-basis:100%;height:0"></div>
-<button class="email-reveal" data-d="ucdavis.edu" data-u="msjung" onclick="revealEmail(this)">UC Davis email</button> <button class="email-reveal" data-d="gmail.com" data-u="msjeong326" onclick="revealEmail(this)">Gmail</button> <button class="email-reveal" data-d="knu.ac.kr" data-u="minsoo0326" onclick="revealEmail(this)">KNU email</button>
+<div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div>
 </div>
 <div class="hero-highlights">
 <div class="hero-hl">
@@ -1559,227 +1556,6 @@
                     <div class="pipe-step-title">AI &amp; Deep Learning</div>
                     <div class="pipe-step-desc">PyTorch, GNN, YOLO</div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Conference Highlights (photo gallery) — moved up to showcase international experience -->
-<section class="section section--alt" id="highlights">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Conferences</div>
-            <h2 class="section-title">On the podium</h2>
-            <p class="section-subtitle">Talks and research seminars in New Zealand, the United States, and Korea.</p>
-        </div>
-        <div class="gallery reveal">
-            <div class="activity-photo-grid" data-conference-group="talks">
-                <figure class="activity-photo-card activity-photo-card--featured" id="isme20-photo">
-                    <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="Enlarge the ISME20 presentation photograph">
-                        <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
-                    </a>
-                    <figcaption>
-                        <div class="activity-kicker">ISME20 · Auckland, New Zealand · August 2026</div>
-                        <div class="activity-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
-                    </figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="4">
-                    <a href="photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="Oral presentation · Gwangju, Republic of Korea">
-                        <img src="photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Oral presentation · Gwangju, Republic of Korea">
-                    </a>
-                    <figcaption><div class="activity-kicker">Korean Society of Environmental Health · November 2025</div><div class="activity-title">Oral presentation · Gwangju, Republic of Korea</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
-                    <a href="photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
-                        <img src="photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
-                    </a>
-                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">Korean Society for Microbiology &amp; Biotechnology — Oral Presentation</div><span class="gallery-badge">Grand Prize</span></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
-                    <a href="photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
-                        <img src="photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">American Society for Microbiology — Oral Presentation</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
-                    <a href="photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
-                        <img src="photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
-                    </a>
-                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">KSABC — Excellence in Presentation</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="1">
-                    <a href="photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="Cucumber and powdery mildew research">
-                        <img src="photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Cucumber and powdery mildew research">
-                    </a>
-                    <figcaption><div class="activity-kicker">Research seminar</div><div class="activity-title">Cucumber and powdery mildew research</div></figcaption>
-                </figure>
-            </div>
-            <details class="conference-extra">
-                <summary>More conference photos (4)</summary>
-                <div class="activity-photo-grid" data-conference-group="additional">
-                <figure class="activity-photo-card" data-added-photo="2">
-                    <a href="photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="Poster presentation · Plant–microbe interactions">
-                        <img src="photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="Poster presentation · Plant–microbe interactions">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2025 · Los Angeles</div><div class="activity-title">Poster presentation · Plant–microbe interactions</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="5">
-                    <a href="photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="Outstanding Poster Presentation Award">
-                        <img src="photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Outstanding Poster Presentation Award">
-                    </a>
-                    <figcaption><div class="activity-kicker">KMB Yeongnam Branch Symposium · 2026</div><div class="activity-title">Outstanding Poster Presentation Award</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
-                    <a href="photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
-                        <img src="photos/asm-2023-poster.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="ASM 2023 poster session">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
-                    <a href="photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 poster presentation">
-                        <img src="photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 poster presentation">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">American Society for Microbiology — Poster Presentation</div></figcaption>
-                </figure>
-                </div>
-            </details>
-        </div>
-    </div>
-</section>
-
-<!-- Research Interests -->
-<section class="section section--alt" id="research">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Research</div>
-            <h2 class="section-title">Research Interests</h2>
-            <p class="section-subtitle">Linked research questions across environmental systems, microbial communities, crops, and human health, supported by experimental and computational methods.</p>
-        </div>
-        <div class="card-grid reveal">
-            <div class="card">
-                <h3 class="card-title">Environment &amp; Soil Microbiomes</h3>
-                <p class="card-desc">Environmental change, soil and aquatic microbial communities, community assembly, cyanobacterial blooms, and resistance-gene profiles.</p>
-                <div class="card-tags">
-                    <span class="card-tag">Soil</span>
-                    <span class="card-tag">Water</span>
-                    <span class="card-tag">Blooms</span>
-                    <span class="card-tag">ARG Dynamics</span>
-                    <span class="card-tag">Assembly</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Crop Health &amp; Disease</h3>
-                <p class="card-desc">Controlled plant–microbe experiments and multi-omics to investigate microbial contributions to plant health, disease, and crop responses.</p>
-                <div class="card-tags">
-                    <span class="card-tag">Gnotobiotics</span>
-                    <span class="card-tag">Phyllosphere</span>
-                    <span class="card-tag">Rhizosphere</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Produce Safety &amp; Human Health</h3>
-                <p class="card-desc">Ongoing lettuce research at UC Davis explores how plant disease and associated microbiomes may relate to produce safety and potential risks to human health.</p>
-                <div class="card-tags">
-                    <span class="card-tag">Lettuce</span>
-                    <span class="card-tag">Plant Disease</span>
-                    <span class="card-tag">Produce Safety</span>
-                    <span class="card-tag">Human Health</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Multi-omics &amp; Metabolomics</h3>
-                <p class="card-desc">Integrating WMS, RNA-seq, metabolomics, ddPCR, and amplicon sequencing.</p>
-                <div class="card-tags">
-                    <span class="card-tag">WMS</span>
-                    <span class="card-tag">RNA-seq</span>
-                    <span class="card-tag">Metabolomics</span>
-                    <span class="card-tag">ddPCR</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">AI &amp; Crop Phenotyping</h3>
-                <p class="card-desc">Deep learning for crop phenotyping, including YOLOv8-based nutrient-deficiency detection, and microbial community prediction.</p>
-                <div class="card-tags">
-                    <span class="card-tag">PyTorch</span>
-                    <span class="card-tag">YOLOv8</span>
-                    <span class="card-tag">XGBoost</span>
-                    <span class="card-tag">GNN</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Bioinformatics &amp; Computational Ecology</h3>
-                <p class="card-desc">Metagenome assembly, MAG binning, functional annotation, null models, and network analysis.</p>
-                <div class="card-tags">
-                    <span class="card-tag">MAG Binning</span>
-                    <span class="card-tag">eggNOG</span>
-                    <span class="card-tag">Network Analysis</span>
-                    <span class="card-tag">PERMANOVA</span>
-                    <span class="card-tag">antiSMASH</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Education -->
-<section class="section" id="education">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">Education &amp; Experience</div>
-            <h2 class="section-title">Academic Background</h2>
-        </div>
-        <div class="timeline reveal">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Oct 2026 – Present</div>
-                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
-                    <div class="timeline-inst">University of California, Davis</div>
-                    <div class="timeline-desc">Department of Plant Sciences · Maeli Melotto Lab. Supported by the Sejong Science Fellowship.</div>
-                </div>
-                <img class="timeline-logo timeline-logo--ucdavis" src="logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Sep 2026 &ndash; Present</div>
-                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
-                    <div class="timeline-inst">Kyungpook National University</div>
-                    <div class="timeline-desc">Institute for Agricultural Product Quality and Safety Assessment. Sejong Science Fellowship (NRF, 2026&ndash;2031).</div>
-                </div>
-                <img class="timeline-logo" src="logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="Institute for Agricultural Product Quality and Safety Assessment, Kyungpook National University" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Sep 2025 &ndash; Aug 2026</div>
-                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
-                    <div class="timeline-inst">Kyungpook National University</div>
-                    <div class="timeline-desc">NGS Core Research Support Center. Research on host–microbe interactions. Sejong Science Fellow from Mar 2026 (NRF, 2026&ndash;2031).</div>
-                </div>
-                <img class="timeline-logo" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center, Kyungpook National University" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
-                    <h3 class="timeline-title">Ph.D. in Applied Biosciences (Agriculture)</h3>
-                    <div class="timeline-inst">Kyungpook National University</div>
-                    <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
-                </div>
-                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Mar 2020 &ndash; Feb 2022</div>
-                    <h3 class="timeline-title">M.S. in Applied Biosciences (Agriculture)</h3>
-                    <div class="timeline-inst">Kyungpook National University</div>
-                </div>
-                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Mar 2014 &ndash; Feb 2020</div>
-                    <h3 class="timeline-title">B.S. in Applied Biosciences (Agriculture)</h3>
-                    <div class="timeline-inst">Kyungpook National University</div>
-                </div>
-                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -1998,6 +1774,230 @@
 </section>
 <!-- PUBLICATIONS:END -->
 
+<!-- Conference Highlights (photo gallery) — moved up to showcase international experience -->
+<section class="section section--alt" id="highlights">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Conferences</div>
+            <h2 class="section-title">Conference presentations</h2>
+            <p class="section-subtitle">Oral and poster presentations in New Zealand, the United States, and Korea.</p>
+        </div>
+        <div class="gallery reveal">
+            <div class="activity-photo-grid" data-conference-group="international">
+                <figure class="activity-photo-card activity-photo-card--featured" id="isme20-photo">
+                    <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="Enlarge the ISME20 presentation photograph">
+                        <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
+                    </a>
+                    <figcaption>
+                        <div class="activity-kicker">ISME20 · Auckland, New Zealand · August 2026</div>
+                        <div class="activity-title">Oral presentation at the 20th International Symposium on Microbial Ecology</div>
+                    </figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="2">
+                    <a href="photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="Poster presentation · Plant–microbe interactions">
+                        <img src="photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="Poster presentation · Plant–microbe interactions">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2025 · Los Angeles</div><div class="activity-title">Poster presentation · Plant–microbe interactions</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
+                    <a href="photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
+                        <img src="photos/asm-2023-poster.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="ASM 2023 poster session">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
+                    <a href="photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 poster presentation">
+                        <img src="photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 poster presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">American Society for Microbiology — Poster Presentation</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
+                    <a href="photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
+                        <img src="photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">American Society for Microbiology — Oral Presentation</div></figcaption>
+                </figure>
+            </div>
+            <details class="conference-extra">
+                <summary>More conference &amp; seminar photos (5)</summary>
+                <div class="activity-photo-grid" data-conference-group="additional">
+                <figure class="activity-photo-card" data-added-photo="5">
+                    <a href="photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="Outstanding Poster Presentation Award">
+                        <img src="photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Outstanding Poster Presentation Award">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB Yeongnam Branch Symposium · 2026</div><div class="activity-title">Outstanding Poster Presentation Award</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="4">
+                    <a href="photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="Oral presentation · Gwangju, Republic of Korea">
+                        <img src="photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Oral presentation · Gwangju, Republic of Korea">
+                    </a>
+                    <figcaption><div class="activity-kicker">Korean Society of Environmental Health · November 2025</div><div class="activity-title">Oral presentation · Gwangju, Republic of Korea</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
+                    <a href="photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
+                        <img src="photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">Korean Society for Microbiology &amp; Biotechnology — Oral Presentation</div><span class="gallery-badge">Grand Prize</span></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
+                    <a href="photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
+                        <img src="photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
+                    </a>
+                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">KSABC — Excellence in Presentation</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="1">
+                    <a href="photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="Cucumber and powdery mildew research">
+                        <img src="photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="Cucumber and powdery mildew research">
+                    </a>
+                    <figcaption><div class="activity-kicker">Research seminar</div><div class="activity-title">Cucumber and powdery mildew research</div></figcaption>
+                </figure>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Research Interests -->
+<section class="section section--alt" id="research">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Research</div>
+            <h2 class="section-title">Research Interests</h2>
+            <p class="section-subtitle">Linked research questions across environmental systems, microbial communities, crops, and human health, supported by experimental and computational methods.</p>
+        </div>
+        <div class="card-grid reveal">
+            <div class="card">
+                <h3 class="card-title">Environment &amp; Soil Microbiomes</h3>
+                <p class="card-desc">Environmental change, soil and aquatic microbial communities, community assembly, cyanobacterial blooms, and resistance-gene profiles.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Soil</span>
+                    <span class="card-tag">Water</span>
+                    <span class="card-tag">Blooms</span>
+                    <span class="card-tag">ARG Dynamics</span>
+                    <span class="card-tag">Assembly</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Crop Health &amp; Disease</h3>
+                <p class="card-desc">Controlled plant–microbe experiments and multi-omics to investigate microbial contributions to plant health, disease, and crop responses.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Gnotobiotics</span>
+                    <span class="card-tag">Phyllosphere</span>
+                    <span class="card-tag">Rhizosphere</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Produce Safety &amp; Human Health</h3>
+                <p class="card-desc">Ongoing lettuce research at UC Davis explores how plant disease and associated microbiomes may relate to produce safety and potential risks to human health.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Lettuce</span>
+                    <span class="card-tag">Plant Disease</span>
+                    <span class="card-tag">Produce Safety</span>
+                    <span class="card-tag">Human Health</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Multi-omics &amp; Metabolomics</h3>
+                <p class="card-desc">Integrating WMS, RNA-seq, metabolomics, ddPCR, and amplicon sequencing.</p>
+                <div class="card-tags">
+                    <span class="card-tag">WMS</span>
+                    <span class="card-tag">RNA-seq</span>
+                    <span class="card-tag">Metabolomics</span>
+                    <span class="card-tag">ddPCR</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">AI &amp; Crop Phenotyping</h3>
+                <p class="card-desc">Deep learning for crop phenotyping, including YOLOv8-based nutrient-deficiency detection, and microbial community prediction.</p>
+                <div class="card-tags">
+                    <span class="card-tag">PyTorch</span>
+                    <span class="card-tag">YOLOv8</span>
+                    <span class="card-tag">XGBoost</span>
+                    <span class="card-tag">GNN</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Bioinformatics &amp; Computational Ecology</h3>
+                <p class="card-desc">Metagenome assembly, MAG binning, functional annotation, null models, and network analysis.</p>
+                <div class="card-tags">
+                    <span class="card-tag">MAG Binning</span>
+                    <span class="card-tag">eggNOG</span>
+                    <span class="card-tag">Network Analysis</span>
+                    <span class="card-tag">PERMANOVA</span>
+                    <span class="card-tag">antiSMASH</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section class="section" id="education">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">Education &amp; Experience</div>
+            <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Oct 2026 – Present</div>
+                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                    <div class="timeline-inst">University of California, Davis</div>
+                    <div class="timeline-desc">Department of Plant Sciences · Maeli Melotto Lab. Supported by the Sejong Science Fellowship.</div>
+                </div>
+                <img class="timeline-logo timeline-logo--ucdavis" src="logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Sep 2026 &ndash; Present</div>
+                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">Institute for Agricultural Product Quality and Safety Assessment. Sejong Science Fellowship (NRF, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="Institute for Agricultural Product Quality and Safety Assessment, Kyungpook National University" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Sep 2025 &ndash; Aug 2026</div>
+                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">NGS Core Research Support Center. Research on host–microbe interactions. Sejong Science Fellow from Mar 2026 (NRF, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center, Kyungpook National University" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
+                    <h3 class="timeline-title">Ph.D. in Applied Biosciences (Agriculture)</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
+                </div>
+                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2020 &ndash; Feb 2022</div>
+                    <h3 class="timeline-title">M.S. in Applied Biosciences (Agriculture)</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                </div>
+                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2014 &ndash; Feb 2020</div>
+                    <h3 class="timeline-title">B.S. in Environment and Life Chemistry (Agriculture)</h3>
+                    <div class="timeline-desc">School of Applied Biosciences</div>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                </div>
+                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 <!-- Awards & Conferences -->
 <section class="section" id="awards">
     <div class="section-inner">
@@ -2029,12 +2029,21 @@
             </div>
             <div id="conferences">
                 <div class="col-title">Conferences (Selected)</div>
-                <div class="list-items" id="conferenceList"><div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ISME20 · Auckland, New Zealand · August 2026</div></div>
-<div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Symposium lecture</span> KSABC International Symposium · Jeju, Korea · June 2026</div></div>
-<div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> Korean Society of Environmental Health · Gwangju, Korea · November 2025</div></div>
-
+                <div class="list-items" id="conferenceList">
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> ASM Microbe 2025, Los Angeles, USA</div>
+                    </div>
+                    <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ISME20 · Auckland, New Zealand · August 2026</div></div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ASM Microbe 2023, Houston, USA</div>
+                    </div>
+                    <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Symposium lecture</span> KSABC International Symposium · Jeju, Korea · June 2026</div></div>
+                    <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> Korean Society of Environmental Health · Gwangju, Korea · November 2025</div></div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Conference 2024 <span class="conf-award-badge">Grand Prize</span></div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">🥈</span></div>
                     </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KMB International Conference 2025</div>
@@ -2042,17 +2051,8 @@
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> MSK 2024</div>
                     </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Conference 2024 <span class="conf-award-badge">Grand Prize</span></div>
-                    </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2024</div>
-                    </div>
-                    <div class="list-item conf-hidden">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> BK21 FOUR Research Symposium, Jan 2024 <span class="conf-award-badge">🥉</span></div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ASM Microbe 2023, Houston, USA</div>
                     </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2022 <span class="conf-award-badge">🥈</span></div>
@@ -2060,8 +2060,8 @@
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSM Ecology 2022</div>
                     </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">🥈</span></div>
+                    <div class="list-item conf-hidden">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> BK21 FOUR Research Symposium, Jan 2024 <span class="conf-award-badge">🥉</span></div>
                     </div>
                 </div>
                 <button class="conf-show-more" id="confShowMore" type="button" aria-expanded="false" aria-controls="conferenceList">Show more ▼</button>
@@ -2270,7 +2270,7 @@
     <div class="section-inner">
         <div class="section-header reveal">
             <div class="section-label">Contact</div>
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">Contact</h2>
         </div>
         <div class="contact-refs reveal">
             <div>
@@ -2282,7 +2282,7 @@
                         </div>
                         <div>
                             <div class="contact-label">Email</div>
-                            <div class="contact-value"><button class="email-reveal" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)">UC Davis email</button> <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Gmail</button> <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">KNU email</button></div>
+                            <div class="contact-value"><div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div></div>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -2316,17 +2316,17 @@
                     <div class="ref-card">
                         <div class="ref-name">Prof. Jae-Ho Shin</div>
                         <div class="ref-role">Supervisor -- Dept. of Applied Biosciences, KNU</div>
-                        <div class="ref-email"><button class="email-reveal" data-u="jhshin" data-d="knu.ac.kr" onclick="revealEmail(this)">Click to show</button></div>
+                        <div class="ref-email"><a class="email-link" href="mailto:jhshin@knu.ac.kr">jhshin@knu.ac.kr</a></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">Prof. Seungjun Lee</div>
                         <div class="ref-role">Dept. of Applied Biosciences, KNU</div>
-                        <div class="ref-email"><button class="email-reveal" data-u="paul5280" data-d="knu.ac.kr" onclick="revealEmail(this)">Click to show</button></div>
+                        <div class="ref-email"><a class="email-link" href="mailto:paul0528@knu.ac.kr">paul0528@knu.ac.kr</a></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">Prof. Maeli Melotto</div>
                         <div class="ref-role">Department of Plant Sciences, UC Davis</div>
-                        <div class="ref-email"><button class="email-reveal" data-u="melotto" data-d="ucdavis.edu" onclick="revealEmail(this)">Click to show</button></div>
+                        <div class="ref-email"><a class="email-link" href="mailto:melotto@ucdavis.edu">melotto@ucdavis.edu</a></div>
                     </div>
                 </div>
             </div>
@@ -2345,7 +2345,7 @@
             <a href="#about">About</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
-            <button class="email-reveal" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)">UC Davis email</button> <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Gmail</button> <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">KNU email</button>
+            <div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div>
         </div>
     </div>
     <div class="footer-bottom">
@@ -2499,17 +2499,6 @@
 
 })();
 
-    // Email reveal (anti-scraping)
-    function revealEmail(btn) {
-        var u = btn.getAttribute('data-u');
-        var d = btn.getAttribute('data-d');
-        var email = u + '@' + d;
-        var link = document.createElement('a');
-        link.href = 'mailto:' + email;
-        link.textContent = email;
-        link.style.color = 'inherit';
-        btn.replaceWith(link);
-    }
 </script>
 <script>
 (function() {

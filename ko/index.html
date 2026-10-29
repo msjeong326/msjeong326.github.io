@@ -412,16 +412,6 @@
     .hero-meta a:hover .hero-link-icon { opacity:0.8; }
     .hero-link-icon { width:22px; height:22px; vertical-align:middle; }
     .hero-meta-sep { color:var(--border-color); }
-    .email-reveal {
-        display:inline-flex; align-items:center; gap:0.35rem;
-        padding:0.2rem 0.6rem; border:1px dashed var(--border-color);
-        border-radius:var(--radius-sm); background:transparent;
-        color:var(--text-tertiary); font-size:inherit; font-family:var(--font-sans);
-        cursor:pointer; transition:all var(--transition);
-    }
-    .email-reveal:hover { border-color:var(--accent); color:var(--accent); }
-    .email-revealed { border-style:solid; color:var(--text-secondary); cursor:default; }
-    .email-revealed:hover { color:var(--text-secondary); border-color:var(--border-color); }
     .hero-highlights {
         margin-top:1.25rem; display:grid; grid-template-columns:1fr 1fr; gap:0.6rem;
     }
@@ -832,12 +822,6 @@
     }
     .hero-meta a .hero-link-icon { display: none; }
     .hero-meta-sep { color: var(--text-tertiary); }
-    .hero-meta .email-reveal {
-        border: 1px solid var(--border-color);
-        color: var(--text-secondary);
-        padding: 0.18rem 0.55rem;
-        border-radius: 100px;
-    }
 
     .open-banner {
         background: var(--bg-secondary);
@@ -1014,10 +998,6 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.75rem 1rem;
-        }
-        .footer-links .email-reveal {
-            max-width: 100%;
-            white-space: normal;
         }
         .section { padding: 4rem 1.25rem; }
     }
@@ -1341,6 +1321,24 @@
     @media (max-width:480px) {
         .activity-photo-card--featured .activity-title { font-size:1.02rem; }
     }
+
+    /* Visible email addresses use simple text links throughout the site. */
+    .email-link {
+        color: var(--text-secondary); font-weight: 400;
+        text-decoration: underline; text-decoration-color: var(--border-color);
+        text-underline-offset: 3px; overflow-wrap: anywhere;
+    }
+    .email-link:hover { color: var(--text-primary); text-decoration-color: currentColor; }
+    .email-list { display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; min-width: 0; max-width: 100%; }
+    .hero-meta .email-list { flex-basis: 100%; }
+    .hero-meta .email-link { display: block; max-width: 100%; padding: 0; border: 0; font-size: 0.84rem; font-weight: 400; line-height: 1.65; color: var(--text-secondary); text-decoration: underline; text-decoration-color: var(--border-color); }
+    .contact-card > div:last-child { min-width: 0; }
+    .contact-value .email-link { font-weight: 400; }
+    .footer-links { flex-wrap: wrap; align-items: flex-start; }
+    @media (max-width: 768px) {
+        .hero-meta .email-list, .footer-links .email-list { align-items: center; }
+        .footer-links .email-list { flex-basis: 100%; }
+    }
     </style>
 </head>
 <body>
@@ -1351,12 +1349,12 @@
         <a href="#" class="gnb-logo">정민수 박사</a>
         <ul class="gnb-menu" id="gnbMenu">
             <li><a href="#about">소개</a></li>
-            <li><a href="#highlights">발표</a></li>
+            <li><a href="#publications">논문</a></li>
+            <li><a href="#highlights">학회</a></li>
             <li><a href="#research">연구분야</a></li>
             <li><a href="#education">학력</a></li>
             <li><a href="#awards">수상</a></li>
             <li><a href="#skills">역량</a></li>
-            <li><a href="#publications">논문</a></li>
             <li><a href="#media">미디어</a></li>
             <li><a href="#offclock">일상</a></li>
             <li><a href="#contact">연락처</a></li>
@@ -1373,9 +1371,9 @@
 <!-- Side progress nav (desktop) -->
 <nav class="side-progress" id="sideProgress" aria-label="섹션 진행">
     <a href="#about" data-section="about">소개</a>
+    <a href="#publications" data-section="publications">논문</a>
     <a href="#research" data-section="research">연구</a>
     <a href="#education" data-section="education">학력</a>
-    <a href="#publications" data-section="publications">논문</a>
     <a href="#awards" data-section="awards">수상</a>
     <a href="#skills" data-section="skills">역량</a>
     <a href="#patents" data-section="patents">특허</a>
@@ -1396,8 +1394,7 @@
 <a href="https://github.com/msjeong326" rel="noopener" target="_blank" title="GitHub"><img alt="GitHub" class="hero-link-icon" src="https://cdn.simpleicons.org/github"/> GitHub</a>
 <span class="hero-meta-sep">·</span>
 <a href="https://www.linkedin.com/in/minsoojeong" rel="noopener" target="_blank" title="LinkedIn"><img alt="LinkedIn" class="hero-link-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"/> LinkedIn</a>
-<div style="flex-basis:100%;height:0"></div>
-<button class="email-reveal" data-d="ucdavis.edu" data-u="msjung" onclick="revealEmail(this)">UC Davis 이메일</button> <button class="email-reveal" data-d="gmail.com" data-u="msjeong326" onclick="revealEmail(this)">Gmail</button> <button class="email-reveal" data-d="knu.ac.kr" data-u="minsoo0326" onclick="revealEmail(this)">경북대 이메일</button>
+<div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div>
 </div>
 <div class="hero-highlights">
 <div class="hero-hl">
@@ -1544,227 +1541,6 @@
                     <div class="pipe-step-title">AI &amp; 딥러닝</div>
                     <div class="pipe-step-desc">PyTorch, GNN, YOLO</div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Conference Highlights (photo gallery) — moved up to showcase international experience -->
-<section class="section section--alt" id="highlights">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">발표 현장</div>
-            <h2 class="section-title">학회 활동</h2>
-            <p class="section-subtitle">뉴질랜드·미국·국내에서 진행한 학회 구두발표와 연구 세미나.</p>
-        </div>
-        <div class="gallery reveal">
-            <div class="activity-photo-grid" data-conference-group="talks">
-                <figure class="activity-photo-card activity-photo-card--featured" id="isme20-photo">
-                    <a href="../photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="ISME20 발표 사진 확대">
-                        <img src="../photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="뉴질랜드 오클랜드 ISME20에서 구두발표하는 정민수">
-                    </a>
-                    <figcaption>
-                        <div class="activity-kicker">ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div>
-                        <div class="activity-title">제20회 국제미생물생태학회(ISME20) 구두발표</div>
-                    </figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="4">
-                    <a href="../photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="한국환경보건학회 추계학술대회 구두발표">
-                        <img src="../photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="한국환경보건학회 추계학술대회 구두발표">
-                    </a>
-                    <figcaption><div class="activity-kicker">2025년 11월 · 광주</div><div class="activity-title">한국환경보건학회 추계학술대회 구두발표</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
-                    <a href="../photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
-                        <img src="../photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
-                    </a>
-                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">한국미생물·생명공학회 구두발표 대상</div><span class="gallery-badge">대상 수상</span></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
-                    <a href="../photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
-                        <img src="../photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">미국미생물학회 구두발표</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
-                    <a href="../photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
-                        <img src="../photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
-                    </a>
-                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">한국응용생명화학회 우수 발표</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="1">
-                    <a href="../photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="오이와 흰가루병 연구 세미나">
-                        <img src="../photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="오이와 흰가루병 연구 세미나">
-                    </a>
-                    <figcaption><div class="activity-kicker">연구 세미나</div><div class="activity-title">오이와 흰가루병 연구 세미나</div></figcaption>
-                </figure>
-            </div>
-            <details class="conference-extra">
-                <summary>추가 학회 사진 (4)</summary>
-                <div class="activity-photo-grid" data-conference-group="additional">
-                <figure class="activity-photo-card" data-added-photo="2">
-                    <a href="../photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="식물–미생물 상호작용 연구 포스터 발표">
-                        <img src="../photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="식물–미생물 상호작용 연구 포스터 발표">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2025 · 미국 로스앤젤레스</div><div class="activity-title">식물–미생물 상호작용 연구 포스터 발표</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-added-photo="5">
-                    <a href="../photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="우수포스터발표상 수상">
-                        <img src="../photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="우수포스터발표상 수상">
-                    </a>
-                    <figcaption><div class="activity-kicker">한국미생물·생명공학회 영남지부 학술대회 · 2026</div><div class="activity-title">우수포스터발표상 수상</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
-                    <a href="../photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
-                        <img src="../photos/asm-2023-poster.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="ASM 2023 poster session">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
-                </figure>
-                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
-                    <a href="../photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 poster presentation">
-                        <img src="../photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 poster presentation">
-                    </a>
-                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">미국미생물학회 포스터 발표</div></figcaption>
-                </figure>
-                </div>
-            </details>
-        </div>
-    </div>
-</section>
-
-<!-- Research Interests -->
-<section class="section section--alt" id="research">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">연구 분야</div>
-            <h2 class="section-title">연구 관심 영역</h2>
-            <p class="section-subtitle">환경과 미생물 군집, 작물, 인간 건강에 걸친 질문을 실험과 전산 분석으로 연결합니다.</p>
-        </div>
-        <div class="card-grid reveal">
-            <div class="card">
-                <h3 class="card-title">환경과 토양 마이크로바이옴</h3>
-                <p class="card-desc">환경 변화에 따른 토양·수계 미생물 군집, 군집 형성, 녹조, 항생제 내성 유전자 프로파일을 연구합니다.</p>
-                <div class="card-tags">
-                    <span class="card-tag">토양</span>
-                    <span class="card-tag">수계</span>
-                    <span class="card-tag">녹조</span>
-                    <span class="card-tag">ARG Dynamics</span>
-                    <span class="card-tag">Assembly</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">작물 건강과 질병</h3>
-                <p class="card-desc">통제된 식물–미생물 실험과 멀티오믹스로 미생물이 식물 건강, 질병과 작물 반응에 어떻게 관여하는지 살핍니다.</p>
-                <div class="card-tags">
-                    <span class="card-tag">Gnotobiotics</span>
-                    <span class="card-tag">Phyllosphere</span>
-                    <span class="card-tag">Rhizosphere</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">농산물 안전성과 인간 건강</h3>
-                <p class="card-desc">UC Davis의 상추 연구를 통해 식물 질병과 관련 미생물 군집이 농산물 안전성 및 인간 건강에 대한 잠재적 위험과 어떻게 연결되는지 탐구합니다.</p>
-                <div class="card-tags">
-                    <span class="card-tag">상추</span>
-                    <span class="card-tag">식물 질병</span>
-                    <span class="card-tag">농산물 안전성</span>
-                    <span class="card-tag">인간 건강</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">멀티오믹스와 대사체학</h3>
-                <p class="card-desc">WMS, RNA-seq, 대사체학, ddPCR, 앰플리콘 시퀀싱을 통합 분석합니다.</p>
-                <div class="card-tags">
-                    <span class="card-tag">WMS</span>
-                    <span class="card-tag">RNA-seq</span>
-                    <span class="card-tag">Metabolomics</span>
-                    <span class="card-tag">ddPCR</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">AI와 작물 표현형</h3>
-                <p class="card-desc">YOLOv8 기반 영양 결핍 탐지 등 작물 표현형 분석과 미생물 군집 예측에 딥러닝을 활용합니다.</p>
-                <div class="card-tags">
-                    <span class="card-tag">PyTorch</span>
-                    <span class="card-tag">YOLOv8</span>
-                    <span class="card-tag">XGBoost</span>
-                    <span class="card-tag">GNN</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">생물정보학과 전산생태학</h3>
-                <p class="card-desc">메타유전체 어셈블리, MAG 비닝, 기능 주석, 널 모델과 네트워크 분석을 수행합니다.</p>
-                <div class="card-tags">
-                    <span class="card-tag">MAG Binning</span>
-                    <span class="card-tag">eggNOG</span>
-                    <span class="card-tag">Network Analysis</span>
-                    <span class="card-tag">PERMANOVA</span>
-                    <span class="card-tag">antiSMASH</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Education -->
-<section class="section" id="education">
-    <div class="section-inner">
-        <div class="section-header reveal">
-            <div class="section-label">학력 및 경력</div>
-            <h2 class="section-title">학력 및 연구 경력</h2>
-        </div>
-        <div class="timeline reveal">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2026년 10월 – 현재</div>
-                    <h3 class="timeline-title">박사후연구원 (Postdoctoral Researcher)</h3>
-                    <div class="timeline-inst">University of California, Davis</div>
-                    <div class="timeline-desc">식물과학과 · Maeli Melotto 연구실. 세종과학펠로우십 지원.</div>
-                </div>
-                <img class="timeline-logo timeline-logo--ucdavis" src="../logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2026년 9월 &ndash; 현재</div>
-                    <h3 class="timeline-title">박사후연구원</h3>
-                    <div class="timeline-inst">경북대학교</div>
-                    <div class="timeline-desc">농업과학연구원 농산물품질·안전성평가연구소. 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
-                </div>
-                <img class="timeline-logo" src="../logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="경북대학교 농산물품질·안전성평가연구소" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2025년 9월 &ndash; 2026년 8월</div>
-                    <h3 class="timeline-title">박사후연구원</h3>
-                    <div class="timeline-inst">경북대학교</div>
-                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 숙주–미생물 상호작용 연구. 2026년 3월부터 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
-                </div>
-                <img class="timeline-logo" src="../logos/ngs-center.png" width="558" height="133" alt="경북대학교 차세대시퀀싱 핵심연구지원센터" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2022년 3월 &ndash; 2025년 8월</div>
-                    <h3 class="timeline-title">농학박사 (응용생명과학)</h3>
-                    <div class="timeline-inst">경북대학교</div>
-                    <div class="timeline-desc">박사학위논문: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems&rdquo;</div>
-                </div>
-                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2020년 3월 &ndash; 2022년 2월</div>
-                    <h3 class="timeline-title">농학석사 (응용생명과학)</h3>
-                    <div class="timeline-inst">경북대학교</div>
-                </div>
-                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2014년 3월 &ndash; 2020년 2월</div>
-                    <h3 class="timeline-title">농학사 (응용생명과학)</h3>
-                    <div class="timeline-inst">경북대학교</div>
-                </div>
-                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -1983,6 +1759,229 @@
 </section>
 <!-- PUBLICATIONS:END -->
 
+<!-- Conference Highlights (photo gallery) — moved up to showcase international experience -->
+<section class="section section--alt" id="highlights">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">발표 현장</div>
+            <h2 class="section-title">학회 활동</h2>
+            <p class="section-subtitle">뉴질랜드·미국·국내에서의 구두·포스터 발표와 연구 세미나.</p>
+        </div>
+        <div class="gallery reveal">
+            <div class="activity-photo-grid" data-conference-group="international">
+                <figure class="activity-photo-card activity-photo-card--featured" id="isme20-photo">
+                    <a href="../photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="ISME20 발표 사진 확대">
+                        <img src="../photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="뉴질랜드 오클랜드 ISME20에서 구두발표하는 정민수">
+                    </a>
+                    <figcaption>
+                        <div class="activity-kicker">ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div>
+                        <div class="activity-title">제20회 국제미생물생태학회(ISME20) 구두발표</div>
+                    </figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="2">
+                    <a href="../photos/asm-microbe-2025-los-angeles-poster.png" target="_blank" rel="noopener" aria-label="식물–미생물 상호작용 연구 포스터 발표">
+                        <img src="../photos/asm-microbe-2025-los-angeles-poster.png" width="1080" height="1440" loading="lazy" decoding="async" alt="식물–미생물 상호작용 연구 포스터 발표">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2025 · 미국 로스앤젤레스</div><div class="activity-title">식물–미생물 상호작용 연구 포스터 발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-poster">
+                    <a href="../photos/asm-2023-poster.jpg" target="_blank" rel="noopener" aria-label="ASM 2023 poster session">
+                        <img src="../photos/asm-2023-poster.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="ASM 2023 poster session">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">Poster Session</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-talk">
+                    <a href="../photos/asm-2023-talk.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 poster presentation">
+                        <img src="../photos/asm-2023-talk.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="ASM Microbe 2023 poster presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023 · Houston</div><div class="activity-title">미국미생물학회 포스터 발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="asm-2023-stage">
+                    <a href="../photos/asm-2023-stage.jpg" target="_blank" rel="noopener" aria-label="ASM Microbe 2023 oral presentation">
+                        <img src="../photos/asm-2023-stage.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="ASM Microbe 2023 oral presentation">
+                    </a>
+                    <figcaption><div class="activity-kicker">ASM Microbe 2023</div><div class="activity-title">미국미생물학회 구두발표</div></figcaption>
+                </figure>
+            </div>
+            <details class="conference-extra">
+                <summary>추가 학회·세미나 사진 (5)</summary>
+                <div class="activity-photo-grid" data-conference-group="additional">
+                <figure class="activity-photo-card" data-added-photo="5">
+                    <a href="../photos/kmb-yeongnam-2026-poster-award.png" target="_blank" rel="noopener" aria-label="우수포스터발표상 수상">
+                        <img src="../photos/kmb-yeongnam-2026-poster-award.png" width="1440" height="1080" loading="lazy" decoding="async" alt="우수포스터발표상 수상">
+                    </a>
+                    <figcaption><div class="activity-kicker">한국미생물·생명공학회 영남지부 학술대회 · 2026</div><div class="activity-title">우수포스터발표상 수상</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="4">
+                    <a href="../photos/kseh-2025-gwangju-talk.png" target="_blank" rel="noopener" aria-label="한국환경보건학회 추계학술대회 구두발표">
+                        <img src="../photos/kseh-2025-gwangju-talk.png" width="1440" height="1080" loading="lazy" decoding="async" alt="한국환경보건학회 추계학술대회 구두발표">
+                    </a>
+                    <figcaption><div class="activity-kicker">2025년 11월 · 광주</div><div class="activity-title">한국환경보건학회 추계학술대회 구두발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="kmb-2024-grand">
+                    <a href="../photos/kmb-2024-grand.jpg" target="_blank" rel="noopener" aria-label="KMB 2024 Grand Prize">
+                        <img src="../photos/kmb-2024-grand.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="KMB 2024 Grand Prize">
+                    </a>
+                    <figcaption><div class="activity-kicker">KMB International Conference · BEXCO Busan · June 2024</div><div class="activity-title">한국미생물·생명공학회 구두발표 대상</div><span class="gallery-badge">대상 수상</span></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-conference-photo="ksabc-2021">
+                    <a href="../photos/ksabc-2021.jpg" target="_blank" rel="noopener" aria-label="KSABC 2021">
+                        <img src="../photos/ksabc-2021.jpg" width="570" height="800" loading="lazy" decoding="async" alt="KSABC 2021">
+                    </a>
+                    <figcaption><div class="activity-kicker">KSABC International · 2021</div><div class="activity-title">한국응용생명화학회 우수 발표</div></figcaption>
+                </figure>
+                <figure class="activity-photo-card" data-added-photo="1">
+                    <a href="../photos/research-seminar-cucumber.png" target="_blank" rel="noopener" aria-label="오이와 흰가루병 연구 세미나">
+                        <img src="../photos/research-seminar-cucumber.png" width="1440" height="1080" loading="lazy" decoding="async" alt="오이와 흰가루병 연구 세미나">
+                    </a>
+                    <figcaption><div class="activity-kicker">연구 세미나</div><div class="activity-title">오이와 흰가루병 연구 세미나</div></figcaption>
+                </figure>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Research Interests -->
+<section class="section section--alt" id="research">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">연구 분야</div>
+            <h2 class="section-title">연구 관심 영역</h2>
+            <p class="section-subtitle">환경과 미생물 군집, 작물, 인간 건강에 걸친 질문을 실험과 전산 분석으로 연결합니다.</p>
+        </div>
+        <div class="card-grid reveal">
+            <div class="card">
+                <h3 class="card-title">환경과 토양 마이크로바이옴</h3>
+                <p class="card-desc">환경 변화에 따른 토양·수계 미생물 군집, 군집 형성, 녹조, 항생제 내성 유전자 프로파일을 연구합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">토양</span>
+                    <span class="card-tag">수계</span>
+                    <span class="card-tag">녹조</span>
+                    <span class="card-tag">ARG Dynamics</span>
+                    <span class="card-tag">Assembly</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">작물 건강과 질병</h3>
+                <p class="card-desc">통제된 식물–미생물 실험과 멀티오믹스로 미생물이 식물 건강, 질병과 작물 반응에 어떻게 관여하는지 살핍니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Gnotobiotics</span>
+                    <span class="card-tag">Phyllosphere</span>
+                    <span class="card-tag">Rhizosphere</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">농산물 안전성과 인간 건강</h3>
+                <p class="card-desc">UC Davis의 상추 연구를 통해 식물 질병과 관련 미생물 군집이 농산물 안전성 및 인간 건강에 대한 잠재적 위험과 어떻게 연결되는지 탐구합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">상추</span>
+                    <span class="card-tag">식물 질병</span>
+                    <span class="card-tag">농산물 안전성</span>
+                    <span class="card-tag">인간 건강</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">멀티오믹스와 대사체학</h3>
+                <p class="card-desc">WMS, RNA-seq, 대사체학, ddPCR, 앰플리콘 시퀀싱을 통합 분석합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">WMS</span>
+                    <span class="card-tag">RNA-seq</span>
+                    <span class="card-tag">Metabolomics</span>
+                    <span class="card-tag">ddPCR</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">AI와 작물 표현형</h3>
+                <p class="card-desc">YOLOv8 기반 영양 결핍 탐지 등 작물 표현형 분석과 미생물 군집 예측에 딥러닝을 활용합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">PyTorch</span>
+                    <span class="card-tag">YOLOv8</span>
+                    <span class="card-tag">XGBoost</span>
+                    <span class="card-tag">GNN</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">생물정보학과 전산생태학</h3>
+                <p class="card-desc">메타유전체 어셈블리, MAG 비닝, 기능 주석, 널 모델과 네트워크 분석을 수행합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">MAG Binning</span>
+                    <span class="card-tag">eggNOG</span>
+                    <span class="card-tag">Network Analysis</span>
+                    <span class="card-tag">PERMANOVA</span>
+                    <span class="card-tag">antiSMASH</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section class="section" id="education">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div class="section-label">학력 및 경력</div>
+            <h2 class="section-title">학력 및 연구 경력</h2>
+        </div>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2026년 10월 – 현재</div>
+                    <h3 class="timeline-title">박사후연구원 (Postdoctoral Researcher)</h3>
+                    <div class="timeline-inst">University of California, Davis</div>
+                    <div class="timeline-desc">식물과학과 · Maeli Melotto 연구실. 세종과학펠로우십 지원.</div>
+                </div>
+                <img class="timeline-logo timeline-logo--ucdavis" src="../logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2026년 9월 &ndash; 현재</div>
+                    <h3 class="timeline-title">박사후연구원</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">농업과학연구원 농산물품질·안전성평가연구소. 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="../logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="경북대학교 농산물품질·안전성평가연구소" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2025년 9월 &ndash; 2026년 8월</div>
+                    <h3 class="timeline-title">박사후연구원</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 숙주–미생물 상호작용 연구. 2026년 3월부터 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="../logos/ngs-center.png" width="558" height="133" alt="경북대학교 차세대시퀀싱 핵심연구지원센터" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2022년 3월 &ndash; 2025년 8월</div>
+                    <h3 class="timeline-title">농학박사 (응용생명과학)</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">박사학위논문: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems&rdquo;</div>
+                </div>
+                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2020년 3월 &ndash; 2022년 2월</div>
+                    <h3 class="timeline-title">농학석사 (응용생명과학)</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                </div>
+                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2014년 3월 &ndash; 2020년 2월</div>
+                    <h3 class="timeline-title">농학사 (응용생명과학부 환경생명화학과)</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                </div>
+                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 <!-- Awards & Conferences -->
 <section class="section" id="awards">
     <div class="section-inner">
@@ -2014,12 +2013,21 @@
             </div>
             <div id="conferences">
                 <div class="col-title">학회 발표 (대표 실적)</div>
-                <div class="list-items" id="conferenceList"><div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div></div>
-<div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">심포지엄 강연</span> KSABC 국제심포지엄 · 제주 · 2026년 6월</div></div>
-<div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국환경보건학회 · 광주 · 2025년 11월</div></div>
-
+                <div class="list-items" id="conferenceList">
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 미국미생물학회 (ASM Microbe) 2025, Los Angeles, USA</div>
+                    </div>
+                    <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div></div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 미국미생물학회 (ASM Microbe) 2023, Houston, USA</div>
+                    </div>
+                    <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">심포지엄 강연</span> KSABC 국제심포지엄 · 제주 · 2026년 6월</div></div>
+                    <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국환경보건학회 · 광주 · 2025년 11월</div></div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제학술대회 2024 <span class="conf-award-badge">대상</span></div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제심포지엄 2021 <span class="conf-award-badge">우수상 🥈</span></div>
                     </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국미생물&middot;생명공학회 국제학술대회 2025</div>
@@ -2027,17 +2035,8 @@
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국미생물학회 (MSK) 2024</div>
                     </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제학술대회 2024 <span class="conf-award-badge">대상</span></div>
-                    </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국응용생명화학회 국제학술대회 2024</div>
-                    </div>
-                    <div class="list-item conf-hidden">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> BK21 연구성과 심포지엄, 2024년 1월 <span class="conf-award-badge">장려상 🥉</span></div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 미국미생물학회 (ASM Microbe) 2023, Houston, USA</div>
                     </div>
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국응용생명화학회 국제학술대회 2022 <span class="conf-award-badge">우수상 🥈</span></div>
@@ -2045,8 +2044,8 @@
                     <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국미생물생태학회 2022</div>
                     </div>
-                    <div class="list-item">
-                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제심포지엄 2021 <span class="conf-award-badge">우수상 🥈</span></div>
+                    <div class="list-item conf-hidden">
+                        <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> BK21 연구성과 심포지엄, 2024년 1월 <span class="conf-award-badge">장려상 🥉</span></div>
                     </div>
                 </div>
                 <button class="conf-show-more" id="confShowMore" type="button" aria-expanded="false" aria-controls="conferenceList">더보기 ▼</button>
@@ -2254,8 +2253,8 @@
 <section class="section" id="contact">
     <div class="section-inner">
         <div class="section-header reveal">
-            <div class="section-label">연락처</div>
-            <h2 class="section-title">연락하기</h2>
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">연락처</h2>
         </div>
         <div class="contact-refs reveal">
             <div>
@@ -2267,7 +2266,7 @@
                         </div>
                         <div>
                             <div class="contact-label">이메일</div>
-                            <div class="contact-value"><button class="email-reveal" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)">UC Davis 이메일</button> <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Gmail</button> <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">경북대 이메일</button></div>
+                            <div class="contact-value"><div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div></div>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -2301,17 +2300,17 @@
                     <div class="ref-card">
                         <div class="ref-name">신재호 교수</div>
                         <div class="ref-role">지도교수 -- 경북대학교 응용생명과학부</div>
-                        <div class="ref-email"><button class="email-reveal" data-u="jhshin" data-d="knu.ac.kr" onclick="revealEmail(this)">이메일 보기</button></div>
+                        <div class="ref-email"><a class="email-link" href="mailto:jhshin@knu.ac.kr">jhshin@knu.ac.kr</a></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">이승준 교수</div>
                         <div class="ref-role">경북대학교 응용생명과학부</div>
-                        <div class="ref-email"><button class="email-reveal" data-u="paul5280" data-d="knu.ac.kr" onclick="revealEmail(this)">이메일 보기</button></div>
+                        <div class="ref-email"><a class="email-link" href="mailto:paul0528@knu.ac.kr">paul0528@knu.ac.kr</a></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">Maeli Melotto 교수</div>
                         <div class="ref-role">UC Davis 식물과학과</div>
-                        <div class="ref-email"><button class="email-reveal" data-u="melotto" data-d="ucdavis.edu" onclick="revealEmail(this)">이메일 보기</button></div>
+                        <div class="ref-email"><a class="email-link" href="mailto:melotto@ucdavis.edu">melotto@ucdavis.edu</a></div>
                     </div>
                 </div>
             </div>
@@ -2330,7 +2329,7 @@
             <a href="#about">소개</a>
             <a href="#publications">논문</a>
             <a href="#contact">연락처</a>
-            <button class="email-reveal" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)">UC Davis 이메일</button> <button class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)">Gmail</button> <button class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)">경북대 이메일</button>
+            <div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div>
         </div>
     </div>
     <div class="footer-bottom">
@@ -2484,17 +2483,6 @@
 
 })();
 
-    // Email reveal (anti-scraping)
-    function revealEmail(btn) {
-        var u = btn.getAttribute('data-u');
-        var d = btn.getAttribute('data-d');
-        var email = u + '@' + d;
-        var link = document.createElement('a');
-        link.href = 'mailto:' + email;
-        link.textContent = email;
-        link.style.color = 'inherit';
-        btn.replaceWith(link);
-    }
 </script>
 <script>
 (function() {
