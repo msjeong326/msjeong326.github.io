@@ -1339,6 +1339,36 @@
         .hero-meta .email-list, .footer-links .email-list { align-items: center; }
         .footer-links .email-list { flex-basis: 100%; }
     }
+
+    /* Keep the accepted hero pills; use lighter disclosures in the contact area. */
+    .hero-meta .email-reveal {
+        display: inline-flex; align-items: center; gap: 0.35rem;
+        padding: 0.18rem 0.55rem; border: 1px solid var(--border-color);
+        border-radius: 100px; background: transparent; color: var(--text-secondary);
+        font-size: inherit; font-family: var(--font-sans); cursor: pointer;
+        transition: border-color var(--transition), color var(--transition);
+    }
+    .hero-meta .email-reveal:hover { border-color: var(--accent); color: var(--accent); }
+    .email-disclosure {
+        display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+        width: 100%; padding: 0.35rem 0; min-height: 2.1rem;
+        border: 0; border-bottom: 1px solid var(--border-color); border-radius: 0;
+        background: transparent; color: var(--text-secondary); font: inherit;
+        text-align: left; cursor: pointer;
+        transition: color var(--transition), border-color var(--transition);
+    }
+    .email-disclosure:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .email-disclosure-action { color: var(--text-tertiary); font-size: 0.72rem; white-space: nowrap; }
+    .email-disclosure--inline {
+        display: inline-flex; justify-content: flex-start; width: auto;
+        min-height: 0; padding: 0.1rem 0; border: 0; font-size: 0.82rem;
+        text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 3px;
+    }
+    .email-disclosure--inline:hover { text-decoration-color: currentColor; }
+    .email-reveal:focus-visible, .email-disclosure:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .contact-card:first-child > div:last-child { flex: 1; }
+    .contact-value > .email-list { width: 100%; }
+    .email-disclosure-result { display: block; max-width: 100%; padding: 0.35rem 0; min-height: 2.1rem; line-height: 1.65; }
     </style>
 </head>
 <body>
@@ -1394,7 +1424,8 @@
 <a href="https://github.com/msjeong326" rel="noopener" target="_blank" title="GitHub"><img alt="GitHub" class="hero-link-icon" src="https://cdn.simpleicons.org/github"/> GitHub</a>
 <span class="hero-meta-sep">·</span>
 <a href="https://www.linkedin.com/in/minsoojeong" rel="noopener" target="_blank" title="LinkedIn"><img alt="LinkedIn" class="hero-link-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"/> LinkedIn</a>
-<div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div>
+<div style="flex-basis:100%;height:0"></div>
+<button type="button" class="email-reveal" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)" aria-label="UC Davis 이메일 주소 보기">UC Davis 이메일</button> <button type="button" class="email-reveal" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)" aria-label="Gmail 이메일 주소 보기">Gmail</button> <button type="button" class="email-reveal" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)" aria-label="경북대 이메일 주소 보기">경북대 이메일</button>
 </div>
 <div class="hero-highlights">
 <div class="hero-hl">
@@ -2266,7 +2297,7 @@
                         </div>
                         <div>
                             <div class="contact-label">이메일</div>
-                            <div class="contact-value"><div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div></div>
+                            <div class="contact-value"><div class="email-list"><button type="button" class="email-disclosure" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)" aria-label="UC Davis 이메일 주소 보기"><span>UC Davis</span><span class="email-disclosure-action">주소 보기</span></button> <button type="button" class="email-disclosure" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)" aria-label="Gmail 이메일 주소 보기"><span>Gmail</span><span class="email-disclosure-action">주소 보기</span></button> <button type="button" class="email-disclosure" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)" aria-label="경북대 이메일 주소 보기"><span>경북대</span><span class="email-disclosure-action">주소 보기</span></button></div></div>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -2300,17 +2331,17 @@
                     <div class="ref-card">
                         <div class="ref-name">신재호 교수</div>
                         <div class="ref-role">지도교수 -- 경북대학교 응용생명과학부</div>
-                        <div class="ref-email"><a class="email-link" href="mailto:jhshin@knu.ac.kr">jhshin@knu.ac.kr</a></div>
+                        <div class="ref-email"><button type="button" class="email-disclosure email-disclosure--inline" data-u="jhshin" data-d="knu.ac.kr" onclick="revealEmail(this)" aria-label="이메일 주소 보기">이메일 보기</button></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">이승준 교수</div>
                         <div class="ref-role">경북대학교 응용생명과학부</div>
-                        <div class="ref-email"><a class="email-link" href="mailto:paul0528@knu.ac.kr">paul0528@knu.ac.kr</a></div>
+                        <div class="ref-email"><button type="button" class="email-disclosure email-disclosure--inline" data-u="paul0528" data-d="knu.ac.kr" onclick="revealEmail(this)" aria-label="이메일 주소 보기">이메일 보기</button></div>
                     </div>
                     <div class="ref-card">
                         <div class="ref-name">Maeli Melotto 교수</div>
                         <div class="ref-role">UC Davis 식물과학과</div>
-                        <div class="ref-email"><a class="email-link" href="mailto:melotto@ucdavis.edu">melotto@ucdavis.edu</a></div>
+                        <div class="ref-email"><button type="button" class="email-disclosure email-disclosure--inline" data-u="melotto" data-d="ucdavis.edu" onclick="revealEmail(this)" aria-label="이메일 주소 보기">이메일 보기</button></div>
                     </div>
                 </div>
             </div>
@@ -2329,7 +2360,7 @@
             <a href="#about">소개</a>
             <a href="#publications">논문</a>
             <a href="#contact">연락처</a>
-            <div class="email-list"><a class="email-link" href="mailto:msjung@ucdavis.edu">msjung@ucdavis.edu</a> <a class="email-link" href="mailto:msjeong326@gmail.com">msjeong326@gmail.com</a> <a class="email-link" href="mailto:minsoo0326@knu.ac.kr">minsoo0326@knu.ac.kr</a></div>
+            <div class="email-list"><button type="button" class="email-disclosure email-disclosure--inline" data-u="msjung" data-d="ucdavis.edu" onclick="revealEmail(this)" aria-label="UC Davis 이메일 주소 보기">UC Davis 이메일</button> <button type="button" class="email-disclosure email-disclosure--inline" data-u="msjeong326" data-d="gmail.com" onclick="revealEmail(this)" aria-label="Gmail 이메일 주소 보기">Gmail</button> <button type="button" class="email-disclosure email-disclosure--inline" data-u="minsoo0326" data-d="knu.ac.kr" onclick="revealEmail(this)" aria-label="경북대 이메일 주소 보기">경북대 이메일</button></div>
         </div>
     </div>
     <div class="footer-bottom">
@@ -2483,6 +2514,19 @@
 
 })();
 
+    // Reveal an email address as a normal mail link and retain keyboard focus.
+    function revealEmail(button) {
+        var address = button.getAttribute('data-u') + '@' + button.getAttribute('data-d');
+        var link = document.createElement('a');
+        link.href = 'mailto:' + address;
+        link.textContent = address;
+        link.className = 'email-link';
+        if (button.classList.contains('email-disclosure') && !button.classList.contains('email-disclosure--inline')) {
+            link.classList.add('email-disclosure-result');
+        }
+        button.replaceWith(link);
+        link.focus({ preventScroll: true });
+    }
 </script>
 <script>
 (function() {
