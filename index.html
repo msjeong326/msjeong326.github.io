@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minsoo Jeong, Ph.D. — Postdoctoral Researcher, UC Davis | Plant & Microbiome Research</title>
-    <meta name="description" content="Minsoo Jeong — Postdoctoral Researcher in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
-    <meta name="keywords" content="Minsoo Jeong, 정민수, microbiome, metagenomics, host-microbe interaction, gnotobiotics, multi-omics, RNA-seq, ddPCR, machine learning, deep learning, UC Davis, University of California Davis, Melotto Lab, Plant Sciences, Kyungpook National University, 경북대학교, Sejong Science Fellowship, 세종과학펠로우십, bioinformatics">
+    <title>Minsoo Jeong, Ph.D. — UC Davis Postdoctoral Researcher | Environment, Crops &amp; Human Health</title>
+    <meta name="description" content="Minsoo Jeong, UC Davis postdoctoral researcher and Sejong Science Fellow, connects environmental and soil microbiomes with crop health, produce safety, and potential implications for human health.">
+    <meta name="keywords" content="Minsoo Jeong, 정민수, microbiome, metagenomics, host-microbe interaction, gnotobiotics, multi-omics, RNA-seq, ddPCR, machine learning, deep learning, UC Davis, University of California Davis, Melotto Lab, Plant Sciences, Kyungpook National University, 경북대학교, Sejong Science Fellowship, 세종과학펠로우십, bioinformatics, Soil Microbiomes, Environmental Microbiomes, Crop Health, Produce Safety, Plant Health and Human Health">
     <meta name="author" content="Minsoo Jeong">
     <meta name="google-site-verification" content="SmsIlWhq2hSwpYq4ycepgG6Y4JhAzDD_LtudoHQBkgc" />
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Minsoo Jeong, Ph.D. — Postdoctoral Researcher, UC Davis | Plant &amp; Microbiome Research">
-    <meta property="og:description" content="Minsoo Jeong — Postdoctoral Researcher in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
+    <meta property="og:title" content="Minsoo Jeong, Ph.D. — UC Davis Postdoctoral Researcher | Environment, Crops &amp; Human Health">
+    <meta property="og:description" content="Minsoo Jeong, UC Davis postdoctoral researcher and Sejong Science Fellow, connects environmental and soil microbiomes with crop health, produce safety, and potential implications for human health.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://msjeong326.github.io/">
     <meta property="og:locale" content="en_US">
@@ -20,8 +20,8 @@
     <link rel="alternate" hreflang="ko" href="https://msjeong326.github.io/ko/">
     <link rel="alternate" hreflang="x-default" href="https://msjeong326.github.io/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Minsoo Jeong, Ph.D. — Postdoctoral Researcher, UC Davis | Plant &amp; Microbiome Research">
-    <meta name="twitter:description" content="Minsoo Jeong — Postdoctoral Researcher in Plant Sciences at UC Davis, Melotto Lab, and Sejong Science Fellow. Plant–microbe interactions, multi-omics, environmental microbiomes, and AI.">
+    <meta name="twitter:title" content="Minsoo Jeong, Ph.D. — UC Davis Postdoctoral Researcher | Environment, Crops &amp; Human Health">
+    <meta name="twitter:description" content="Minsoo Jeong, UC Davis postdoctoral researcher and Sejong Science Fellow, connects environmental and soil microbiomes with crop health, produce safety, and potential implications for human health.">
     <meta property="og:image" content="https://msjeong326.github.io/profile.jpg">
     <meta name="twitter:image" content="https://msjeong326.github.io/profile.jpg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -51,7 +51,12 @@
         "Plant-Microbiome Interactions",
         "Metagenomics",
         "Agricultural Microbiome",
-        "Environmental Metagenomics"
+        "Environmental Metagenomics",
+        "Soil Microbiomes",
+        "Environmental Microbiomes",
+        "Crop Health",
+        "Produce Safety",
+        "Plant Health and Human Health"
     ],
     "award": [
         "Sejong Science Fellowship",
@@ -1285,6 +1290,23 @@
     .hobby-new-photos > img { height: auto; }
     @media (max-width: 900px) { .hobby-new-photos { column-count: 2; } }
     @media (max-width: 540px) { .hobby-new-photos { column-count: 2; } }
+
+    /* Research continuum and full-width featured ISME presentation. */
+    .research-continuum { margin:1.5rem 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:0.75rem; }
+    .research-continuum li { min-width:0; padding:1rem; border:1px solid var(--border-color); border-top:3px solid var(--accent); border-radius:var(--radius-sm); background:var(--bg-secondary); }
+    .research-continuum-index { display:block; margin-bottom:0.45rem; font:600 0.72rem var(--font-mono); color:var(--accent); }
+    .research-continuum-title { display:block; font-size:0.92rem; font-weight:700; line-height:1.45; color:var(--text-primary); }
+    .research-continuum-detail { display:block; margin-top:0.4rem; font-size:0.78rem; line-height:1.6; color:var(--text-secondary); }
+    .about-intro > p + p { margin-top:1rem; }
+    .activity-photo-card--featured { column-span:all; width:100%; margin-bottom:1.5rem; }
+    .activity-photo-card--featured figcaption { padding:1.1rem 1.25rem 1.25rem; }
+    .activity-photo-card--featured .activity-title { font-size:1.15rem; }
+    @media (max-width:900px) { .research-continuum { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+    @media (max-width:480px) {
+        .research-continuum { grid-template-columns:minmax(0, 1fr); gap:0.6rem; }
+        .research-continuum li { padding:0.85rem 1rem; }
+        .activity-photo-card--featured .activity-title { font-size:1.02rem; }
+    }
     </style>
 </head>
 <body>
@@ -1331,7 +1353,7 @@
 <!-- Hero -->
 <section class="hero">
 <div class="hero-inner"><div class="hero-intro"><div class="hero-visual"><img alt="Minsoo Jeong" class="hero-photo" src="profile.jpg"/></div>
-<div class="hero-text"><div class="hero-heading"><h1 class="hero-name">Minsoo Jeong</h1><div class="hero-name-kr">정민수, Ph.D.</div></div><div class="hero-bio"><p class="hero-title"><em>Postdoctoral Researcher · UC Davis</em><br/>Department of Plant Sciences · Melotto Lab.<br/>Plant–microbe interactions, multi-omics, and environmental microbiomes.</p><p class="hero-affil"><em>Sejong Science Fellow</em><span class="hero-funding-source"><span class="hero-funding-separator"> · </span>NRF (2026–2031)</span><span class="hero-home-affiliation">Postdoctoral Researcher, Kyungpook National University</span></p></div>
+<div class="hero-text"><div class="hero-heading"><h1 class="hero-name">Minsoo Jeong</h1><div class="hero-name-kr">정민수, Ph.D.</div></div><div class="hero-bio"><p class="hero-title"><em>Postdoctoral Researcher · UC Davis</em><br/>Department of Plant Sciences · Melotto Lab.<br/>Connecting environments and microbiomes with crop and human health.</p><p class="hero-affil"><em>Sejong Science Fellow</em><span class="hero-funding-source"><span class="hero-funding-separator"> · </span>NRF (2026–2031)</span><span class="hero-home-affiliation">Postdoctoral Researcher, Kyungpook National University</span></p></div>
 <div class="hero-meta">
 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" rel="noopener" target="_blank" title="Google Scholar"><img alt="Google Scholar" class="hero-link-icon" src="https://cdn.simpleicons.org/googlescholar"/> Scholar</a>
 <span class="hero-meta-sep">·</span>
@@ -1381,7 +1403,7 @@
 <div class="open-banner">
     <div class="open-banner-inner">
         <span class="open-banner-badge">Independently Funded</span>
-        <span class="open-banner-text">Based at UC Davis · Collaborating on plant–microbe interactions, crop microbiomes, and reproducible multi-omics.</span>
+        <span class="open-banner-text">Based at UC Davis · Connecting environment, microbiomes, crop health, and human health.</span>
     </div>
 </div>
 
@@ -1393,7 +1415,14 @@
             <h2 class="section-title">What I Do</h2>
         </div>
         <div class="about-intro reveal">
-            <p class="section-subtitle" style="max-width:880px;">I build controlled plant–microbe experiments, integrate microbial and host multi-omics, and develop reproducible analysis pipelines. My work connects crop health with environmental microbiomes through gnotobiotic cucumber systems, river metagenomics, and AI-based crop phenotyping.</p>
+            <p class="section-subtitle" style="max-width:880px;">I study how environmental conditions and microbial communities in soil and water connect crop health with human health. My research asks how changes in these systems relate to plant disease and produce safety.</p>
+            <p class="section-subtitle" style="max-width:880px;">At UC Davis, my ongoing lettuce research explores how plant disease and associated microbiomes may have implications for produce safety and human health. I combine controlled plant–microbe experiments, field microbiome studies, multi-omics, and computational analysis.</p>
+            <ol class="research-continuum" aria-label="Research continuum: environment, soil and environmental microbiomes, crop health, human health">
+                <li><span class="research-continuum-index" aria-hidden="true">01</span><span class="research-continuum-title">Environment</span><span class="research-continuum-detail">Environmental change, water, and growing conditions</span></li>
+                <li><span class="research-continuum-index" aria-hidden="true">02</span><span class="research-continuum-title">Soil &amp; environmental microbiomes</span><span class="research-continuum-detail">Microbial communities across soil and aquatic systems</span></li>
+                <li><span class="research-continuum-index" aria-hidden="true">03</span><span class="research-continuum-title">Crop health</span><span class="research-continuum-detail">Plant–microbe interactions, disease, and crop responses</span></li>
+                <li><span class="research-continuum-index" aria-hidden="true">04</span><span class="research-continuum-title">Human health</span><span class="research-continuum-detail">Produce safety and potential health implications</span></li>
+            </ol>
         </div>
         <div class="research-focus reveal" aria-labelledby="research-focus-title">
             <div class="research-focus-heading">
@@ -1502,7 +1531,7 @@
         </div>
         <div class="gallery reveal">
             <div class="activity-photo-grid" data-conference-group="talks">
-                <figure class="activity-photo-card" id="isme20-photo">
+                <figure class="activity-photo-card activity-photo-card--featured" id="isme20-photo">
                     <a href="photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="Enlarge the ISME20 presentation photograph">
                         <img src="photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="Minsoo Jeong giving an oral presentation at ISME20 in Auckland, New Zealand">
                     </a>
@@ -1581,15 +1610,37 @@
         <div class="section-header reveal">
             <div class="section-label">Research</div>
             <h2 class="section-title">Research Interests</h2>
+            <p class="section-subtitle">Linked research questions across environmental systems, microbial communities, crops, and human health, supported by experimental and computational methods.</p>
         </div>
         <div class="card-grid reveal">
             <div class="card">
-                <h3 class="card-title">Host-Microbe Interaction</h3>
-                <p class="card-desc">Gnotobiotic systems and multi-omics to study microbiome-mediated plant disease suppression.</p>
+                <h3 class="card-title">Environment &amp; Soil Microbiomes</h3>
+                <p class="card-desc">Environmental change, soil and aquatic microbial communities, community assembly, cyanobacterial blooms, and resistance-gene profiles.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Soil</span>
+                    <span class="card-tag">Water</span>
+                    <span class="card-tag">Blooms</span>
+                    <span class="card-tag">ARG Dynamics</span>
+                    <span class="card-tag">Assembly</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Crop Health &amp; Disease</h3>
+                <p class="card-desc">Controlled plant–microbe experiments and multi-omics to investigate microbial contributions to plant health, disease, and crop responses.</p>
                 <div class="card-tags">
                     <span class="card-tag">Gnotobiotics</span>
                     <span class="card-tag">Phyllosphere</span>
                     <span class="card-tag">Rhizosphere</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Produce Safety &amp; Human Health</h3>
+                <p class="card-desc">Ongoing lettuce research at UC Davis explores how plant disease and associated microbiomes may relate to produce safety and potential risks to human health.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Lettuce</span>
+                    <span class="card-tag">Plant Disease</span>
+                    <span class="card-tag">Produce Safety</span>
+                    <span class="card-tag">Human Health</span>
                 </div>
             </div>
             <div class="card">
@@ -1603,8 +1654,8 @@
                 </div>
             </div>
             <div class="card">
-                <h3 class="card-title">Machine Learning for Biology</h3>
-                <p class="card-desc">Deep learning for crop phenotyping (YOLOv8) and microbial community prediction.</p>
+                <h3 class="card-title">AI &amp; Crop Phenotyping</h3>
+                <p class="card-desc">Deep learning for crop phenotyping, including YOLOv8-based nutrient-deficiency detection, and microbial community prediction.</p>
                 <div class="card-tags">
                     <span class="card-tag">PyTorch</span>
                     <span class="card-tag">YOLOv8</span>
@@ -1613,15 +1664,6 @@
                 </div>
             </div>
             <div class="card">
-                <h3 class="card-title">Environmental Microbiome</h3>
-                <p class="card-desc">ARG dynamics, cyanobacterial blooms, and community assembly in aquatic systems.</p>
-                <div class="card-tags">
-                    <span class="card-tag">ARG Dynamics</span>
-                    <span class="card-tag">Blooms</span>
-                    <span class="card-tag">Assembly</span>
-                </div>
-            </div>
-            <div class="card" style="grid-column: span 2;">
                 <h3 class="card-title">Bioinformatics &amp; Computational Ecology</h3>
                 <p class="card-desc">Metagenome assembly, MAG binning, functional annotation, null models, and network analysis.</p>
                 <div class="card-tags">
@@ -1664,19 +1706,10 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <div class="timeline-date">Mar 2026 &ndash; Aug 2026</div>
-                    <h3 class="timeline-title">Postdoctoral Research Fellow</h3>
-                    <div class="timeline-inst">Kyungpook National University</div>
-                    <div class="timeline-desc">NGS Core Research Support Center. Sejong Science Fellowship (NRF, 2026&ndash;2031).</div>
-                </div>
-                <img class="timeline-logo" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center, Kyungpook National University" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">Sep 2025 &ndash; Feb 2026</div>
+                    <div class="timeline-date">Sep 2025 &ndash; Aug 2026</div>
                     <h3 class="timeline-title">Postdoctoral Researcher</h3>
                     <div class="timeline-inst">Kyungpook National University</div>
-                    <div class="timeline-desc">NGS Core Research Support Center. Independent research on host-microbe interactions.</div>
+                    <div class="timeline-desc">NGS Core Research Support Center. Research on host–microbe interactions. Sejong Science Fellow from Mar 2026 (NRF, 2026&ndash;2031).</div>
                 </div>
                 <img class="timeline-logo" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center, Kyungpook National University" loading="lazy" decoding="async">
             </div>
@@ -2253,7 +2286,7 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">Minsoo Jeong, Ph.D.</div>
-            <p>Postdoctoral Researcher, Department of Plant Sciences, University of California, Davis. Plant–microbe interactions, multi-omics, and environmental microbiomes.</p>
+            <p>Postdoctoral Researcher, Department of Plant Sciences, University of California, Davis. Connecting environments and microbiomes with crop and human health.</p>
         </div>
         <div class="footer-links">
             <a href="#about">About</a>

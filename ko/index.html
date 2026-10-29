@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정민수, Ph.D. — UC Davis 박사후연구원 | 식물·마이크로바이옴</title>
-    <meta name="description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 박사후연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
-    <meta name="keywords" content="정민수, 정민수 박사, 경북대 정민수, 경북대학교 정민수, 차세대시퀀싱 정민수, 마이크로바이옴, 메타지놈, 차세대시퀀싱, 경북대학교, 세종과학펠로우십, 생물정보학, 멀티오믹스, 딥러닝, 식물-미생물 상호작용">
+    <title>정민수, Ph.D. — UC Davis 박사후연구원 | 환경에서 작물과 인간 건강까지</title>
+    <meta name="description" content="UC Davis 박사후연구원·세종과학펠로우 정민수. 환경과 토양·환경 미생물에서 작물 건강, 농산물 안전성, 인간 건강에 대한 잠재적 영향까지 연결하는 연구를 수행합니다.">
+    <meta name="keywords" content="정민수, 정민수 박사, 경북대 정민수, 경북대학교 정민수, 차세대시퀀싱 정민수, 마이크로바이옴, 메타지놈, 차세대시퀀싱, 경북대학교, 세종과학펠로우십, 생물정보학, 멀티오믹스, 딥러닝, 식물-미생물 상호작용, 토양 마이크로바이옴, 환경 마이크로바이옴, 작물 건강, 농산물 안전성, 식물 건강과 인간 건강">
     <meta name="author" content="Minsoo Jeong">
     <meta name="google-site-verification" content="SmsIlWhq2hSwpYq4ycepgG6Y4JhAzDD_LtudoHQBkgc" />
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="정민수, Ph.D. — UC Davis 박사후연구원 | 식물·마이크로바이옴">
-    <meta property="og:description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 박사후연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
+    <meta property="og:title" content="정민수, Ph.D. — UC Davis 박사후연구원 | 환경에서 작물과 인간 건강까지">
+    <meta property="og:description" content="UC Davis 박사후연구원·세종과학펠로우 정민수. 환경과 토양·환경 미생물에서 작물 건강, 농산물 안전성, 인간 건강에 대한 잠재적 영향까지 연결하는 연구를 수행합니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://msjeong326.github.io/ko/">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="정민수 학술 웹사이트">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="정민수, Ph.D. — UC Davis 박사후연구원 | 식물·마이크로바이옴">
-    <meta name="twitter:description" content="정민수 — UC Davis 식물과학과 Melotto 연구실 박사후연구원. 세종과학펠로우십 연구책임자. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.">
+    <meta name="twitter:title" content="정민수, Ph.D. — UC Davis 박사후연구원 | 환경에서 작물과 인간 건강까지">
+    <meta name="twitter:description" content="UC Davis 박사후연구원·세종과학펠로우 정민수. 환경과 토양·환경 미생물에서 작물 건강, 농산물 안전성, 인간 건강에 대한 잠재적 영향까지 연결하는 연구를 수행합니다.">
 
     <link rel="canonical" href="https://msjeong326.github.io/ko/">
     <link rel="alternate" hreflang="en" href="https://msjeong326.github.io/">
@@ -52,7 +52,12 @@
         "식물-마이크로바이옴 상호작용",
         "메타유전체학",
         "농업 마이크로바이옴",
-        "환경 메타지노믹스"
+        "환경 메타지노믹스",
+        "토양 마이크로바이옴",
+        "환경 마이크로바이옴",
+        "작물 건강",
+        "농산물 안전성",
+        "식물 건강과 인간 건강"
     ],
     "award": [
         "세종과학펠로우십",
@@ -1270,6 +1275,23 @@
     .hobby-new-photos > img { height: auto; }
     @media (max-width: 900px) { .hobby-new-photos { column-count: 2; } }
     @media (max-width: 540px) { .hobby-new-photos { column-count: 2; } }
+
+    /* Research continuum and full-width featured ISME presentation. */
+    .research-continuum { margin:1.5rem 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:0.75rem; }
+    .research-continuum li { min-width:0; padding:1rem; border:1px solid var(--border-color); border-top:3px solid var(--accent); border-radius:var(--radius-sm); background:var(--bg-secondary); }
+    .research-continuum-index { display:block; margin-bottom:0.45rem; font:600 0.72rem var(--font-mono); color:var(--accent); }
+    .research-continuum-title { display:block; font-size:0.92rem; font-weight:700; line-height:1.45; color:var(--text-primary); }
+    .research-continuum-detail { display:block; margin-top:0.4rem; font-size:0.78rem; line-height:1.6; color:var(--text-secondary); }
+    .about-intro > p + p { margin-top:1rem; }
+    .activity-photo-card--featured { column-span:all; width:100%; margin-bottom:1.5rem; }
+    .activity-photo-card--featured figcaption { padding:1.1rem 1.25rem 1.25rem; }
+    .activity-photo-card--featured .activity-title { font-size:1.15rem; }
+    @media (max-width:900px) { .research-continuum { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+    @media (max-width:480px) {
+        .research-continuum { grid-template-columns:minmax(0, 1fr); gap:0.6rem; }
+        .research-continuum li { padding:0.85rem 1rem; }
+        .activity-photo-card--featured .activity-title { font-size:1.02rem; }
+    }
     </style>
 </head>
 <body>
@@ -1316,7 +1338,7 @@
 <!-- Hero -->
 <section class="hero">
 <div class="hero-inner"><div class="hero-intro"><div class="hero-visual"><img alt="정민수" class="hero-photo" src="../profile.jpg"/></div>
-<div class="hero-text"><div class="hero-heading"><h1 class="hero-name">정민수</h1><div class="hero-name-kr">Minsoo Jeong, Ph.D.</div></div><div class="hero-bio"><p class="hero-title"><em>UC Davis 박사후연구원</em><br/>식물과학과 · Maeli Melotto 연구실.<br/>식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p><p class="hero-affil"><em>세종과학펠로우십 연구책임자</em><span class="hero-funding-source"><span class="hero-funding-separator"> · </span>한국연구재단 (2026–2031)</span><span class="hero-home-affiliation">경북대학교 박사후연구원</span></p></div>
+<div class="hero-text"><div class="hero-heading"><h1 class="hero-name">정민수</h1><div class="hero-name-kr">Minsoo Jeong, Ph.D.</div></div><div class="hero-bio"><p class="hero-title"><em>UC Davis 박사후연구원</em><br/>식물과학과 · Maeli Melotto 연구실.<br/>환경과 토양·환경 미생물을 작물과 인간 건강으로 연결합니다.</p><p class="hero-affil"><em>세종과학펠로우십 연구책임자</em><span class="hero-funding-source"><span class="hero-funding-separator"> · </span>한국연구재단 (2026–2031)</span><span class="hero-home-affiliation">경북대학교 박사후연구원</span></p></div>
 <div class="hero-meta">
 <a href="https://scholar.google.co.kr/citations?user=SuUD0hYAAAAJ" rel="noopener" target="_blank" title="Google Scholar"><img alt="Google Scholar" class="hero-link-icon" src="https://cdn.simpleicons.org/googlescholar"/> Scholar</a>
 <span class="hero-meta-sep">·</span>
@@ -1366,7 +1388,7 @@
 <div class="open-banner">
     <div class="open-banner-inner">
         <span class="open-banner-badge">독립과제 보유</span>
-        <span class="open-banner-text">UC Davis에서 식물–미생물 상호작용, 작물 마이크로바이옴, 재현 가능한 멀티오믹스 공동연구를 수행합니다.</span>
+        <span class="open-banner-text">UC Davis에서 환경·미생물·작물 건강과 인간 건강을 연결하는 연구를 수행합니다.</span>
     </div>
 </div>
 
@@ -1378,7 +1400,14 @@
             <h2 class="section-title">연구 소개</h2>
         </div>
         <div class="about-intro reveal">
-            <p class="section-subtitle" style="max-width:880px;">식물–미생물 상호작용을 검증하는 통제 실험을 설계하고, 미생물·숙주 멀티오믹스를 통합하며, 재현 가능한 분석 파이프라인을 개발합니다. 노토바이오틱 오이 실험부터 하천 메타유전체, AI 기반 작물 표현형 분석까지 작물 건강과 환경 마이크로바이옴을 연결합니다.</p>
+            <p class="section-subtitle" style="max-width:880px;">환경과 토양·환경 미생물에서 작물 건강, 나아가 인간 건강으로 이어지는 연결을 연구합니다. 작물이 자라는 환경, 미생물 군집, 식물 질병이 서로 어떻게 연결되고 농산물 안전성과 어떤 관련이 있는지 살핍니다.</p>
+            <p class="section-subtitle" style="max-width:880px;">UC Davis에서는 상추의 질병과 관련 미생물 군집이 농산물 안전성과 인간 건강에 어떤 잠재적 영향을 갖는지 탐구하고 있습니다. 통제된 식물–미생물 실험과 포장 미생물 군집 연구, 멀티오믹스, 전산 분석을 결합합니다.</p>
+            <ol class="research-continuum" aria-label="연구의 연결: 환경, 토양·환경 미생물, 작물 건강, 인간 건강">
+                <li><span class="research-continuum-index" aria-hidden="true">01</span><span class="research-continuum-title">환경</span><span class="research-continuum-detail">환경 변화, 물, 작물의 생육 조건</span></li>
+                <li><span class="research-continuum-index" aria-hidden="true">02</span><span class="research-continuum-title">토양·환경 미생물</span><span class="research-continuum-detail">토양과 수계에 걸친 미생물 군집</span></li>
+                <li><span class="research-continuum-index" aria-hidden="true">03</span><span class="research-continuum-title">작물 건강</span><span class="research-continuum-detail">식물–미생물 상호작용, 질병과 작물 반응</span></li>
+                <li><span class="research-continuum-index" aria-hidden="true">04</span><span class="research-continuum-title">인간 건강</span><span class="research-continuum-detail">농산물 안전성과 잠재적 건강 영향</span></li>
+            </ol>
         </div>
         <div class="research-focus reveal" aria-labelledby="research-focus-title">
             <div class="research-focus-heading">
@@ -1487,7 +1516,7 @@
         </div>
         <div class="gallery reveal">
             <div class="activity-photo-grid" data-conference-group="talks">
-                <figure class="activity-photo-card" id="isme20-photo">
+                <figure class="activity-photo-card activity-photo-card--featured" id="isme20-photo">
                     <a href="../photos/isme20-2026-auckland-talk.png" target="_blank" rel="noopener" aria-label="ISME20 발표 사진 확대">
                         <img src="../photos/isme20-2026-auckland-talk.png" width="1440" height="810" loading="lazy" decoding="async" alt="뉴질랜드 오클랜드 ISME20에서 구두발표하는 정민수">
                     </a>
@@ -1566,11 +1595,23 @@
         <div class="section-header reveal">
             <div class="section-label">연구 분야</div>
             <h2 class="section-title">연구 관심 영역</h2>
+            <p class="section-subtitle">환경과 미생물 군집, 작물, 인간 건강에 걸친 질문을 실험과 전산 분석으로 연결합니다.</p>
         </div>
         <div class="card-grid reveal">
             <div class="card">
-                <h3 class="card-title">숙주-미생물 상호작용</h3>
-                <p class="card-desc">노토바이오틱 시스템과 멀티오믹스를 활용한 마이크로바이옴 매개 식물 병해 억제 연구.</p>
+                <h3 class="card-title">환경과 토양 마이크로바이옴</h3>
+                <p class="card-desc">환경 변화에 따른 토양·수계 미생물 군집, 군집 형성, 녹조, 항생제 내성 유전자 프로파일을 연구합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">토양</span>
+                    <span class="card-tag">수계</span>
+                    <span class="card-tag">녹조</span>
+                    <span class="card-tag">ARG Dynamics</span>
+                    <span class="card-tag">Assembly</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">작물 건강과 질병</h3>
+                <p class="card-desc">통제된 식물–미생물 실험과 멀티오믹스로 미생물이 식물 건강, 질병과 작물 반응에 어떻게 관여하는지 살핍니다.</p>
                 <div class="card-tags">
                     <span class="card-tag">Gnotobiotics</span>
                     <span class="card-tag">Phyllosphere</span>
@@ -1578,8 +1619,18 @@
                 </div>
             </div>
             <div class="card">
-                <h3 class="card-title">멀티오믹스 &amp; 대사체학</h3>
-                <p class="card-desc">WMS, RNA-seq, 대사체학, ddPCR, 앰플리콘 시퀀싱 통합 분석.</p>
+                <h3 class="card-title">농산물 안전성과 인간 건강</h3>
+                <p class="card-desc">UC Davis의 상추 연구를 통해 식물 질병과 관련 미생물 군집이 농산물 안전성 및 인간 건강에 대한 잠재적 위험과 어떻게 연결되는지 탐구합니다.</p>
+                <div class="card-tags">
+                    <span class="card-tag">상추</span>
+                    <span class="card-tag">식물 질병</span>
+                    <span class="card-tag">농산물 안전성</span>
+                    <span class="card-tag">인간 건강</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">멀티오믹스와 대사체학</h3>
+                <p class="card-desc">WMS, RNA-seq, 대사체학, ddPCR, 앰플리콘 시퀀싱을 통합 분석합니다.</p>
                 <div class="card-tags">
                     <span class="card-tag">WMS</span>
                     <span class="card-tag">RNA-seq</span>
@@ -1588,8 +1639,8 @@
                 </div>
             </div>
             <div class="card">
-                <h3 class="card-title">생물학을 위한 머신러닝</h3>
-                <p class="card-desc">작물 표현형 분석(YOLOv8) 및 미생물 군집 예측을 위한 딥러닝.</p>
+                <h3 class="card-title">AI와 작물 표현형</h3>
+                <p class="card-desc">YOLOv8 기반 영양 결핍 탐지 등 작물 표현형 분석과 미생물 군집 예측에 딥러닝을 활용합니다.</p>
                 <div class="card-tags">
                     <span class="card-tag">PyTorch</span>
                     <span class="card-tag">YOLOv8</span>
@@ -1598,17 +1649,8 @@
                 </div>
             </div>
             <div class="card">
-                <h3 class="card-title">환경 마이크로바이옴</h3>
-                <p class="card-desc">ARG 동태, 남조류 대발생, 수계 생태계 군집 형성 메커니즘 연구.</p>
-                <div class="card-tags">
-                    <span class="card-tag">ARG Dynamics</span>
-                    <span class="card-tag">Blooms</span>
-                    <span class="card-tag">Assembly</span>
-                </div>
-            </div>
-            <div class="card" style="grid-column: span 2;">
-                <h3 class="card-title">생물정보학 &amp; 전산생태학</h3>
-                <p class="card-desc">메타유전체 어셈블리, MAG 비닝, 기능 주석, 널 모델 및 네트워크 분석.</p>
+                <h3 class="card-title">생물정보학과 전산생태학</h3>
+                <p class="card-desc">메타유전체 어셈블리, MAG 비닝, 기능 주석, 널 모델과 네트워크 분석을 수행합니다.</p>
                 <div class="card-tags">
                     <span class="card-tag">MAG Binning</span>
                     <span class="card-tag">eggNOG</span>
@@ -1649,19 +1691,10 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <div class="timeline-date">2026년 3월 &ndash; 2026년 8월</div>
-                    <h3 class="timeline-title">박사후 연수연구원</h3>
-                    <div class="timeline-inst">경북대학교</div>
-                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
-                </div>
-                <img class="timeline-logo" src="../logos/ngs-center.png" width="558" height="133" alt="경북대학교 차세대시퀀싱 핵심연구지원센터" loading="lazy" decoding="async">
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2025년 9월 &ndash; 2026년 2월</div>
+                    <div class="timeline-date">2025년 9월 &ndash; 2026년 8월</div>
                     <h3 class="timeline-title">박사후연구원</h3>
                     <div class="timeline-inst">경북대학교</div>
-                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 숙주-미생물 상호작용 독립 연구.</div>
+                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 숙주–미생물 상호작용 연구. 2026년 3월부터 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
                 </div>
                 <img class="timeline-logo" src="../logos/ngs-center.png" width="558" height="133" alt="경북대학교 차세대시퀀싱 핵심연구지원센터" loading="lazy" decoding="async">
             </div>
@@ -2238,7 +2271,7 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">정민수 박사</div>
-            <p>UC Davis 식물과학과 박사후연구원. 식물–미생물 상호작용, 멀티오믹스, 환경 마이크로바이옴을 연구합니다.</p>
+            <p>UC Davis 식물과학과 박사후연구원. 환경과 토양·환경 미생물을 작물과 인간 건강으로 연결합니다.</p>
         </div>
         <div class="footer-links">
             <a href="#about">소개</a>
