@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-30",
   "scope": "Published journal articles and publicly available early online articles; issue year is preserved for future-dated journal issues.",
   "publications": [
     {
@@ -58,6 +58,62 @@
       "figure_status": "available",
       "figure_sha256": "d5ce71f212bd56006349f8e9d2d4bab78458a1515eae14d5b15db52fafeef708",
       "figure_verified_at": "2026-10-28"
+    },
+    {
+      "doi": "10.3390/w18212705",
+      "title": "Spatial Associations Between Chlorophyll-a Concentrations and Estimated Alzheimer’s and Parkinson’s Disease Patient Counts in the Nakdong River Basin, South Korea: A Geographically Weighted Regression Analysis",
+      "journal": "Water",
+      "year": 2026,
+      "volume": "18",
+      "issue": "21",
+      "pages": null,
+      "article_number": "2705",
+      "authors": [
+        {
+          "display": "Kim, S.J.",
+          "self": false
+        },
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Park, S.",
+          "self": false
+        },
+        {
+          "display": "Kim, M.J.",
+          "self": false
+        },
+        {
+          "display": "Kang, D.",
+          "self": false
+        },
+        {
+          "display": "Choi, B.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        }
+      ],
+      "first_author": false,
+      "co_first_author": true,
+      "corresponding_author": false,
+      "online_status": null,
+      "source": "https://mdpi-res.com/d_attachment/water/water-18-02705/article_deploy/water-18-02705.xml",
+      "checked": "2026-10-30",
+      "figure": "figs/pub-10-3390-w18212705-figure-4.png",
+      "figure_label": "Figure 4",
+      "figure_source_url": "https://www.mdpi.com/2073-4441/18/21/2705",
+      "figure_asset_url": "https://mdpi-res.com/d_attachment/water/water-18-02705/article_deploy/html/images/water-18-02705-g004.png",
+      "figure_license": "https://creativecommons.org/licenses/by/4.0/",
+      "figure_count": 5,
+      "figure_status": "available",
+      "figure_sha256": "ddb988f830e5f4df18fafbc56e6cc65ab1570df9373ae2b2d9691d4a9077bd9f",
+      "figure_verified_at": "2026-10-30",
+      "article_url": "https://mdpi-res.com/d_attachment/water/water-18-02705/article_deploy/water-18-02705.pdf"
     },
     {
       "doi": "10.1016/j.apsoil.2026.107429",
