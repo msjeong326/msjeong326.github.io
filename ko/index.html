@@ -556,6 +556,17 @@
     .timeline-inst { font-size:0.88rem; color:var(--text-secondary); }
     .timeline-desc { font-size:0.85rem; color:var(--text-tertiary); margin-top:0.3rem; line-height:1.5; }
 
+    /* Institution marks in the academic timeline */
+    .timeline { max-width:960px; }
+    .timeline-item { display:grid; grid-template-columns:minmax(0, 1fr) 210px; align-items:center; column-gap:2rem; }
+    .timeline-content { min-width:0; }
+    .timeline-logo { display:block; width:100%; height:auto; max-height:64px; object-fit:contain; object-position:right center; justify-self:end; }
+    .timeline-logo--ucdavis { max-width:180px; }
+    @media (max-width:600px) {
+        .timeline-item { grid-template-columns:minmax(0, 1fr) 96px; column-gap:0.75rem; }
+        .timeline-logo { max-height:40px; }
+    }
+
     .two-col { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
     .col-title {
         font-size:1.1rem; font-weight:700; margin-bottom:1rem;
@@ -1619,38 +1630,65 @@
         </div>
         <div class="timeline reveal">
             <div class="timeline-item">
-                <div class="timeline-date">2026년 10월 – 현재</div>
-                <h3 class="timeline-title">박사후연구원 (Postdoctoral Researcher)</h3>
-                <div class="timeline-inst">University of California, Davis</div>
-                <div class="timeline-desc">식물과학과 · Maeli Melotto 연구실. 세종과학펠로우십 지원.</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2026년 10월 – 현재</div>
+                    <h3 class="timeline-title">박사후연구원 (Postdoctoral Researcher)</h3>
+                    <div class="timeline-inst">University of California, Davis</div>
+                    <div class="timeline-desc">식물과학과 · Maeli Melotto 연구실. 세종과학펠로우십 지원.</div>
+                </div>
+                <img class="timeline-logo timeline-logo--ucdavis" src="../logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2026년 3월 &ndash; 현재</div>
-                <h3 class="timeline-title">박사후 연수연구원</h3>
-                <div class="timeline-inst">경북대학교</div>
-                <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2026년 9월 &ndash; 현재</div>
+                    <h3 class="timeline-title">박사후연구원</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">농업과학연구원 농산물품질·안전성평가연구소. 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="../logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="경북대학교 농산물품질·안전성평가연구소" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2025년 9월 &ndash; 2026년 2월</div>
-                <h3 class="timeline-title">박사후연구원</h3>
-                <div class="timeline-inst">경북대학교</div>
-                <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 숙주-미생물 상호작용 독립 연구.</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2026년 3월 &ndash; 2026년 8월</div>
+                    <h3 class="timeline-title">박사후 연수연구원</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 세종과학펠로우십 (한국연구재단, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="../logos/ngs-center.png" width="558" height="133" alt="경북대학교 차세대시퀀싱 핵심연구지원센터" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2022년 3월 &ndash; 2025년 8월</div>
-                <h3 class="timeline-title">농학박사 (응용생명과학)</h3>
-                <div class="timeline-inst">경북대학교</div>
-                <div class="timeline-desc">박사학위논문: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems&rdquo;</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2025년 9월 &ndash; 2026년 2월</div>
+                    <h3 class="timeline-title">박사후연구원</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">차세대시퀀싱 핵심연구지원센터. 숙주-미생물 상호작용 독립 연구.</div>
+                </div>
+                <img class="timeline-logo" src="../logos/ngs-center.png" width="558" height="133" alt="경북대학교 차세대시퀀싱 핵심연구지원센터" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2020년 3월 &ndash; 2022년 2월</div>
-                <h3 class="timeline-title">농학석사 (응용생명과학)</h3>
-                <div class="timeline-inst">경북대학교</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2022년 3월 &ndash; 2025년 8월</div>
+                    <h3 class="timeline-title">농학박사 (응용생명과학)</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                    <div class="timeline-desc">박사학위논문: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems&rdquo;</div>
+                </div>
+                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2014년 3월 &ndash; 2020년 2월</div>
-                <h3 class="timeline-title">농학사 (응용생명과학)</h3>
-                <div class="timeline-inst">경북대학교</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2020년 3월 &ndash; 2022년 2월</div>
+                    <h3 class="timeline-title">농학석사 (응용생명과학)</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                </div>
+                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2014년 3월 &ndash; 2020년 2월</div>
+                    <h3 class="timeline-title">농학사 (응용생명과학)</h3>
+                    <div class="timeline-inst">경북대학교</div>
+                </div>
+                <img class="timeline-logo" src="../logos/kyungpook-national-university.jpg" width="714" height="82" alt="경북대학교" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -1890,17 +1928,17 @@
             </div>
             <div id="conferences">
                 <div class="col-title">학회 발표 (대표 실적)</div>
-                <div class="list-items"><div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div></div>
+                <div class="list-items" id="conferenceList"><div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> ISME20 · 뉴질랜드 오클랜드 · 2026년 8월</div></div>
 <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">심포지엄 강연</span> KSABC 국제심포지엄 · 제주 · 2026년 6월</div></div>
 <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국환경보건학회 · 광주 · 2025년 11월</div></div>
 
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 미국미생물학회 (ASM Microbe) 2025, Los Angeles, USA</div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국미생물&middot;생명공학회 국제학술대회 2025</div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국미생물학회 (MSK) 2024</div>
                     </div>
                     <div class="list-item">
@@ -1915,7 +1953,7 @@
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 미국미생물학회 (ASM Microbe) 2023, Houston, USA</div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">포스터</span> 한국응용생명화학회 국제학술대회 2022 <span class="conf-award-badge">우수상 🥈</span></div>
                     </div>
                     <div class="list-item conf-hidden">
@@ -1925,7 +1963,7 @@
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">구두</span> 한국미생물&middot;생명공학회 국제심포지엄 2021 <span class="conf-award-badge">우수상 🥈</span></div>
                     </div>
                 </div>
-                <button class="conf-show-more" id="confShowMore">더보기 ▼</button>
+                <button class="conf-show-more" id="confShowMore" type="button" aria-expanded="false" aria-controls="conferenceList">더보기 ▼</button>
             </div>
         </div>
 
@@ -2353,6 +2391,7 @@
         confBtn.addEventListener('click', function() {
             var list = this.previousElementSibling;
             list.classList.toggle('conf-expanded');
+            this.setAttribute('aria-expanded', String(list.classList.contains('conf-expanded')));
             this.textContent = list.classList.contains('conf-expanded') ? '접기 ▲' : '더보기 ▼';
         });
     }

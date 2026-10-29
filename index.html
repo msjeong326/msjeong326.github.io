@@ -563,6 +563,17 @@
     .timeline-inst { font-size:0.88rem; color:var(--text-secondary); }
     .timeline-desc { font-size:0.85rem; color:var(--text-tertiary); margin-top:0.3rem; line-height:1.5; }
 
+    /* Institution marks in the academic timeline */
+    .timeline { max-width:960px; }
+    .timeline-item { display:grid; grid-template-columns:minmax(0, 1fr) 210px; align-items:center; column-gap:2rem; }
+    .timeline-content { min-width:0; }
+    .timeline-logo { display:block; width:100%; height:auto; max-height:64px; object-fit:contain; object-position:right center; justify-self:end; }
+    .timeline-logo--ucdavis { max-width:180px; }
+    @media (max-width:600px) {
+        .timeline-item { grid-template-columns:minmax(0, 1fr) 96px; column-gap:0.75rem; }
+        .timeline-logo { max-height:40px; }
+    }
+
     /* Two Column */
     .two-col { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
     .col-title {
@@ -1634,38 +1645,65 @@
         </div>
         <div class="timeline reveal">
             <div class="timeline-item">
-                <div class="timeline-date">Oct 2026 – Present</div>
-                <h3 class="timeline-title">Postdoctoral Researcher</h3>
-                <div class="timeline-inst">University of California, Davis</div>
-                <div class="timeline-desc">Department of Plant Sciences · Maeli Melotto Lab. Supported by the Sejong Science Fellowship.</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Oct 2026 – Present</div>
+                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                    <div class="timeline-inst">University of California, Davis</div>
+                    <div class="timeline-desc">Department of Plant Sciences · Maeli Melotto Lab. Supported by the Sejong Science Fellowship.</div>
+                </div>
+                <img class="timeline-logo timeline-logo--ucdavis" src="logos/uc-davis-wordmark.gif" width="238" height="41" alt="University of California, Davis" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">Mar 2026 &ndash; Present</div>
-                <h3 class="timeline-title">Postdoctoral Research Fellow</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-                <div class="timeline-desc">NGS Core Research Support Center. Sejong Science Fellowship (NRF, 2026&ndash;2031).</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Sep 2026 &ndash; Present</div>
+                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">Institute for Agricultural Product Quality and Safety Assessment. Sejong Science Fellowship (NRF, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="logos/knu-agricultural-product-quality-safety.png" width="740" height="157" alt="Institute for Agricultural Product Quality and Safety Assessment, Kyungpook National University" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">Sep 2025 &ndash; Feb 2026</div>
-                <h3 class="timeline-title">Postdoctoral Researcher</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-                <div class="timeline-desc">NGS Core Research Support Center. Independent research on host-microbe interactions.</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2026 &ndash; Aug 2026</div>
+                    <h3 class="timeline-title">Postdoctoral Research Fellow</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">NGS Core Research Support Center. Sejong Science Fellowship (NRF, 2026&ndash;2031).</div>
+                </div>
+                <img class="timeline-logo" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center, Kyungpook National University" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
-                <h3 class="timeline-title">Ph.D. in Applied Biosciences (Agriculture)</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
-                <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Sep 2025 &ndash; Feb 2026</div>
+                    <h3 class="timeline-title">Postdoctoral Researcher</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">NGS Core Research Support Center. Independent research on host-microbe interactions.</div>
+                </div>
+                <img class="timeline-logo" src="logos/ngs-center.png" width="558" height="133" alt="NGS Center, Kyungpook National University" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">Mar 2020 &ndash; Feb 2022</div>
-                <h3 class="timeline-title">M.S. in Applied Biosciences (Agriculture)</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2022 &ndash; Aug 2025</div>
+                    <h3 class="timeline-title">Ph.D. in Applied Biosciences (Agriculture)</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                    <div class="timeline-desc">Dissertation: &ldquo;Unraveling environmental immunomodulation: multi-omics study of microbiome-mediated plant disease suppression using gnotobiotic systems.&rdquo;</div>
+                </div>
+                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">Mar 2014 &ndash; Feb 2020</div>
-                <h3 class="timeline-title">B.S. in Applied Biosciences (Agriculture)</h3>
-                <div class="timeline-inst">Kyungpook National University</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2020 &ndash; Feb 2022</div>
+                    <h3 class="timeline-title">M.S. in Applied Biosciences (Agriculture)</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                </div>
+                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Mar 2014 &ndash; Feb 2020</div>
+                    <h3 class="timeline-title">B.S. in Applied Biosciences (Agriculture)</h3>
+                    <div class="timeline-inst">Kyungpook National University</div>
+                </div>
+                <img class="timeline-logo" src="logos/kyungpook-national-university.jpg" width="714" height="82" alt="Kyungpook National University" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -1905,17 +1943,17 @@
             </div>
             <div id="conferences">
                 <div class="col-title">Conferences (Selected)</div>
-                <div class="list-items"><div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ISME20 · Auckland, New Zealand · August 2026</div></div>
+                <div class="list-items" id="conferenceList"><div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ISME20 · Auckland, New Zealand · August 2026</div></div>
 <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Symposium lecture</span> KSABC International Symposium · Jeju, Korea · June 2026</div></div>
 <div class="list-item"><div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> Korean Society of Environmental Health · Gwangju, Korea · November 2025</div></div>
 
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> ASM Microbe 2025, Los Angeles, USA</div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KMB International Conference 2025</div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> MSK 2024</div>
                     </div>
                     <div class="list-item">
@@ -1930,7 +1968,7 @@
                     <div class="list-item">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> ASM Microbe 2023, Houston, USA</div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item conf-hidden">
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--poster">Poster</span> KSABC International Conference 2022 <span class="conf-award-badge">🥈</span></div>
                     </div>
                     <div class="list-item conf-hidden">
@@ -1940,7 +1978,7 @@
                         <div class="list-item-detail"><span class="conf-type-badge conf-type-badge--oral">Oral</span> KMB International Symposium 2021 <span class="conf-award-badge">🥈</span></div>
                     </div>
                 </div>
-                <button class="conf-show-more" id="confShowMore">Show more ▼</button>
+                <button class="conf-show-more" id="confShowMore" type="button" aria-expanded="false" aria-controls="conferenceList">Show more ▼</button>
             </div>
         </div>
 
@@ -2368,6 +2406,7 @@
         confBtn.addEventListener('click', function() {
             var list = this.previousElementSibling;
             list.classList.toggle('conf-expanded');
+            this.setAttribute('aria-expanded', String(list.classList.contains('conf-expanded')));
             this.textContent = list.classList.contains('conf-expanded') ? 'Show less ▲' : 'Show more ▼';
         });
     }
