@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-29",
   "scope": "Published journal articles and publicly available early online articles; issue year is preserved for future-dated journal issues.",
   "publications": [
     {
@@ -58,6 +58,65 @@
       "figure_status": "available",
       "figure_sha256": "d5ce71f212bd56006349f8e9d2d4bab78458a1515eae14d5b15db52fafeef708",
       "figure_verified_at": "2026-10-28"
+    },
+    {
+      "doi": "10.1016/j.watres.2026.127235",
+      "title": "Antibiotic resistance gene classes show no detectable shift despite extensive microcystin-associated river microbiome reorganization",
+      "journal": "Water Research",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "pages": "127235",
+      "article_number": "127235",
+      "authors": [
+        {
+          "display": "Jeong, M.",
+          "self": true
+        },
+        {
+          "display": "Yeo, S.",
+          "self": false
+        },
+        {
+          "display": "Kang, D.",
+          "self": false
+        },
+        {
+          "display": "Park, S.",
+          "self": false
+        },
+        {
+          "display": "Hyun, Y.",
+          "self": false
+        },
+        {
+          "display": "Jeong, S.Y.",
+          "self": false
+        },
+        {
+          "display": "Shin, J.H.",
+          "self": false
+        },
+        {
+          "display": "Lee, S.",
+          "self": false
+        }
+      ],
+      "first_author": true,
+      "co_first_author": true,
+      "corresponding_author": false,
+      "online_status": {
+        "en": "Published online · October 29, 2026",
+        "ko": "온라인 공개 · 2026년 10월 29일"
+      },
+      "source": "https://api.crossref.org/works/10.1016/j.watres.2026.127235",
+      "checked": "2026-10-29",
+      "figure": "figs/nakdong-arg-manuscript-figure-1.png",
+      "figure_label": "Author manuscript · Figure 1",
+      "figure_status": "existing",
+      "figure_note": "Author-provided manuscript Figure 1; retained original image, not a verified publisher-layout reproduction.",
+      "figure_sha256": "91ac4bec93adb77cdfb5576ac670c8a493989530d5b4c7c33dba6bb8b3b5657b",
+      "figure_verified_at": "2026-10-29"
     },
     {
       "doi": "10.3390/w18212705",
