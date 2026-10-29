@@ -119,8 +119,12 @@ def render_item(item: dict, language: str) -> str:
         item.get("article_number") or item.get("pages") or "",
     ]))
     doi = html.escape(item["doi"], quote=True)
+    article_url = item.get("article_url") or f"https://doi.org/{item['doi']}"
+    if urlparse(article_url).scheme != "https" or not urlparse(article_url).netloc:
+        raise ValueError(f"Invalid article URL: {item['doi']}")
+    article_url = html.escape(article_url, quote=True)
     return f'''                    <div class="{classes}" data-type="{' '.join(types)}" data-doi="{doi}"{figure}>
-                        <div class="pub-title"><a href="https://doi.org/{doi}" target="_blank" rel="noopener">{html.escape(item['title'])}</a></div>
+                        <div class="pub-title"><a href="{article_url}" target="_blank" rel="noopener">{html.escape(item['title'])}</a></div>
                         <div class="pub-authors">{', '.join(authors)} ({item['year']})</div>
                         <div class="pub-meta"><span class="pub-journal">{html.escape(citation)}</span> {' '.join(badges)} {figure_control(item, language)}</div>
                     </div>'''
