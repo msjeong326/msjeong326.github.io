@@ -1291,20 +1291,11 @@
     @media (max-width: 900px) { .hobby-new-photos { column-count: 2; } }
     @media (max-width: 540px) { .hobby-new-photos { column-count: 2; } }
 
-    /* Research continuum and full-width featured ISME presentation. */
-    .research-continuum { margin:1.5rem 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:0.75rem; }
-    .research-continuum li { min-width:0; padding:1rem; border:1px solid var(--border-color); border-top:3px solid var(--accent); border-radius:var(--radius-sm); background:var(--bg-secondary); }
-    .research-continuum-index { display:block; margin-bottom:0.45rem; font:600 0.72rem var(--font-mono); color:var(--accent); }
-    .research-continuum-title { display:block; font-size:0.92rem; font-weight:700; line-height:1.45; color:var(--text-primary); }
-    .research-continuum-detail { display:block; margin-top:0.4rem; font-size:0.78rem; line-height:1.6; color:var(--text-secondary); }
-    .about-intro > p + p { margin-top:1rem; }
+    /* Full-width featured ISME presentation. */
     .activity-photo-card--featured { column-span:all; width:100%; margin-bottom:1.5rem; }
     .activity-photo-card--featured figcaption { padding:1.1rem 1.25rem 1.25rem; }
     .activity-photo-card--featured .activity-title { font-size:1.15rem; }
-    @media (max-width:900px) { .research-continuum { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
     @media (max-width:480px) {
-        .research-continuum { grid-template-columns:minmax(0, 1fr); gap:0.6rem; }
-        .research-continuum li { padding:0.85rem 1rem; }
         .activity-photo-card--featured .activity-title { font-size:1.02rem; }
     }
     </style>
@@ -1415,14 +1406,7 @@
             <h2 class="section-title">What I Do</h2>
         </div>
         <div class="about-intro reveal">
-            <p class="section-subtitle" style="max-width:880px;">I study how environmental conditions and microbial communities in soil and water connect crop health with human health. My research asks how changes in these systems relate to plant disease and produce safety.</p>
-            <p class="section-subtitle" style="max-width:880px;">At UC Davis, my ongoing lettuce research explores how plant disease and associated microbiomes may have implications for produce safety and human health. I combine controlled plant–microbe experiments, field microbiome studies, multi-omics, and computational analysis.</p>
-            <ol class="research-continuum" aria-label="Research continuum: environment, soil and environmental microbiomes, crop health, human health">
-                <li><span class="research-continuum-index" aria-hidden="true">01</span><span class="research-continuum-title">Environment</span><span class="research-continuum-detail">Environmental change, water, and growing conditions</span></li>
-                <li><span class="research-continuum-index" aria-hidden="true">02</span><span class="research-continuum-title">Soil &amp; environmental microbiomes</span><span class="research-continuum-detail">Microbial communities across soil and aquatic systems</span></li>
-                <li><span class="research-continuum-index" aria-hidden="true">03</span><span class="research-continuum-title">Crop health</span><span class="research-continuum-detail">Plant–microbe interactions, disease, and crop responses</span></li>
-                <li><span class="research-continuum-index" aria-hidden="true">04</span><span class="research-continuum-title">Human health</span><span class="research-continuum-detail">Produce safety and potential health implications</span></li>
-            </ol>
+            <p class="section-subtitle" style="max-width:880px;">I build controlled plant–microbe experiments, integrate microbial and host multi-omics, and develop reproducible analysis pipelines to study how environmental conditions and soil, water, and crop microbiomes connect crop health with human health. My work spans river microbial ecology, gnotobiotic crop systems, and AI-based phenotyping. At UC Davis, I bring this perspective to lettuce research exploring potential links between plant disease, associated microbiomes, produce safety, and human health.</p>
         </div>
         <div class="research-focus reveal" aria-labelledby="research-focus-title">
             <div class="research-focus-heading">

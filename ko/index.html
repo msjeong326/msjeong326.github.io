@@ -1276,20 +1276,11 @@
     @media (max-width: 900px) { .hobby-new-photos { column-count: 2; } }
     @media (max-width: 540px) { .hobby-new-photos { column-count: 2; } }
 
-    /* Research continuum and full-width featured ISME presentation. */
-    .research-continuum { margin:1.5rem 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:0.75rem; }
-    .research-continuum li { min-width:0; padding:1rem; border:1px solid var(--border-color); border-top:3px solid var(--accent); border-radius:var(--radius-sm); background:var(--bg-secondary); }
-    .research-continuum-index { display:block; margin-bottom:0.45rem; font:600 0.72rem var(--font-mono); color:var(--accent); }
-    .research-continuum-title { display:block; font-size:0.92rem; font-weight:700; line-height:1.45; color:var(--text-primary); }
-    .research-continuum-detail { display:block; margin-top:0.4rem; font-size:0.78rem; line-height:1.6; color:var(--text-secondary); }
-    .about-intro > p + p { margin-top:1rem; }
+    /* Full-width featured ISME presentation. */
     .activity-photo-card--featured { column-span:all; width:100%; margin-bottom:1.5rem; }
     .activity-photo-card--featured figcaption { padding:1.1rem 1.25rem 1.25rem; }
     .activity-photo-card--featured .activity-title { font-size:1.15rem; }
-    @media (max-width:900px) { .research-continuum { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
     @media (max-width:480px) {
-        .research-continuum { grid-template-columns:minmax(0, 1fr); gap:0.6rem; }
-        .research-continuum li { padding:0.85rem 1rem; }
         .activity-photo-card--featured .activity-title { font-size:1.02rem; }
     }
     </style>
@@ -1400,14 +1391,7 @@
             <h2 class="section-title">연구 소개</h2>
         </div>
         <div class="about-intro reveal">
-            <p class="section-subtitle" style="max-width:880px;">환경과 토양·환경 미생물에서 작물 건강, 나아가 인간 건강으로 이어지는 연결을 연구합니다. 작물이 자라는 환경, 미생물 군집, 식물 질병이 서로 어떻게 연결되고 농산물 안전성과 어떤 관련이 있는지 살핍니다.</p>
-            <p class="section-subtitle" style="max-width:880px;">UC Davis에서는 상추의 질병과 관련 미생물 군집이 농산물 안전성과 인간 건강에 어떤 잠재적 영향을 갖는지 탐구하고 있습니다. 통제된 식물–미생물 실험과 포장 미생물 군집 연구, 멀티오믹스, 전산 분석을 결합합니다.</p>
-            <ol class="research-continuum" aria-label="연구의 연결: 환경, 토양·환경 미생물, 작물 건강, 인간 건강">
-                <li><span class="research-continuum-index" aria-hidden="true">01</span><span class="research-continuum-title">환경</span><span class="research-continuum-detail">환경 변화, 물, 작물의 생육 조건</span></li>
-                <li><span class="research-continuum-index" aria-hidden="true">02</span><span class="research-continuum-title">토양·환경 미생물</span><span class="research-continuum-detail">토양과 수계에 걸친 미생물 군집</span></li>
-                <li><span class="research-continuum-index" aria-hidden="true">03</span><span class="research-continuum-title">작물 건강</span><span class="research-continuum-detail">식물–미생물 상호작용, 질병과 작물 반응</span></li>
-                <li><span class="research-continuum-index" aria-hidden="true">04</span><span class="research-continuum-title">인간 건강</span><span class="research-continuum-detail">농산물 안전성과 잠재적 건강 영향</span></li>
-            </ol>
+            <p class="section-subtitle" style="max-width:880px;">통제된 식물–미생물 실험을 설계하고, 미생물·숙주 멀티오믹스를 통합하며, 재현 가능한 분석 파이프라인을 개발해 환경과 토양·수계·작물의 미생물 군집이 작물 건강, 나아가 인간 건강과 어떻게 연결되는지 연구합니다. 하천 미생물 생태, 노토바이오틱 작물 시스템, AI 기반 표현형 분석을 다룹니다. UC Davis에서는 이러한 관점을 상추 연구로 확장해 식물 질병과 관련 미생물 군집, 농산물 안전성, 인간 건강 사이의 잠재적 연결을 탐구하고 있습니다.</p>
         </div>
         <div class="research-focus reveal" aria-labelledby="research-focus-title">
             <div class="research-focus-heading">
