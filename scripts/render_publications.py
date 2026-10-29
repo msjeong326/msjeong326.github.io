@@ -82,7 +82,8 @@ def render_item(item: dict, language: str) -> str:
     """Keep publication roles independent of the author's byline position."""
     korean = language == "ko"
     first = item["first_author"] or item["co_first_author"]
-    types = ["first" if first else "coauthor"]
+    lead = first or item["corresponding_author"]
+    types = ["lead" if lead else "coauthor"]
     if item["corresponding_author"]:
         types.append("corresponding")
     authors = []
@@ -130,12 +131,16 @@ def render_section(data: dict, language: str) -> str:
     korean = language == "ko"
     counts = {
         "all": len(items),
-        "first": sum(x["first_author"] or x["co_first_author"] for x in items),
-        "coauthor": sum(not (x["first_author"] or x["co_first_author"]) for x in items),
+        "lead": sum(
+            x["first_author"] or x["co_first_author"] or x["corresponding_author"]
+            for x in items
+        ),
+        "corresponding": sum(x["corresponding_author"] for x in items),
     }
+    counts["coauthor"] = counts["all"] - counts["lead"]
     labels = {
         "all": "전체" if korean else "All articles",
-        "first": "제1·공동 제1저자" if korean else "First & co-first",
+        "lead": "제1·공동제1·교신저자" if korean else "First, co-first & corresponding",
         "coauthor": "공저자" if korean else "Co-author",
         "corresponding": "교신저자" if korean else "Corresponding",
     }
@@ -145,9 +150,9 @@ def render_section(data: dict, language: str) -> str:
         active = " active" if key == "all" else ""
         tabs.append(f'                <button class="pub-tab{active}" data-tab="{key}">{label}{count}</button>')
     subtitle = (
-        f"출판·온라인 공개 논문 {counts['all']}편. 제1·공동 제1저자 {counts['first']}편 포함."
+        f"출판·온라인 공개 논문 {counts['all']}편. 제1·공동제1·교신저자 {counts['lead']}편 포함."
         if korean else
-        f"{counts['all']} published and online articles, including {counts['first']} first- and co-first-author papers."
+        f"{counts['all']} published and online articles, including {counts['lead']} as first, co-first, or corresponding author."
     )
     updated = date.fromisoformat(data["updated"])
     checked = (
@@ -179,7 +184,7 @@ def render_section(data: dict, language: str) -> str:
                 </div>
                 <button class="pub-show-more" id="pubShowMore">{show} <span class="arrow">&#9660;</span></button>
             </div>
-            <div class="pub-panel" id="panel-first"></div>
+            <div class="pub-panel" id="panel-lead"></div>
             <div class="pub-panel" id="panel-coauthor"></div>
             <div class="pub-panel" id="panel-corresponding"></div>
         </div>
